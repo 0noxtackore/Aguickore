@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import { createSSEResponse, createNDJSONResponse } from "./helpers";
 import { Observable } from "rxjs";
-import { EventType, type BaseEvent } from "@ag-ui/client";
+import { EventType, type BaseEvent } from "@0noxtackore/client";
 
 describe("createSSEResponse", () => {
   it("streams events as SSE format", async () => {

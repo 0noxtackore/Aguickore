@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A tool that returns void / null / empty still produces TOOL_CALL_RESULT,
  * so legitimate side-effect tools get a result card in the UI instead of
  * silently dropping the emission.
@@ -7,7 +7,7 @@
 import { describe, it, expect } from "vitest";
 import { ToolUseBlock, ToolResultBlock } from "@strands-agents/sdk";
 import type { AgentStreamEvent } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 
 import { collect, scriptedStrandsAgent } from "./helpers";
 import { _buildToolResultContent } from "../agent";

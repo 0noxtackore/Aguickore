@@ -1,4 +1,4 @@
-import test from "node:test";
+﻿import test from "node:test";
 import assert from "node:assert/strict";
 import { buildReleaseNotification } from "./lib/build-release-notification";
 import type { BuildReleaseNotificationInput } from "./lib/build-release-notification";
@@ -65,8 +65,8 @@ test("suppresses dry-run — no post", () => {
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { latest: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { latest: ["@0noxtackore/core"] },
       dryRun: true,
     }),
   );
@@ -81,8 +81,8 @@ test("suppresses prerelease (canary) success — no post", () => {
       mode: "prerelease",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { canary: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { canary: ["@0noxtackore/core"] },
     }),
   );
   assert.equal(r.shouldPost, false);
@@ -162,15 +162,15 @@ test("stable npm success → concise npm success line (N packages + names + dist
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core", "@ag-ui/client"),
-      tsGroups: { latest: ["@ag-ui/core", "@ag-ui/client"] },
+      tsPackages: ts("@0noxtackore/core", "@0noxtackore/client"),
+      tsGroups: { latest: ["@0noxtackore/core", "@0noxtackore/client"] },
     }),
   );
   assert.equal(r.shouldPost, true);
   assert.equal(
     r.message,
     "🚀 *ag-ui release* · 2 npm packages published " +
-      "(`latest`: @ag-ui/core, @ag-ui/client) · " +
+      "(`latest`: @0noxtackore/core, @0noxtackore/client) · " +
       `<${NPM_ORG_URL}|npm>`,
   );
 });
@@ -181,8 +181,8 @@ test("single npm package → '1 npm package' (pluralization)", () => {
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { latest: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { latest: ["@0noxtackore/core"] },
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -196,8 +196,8 @@ test("npm dist-tags other than latest are rendered (alpha)", () => {
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: [{ name: "@ag-ui/core", version: "1.0.0-alpha.0" }],
-      tsGroups: { alpha: ["@ag-ui/core"] },
+      tsPackages: [{ name: "@0noxtackore/core", version: "1.0.0-alpha.0" }],
+      tsGroups: { alpha: ["@0noxtackore/core"] },
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -211,10 +211,10 @@ test("npm success with multiple dist-tag groups → all groups rendered", () => 
       npmResult: "success",
       buildResult: "success",
       tsPackages: [
-        { name: "@ag-ui/core", version: "1.0.0" },
-        { name: "@ag-ui/client", version: "1.0.0-beta.0" },
+        { name: "@0noxtackore/core", version: "1.0.0" },
+        { name: "@0noxtackore/client", version: "1.0.0-beta.0" },
       ],
-      tsGroups: { latest: ["@ag-ui/core"], beta: ["@ag-ui/client"] },
+      tsGroups: { latest: ["@0noxtackore/core"], beta: ["@0noxtackore/client"] },
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -230,7 +230,7 @@ test("populated tsPackages + EMPTY tsGroups → flat name list (no dist-tag back
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core", "@ag-ui/client"),
+      tsPackages: ts("@0noxtackore/core", "@0noxtackore/client"),
       tsGroups: {},
     }),
   );
@@ -248,10 +248,10 @@ test("tsGroups membership MISMATCHES tsPackages → falls back to flat list (cou
       npmResult: "success",
       buildResult: "success",
       // Three packages published...
-      tsPackages: ts("@ag-ui/core", "@ag-ui/client", "@ag-ui/encoder"),
+      tsPackages: ts("@0noxtackore/core", "@0noxtackore/client", "@0noxtackore/encoder"),
       // ...but the groups dropped one (degraded ts_groups_json). Count (3) from
       // tsPackages would disagree with names (2) from tsGroups — must fall back.
-      tsGroups: { latest: ["@ag-ui/core", "@ag-ui/client"] },
+      tsGroups: { latest: ["@0noxtackore/core", "@0noxtackore/client"] },
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -268,14 +268,14 @@ test("tsGroups listing a name NOT in tsPackages → falls back to flat list", ()
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
+      tsPackages: ts("@0noxtackore/core"),
       // Group lists a phantom name absent from tsPackages → membership mismatch.
-      tsGroups: { latest: ["@ag-ui/core", "@ag-ui/phantom"] },
+      tsGroups: { latest: ["@0noxtackore/core", "@0noxtackore/phantom"] },
     }),
   );
   assert.equal(r.shouldPost, true);
   assert.match(r.message, /1 npm package published/);
-  assert.ok(!r.message.includes("@ag-ui/phantom"));
+  assert.ok(!r.message.includes("@0noxtackore/phantom"));
   assert.ok(!r.message.includes("`latest`"));
 });
 
@@ -285,12 +285,12 @@ test("tsGroups with an EMPTY group array → falls back to flat list (no empty `
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
+      tsPackages: ts("@0noxtackore/core"),
       // An empty-array group renders no names; total grouped count (1) still
       // matches tsPackages.length (1) AND membership matches, but the empty
       // group must never produce a malformed "`beta`: " fragment. The skip in
       // renderNpmGroups drops it; here we additionally assert no empty fragment.
-      tsGroups: { latest: ["@ag-ui/core"], beta: [] },
+      tsGroups: { latest: ["@0noxtackore/core"], beta: [] },
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -309,11 +309,11 @@ test("tsGroups with a name duplicated across two groups → falls back to flat l
       npmResult: "success",
       buildResult: "success",
       // One published package...
-      tsPackages: ts("@ag-ui/core"),
+      tsPackages: ts("@0noxtackore/core"),
       // ...but it appears in TWO groups: deduped Set size (1) would match the
       // package set, yet the TOTAL grouped count (2) disagrees with the count
       // (1) from tsPackages. Must fall back to the flat list.
-      tsGroups: { latest: ["@ag-ui/core"], next: ["@ag-ui/core"] },
+      tsGroups: { latest: ["@0noxtackore/core"], next: ["@0noxtackore/core"] },
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -321,7 +321,7 @@ test("tsGroups with a name duplicated across two groups → falls back to flat l
   // Flat fallback: no dist-tag grouping rendered, name listed exactly once.
   assert.ok(!r.message.includes("`latest`"));
   assert.ok(!r.message.includes("`next`"));
-  assert.equal(r.message.split("@ag-ui/core").length - 1, 1);
+  assert.equal(r.message.split("@0noxtackore/core").length - 1, 1);
 });
 
 // ---- npm lane: failure (lane-level wording) ---------------------------------
@@ -334,7 +334,7 @@ test("stable npm failure → lane-level red alert (NOT 'npm publish failed')", (
       buildResult: "success",
       // Detected package set is the authoritative "release attempted" signal:
       // build succeeded and packages were detected, then publish failed.
-      tsPackages: ts("@ag-ui/core"),
+      tsPackages: ts("@0noxtackore/core"),
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -355,8 +355,8 @@ test("npm result failure beats a populated package set → FAILURE line, NOT suc
       npmIntended: "true",
       npmResult: "failure",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { latest: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { latest: ["@0noxtackore/core"] },
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -393,7 +393,7 @@ test("npm publish failure with empty mode → lane-level red alert (no mode-coup
       npmResult: "failure",
       buildResult: "success",
       // Packages were detected (build OK) then publish failed → authoritative.
-      tsPackages: ts("@ag-ui/core"),
+      tsPackages: ts("@0noxtackore/core"),
     }),
   );
   assert.equal(r.shouldPost, true);
@@ -486,7 +486,7 @@ test("detected npm packages + publish failure with npmIntended FALSE → npm fai
       mode: "stable",
       npmResult: "failure",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
+      tsPackages: ts("@0noxtackore/core"),
       npmIntended: "false",
     }),
   );
@@ -766,8 +766,8 @@ test("prerelease + python success → NO post (canary fully suppressed, both lan
       mode: "prerelease",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { canary: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { canary: ["@0noxtackore/core"] },
       pyResult: "success",
       pyBuildResult: "success",
       pyPackages: py("ag-ui-protocol"),
@@ -825,8 +825,8 @@ test("npm-only run (PyPI lane not acting) → only npm line", () => {
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { latest: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { latest: ["@0noxtackore/core"] },
       pyResult: "skipped",
     }),
   );
@@ -843,8 +843,8 @@ test("both lanes succeed → one message with both lines", () => {
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core", "@ag-ui/client"),
-      tsGroups: { latest: ["@ag-ui/core", "@ag-ui/client"] },
+      tsPackages: ts("@0noxtackore/core", "@0noxtackore/client"),
+      tsGroups: { latest: ["@0noxtackore/core", "@0noxtackore/client"] },
       pyResult: "success",
       pyBuildResult: "success",
       pyPackages: py("ag-ui-protocol"),
@@ -853,7 +853,7 @@ test("both lanes succeed → one message with both lines", () => {
   assert.equal(r.shouldPost, true);
   const expected =
     "🚀 *ag-ui release* · 2 npm packages published " +
-    "(`latest`: @ag-ui/core, @ag-ui/client) · " +
+    "(`latest`: @0noxtackore/core, @0noxtackore/client) · " +
     `<${NPM_ORG_URL}|npm>\n` +
     "🐍 *ag-ui release* · 1 PyPI package published (ag-ui-protocol) · " +
     `<${PY_BASE_URL}/ag-ui-protocol/|PyPI>`;
@@ -868,7 +868,7 @@ test("both lanes fail → one message with both lane-level red lines", () => {
       npmResult: "failure",
       buildResult: "success",
       // Both lanes detected packages (build OK) then the shared publish failed.
-      tsPackages: ts("@ag-ui/core"),
+      tsPackages: ts("@0noxtackore/core"),
       pyIntended: "true",
       pyResult: "failure",
       pyBuildResult: "success",
@@ -921,8 +921,8 @@ test("npm success but mode not stable (defensive) → no npm success line", () =
       mode: "",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { latest: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { latest: ["@0noxtackore/core"] },
     }),
   );
   assert.equal(r.shouldPost, false);
@@ -932,13 +932,13 @@ test("npm success but mode not stable (defensive) → no npm success line", () =
 // ---- name-list truncation (keep the message concise) ------------------------
 test("npm success with many packages → name list truncates with '+N more'", () => {
   const names = [
-    "@ag-ui/core",
-    "@ag-ui/client",
-    "@ag-ui/encoder",
-    "@ag-ui/proto",
+    "@0noxtackore/core",
+    "@0noxtackore/client",
+    "@0noxtackore/encoder",
+    "@0noxtackore/proto",
     "create-ag-ui-app",
-    "@ag-ui/langgraph",
-    "@ag-ui/mastra",
+    "@0noxtackore/langgraph",
+    "@0noxtackore/mastra",
   ];
   const r = buildReleaseNotification(
     base({
@@ -1100,8 +1100,8 @@ test("all four lanes can succeed together — one line each, Maven last", () => 
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { latest: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { latest: ["@0noxtackore/core"] },
       pyResult: "success",
       pyBuildResult: "success",
       pyPackages: py("ag-ui-protocol"),
@@ -1128,8 +1128,8 @@ test("a Maven-only failure does not red the other lanes", () => {
       mode: "stable",
       npmResult: "success",
       buildResult: "success",
-      tsPackages: ts("@ag-ui/core"),
-      tsGroups: { latest: ["@ag-ui/core"] },
+      tsPackages: ts("@0noxtackore/core"),
+      tsGroups: { latest: ["@0noxtackore/core"] },
       mavenIntended: "true",
       mavenResult: "failure",
       mavenBuildResult: "success",

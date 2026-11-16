@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 import { Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
@@ -13,7 +13,7 @@ import {
   ToolCallEndEvent,
   ToolCallResultEvent,
   ToolCallStartEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";
 import { AbstractAgent } from "@/agent";
 

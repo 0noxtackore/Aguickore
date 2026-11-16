@@ -1,16 +1,16 @@
-import { createServer } from "node:http";
+﻿import { createServer } from "node:http";
 import { once } from "node:events";
 import { createRequire } from "node:module";
 import assert from "node:assert/strict";
 import { it } from "node:test";
 import { lastValueFrom, toArray } from "rxjs";
-import { EventType, type RunAgentInput } from "@ag-ui/client";
+import { EventType, type RunAgentInput } from "@0noxtackore/client";
 import {
   ManagedAgentsAgent,
   InMemorySessionStore,
   type SessionRecord,
   type ManagedAgentsAgentConfig,
-} from "@ag-ui/claude-managed-agents";
+} from "@0noxtackore/claude-managed-agents";
 import { registerManagedAgentsFake } from "./managed-agents-fake";
 class RecordingSessionStore extends InMemorySessionStore {
   readonly writes: { record: SessionRecord }[] = [];
@@ -23,7 +23,7 @@ class RecordingSessionStore extends InMemorySessionStore {
 // Resolve the SDK from its owning integration, avoiding an undeclared Dojo dependency.
 type Anthropic = NonNullable<ManagedAgentsAgentConfig["client"]>;
 const integrationRequire = createRequire(
-  createRequire(import.meta.url).resolve("@ag-ui/claude-managed-agents"),
+  createRequire(import.meta.url).resolve("@0noxtackore/claude-managed-agents"),
 );
 const { default: Anthropic } = integrationRequire("@anthropic-ai/sdk") as {
   default: new (options: { apiKey: string; baseURL: string }) => Anthropic;

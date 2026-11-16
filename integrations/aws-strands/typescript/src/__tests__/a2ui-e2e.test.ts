@@ -1,4 +1,4 @@
-/**
+﻿/**
  * End-to-end regression for the dynamic-A2UI hang: drive a REAL Strands `Agent`
  * loop (not a scripted stub) with a fake `Model` that scripts the full
  * conversation — outer turn calls the auto-injected `generate_a2ui`, the
@@ -9,7 +9,7 @@
 import { describe, it, expect, vi } from "vitest";
 
 import { Agent, Model } from "@strands-agents/sdk";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import type { StrandsAgentConfig } from "../config";

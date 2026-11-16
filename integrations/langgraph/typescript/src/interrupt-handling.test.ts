@@ -1,10 +1,10 @@
-/**
+﻿/**
  * Tests for interrupt detection across parallel tasks — fixes #1409.
  *
  * The bug: interrupt checking only looked at tasks[0], so if a parallel
  * tool call had the interrupt on tasks[1] or later, it was silently missed.
  *
- * NOTE: LangGraphAgent can't be instantiated in tests (requires @ag-ui/client
+ * NOTE: LangGraphAgent can't be instantiated in tests (requires @0noxtackore/client
  * which needs protoc). We test the interrupt collection pattern directly.
  * This MUST stay in sync with agent.ts lines ~404 and ~626:
  *   (tasks ?? []).flatMap((t: any) => t.interrupts ?? [])

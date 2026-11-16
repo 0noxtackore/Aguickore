@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/proto",
+﻿{
+  "name": "@0noxtackore/proto",
   "author": "Markus Ecker <markus.ecker@gmail.com>",
   "version": "1.0.4",
   "agui": {
@@ -35,7 +35,7 @@
     "unlink:global": "pnpm unlink --global"
   },
   "dependencies": {
-    "@ag-ui/core": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
     "@bufbuild/protobuf": "^2.2.5",
     "@protobuf-ts/protoc": "^2.11.1"
   },

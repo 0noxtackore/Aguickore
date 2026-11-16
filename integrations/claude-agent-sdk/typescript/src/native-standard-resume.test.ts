@@ -1,10 +1,10 @@
-import { afterEach, expect, it, vi } from "vitest";
+﻿import { afterEach, expect, it, vi } from "vitest";
 import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { lastValueFrom, toArray } from "rxjs";
-import { AbstractAgent, buildResumeArray } from "@ag-ui/client";
-import type { ToolCallResultEvent, RunAgentInput } from "@ag-ui/core";
+import { AbstractAgent, buildResumeArray } from "@0noxtackore/client";
+import type { ToolCallResultEvent, RunAgentInput } from "@0noxtackore/core";
 import { ClaudeAgentAdapter } from "./adapter";
 const { queryMock } = vi.hoisted(() => ({ queryMock: vi.fn() }));
 vi.mock("@anthropic-ai/claude-agent-sdk", async (importOriginal) => ({

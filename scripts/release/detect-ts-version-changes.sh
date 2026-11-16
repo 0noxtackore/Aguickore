@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 # scripts/release/detect-ts-version-changes.sh
 #
 # Discovers publishable TypeScript packages from the pnpm workspace,
@@ -11,7 +11,7 @@
 # publish on any merged PR to main. That includes packages the team
 # intentionally hasn't wired up for release yet.
 #
-# Output format (stdout): [{"name":"@ag-ui/core","version":"0.0.49","path":"sdks/typescript/packages/core"}, ...]
+# Output format (stdout): [{"name":"@0noxtackore/core","version":"0.0.49","path":"sdks/typescript/packages/core"}, ...]
 # Logs go to stderr so they don't corrupt the JSON output.
 
 set -euo pipefail

@@ -1,7 +1,7 @@
-import { describe, it, expect, vi } from "vitest";
-import { EventType } from "@ag-ui/client";
-import type { BaseEvent, Interrupt } from "@ag-ui/client";
-import { RunFinishedEventSchema } from "@ag-ui/core/schemas";
+﻿import { describe, it, expect, vi } from "vitest";
+import { EventType } from "@0noxtackore/client";
+import type { BaseEvent, Interrupt } from "@0noxtackore/client";
+import { RunFinishedEventSchema } from "@0noxtackore/core/schemas";
 import { Agent } from "@mastra/core/agent";
 import { Mastra } from "@mastra/core";
 import { InMemoryStore } from "@mastra/core/storage";

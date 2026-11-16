@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A rejected resume must be atomic and must leave the checkpoint retryable.
  *
  * Atomic: the gate rejects before anything is mutated, so the model is never
@@ -12,7 +12,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import {
   collect,
   errorCodes,

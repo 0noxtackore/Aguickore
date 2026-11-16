@@ -1,4 +1,4 @@
-import { AbstractAgent, BaseEvent, RunAgentInput } from "@ag-ui/client";
+﻿import { AbstractAgent, BaseEvent, RunAgentInput } from "@0noxtackore/client";
 import { Observable, firstValueFrom, toArray } from "rxjs";
 
 /**

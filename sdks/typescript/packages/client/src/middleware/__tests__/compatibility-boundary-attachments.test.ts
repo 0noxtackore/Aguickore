@@ -1,8 +1,8 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { of } from "rxjs";
 import { AbstractAgent } from "@/agent";
-import { EventType, type Message, type RunAgentInput } from "@ag-ui/core";
-import { RunAgentInputSchema } from "@ag-ui/core/schemas";
+import { EventType, type Message, type RunAgentInput } from "@0noxtackore/core";
+import { RunAgentInputSchema } from "@0noxtackore/core/schemas";
 import { upgradeMessageContent } from "../legacy-content";
 
 const binary = { type: "binary", mimeType: "image/png", data: "image-data" };

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Compacting a window of state events that contains no SNAPSHOT.
  *
  * Collapsing `SNAPSHOT + deltas` into one snapshot is sound: the snapshot said
@@ -9,7 +9,7 @@
  * wipes whatever the consumer already held.
  */
 import { compactEvents } from "../compact";
-import { BaseEvent, EventType, StateDeltaEvent, StateSnapshotEvent } from "@ag-ui/core";
+import { BaseEvent, EventType, StateDeltaEvent, StateSnapshotEvent } from "@0noxtackore/core";
 
 const RUN_STARTED = {
   type: EventType.RUN_STARTED,

@@ -1,4 +1,4 @@
-import {
+﻿import {
   AbstractAgent,
   type RunAgentInput,
   type BaseEvent,
@@ -19,7 +19,7 @@ import {
   type RawEvent,
   PROTOCOL_VERSION,
   contentToText,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable, type Subscriber } from "rxjs";
 
 const IAM_TOKEN_URL = "https://iam.cloud.ibm.com/identity/token";
@@ -218,7 +218,7 @@ function lastUserText(messages: Message[]): string {
 
 /**
  * Translates the events of one watsonx run into AG-UI events. It keeps the
- * invariants `@ag-ui/client` checks: a text message is closed before a tool
+ * invariants `@0noxtackore/client` checks: a text message is closed before a tool
  * call opens, every tool call gets a result (otherwise a client would take it
  * for a frontend tool to execute), and the run ends with exactly one
  * RUN_FINISHED or RUN_ERROR.

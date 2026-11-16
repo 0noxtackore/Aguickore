@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Three places where the legacy bridge lost something without saying so.
  *
  * The bridge is a translation to a protocol that cannot represent everything
@@ -18,7 +18,7 @@ import {
   ToolCallArgsEvent,
   ToolCallResultEvent,
   ToolCallStartEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { LegacyRuntimeProtocolEvent } from "../types";
 
 async function bridge(events: BaseEvent[]): Promise<{

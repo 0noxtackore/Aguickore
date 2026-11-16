@@ -1,11 +1,11 @@
-import { from, lastValueFrom } from "rxjs";
+﻿import { from, lastValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
   BaseEvent,
   EventType,
   TextMessageChunkEvent,
   ToolCallChunkEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { transformChunks } from "../transform";
 import { describe, expect, it } from "vitest";
 

@@ -1,9 +1,9 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
-import { EventType } from "@ag-ui/client";
+﻿import { describe, it, expect, vi, afterEach } from "vitest";
+import { EventType } from "@0noxtackore/client";
 import { Agent } from "@mastra/core/agent";
 import { MockMemory } from "@mastra/core/memory";
 import { MastraLanguageModelV2Mock } from "@mastra/core/test-utils/llm-mock";
-import { GENERATE_A2UI_TOOL_NAME } from "@ag-ui/a2ui-toolkit";
+import { GENERATE_A2UI_TOOL_NAME } from "@0noxtackore/a2ui-toolkit";
 import { MastraAgent } from "../mastra";
 import { makeInput, collectEvents } from "./helpers";
 

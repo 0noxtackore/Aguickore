@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Agentic chat example - basic configuration.
  *
  * This example shows how to create a basic agentic chat adapter
  * using the Claude Agent SDK integration.
  */
 
-import { ClaudeAgentAdapter } from "@ag-ui/claude-agent-sdk";
+import { ClaudeAgentAdapter } from "@0noxtackore/claude-agent-sdk";
 import { DEFAULT_DISALLOWED_TOOLS } from "./constants";
 
 /**

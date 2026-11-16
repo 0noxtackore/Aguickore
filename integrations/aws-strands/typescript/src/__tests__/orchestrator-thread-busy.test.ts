@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Concurrent runs on the orchestrator path (Graph/Swarm) must be rejected
  * with RUN_ERROR/THREAD_BUSY, not leak Strands's internal "already
  * processing" error.
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import { collect, minimalRunInput } from "./helpers";

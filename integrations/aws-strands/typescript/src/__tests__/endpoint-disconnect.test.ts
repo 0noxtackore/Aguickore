@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Client disconnect while streaming must `.return()` the iterator so the
  * agent generator's `finally` runs and `_activeRunsByThread` releases the
  * slot.
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 import express from "express";
 import type { AddressInfo } from "net";
 

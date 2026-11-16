@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A2UI recovery agent (OSS-162) — DRAFT showcase, verify before wiring.
  *
  * A clone of `a2ui_dynamic_schema` that showcases the error-recovery loop. It
@@ -24,7 +24,7 @@
 import { createAgent } from "langchain";
 import { copilotkitMiddleware } from "@copilotkit/sdk-js/langgraph";
 import { ChatOpenAI } from "@langchain/openai";
-import { getA2UITools, type A2UIAttemptRecord } from "@ag-ui/langgraph";
+import { getA2UITools, type A2UIAttemptRecord } from "@0noxtackore/langgraph";
 
 const CUSTOM_CATALOG_ID = "https://a2ui.org/demos/dojo/dynamic_catalog.json";
 
@@ -67,7 +67,7 @@ const a2uiTool = getA2UITools({
 
 export const a2uiRecoveryGraph = createAgent({
   model: "openai:gpt-4o",
-  // Cast: tool typed against @ag-ui/langgraph's own @langchain/core peer.
+  // Cast: tool typed against @0noxtackore/langgraph's own @langchain/core peer.
   tools: [a2uiTool as any],
   middleware: [copilotkitMiddleware],
   systemPrompt: `You are a helpful assistant that creates rich visual UI on the fly.

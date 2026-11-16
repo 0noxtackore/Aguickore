@@ -1,5 +1,5 @@
-// @generated from https://ag-ui.com/spec/1.0/schema.json. DO NOT EDIT.
-// Regenerate with pnpm --filter @ag-ui/spec generate.
+﻿// @generated from https://ag-ui.com/spec/1.0/schema.json. DO NOT EDIT.
+// Regenerate with pnpm --filter @0noxtackore/spec generate.
 
 type Shape =
   | string

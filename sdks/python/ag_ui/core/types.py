@@ -1,10 +1,10 @@
-"""
+﻿"""
 This module contains the types for the Agent User Interaction Protocol.
 
 Since PNI-213 it is a compatibility surface: every protocol shape is
 re-exported from the generated models (``ag_ui._generated.models``, emitted
 from ``spec/1.0/schema.json`` — regenerate with
-``pnpm --filter @ag-ui/spec generate``). Only the package's own non-protocol
+``pnpm --filter @0noxtackore/spec generate``). Only the package's own non-protocol
 pieces (the reserved metadata key, historic aliases) are declared here.
 
 The legacy ``BinaryInputContent`` part left the protocol in 1.0 (see

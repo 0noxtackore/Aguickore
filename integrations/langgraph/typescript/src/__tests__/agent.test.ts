@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { LangGraphAgent, LangGraphAgentConfig } from "../agent";
 
 // ─── Shared helpers ──────────────────────────────────────────────────────────
@@ -312,7 +312,7 @@ describe("prepareStream payload partitioning", () => {
     );
     // (d) warning prefix appears
     expect(warnSpy).toHaveBeenCalledWith(
-      expect.stringContaining("[@ag-ui/langgraph]"),
+      expect.stringContaining("[@0noxtackore/langgraph]"),
     );
   });
 

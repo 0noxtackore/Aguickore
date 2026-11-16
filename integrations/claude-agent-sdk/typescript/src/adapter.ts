@@ -1,4 +1,4 @@
-import { NativeChildRecovery } from "./native-recovery";
+﻿import { NativeChildRecovery } from "./native-recovery";
 import { startLoopbackMcp } from "./loopback-mcp";
 import {
   RecoveryRun,
@@ -15,14 +15,14 @@ import {
  */
 
 import { Observable, Subscriber } from "rxjs";
-import { AbstractAgent, EventType, randomUUID } from "@ag-ui/client";
+import { AbstractAgent, EventType, randomUUID } from "@0noxtackore/client";
 import {
   PROTOCOL_VERSION,
   type BaseEvent,
   type RunAgentInput,
   type Message,
   type ToolMessage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 import { createSdkMcpServer, query } from "@anthropic-ai/claude-agent-sdk";
 import type {

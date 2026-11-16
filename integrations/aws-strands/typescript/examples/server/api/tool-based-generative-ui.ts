@@ -1,8 +1,8 @@
-/**
+﻿/**
  * Tool-based Generative UI example for AWS Strands (TypeScript).
  *
  * The `generate_haiku` tool is declared on the frontend via
- * `useFrontendTool`. The @ag-ui/aws-strands adapter auto-registers it as a
+ * `useFrontendTool`. The @0noxtackore/aws-strands adapter auto-registers it as a
  * proxy tool when
  * `RunAgentInput.tools` arrives, so the backend does not register a native
  * tool here. Strands invokes the proxy with the structured haiku args, the
@@ -11,8 +11,8 @@
  */
 
 import { Agent } from "@strands-agents/sdk";
-import { StrandsAgent } from "@ag-ui/aws-strands";
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
 import { corsPolicyFromEnv } from "../cors";
 import { createModel } from "../model-factory";
 import { demoPort, listenOrExit, runIfMain } from "../run-if-main";

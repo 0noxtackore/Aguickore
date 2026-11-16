@@ -1,4 +1,4 @@
-# @ag-ui/antigravity
+﻿# @0noxtackore/antigravity
 
 TypeScript client for [Google Antigravity](https://github.com/google-antigravity/antigravity-sdk-python)
 agents exposed over the [AG-UI protocol](https://github.com/ag-ui-protocol/ag-ui).
@@ -7,11 +7,11 @@ All translation happens on the Python side (`ag_ui_antigravity`), so this is a
 thin `HttpAgent` plus capability discovery.
 
 ```bash
-npm install @ag-ui/antigravity
+npm install @0noxtackore/antigravity
 ```
 
 ```ts
-import { AntigravityAgent } from "@ag-ui/antigravity";
+import { AntigravityAgent } from "@0noxtackore/antigravity";
 
 const agent = new AntigravityAgent({ url: "http://localhost:8009/agentic_chat" });
 

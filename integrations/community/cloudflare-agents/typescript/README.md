@@ -1,4 +1,4 @@
-# @ag-ui/cloudflare-agents
+﻿# @0noxtackore/cloudflare-agents
 
 AG-UI community integration for Cloudflare Agents. Provides a WebSocket client for connecting to deployed Cloudflare Workers and a server-side adapter for converting Vercel AI SDK v5 streams into AG-UI protocol events.
 
@@ -11,15 +11,15 @@ AG-UI community integration for Cloudflare Agents. Provides a WebSocket client f
 ## Installation
 
 ```bash
-npm install @ag-ui/cloudflare-agents
+npm install @0noxtackore/cloudflare-agents
 # or
-pnpm add @ag-ui/cloudflare-agents
+pnpm add @0noxtackore/cloudflare-agents
 ```
 
 ### Peer Dependencies
 
-- `@ag-ui/client` (>=1.0.0)
-- `@ag-ui/core` (>=1.0.0)
+- `@0noxtackore/client` (>=1.0.0)
+- `@0noxtackore/core` (>=1.0.0)
 - `ai` (^5.0.0) -- Vercel AI SDK v5+
 - `@cloudflare/workers-types` (>=4.0.0)
 
@@ -28,7 +28,7 @@ pnpm add @ag-ui/cloudflare-agents
 ### Client: Connect to a Deployed Agent
 
 ```typescript
-import { CloudflareAgentsClient } from "@ag-ui/cloudflare-agents";
+import { CloudflareAgentsClient } from "@0noxtackore/cloudflare-agents";
 
 const agent = new CloudflareAgentsClient({
   url: "wss://your-agent.workers.dev",
@@ -61,7 +61,7 @@ agent
 ### Adapter: Build an Agent with SSE Streaming
 
 ```typescript
-import { AgentsToAGUIAdapter, createSSEResponse } from "@ag-ui/cloudflare-agents";
+import { AgentsToAGUIAdapter, createSSEResponse } from "@0noxtackore/cloudflare-agents";
 import { streamText } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { from } from "rxjs";
@@ -92,7 +92,7 @@ export default {
 import { Agent } from "agents";
 import { streamText } from "ai";
 import { openai } from "@ai-sdk/openai";
-import { AgentsToAGUIAdapter } from "@ag-ui/cloudflare-agents";
+import { AgentsToAGUIAdapter } from "@0noxtackore/cloudflare-agents";
 import { z } from "zod";
 
 export class MyAgent extends Agent {

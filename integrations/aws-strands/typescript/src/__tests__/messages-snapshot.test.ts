@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MessagesSnapshotEvent emission + message_id rotation.
  *
  * Four lifecycle splice points (Python parity, PR #1638):
@@ -16,7 +16,7 @@
 import { describe, it, expect } from "vitest";
 import { ToolUseBlock, TextBlock, ToolResultBlock } from "@strands-agents/sdk";
 import type { AgentStreamEvent } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 
 import { buildSnapshotMessages } from "../agent";
 import {

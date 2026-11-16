@@ -1,5 +1,5 @@
-import { HttpAgent } from "@ag-ui/client";
-import type { AgentSubscriber, RunAgentInput } from "@ag-ui/client";
+﻿import { HttpAgent } from "@0noxtackore/client";
+import type { AgentSubscriber, RunAgentInput } from "@0noxtackore/client";
 import { reconcileLegacyResumeInterrupts } from "./interrupts";
 
 export * from './agent'
@@ -27,7 +27,7 @@ export type {
   A2UIRecoveryConfig,
   A2UIValidationCatalog,
   A2UIAttemptRecord,
-} from '@ag-ui/a2ui-toolkit'
+} from '@0noxtackore/a2ui-toolkit'
 export class LangGraphHttpAgent extends HttpAgent {
   // Mirror LangGraphAgent: keep legacy forwardedProps.command.resume working
   // when an upstream agent emits RUN_FINISHED.outcome=interrupt (which records

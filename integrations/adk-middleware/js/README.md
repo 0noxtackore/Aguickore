@@ -1,10 +1,10 @@
-# @ag-ui/adk-js
+﻿# @0noxtackore/adk-js
 
-`@ag-ui/adk-js` runs a Google ADK JavaScript `Runner` inside a Node.js AG-UI
+`@0noxtackore/adk-js` runs a Google ADK JavaScript `Runner` inside a Node.js AG-UI
 runtime. It translates raw ADK events into AG-UI messages, tools, state,
 interrupts, usage, errors, and lifecycle events.
 
-This package is separate from `@ag-ui/adk`. The older package remains the
+This package is separate from `@0noxtackore/adk`. The older package remains the
 browser-safe HTTP client for the Python `ag_ui_adk` middleware; it is not a
 JavaScript ADK runtime.
 
@@ -13,10 +13,10 @@ JavaScript ADK runtime.
 ### 1. Install the server dependencies
 
 ```bash
-pnpm add @ag-ui/adk-js @google/adk @copilotkit/runtime hono
+pnpm add @0noxtackore/adk-js @google/adk @copilotkit/runtime hono
 ```
 
-`@ag-ui/adk-js` requires `@google/adk` 2.x, `@ag-ui/client` and `@ag-ui/core`
+`@0noxtackore/adk-js` requires `@google/adk` 2.x, `@0noxtackore/client` and `@0noxtackore/core`
 1.x, and Node.js 20.19 or newer. This integration is server-only. Do not import it from browser
 components.
 
@@ -38,7 +38,7 @@ it through CopilotKit's AG-UI endpoint:
 
 ```typescript
 import { Agent, InMemorySessionService } from "@google/adk";
-import { ADKJSAgent } from "@ag-ui/adk-js";
+import { ADKJSAgent } from "@0noxtackore/adk-js";
 import {
   CopilotRuntime,
   InMemoryAgentRunner,
@@ -134,12 +134,12 @@ new ADKJSAgent({ ..., subagents: "attributed" });
 - `steps`: `STEP_STARTED` / `STEP_FINISHED` named `agent:<name>` around each
   sub-agent invocation, plus a `CUSTOM` `MultiAgentHandoff { from_nodes,
   to_nodes }` on each handoff. These predate subagent support, so they are
-  safe for clients on `@ag-ui/client` 0.0.57 or older; the Dojo pipeline page
+  safe for clients on `@0noxtackore/client` 0.0.57 or older; the Dojo pipeline page
   is driven by them.
 - `attributed`: everything in `steps` plus the AG-UI subagent protocol —
   `SUBAGENT_STARTED` / `SUBAGENT_FINISHED` / `SUBAGENT_ERROR` per invocation,
   and `subagentRunId` on every event, snapshot message, and interrupt a
-  sub-agent produces. Clients on `@ag-ui/client` 0.0.57 or older reject these
+  sub-agent produces. Clients on `@0noxtackore/client` 0.0.57 or older reject these
   event types at the wire, so keep `off` or `steps` for them.
 
 A transfer links the new invocation to the `transfer_to_agent` call through

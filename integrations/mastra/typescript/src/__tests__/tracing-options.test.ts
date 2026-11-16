@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
-import { EventType } from "@ag-ui/client";
-import type { RunFinishedEvent } from "@ag-ui/client";
+﻿import { describe, it, expect } from "vitest";
+import { EventType } from "@0noxtackore/client";
+import type { RunFinishedEvent } from "@0noxtackore/client";
 import {
   FakeLocalAgent,
   FakeRemoteAgent,

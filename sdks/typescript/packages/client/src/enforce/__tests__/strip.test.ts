@@ -1,12 +1,12 @@
-/**
+﻿/**
  * The stripper on its own, at the shapes the enforcement tests cannot reach
  * through a whole event: what it must NOT touch, what it must report, and the
  * schema constructs the generated schemas do not use yet.
  */
 import { describe, expect, it } from "vitest";
 import { z } from "zod/v4";
-import { EventType } from "@ag-ui/core";
-import { EventSchema } from "@ag-ui/core/schemas";
+import { EventType } from "@0noxtackore/core";
+import { EventSchema } from "@0noxtackore/core/schemas";
 import { stripUnknown } from "../strip";
 
 function eventSchema(type: EventType): z.ZodType {

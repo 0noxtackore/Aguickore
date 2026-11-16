@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Abnormal stop reasons on the orchestrator path (Graph/Swarm).
  *
  * The orchestrator counterpart of `stop-reasons.test.ts`, for the ONE thing the
@@ -31,8 +31,8 @@ import {
   TextBlock,
 } from "@strands-agents/sdk";
 import type { StopReason } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
-import type { BaseEvent, RunAgentInput } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
+import type { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import { collect, minimalRunInput } from "./helpers";
@@ -682,7 +682,7 @@ describe("orchestrator diagnostics", () => {
       .map((call) => String(call[0]))
       .filter((line) => line.includes("node agent_result:"));
     expect(lines).toEqual([
-      "[@ag-ui/aws-strands] node agent_result: threadId=default, " +
+      "[@0noxtackore/aws-strands] node agent_result: threadId=default, " +
         "nodeId=writer, stopReason=endTurn",
     ]);
   });

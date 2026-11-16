@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Reaching the URL fetch policy from configuration, and what that changes.
  *
  * `url-fetch-policy.test.ts` pins the policy itself: what it refuses, and what
@@ -20,7 +20,7 @@ import { describe, it, expect, afterEach, vi } from "vitest";
 import dns from "node:dns";
 import http from "node:http";
 import type { AddressInfo } from "node:net";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 
 import * as pkg from "../index";
 import {

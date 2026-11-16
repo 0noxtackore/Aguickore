@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Hook exceptions must be logged with the raw Error object so Node prints
  * the stack trace, not `String(e)` which produces "Error: boom" with no
  * context.
  */
 
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import { collect, minimalRunInput, scriptedStrandsAgent } from "./helpers";
 
 describe("hook error logging", () => {

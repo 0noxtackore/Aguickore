@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import { AgentsToAGUIAdapter } from "./adapter";
-import { EventType, PROTOCOL_VERSION } from "@ag-ui/client";
-import type { BaseEvent, Message } from "@ag-ui/client";
+import { EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
+import type { BaseEvent, Message } from "@0noxtackore/client";
 
 async function collectEvents(gen: AsyncGenerator<BaseEvent>): Promise<BaseEvent[]> {
   const events: BaseEvent[] = [];

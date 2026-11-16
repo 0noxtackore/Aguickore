@@ -1,4 +1,4 @@
-# @ag-ui/spring-ai
+﻿# @0noxtackore/spring-ai
 
 AG-UI client for agents served by the community [Spring AI](https://spring.io/projects/spring-ai)
 integration.
@@ -13,17 +13,17 @@ connects to that endpoint.
 ## Installation
 
 ```bash
-npm install @ag-ui/spring-ai
-pnpm add @ag-ui/spring-ai
-yarn add @ag-ui/spring-ai
+npm install @0noxtackore/spring-ai
+pnpm add @0noxtackore/spring-ai
+yarn add @0noxtackore/spring-ai
 ```
 
-`@ag-ui/client` and `@ag-ui/core` `>=1.0.0` are peer dependencies.
+`@0noxtackore/client` and `@0noxtackore/core` `>=1.0.0` are peer dependencies.
 
 ## Usage
 
 ```ts
-import { SpringAiAgent } from "@ag-ui/spring-ai";
+import { SpringAiAgent } from "@0noxtackore/spring-ai";
 
 // The Spring starters serve agents at POST /agent (a single Agent bean) or
 // POST /agent/{beanName} (several). Change the prefix with `ag-ui.server.path`.

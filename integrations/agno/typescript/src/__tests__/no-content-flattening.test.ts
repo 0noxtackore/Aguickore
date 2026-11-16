@@ -1,13 +1,13 @@
-/**
+﻿/**
  * PNI-220: AgnoAgent must not have a protocol version ceiling, and the
  * backward-compat middlewares must stay off its path. AgnoAgent inherits
  * maxProtocolVersion (and the deprecated maxVersion alias) from
- * @ag-ui/client, which sits above every compat threshold, so structured
+ * @0noxtackore/client, which sits above every compat threshold, so structured
  * message content has to reach the wire intact instead of being flattened
  * to a text-only string — the agentic_chat_multimodal Dojo lane depends on it.
  */
 import { describe, it, expect } from "vitest";
-import type { InputContent, RunAgentInput } from "@ag-ui/core";
+import type { InputContent, RunAgentInput } from "@0noxtackore/core";
 import { AgnoAgent } from "../index";
 
 const multimodalContent: InputContent[] = [

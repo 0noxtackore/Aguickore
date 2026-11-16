@@ -1,4 +1,4 @@
-/**
+﻿/**
  * What happens to an exception a subscriber throws.
  *
  * Development and production log subscriber errors and continue. Tests retain
@@ -9,7 +9,7 @@
 import type { AgentSubscriber } from "../subscriber";
 import { runSubscribersWithMutation } from "../subscriber";
 import { HttpAgent } from "../http";
-import type { Message, RunAgentInput, State } from "@ag-ui/core";
+import type { Message, RunAgentInput, State } from "@0noxtackore/core";
 
 const run = (subscribers: AgentSubscriber[], messages: Message[] = [], state: State = {}) => {
   const agent = new HttpAgent({ url: "http://localhost/agent", threadId: "t1" });

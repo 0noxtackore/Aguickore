@@ -1,4 +1,4 @@
-# AG-UI Protocol Dojo
+﻿# AG-UI Protocol Dojo
 
 A modern, interactive viewer for exploring CopilotKit agent demos with a clean, responsive UI and dark/light theme support.
 
@@ -96,7 +96,7 @@ To add it to the dojo, please make sure it gets added to
 
 ## Published mode (run lanes against released packages)
 
-By default every Dojo lane runs against repo source: `@ag-ui/*` resolve through
+By default every Dojo lane runs against repo source: `@0noxtackore/*` resolve through
 `workspace:*`, Python examples use path dependencies / `[tool.uv.sources]`
 overrides and their committed locks, and the AG-UI .NET sample uses
 `ProjectReference`s. Published mode instead runs a lane against the latest
@@ -107,7 +107,7 @@ works with the current protocol.
 
 | Ecosystem | What changes |
 | --- | --- |
-| npm | The protocol packages (`@ag-ui/core`, `client`, `encoder`, `proto`) and the packages the lane lists in its `npm` entry are pinned to the version npm's `latest` tag points at, in `apps/dojo` and in the lane's example package. The protocol packages are also pinned workspace-wide through the root `pnpm` overrides, so CopilotKit and every other dependency share one copy. Other integrations' packages stay on repo source (with their protocol deps switched), so one broken release fails only its own lane, not the Dojo build for all of them. Packages that are not on npm (e.g. `@ag-ui/server-starter`, `@ag-ui/langroid`) also stay on source. The `tsconfig.json` aliases that point `@ag-ui/client` at repo source are removed. |
+| npm | The protocol packages (`@0noxtackore/core`, `client`, `encoder`, `proto`) and the packages the lane lists in its `npm` entry are pinned to the version npm's `latest` tag points at, in `apps/dojo` and in the lane's example package. The protocol packages are also pinned workspace-wide through the root `pnpm` overrides, so CopilotKit and every other dependency share one copy. Other integrations' packages stay on repo source (with their protocol deps switched), so one broken release fails only its own lane, not the Dojo build for all of them. Packages that are not on npm (e.g. `@0noxtackore/server-starter`, `@0noxtackore/langroid`) also stay on source. The `tsconfig.json` aliases that point `@0noxtackore/client` at repo source are removed. |
 | PyPI | The lane's integration package (ours, e.g. `ag-ui-langgraph`, or the upstream producer's: `pydantic-ai-slim`, `ag2`, `agent-framework-ag-ui`, `agno`, `llama-index-protocols-ag-ui`) is pinned to `>=` its PyPI latest, path sources for it and `ag-ui-protocol` are dropped, example-level bounds on `ag-ui-protocol` / `ag-ui-a2ui-toolkit` are relaxed, and `uv.lock` / `poetry.lock` is deleted so the environment is resolved from scratch. |
 | NuGet | `ag-ui-dotnet`: `ProjectReference`s to `AGUI.Abstractions`, `AGUI.Server` and `AGUI.Formatting` become `PackageReference`s at their NuGet latest; `AGUI.A2UI` is not on NuGet yet and still builds from source (against the published packages). `microsoft-agent-framework-dotnet`: `Microsoft.Agents.AI.*` are bumped to their NuGet latest (and the example's old direct `OpenAI` / `System.Net.ServerSentEvents` pins are dropped so they don't downgrade what MAF needs). |
 
@@ -115,10 +115,10 @@ works with the current protocol.
 producer's own constraints allowed and marks it `(not latest)` when that is not
 the newest release, which is the signal that a producer still caps the protocol.
 Such a lane is reported as `PASS ON OLDER PROTOCOL` and counts as a failure:
-its tests passed, but only a lane whose `ag-ui-protocol` / `@ag-ui/core` /
-`@ag-ui/client` resolve to 1.0 or newer counts as having adopted the protocol.
+its tests passed, but only a lane whose `ag-ui-protocol` / `@0noxtackore/core` /
+`@0noxtackore/client` resolve to 1.0 or newer counts as having adopted the protocol.
 The `claude-agent-sdk-typescript` lane runs its adapter from source (the example
-server imports `../src`); only its `@ag-ui/*` deps are switched.
+server imports `../src`); only its `@0noxtackore/*` deps are switched.
 
 The script edits files in place, so use a throwaway checkout or a worktree
 (`.published-mode/` at the repo root holds its state and is git-ignored):

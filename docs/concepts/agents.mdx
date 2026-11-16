@@ -1,4 +1,4 @@
----
+﻿---
 title: "Agents"
 description: "Learn about agents in the Agent User Interaction Protocol"
 ---
@@ -37,7 +37,7 @@ foundation for:
 - Tool usage
 
 ```typescript
-import { AbstractAgent } from "@ag-ui/client"
+import { AbstractAgent } from "@0noxtackore/client"
 
 class MyAgent extends AbstractAgent {
   run(input: RunAgentInput): RunAgent {
@@ -70,7 +70,7 @@ management, and message history.
 A concrete implementation that connects to remote AI services via HTTP:
 
 ```typescript
-import { HttpAgent } from "@ag-ui/client"
+import { HttpAgent } from "@0noxtackore/client"
 
 const agent = new HttpAgent({
   url: "https://your-agent-endpoint.com/agent",
@@ -109,7 +109,7 @@ import {
   RunAgentInput,
   EventType,
   BaseEvent,
-} from "@ag-ui/client"
+} from "@0noxtackore/client"
 import { Observable } from "rxjs"
 
 class SimpleAgent extends AbstractAgent {

@@ -1,11 +1,11 @@
-# A2UI Runtime and Renderer Wiring
+﻿# A2UI Runtime and Renderer Wiring
 
 A2UI needs three pieces to line up: a server-side AG-UI bridge, an A2UI
 operation source, and a client renderer with the matching catalog.
 
 ## Server Bridge
 
-AG-UI now provides `@ag-ui/a2ui-middleware`. It injects schema context, can
+AG-UI now provides `@0noxtackore/a2ui-middleware`. It injects schema context, can
 inject the `render_a2ui` tool, detects `a2ui_operations` tool results, emits
 `ACTIVITY_SNAPSHOT` events with `activityType: "a2ui-surface"`, and forwards
 user actions back to the agent as private user context: `A2UI user action:`
@@ -15,7 +15,7 @@ is preserved; the internal action message is kept out of public chat.
 Apply it directly to one agent:
 
 ```ts
-import { A2UIMiddleware } from "@ag-ui/a2ui-middleware";
+import { A2UIMiddleware } from "@0noxtackore/a2ui-middleware";
 
 agent.use(
   new A2UIMiddleware({
@@ -66,7 +66,7 @@ import {
   createSurface,
   updateComponents,
   updateDataModel,
-} from "@ag-ui/a2ui-toolkit";
+} from "@0noxtackore/a2ui-toolkit";
 
 const CATALOG_ID = "https://example.com/catalogs/travel.json";
 const SURFACE_ID = "flight-search-results";
@@ -109,7 +109,7 @@ For adapters that expose an explicit tool factory, use that rather than
 hand-rolling prompts:
 
 ```ts
-import { getA2UITools } from "@ag-ui/langgraph";
+import { getA2UITools } from "@0noxtackore/langgraph";
 
 const a2uiTool = getA2UITools({
   model: subagentModel,

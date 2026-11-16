@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Chunk expansion must RESHAPE, never repair.
  *
  * There are two places it runs, and they sit on opposite sides of the
@@ -18,7 +18,7 @@
  */
 import { Observable, of } from "rxjs";
 import { HttpAgent } from "@/agent";
-import { BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 
 /** Replays a scripted stream in place of a real request. */
 function scripted(stream: Record<string, unknown>[], pinned?: string) {

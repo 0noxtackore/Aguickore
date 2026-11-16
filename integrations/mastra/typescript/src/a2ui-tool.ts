@@ -1,7 +1,7 @@
-/**
+﻿/**
  * A2UI subagent tool factory for Mastra agents.
  *
- * Thin adapter over ``@ag-ui/a2ui-toolkit`` — the heavy lifting (op builders,
+ * Thin adapter over ``@0noxtackore/a2ui-toolkit`` — the heavy lifting (op builders,
  * prompt assembly, history walkers, output envelope, and the validate→retry
  * recovery loop) lives in the toolkit so this adapter owns ONLY the Mastra
  * glue: the ``createTool`` decorator, reading the run's messages/context off the
@@ -9,8 +9,8 @@
  * subagent through an ephemeral Mastra ``Agent`` (so model resolution matches
  * the host and the package never couples to a specific ``ai`` version).
  *
- * This is the Mastra sibling of ``getA2UITools`` in ``@ag-ui/langgraph`` and
- * ``@ag-ui/aws-strands`` — same ``A2UIToolParams`` shape, same recovery loop,
+ * This is the Mastra sibling of ``getA2UITools`` in ``@0noxtackore/langgraph`` and
+ * ``@0noxtackore/aws-strands`` — same ``A2UIToolParams`` shape, same recovery loop,
  * same envelope. It is the BACKEND-OWNED path: the developer adds the returned
  * tool to their Mastra agent's tools and wires the copilotkit route (or an
  * ``A2UIMiddleware`` direct attach) with ``injectA2UITool: false`` so the
@@ -19,7 +19,7 @@
  *
  * Example:
  *
- *   import { getA2UITools } from "@ag-ui/mastra";
+ *   import { getA2UITools } from "@0noxtackore/mastra";
  *   import { openai } from "@ai-sdk/openai";
  *   import { Agent } from "@mastra/core/agent";
  *
@@ -44,7 +44,7 @@
  *     exhaustion → a tasteful failure envelope.
  *  4. SUBAGENT-BASED: a ``render_a2ui`` structured-output subagent.
  *
- * (Server-side / REMOTE Mastra agents import from ``@ag-ui/mastra/a2ui`` — a
+ * (Server-side / REMOTE Mastra agents import from ``@0noxtackore/mastra/a2ui`` — a
  * bridge-free entry that omits the AbstractAgent bridge so the Mastra CLI bundler
  * needn't resolve its transitive deps.)
  */
@@ -52,7 +52,7 @@
 import { createTool } from "@mastra/core/tools";
 import { Agent } from "@mastra/core/agent";
 import { z } from "zod";
-import type { RunAgentInput } from "@ag-ui/client";
+import type { RunAgentInput } from "@0noxtackore/client";
 import {
   GENERATE_A2UI_TOOL_NAME,
   GENERATE_A2UI_ARG_DESCRIPTIONS,
@@ -69,7 +69,7 @@ import {
   type A2UIAttemptRecord,
   type A2UIRecoveryConfig,
   type A2UIValidationCatalog,
-} from "@ag-ui/a2ui-toolkit";
+} from "@0noxtackore/a2ui-toolkit";
 
 /** Name of the render tool the subagent is forced to call. */
 const RENDER_A2UI_TOOL_NAME = RENDER_A2UI_TOOL_DEF.function.name;
@@ -98,7 +98,7 @@ interface A2UIToolExecutionContext {
   /**
    * Mastra request context. The AG-UI Mastra bridge forwards
    * ``RunAgentInput.context`` (which carries the A2UI catalog schema entry the
-   * ``@ag-ui/a2ui-middleware`` / provider injects) under the ``"ag-ui"`` key.
+   * ``@0noxtackore/a2ui-middleware`` / provider injects) under the ``"ag-ui"`` key.
    */
   requestContext?: { get?: (key: string) => unknown };
   /** Mastra ToolStream — used to push progressive render deltas (pillar 2). */
@@ -462,7 +462,7 @@ function parseEnvelope(envelope: string): unknown {
 }
 
 // ---------------------------------------------------------------------------
-// Auto-injection (pillar 1: easy devex) — mirrors @ag-ui/aws-strands
+// Auto-injection (pillar 1: easy devex) — mirrors @0noxtackore/aws-strands
 // `planA2UIInjection`. The MastraAgent bridge calls this per run: when the
 // runtime/middleware forwarded `injectA2UITool`, it builds the backend-owned
 // `generate_a2ui` tool (recovery included) so the DEVELOPER never hand-wires it.
@@ -472,7 +472,7 @@ function parseEnvelope(envelope: string): unknown {
 /** Marks a tool this adapter auto-injected, so the bridge can refresh (not
  *  "user-prevails") its own prior-turn tool on a cached/multi-turn thread. */
 export const A2UI_AUTOINJECT_MARKER = Symbol.for(
-  "@ag-ui/mastra.a2uiAutoInjected",
+  "@0noxtackore/mastra.a2uiAutoInjected",
 );
 
 /** Backend override knobs for auto-injection (mirrors the runtime `injectA2UITool`
@@ -552,7 +552,7 @@ export function planA2UIInjection<TModel = A2UISubagentModel>(
   const model = config?.model ?? args.model;
   if (model == null) {
     log.warn(
-      "[@ag-ui/mastra] A2UI tool injection requested but no model could be " +
+      "[@0noxtackore/mastra] A2UI tool injection requested but no model could be " +
         "inferred from the agent. Skipping auto-injection — pass `a2ui.model` " +
         "or wire getA2UITools() explicitly.",
     );

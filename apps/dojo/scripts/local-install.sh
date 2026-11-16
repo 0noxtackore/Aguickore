@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 set -euo pipefail
 
 # Links the dojo against locally-built A2UI and CopilotKit packages.
@@ -58,17 +58,17 @@ COPILOTKIT_LOCAL=1 A2UI_LOCAL=1 pnpm install
 echo ""
 echo "=== Building ag-ui workspace packages ==="
 cd "$AGUI_ROOT"
-pnpm --filter @ag-ui/proto generate
+pnpm --filter @0noxtackore/proto generate
 pnpm -r --filter='!demo-viewer' --filter='!client-cli-example' build
 
 # 5. Copy middleware dist to CopilotKit's pnpm store
-#    (CopilotKit has its own npm copy of @ag-ui/a2ui-middleware;
+#    (CopilotKit has its own npm copy of @0noxtackore/a2ui-middleware;
 #    the workspace link doesn't reach it, so we copy the built files)
 echo ""
 echo "=== Syncing a2ui-middleware into CopilotKit pnpm store ==="
 MIDDLEWARE_SOURCE="$AGUI_ROOT/middlewares/a2ui-middleware/dist"
 MIDDLEWARE_TARGET=$(find "$COPILOTKIT_ROOT/node_modules/.pnpm" \
-  -path "*/@ag-ui/a2ui-middleware/dist" -type d 2>/dev/null | head -1)
+  -path "*/@0noxtackore/a2ui-middleware/dist" -type d 2>/dev/null | head -1)
 
 if [ -n "$MIDDLEWARE_TARGET" ]; then
   for f in index.mjs index.js index.mjs.map index.js.map index.d.mts index.d.ts; do
@@ -83,17 +83,17 @@ else
   echo "  The middleware changes may not take effect in the CopilotKit runtime."
 fi
 
-# 5b. Sync the LOCAL @ag-ui/a2ui-toolkit next to the synced middleware (OSS-162).
-#     The recovery middleware imports @ag-ui/a2ui-toolkit, but CopilotKit's tree has
+# 5b. Sync the LOCAL @0noxtackore/a2ui-toolkit next to the synced middleware (OSS-162).
+#     The recovery middleware imports @0noxtackore/a2ui-toolkit, but CopilotKit's tree has
 #     no copy of it, so the synced middleware above would fail to resolve it
-#     ("Module not found: Can't resolve '@ag-ui/a2ui-toolkit'"). The toolkit has zero
+#     ("Module not found: Can't resolve '@0noxtackore/a2ui-toolkit'"). The toolkit has zero
 #     runtime deps, so dropping its package.json + dist into the middleware's pnpm
 #     peer-dir (the @ag-ui namespace dir) is enough for resolution.
 echo ""
 echo "=== Syncing a2ui-toolkit into CopilotKit pnpm store (OSS-162) ==="
 TOOLKIT_SOURCE="$AGUI_ROOT/sdks/typescript/packages/a2ui-toolkit"
 if [ -n "$MIDDLEWARE_TARGET" ] && [ -d "$TOOLKIT_SOURCE/dist" ]; then
-  # MIDDLEWARE_TARGET = .../node_modules/@ag-ui/a2ui-middleware/dist
+  # MIDDLEWARE_TARGET = .../node_modules/@0noxtackore/a2ui-middleware/dist
   AGUI_NS="$(dirname "$(dirname "$MIDDLEWARE_TARGET")")" # -> .../node_modules/@ag-ui
   TOOLKIT_TARGET="$AGUI_NS/a2ui-toolkit"
   rm -rf "$TOOLKIT_TARGET"
@@ -103,7 +103,7 @@ if [ -n "$MIDDLEWARE_TARGET" ] && [ -d "$TOOLKIT_SOURCE/dist" ]; then
   echo "  Placed a2ui-toolkit at $TOOLKIT_TARGET"
 else
   echo "  WARNING: could not place a2ui-toolkit (missing middleware target or toolkit dist)."
-  echo "  Build it first: pnpm --filter @ag-ui/a2ui-toolkit build"
+  echo "  Build it first: pnpm --filter @0noxtackore/a2ui-toolkit build"
 fi
 
 # 6. Install local CopilotKit Python SDK for langgraph agent

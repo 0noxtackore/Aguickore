@@ -1,4 +1,4 @@
----
+﻿---
 title: "Server"
 description: "Implement AG-UI compatible servers"
 ---
@@ -88,7 +88,7 @@ your new folder:
 
 ```json
 {
-  "name": "@ag-ui/openai-server",
+  "name": "@0noxtackore/openai-server",
   "author": "Your Name <your-email@example.com>",
   "version": "0.0.1",
 
@@ -124,7 +124,7 @@ And `apps/dojo/src/agents.ts`:
 
 ```ts
 // ...
-import { OpenAIServerAgent } from "@ag-ui/openai-server"
+import { OpenAIServerAgent } from "@0noxtackore/openai-server"
 
 export const agentsIntegrations: AgentIntegrationConfig[] = [
   // ...
@@ -142,7 +142,7 @@ export const agentsIntegrations: AgentIntegrationConfig[] = [
 
 ## Step 2 – Add package to dojo dependencies
 
-Open `apps/dojo/package.json` and add `"@ag-ui/openai-server": "workspace:*"` to
+Open `apps/dojo/package.json` and add `"@0noxtackore/openai-server": "workspace:*"` to
 the `dependencies` object:
 
 ```json
@@ -157,14 +157,14 @@ the `dependencies` object:
     "lint": "next lint"
   },
   "dependencies": {
-    "@ag-ui/agno": "workspace:*",
-    "@ag-ui/langgraph": "workspace:*",
-    "@ag-ui/mastra": "workspace:*",
-    "@ag-ui/middleware-starter": "workspace:*",
-    "@ag-ui/server-starter": "workspace:*",
-    "@ag-ui/server-starter-all-features": "workspace:*",
-    "@ag-ui/vercel-ai-sdk": "workspace:*",
-    "@ag-ui/openai-server": "workspace:*"
+    "@0noxtackore/agno": "workspace:*",
+    "@0noxtackore/langgraph": "workspace:*",
+    "@0noxtackore/mastra": "workspace:*",
+    "@0noxtackore/middleware-starter": "workspace:*",
+    "@0noxtackore/server-starter": "workspace:*",
+    "@0noxtackore/server-starter-all-features": "workspace:*",
+    "@0noxtackore/vercel-ai-sdk": "workspace:*",
+    "@0noxtackore/openai-server": "workspace:*"
   }
 }
 ```

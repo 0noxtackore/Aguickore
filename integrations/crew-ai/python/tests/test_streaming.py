@@ -1,4 +1,4 @@
-from tests.native_capture import capture_events, captured_events, close_capture
+﻿from tests.native_capture import capture_events, captured_events, close_capture
 """Streaming and event emission: ``copilotkit_stream`` reassembly, the
 per-delta chunk events, ``copilotkit_predict_state``/``copilotkit_emit_state``,
 and the endpoint listener's translation of bridged events to wire events.
@@ -2209,7 +2209,7 @@ async def test_raw_passthrough_mirrors_foreign_source_events_end_to_end():
     types = [p["type"] for p in payloads]
 
     # The invariant RAW can break: crewai raises some events BEFORE flow_started, and
-    # @ag-ui/client's verifyEvents throws "First event must be 'RUN_STARTED'".
+    # @0noxtackore/client's verifyEvents throws "First event must be 'RUN_STARTED'".
     assert types[0] == "RUN_STARTED", types
     raws = [p for p in payloads if p["type"] == "RAW"]
     assert raws, types

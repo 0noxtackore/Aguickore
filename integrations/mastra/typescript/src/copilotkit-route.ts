@@ -1,4 +1,4 @@
-import {
+﻿import {
   MASTRA_RESOURCE_ID_KEY,
   RequestContext,
 } from "@mastra/core/request-context";
@@ -125,7 +125,7 @@ export function createCopilotKitRoute<
 
       // CopilotKit forwards `authorization` and `x-*` headers onto the agent
       // (`configureAgentForRequest` → `extractForwardableHeaders`), and
-      // `@ag-ui/mastra` then passes the agent's headers as
+      // `@0noxtackore/mastra` then passes the agent's headers as
       // `modelSettings.headers` into the model call. That would forward our
       // Mastra Authorization to our AI provider and clobber the provider's real
       // Authorization header. Mastra has already authenticated this request by

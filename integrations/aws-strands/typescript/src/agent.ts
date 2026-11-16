@@ -1,4 +1,4 @@
-/**
+﻿/**
  * AWS Strands Agent adapter for AG-UI.
  *
  * Translates Strands streaming events into the AG-UI event protocol.
@@ -38,8 +38,8 @@ import {
   type ToolMessage as AguiToolMessage,
   type UserMessage as AguiUserMessage,
   PROTOCOL_VERSION,
-} from "@ag-ui/core";
-import { InterruptSchema as AguiInterruptSchema } from "@ag-ui/core/schemas";
+} from "@0noxtackore/core";
+import { InterruptSchema as AguiInterruptSchema } from "@0noxtackore/core/schemas";
 
 import {
   buildContextExtras,
@@ -119,7 +119,7 @@ import {
 // stays its established import path.
 export { _buildToolResultContent };
 
-const LOG_PREFIX = "[@ag-ui/aws-strands]";
+const LOG_PREFIX = "[@0noxtackore/aws-strands]";
 
 /**
  * Marks a RUN_FINISHED that reports success while the run's agent stays parked
@@ -3119,7 +3119,7 @@ export class StrandsAgent {
             ?.injectA2UITool ?? this.config.a2ui?.injectA2UITool;
         if (wantsInject) {
           this._log.warn(
-            "[@ag-ui/aws-strands] A2UI tool injection requested but toolRegistry.list() " +
+            "[@0noxtackore/aws-strands] A2UI tool injection requested but toolRegistry.list() " +
               "is unavailable; skipping auto-injection for this run.",
           );
         }
@@ -3150,7 +3150,7 @@ export class StrandsAgent {
       }
     } catch (e) {
       this._log.warn(
-        `[@ag-ui/aws-strands] A2UI auto-injection failed; running without A2UI for this turn: ${
+        `[@0noxtackore/aws-strands] A2UI auto-injection failed; running without A2UI for this turn: ${
           e instanceof Error ? e.message : String(e)
         }`,
       );

@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/a2a",
+﻿{
+  "name": "@0noxtackore/a2a",
   "author": "Markus Ecker <markus.ecker@gmail.com>",
   "version": "0.0.7",
   "repository": {
@@ -43,12 +43,12 @@
     "rxjs": "7.8.1"
   },
   "peerDependencies": {
-    "@ag-ui/core": ">=1.0.0",
-    "@ag-ui/client": ">=1.0.0"
+    "@0noxtackore/core": ">=1.0.0",
+    "@0noxtackore/client": ">=1.0.0"
   },
   "devDependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "@vitest/coverage-istanbul": "^4.0.18",
     "publint": "^0.3.12",

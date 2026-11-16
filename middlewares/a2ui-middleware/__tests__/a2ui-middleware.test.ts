@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll, beforeEach, afterEach, vi } from "vitest";
+﻿import { describe, it, expect, beforeAll, beforeEach, afterEach, vi } from "vitest";
 import {
   BaseEvent,
   AbstractAgent,
@@ -10,7 +10,7 @@ import {
   Tool,
   AssistantMessage,
   ToolMessage,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 
 import {
   A2UIMiddleware,

@@ -1,4 +1,4 @@
-import { Observable } from "rxjs";
+﻿import { Observable } from "rxjs";
 import { AbstractAgent } from "../agent";
 import {
   BaseEvent,
@@ -15,7 +15,7 @@ import {
   StepStartedEvent,
   StepFinishedEvent,
   AssistantMessage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 // Mock agent implementation for testing concurrent events
 class ConcurrentTestAgent extends AbstractAgent {

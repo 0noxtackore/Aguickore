@@ -1,4 +1,4 @@
-import type { Definition, ProtocolModel, TypeExpr } from "./ir";
+﻿import type { Definition, ProtocolModel, TypeExpr } from "./ir";
 
 /** Only protocol structure is traversable. Arbitrary JSON and open maps are leaves. */
 type Shape =
@@ -113,7 +113,7 @@ export function emitSerialization(model: ProtocolModel): string {
     }),
   );
   return `// @generated from ${model.schemaId}. DO NOT EDIT.
-// Regenerate with pnpm --filter @ag-ui/spec generate.
+// Regenerate with pnpm --filter @0noxtackore/spec generate.
 
 type Shape = string | { array: Shape } | {
   optional: string[];

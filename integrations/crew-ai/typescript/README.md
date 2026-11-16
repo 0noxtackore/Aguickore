@@ -1,4 +1,4 @@
-# @ag-ui/crewai
+﻿# @0noxtackore/crewai
 
 Implementation of the AG-UI protocol for CrewAI.
 
@@ -7,15 +7,15 @@ Connects CrewAI Flows and Crews to frontend applications via the AG-UI protocol.
 ## Installation
 
 ```bash
-npm install @ag-ui/crewai
-pnpm add @ag-ui/crewai
-yarn add @ag-ui/crewai
+npm install @0noxtackore/crewai
+pnpm add @0noxtackore/crewai
+yarn add @0noxtackore/crewai
 ```
 
 ## Usage
 
 ```ts
-import { CrewAIAgent } from "@ag-ui/crewai";
+import { CrewAIAgent } from "@0noxtackore/crewai";
 
 // Create an AG-UI compatible agent
 const agent = new CrewAIAgent({

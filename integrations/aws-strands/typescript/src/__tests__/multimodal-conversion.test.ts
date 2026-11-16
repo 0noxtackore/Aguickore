@@ -1,6 +1,6 @@
-import { describe, it, expect, afterEach, vi } from "vitest";
+﻿import { describe, it, expect, afterEach, vi } from "vitest";
 import dns from "node:dns";
-import type { InputContent } from "@ag-ui/core";
+import type { InputContent } from "@0noxtackore/core";
 
 import {
   convertAguiContentToStrands,

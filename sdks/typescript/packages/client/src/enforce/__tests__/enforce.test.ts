@@ -1,12 +1,12 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { of, lastValueFrom, Observable } from "rxjs";
 import { toArray, map } from "rxjs/operators";
-import { BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent } from "@/agent";
 import { Middleware } from "@/middleware";
 import { enforceEvents, enforceOutgoingInput, isRecognizedEvent } from "../enforce";
 import { stripUnknown } from "../strip";
-import { EventSchema } from "@ag-ui/core/schemas";
+import { EventSchema } from "@0noxtackore/core/schemas";
 import { ZodError } from "zod/v4";
 
 class MemoryAgent extends AbstractAgent {

@@ -1,8 +1,8 @@
-import type {
+﻿import type {
   AgentCapabilities,
   MultiAgentCapabilities,
   SubagentInfo,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { isAgentTool, isWorkflow, type Runner } from "@google/adk";
 
 import { AGUIClientToolset } from "./client-toolset";

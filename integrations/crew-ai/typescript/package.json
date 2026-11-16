@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/crewai",
+﻿{
+  "name": "@0noxtackore/crewai",
   "author": "Markus Ecker <markus.ecker@gmail.com>",
   "version": "0.0.4",
   "license": "MIT",
@@ -32,13 +32,13 @@
     "unlink:global": "pnpm unlink --global"
   },
   "peerDependencies": {
-    "@ag-ui/core": ">=0.0.37",
-    "@ag-ui/client": ">=0.0.37",
+    "@0noxtackore/core": ">=0.0.37",
+    "@0noxtackore/client": ">=0.0.37",
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "@vitest/coverage-istanbul": "^4.0.18",
     "publint": "^0.3.12",

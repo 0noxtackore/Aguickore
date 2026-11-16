@@ -1,4 +1,4 @@
-import {
+﻿import {
   Middleware,
   RunAgentInput,
   AbstractAgent,
@@ -12,7 +12,7 @@ import {
   RunStartedEvent,
   RunFinishedEvent,
   PROTOCOL_VERSION,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable, Subscription, from, switchMap } from "rxjs";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";

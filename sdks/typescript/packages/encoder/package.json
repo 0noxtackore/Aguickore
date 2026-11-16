@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/encoder",
+﻿{
+  "name": "@0noxtackore/encoder",
   "author": "Markus Ecker <markus.ecker@gmail.com>",
   "version": "1.0.4",
   "agui": {
@@ -31,8 +31,8 @@
     "unlink:global": "pnpm unlink --global"
   },
   "dependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/proto": "workspace:*"
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/proto": "workspace:*"
   },
   "peerDependencies": {
     "zod": "^3.25.18 || ^4.0.0"

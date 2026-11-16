@@ -1,4 +1,4 @@
-import test from "node:test";
+﻿import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn, spawnSync, execFileSync } from "node:child_process";
 import {
@@ -90,7 +90,7 @@ async function startServer(
 function bump(overrides: Partial<Bump> = {}): Bump {
   return {
     scope: "integration-mastra",
-    name: "@ag-ui/mastra",
+    name: "@0noxtackore/mastra",
     path: "integrations/mastra",
     file: "integrations/mastra/package.json",
     ecosystem: "typescript",
@@ -102,7 +102,7 @@ function bump(overrides: Partial<Bump> = {}): Bump {
 
 function entry(overrides: Partial<ModelEntry> = {}): ModelEntry {
   return {
-    name: "@ag-ui/mastra",
+    name: "@0noxtackore/mastra",
     notes: "- Added streaming tool results.",
     breaking: "",
     ...overrides,
@@ -411,7 +411,7 @@ test("a backtick in a backtick fence's info string does not open a fence", () =>
 test("formatCommits drops release bookkeeping commits and keeps bodies", () => {
   const raw = [
     "feat: add resume support\nCarries inbound framework context.\x1e",
-    "chore(release): bump integration-mastra (@ag-ui/mastra@0.2.0)\n\x1e",
+    "chore(release): bump integration-mastra (@0noxtackore/mastra@0.2.0)\n\x1e",
     "fix: stop dropping metadata\n\x1e",
   ].join("\n");
   const { commits, truncated } = formatCommits(raw);
@@ -442,7 +442,7 @@ test("formatCommits reports truncation, and collectHistory discloses it", () => 
     writeFileSync(join(dir, "integrations/mastra/index.ts"), "base\n");
     git("add", "-A");
     git("commit", "-qm", "feat: base");
-    git("tag", "@ag-ui/mastra@0.1.0");
+    git("tag", "@0noxtackore/mastra@0.1.0");
     for (let i = 0; i < 101; i++) {
       writeFileSync(join(dir, "integrations/mastra/index.ts"), `${i}\n`);
       git("add", "-A");
@@ -478,7 +478,7 @@ test("buildPrompt includes per-package history and demands strict JSON", () => {
     {
       bump: bump(),
       commits: ["- feat: add resume support"],
-      rangeNote: "changes since @ag-ui/mastra@0.1.0",
+      rangeNote: "changes since @0noxtackore/mastra@0.1.0",
     },
   ]);
   assert.match(prompt, /^Package: @ag-ui\/mastra$/m);
@@ -491,12 +491,12 @@ test("buildPrompt includes per-package history and demands strict JSON", () => {
 
 test("parseModelOutput accepts bare JSON and code-fenced JSON", () => {
   const payload = JSON.stringify({
-    entries: [{ name: "@ag-ui/mastra", notes: "- x", breaking: "" }],
+    entries: [{ name: "@0noxtackore/mastra", notes: "- x", breaking: "" }],
   });
   for (const text of [payload, "```json\n" + payload + "\n```"]) {
-    const entries = parseModelOutput(text, ["@ag-ui/mastra"]);
+    const entries = parseModelOutput(text, ["@0noxtackore/mastra"]);
     assert.equal(entries.length, 1);
-    assert.equal(entries[0].name, "@ag-ui/mastra");
+    assert.equal(entries[0].name, "@0noxtackore/mastra");
   }
 });
 
@@ -511,10 +511,10 @@ test("parseModelOutput tolerates a name decorated with an ecosystem suffix", () 
 
 test("parseModelOutput fails when a package is missing", () => {
   const payload = JSON.stringify({
-    entries: [{ name: "@ag-ui/mastra", notes: "- x", breaking: "" }],
+    entries: [{ name: "@0noxtackore/mastra", notes: "- x", breaking: "" }],
   });
   assert.throws(
-    () => parseModelOutput(payload, ["@ag-ui/mastra", "@ag-ui/agno"]),
+    () => parseModelOutput(payload, ["@0noxtackore/mastra", "@0noxtackore/agno"]),
     /missing entries for: @ag-ui\/agno/,
   );
 });
@@ -525,15 +525,15 @@ test("parseModelOutput rejects duplicate entries for one package", () => {
   const payload = JSON.stringify({
     entries: [
       {
-        name: "@ag-ui/mastra",
+        name: "@0noxtackore/mastra",
         notes: "- Renamed runAgent.",
         breaking: "- runAgent is now run().",
       },
-      { name: "@ag-ui/mastra", notes: "- Minor tidy.", breaking: "" },
+      { name: "@0noxtackore/mastra", notes: "- Minor tidy.", breaking: "" },
     ],
   });
   assert.throws(
-    () => parseModelOutput(payload, ["@ag-ui/mastra"]),
+    () => parseModelOutput(payload, ["@0noxtackore/mastra"]),
     /more than one entry named/,
   );
 });
@@ -556,16 +556,16 @@ test("parseModelOutput rejects an exact name duplicated by a suffixed one", () =
   // here that is the one carrying the breaking change.
   const payload = JSON.stringify({
     entries: [
-      { name: "@ag-ui/mastra", notes: "- Minor tidy.", breaking: "" },
+      { name: "@0noxtackore/mastra", notes: "- Minor tidy.", breaking: "" },
       {
-        name: "@ag-ui/mastra (typescript)",
+        name: "@0noxtackore/mastra (typescript)",
         notes: "- Renamed runAgent.",
         breaking: "- runAgent is now run().",
       },
     ],
   });
   assert.throws(
-    () => parseModelOutput(payload, ["@ag-ui/mastra"]),
+    () => parseModelOutput(payload, ["@0noxtackore/mastra"]),
     /multiple candidate entries/,
   );
 });
@@ -670,7 +670,7 @@ test("collectHistory uses the last release tag range and excludes bookkeeping", 
     writeFileSync(join(dir, "integrations/mastra/index.ts"), "1\n");
     git("add", "-A");
     git("commit", "-qm", "feat: initial mastra integration");
-    git("tag", "@ag-ui/mastra@0.1.0");
+    git("tag", "@0noxtackore/mastra@0.1.0");
     writeFileSync(join(dir, "integrations/mastra/index.ts"), "2\n");
     git("add", "-A");
     git("commit", "-qm", "fix: forward tool call results");
@@ -818,7 +818,7 @@ function setupFixtureRepo(dir: string): void {
   writeFileSync(join(dir, "integrations/mastra/index.ts"), "1\n");
   git("add", "-A");
   git("commit", "-qm", "feat: initial mastra integration");
-  git("tag", "@ag-ui/mastra@0.1.0");
+  git("tag", "@0noxtackore/mastra@0.1.0");
   writeFileSync(join(dir, "integrations/mastra/index.ts"), "2\n");
   git("add", "-A");
   git("commit", "-qm", "fix: forward tool call results");
@@ -845,7 +845,7 @@ test(
         JSON.stringify([
           bump(),
           bump({
-            name: "@ag-ui/agno",
+            name: "@0noxtackore/agno",
             path: "integrations/agno",
             oldVersion: "(new)",
             newVersion: "0.1.0",
@@ -874,8 +874,8 @@ test(
           });
           const modelJson = JSON.stringify({
             entries: [
-              { name: "@ag-ui/mastra", notes: "- Mastra note.", breaking: "" },
-              { name: "@ag-ui/agno", notes: "- Agno note.", breaking: "" },
+              { name: "@0noxtackore/mastra", notes: "- Mastra note.", breaking: "" },
+              { name: "@0noxtackore/agno", notes: "- Agno note.", breaking: "" },
             ],
           });
           res.writeHead(200, { "content-type": "application/json" });
@@ -950,7 +950,7 @@ test(
             "integration-mastra": {
               packages: [
                 {
-                  name: "@ag-ui/mastra",
+                  name: "@0noxtackore/mastra",
                   path: "integrations/mastra",
                   ecosystem: "typescript",
                 },
@@ -967,7 +967,7 @@ test(
         const modelJson = JSON.stringify({
           entries: [
             {
-              name: "@ag-ui/mastra",
+              name: "@0noxtackore/mastra",
               notes:
                 "- First bullet.\n\n## Migration\n\n- Required step.\n\n```md\n## Fenced sample stays put\n```",
               breaking: "- Callers must re-verify tool results.",
@@ -1005,7 +1005,7 @@ test(
         "python3",
         [
           join(process.cwd(), "scripts/release/extract-changelog-entry.py"),
-          "@ag-ui/mastra",
+          "@0noxtackore/mastra",
           "0.2.0",
           "--demote",
           "2",
@@ -1047,7 +1047,7 @@ test(
         const modelJson = JSON.stringify({
           entries: [
             {
-              name: "@ag-ui/mastra",
+              name: "@0noxtackore/mastra",
               notes: "- Forwarded tool call results to the client.",
               breaking: "",
             },
@@ -1329,7 +1329,7 @@ test(
         JSON.stringify([
           bump(),
           bump({
-            name: "@ag-ui/agno",
+            name: "@0noxtackore/agno",
             path: "integrations/agno",
             oldVersion: "(new)",
             newVersion: "0.1.0",
@@ -1387,7 +1387,7 @@ test(
         JSON.stringify([
           bump(),
           bump({
-            name: "@ag-ui/agno",
+            name: "@0noxtackore/agno",
             path: "integrations/agno",
             oldVersion: "(new)",
             newVersion: "0.1.0",
@@ -1474,7 +1474,7 @@ test(
         JSON.stringify([
           bump(),
           bump({
-            name: "@ag-ui/agno",
+            name: "@0noxtackore/agno",
             path: "integrations/agno",
             oldVersion: "(new)",
             newVersion: "0.1.0",
@@ -1485,8 +1485,8 @@ test(
       server = await startServer((_req, res) => {
         const modelJson = JSON.stringify({
           entries: [
-            { name: "@ag-ui/mastra", notes: "- Mastra note.", breaking: "" },
-            { name: "@ag-ui/agno", notes: "- Agno note.", breaking: "" },
+            { name: "@0noxtackore/mastra", notes: "- Mastra note.", breaking: "" },
+            { name: "@0noxtackore/agno", notes: "- Agno note.", breaking: "" },
           ],
         });
         res.writeHead(200, { "content-type": "application/json" });
@@ -1540,7 +1540,7 @@ test(
       // package with no notes and no warning anywhere.
       const valid = bump();
       const broken: Record<string, unknown> = {
-        ...bump({ name: "@ag-ui/agno", path: "integrations/agno" }),
+        ...bump({ name: "@0noxtackore/agno", path: "integrations/agno" }),
       };
       delete broken.file;
       writeFileSync(accumulated, JSON.stringify([valid, broken]));
@@ -1687,7 +1687,7 @@ test(
         JSON.stringify([
           bump(),
           bump({
-            name: "@ag-ui/agno",
+            name: "@0noxtackore/agno",
             path: "integrations/agno",
             oldVersion: "(new)",
             newVersion: "0.1.0",
@@ -1743,7 +1743,7 @@ test(
       server = await startServer((_req, res) => {
         const modelJson = JSON.stringify({
           entries: [
-            { name: "@ag-ui/mastra", notes: "- Mastra note.", breaking: "" },
+            { name: "@0noxtackore/mastra", notes: "- Mastra note.", breaking: "" },
           ],
         });
         res.writeHead(200, { "content-type": "application/json" });
@@ -1983,7 +1983,7 @@ for (const order of ["kotlin-first", "npm-first"]) {
               "integration-mastra": {
                 packages: [
                   {
-                    name: "@ag-ui/mastra",
+                    name: "@0noxtackore/mastra",
                     path: "integrations/mastra",
                     ecosystem: "typescript",
                   },
@@ -2010,7 +2010,7 @@ for (const order of ["kotlin-first", "npm-first"]) {
             prompts.push(prompt);
             const names = [
               ...kotlinRecords.map((pkg: { name: string }) => pkg.name),
-              "@ag-ui/mastra",
+              "@0noxtackore/mastra",
             ].filter((name) => prompt.includes(`Package: ${name}\n`));
             res.writeHead(200, { "content-type": "application/json" });
             res.end(

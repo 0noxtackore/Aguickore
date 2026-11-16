@@ -1,4 +1,4 @@
-/**
+﻿/**
  * RunAgentInput.context[] and .forwardedProps are exposed on hook contexts
  * as a ToolCallContextExtras convenience. The AG-UI `Context` schema is
  * `{ description: string; value: string }` — entries are keyed by
@@ -6,7 +6,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import type { RunAgentInput } from "@ag-ui/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 import { buildContextExtras } from "../config";
 import { minimalRunInput } from "./helpers";
 

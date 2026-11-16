@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/aws-strands",
+﻿{
+  "name": "@0noxtackore/aws-strands",
   "author": "AG-UI Contributors",
   "version": "1.0.2",
   "license": "MIT",
@@ -31,10 +31,10 @@
     "unlink:global": "pnpm unlink --global"
   },
   "peerDependencies": {
-    "@ag-ui/a2ui-toolkit": ">=0.0.3",
-    "@ag-ui/client": ">=1.0.0",
-    "@ag-ui/core": ">=1.0.0",
-    "@ag-ui/encoder": ">=0.0.59",
+    "@0noxtackore/a2ui-toolkit": ">=0.0.3",
+    "@0noxtackore/client": ">=1.0.0",
+    "@0noxtackore/core": ">=1.0.0",
+    "@0noxtackore/encoder": ">=0.0.59",
     "@modelcontextprotocol/sdk": ">=1.0.0",
     "@strands-agents/sdk": ">=1.1.0",
     "cors": "^2.8.5",
@@ -55,10 +55,10 @@
     "zod": "^3.25.18 || ^4.0.0"
   },
   "devDependencies": {
-    "@ag-ui/a2ui-toolkit": "workspace:*",
-    "@ag-ui/client": "workspace:*",
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/encoder": "workspace:*",
+    "@0noxtackore/a2ui-toolkit": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/encoder": "workspace:*",
     "@arethetypeswrong/cli": "^0.17.4",
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@opentelemetry/api": "^1.9.0",

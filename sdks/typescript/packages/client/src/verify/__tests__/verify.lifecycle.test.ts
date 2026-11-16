@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray, catchError } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { verifyEvents } from "../verify";
@@ -15,7 +15,7 @@ import {
   ToolCallStartEvent,
   ToolCallArgsEvent,
   ToolCallEndEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 describe("verifyEvents lifecycle", () => {
   // Test: RUN_STARTED must be the first event

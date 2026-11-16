@@ -1,4 +1,4 @@
-"""A2UI subagent tool for AWS Strands agents — Python.
+﻿"""A2UI subagent tool for AWS Strands agents — Python.
 
 Thin adapter over ``ag-ui-a2ui-toolkit`` — the recovery loop, validation, op
 builders, prompt assembly and output envelope all live in the toolkit. This
@@ -277,7 +277,7 @@ async def _stream_render_subagent(
     ``catalog_id`` (the host-resolved ``default_catalog_id``) is spliced into the
     first chunk: the model never emits ``catalogId`` (the render schema omits it
     and the host owns the catalog), so without it the progressive paint in
-    ``@ag-ui/a2ui-middleware`` falls back to the basic catalog and the renderer
+    ``@0noxtackore/a2ui-middleware`` falls back to the basic catalog and the renderer
     throws "Catalog not found". The splice affects only the EMITTED delta, never
     the captured args — the committed envelope stamps the id via
     ``build_a2ui_envelope`` so the progressive and committed surfaces agree."""

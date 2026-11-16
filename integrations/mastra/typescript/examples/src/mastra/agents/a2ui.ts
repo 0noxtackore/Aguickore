@@ -1,8 +1,8 @@
-import { Agent } from "@mastra/core/agent";
+﻿import { Agent } from "@mastra/core/agent";
 // Bridge-free subpath: the remote Mastra server only needs the A2UI tool
-// factory, not the AbstractAgent bridge (whose @ag-ui/client → uuid dep the
+// factory, not the AbstractAgent bridge (whose @0noxtackore/client → uuid dep the
 // Mastra CLI bundler can't resolve).
-import { getA2UITools, type A2UIAttemptRecord } from "@ag-ui/mastra/a2ui";
+import { getA2UITools, type A2UIAttemptRecord } from "@0noxtackore/mastra/a2ui";
 
 /**
  * A2UI demo agents for the REMOTE Mastra server (accessed via MastraClient /

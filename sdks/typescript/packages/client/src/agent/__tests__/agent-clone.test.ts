@@ -1,8 +1,8 @@
-import { AbstractAgent } from "../agent";
+﻿import { AbstractAgent } from "../agent";
 import { HttpAgent } from "../http";
-import { BaseEvent, Message, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, Message, RunAgentInput } from "@0noxtackore/core";
 import { EMPTY, Observable, Subscriber } from "rxjs";
-import { EventType, RunStartedEvent } from "@ag-ui/core";
+import { EventType, RunStartedEvent } from "@0noxtackore/core";
 
 class CloneableTestAgent extends AbstractAgent {
   constructor() {

@@ -1,9 +1,9 @@
-import {
+﻿import {
   AbstractAgent,
   EventType,
   type BaseEvent,
   type RunAgentInput,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { from, Subject } from "rxjs";
 import { describe, expect, it } from "vitest";
 import { A2UIMiddleware } from "../src";

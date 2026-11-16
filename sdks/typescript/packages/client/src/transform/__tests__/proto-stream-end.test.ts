@@ -1,4 +1,4 @@
-/**
+﻿/**
  * What the binary reader does with what is left in its buffer when the stream
  * ends, and whether it reports at all.
  *
@@ -9,13 +9,13 @@
  */
 import { describe, expect, it, vi } from "vitest";
 import { Subject } from "rxjs";
-import { EventType } from "@ag-ui/core";
-import * as proto from "@ag-ui/proto";
-import * as encoder from "@ag-ui/encoder";
+import { EventType } from "@0noxtackore/core";
+import * as proto from "@0noxtackore/proto";
+import * as encoder from "@0noxtackore/encoder";
 import { transformHttpEventStream } from "../http";
 import { HttpEvent, HttpEventType } from "../../run/http-request";
 
-vi.unmock("@ag-ui/proto");
+vi.unmock("@0noxtackore/proto");
 
 const eventEncoder = new encoder.EventEncoder({ accept: proto.AGUI_MEDIA_TYPE });
 

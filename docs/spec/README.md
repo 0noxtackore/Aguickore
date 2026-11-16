@@ -1,4 +1,4 @@
-# Serving the specification at `ag-ui.com/spec`
+﻿# Serving the specification at `ag-ui.com/spec`
 
 Every schema file names its own web address in `$id`, and a tool that meets one
 fetches that address to resolve it and any reference it makes. The address has
@@ -22,7 +22,7 @@ serves as-is, the same way it serves `/images/…`. They share a folder and must
 never share a name — `spec/harness/publishing.test.ts` fails the build if a page
 is ever named so that it would shadow a published file.
 
-`schema.json` is written by the generator (`pnpm --filter @ag-ui/spec generate`)
+`schema.json` is written by the generator (`pnpm --filter @0noxtackore/spec generate`)
 as a byte-for-byte copy of `spec/1.0/schema.json`, the file the SDKs are
 generated from. Editing it here does nothing: the spec suite's drift gate
 compares the committed bytes against a fresh generation and fails on any
@@ -73,7 +73,7 @@ the cut. The generator only publishes the draft's own `schema.json` and
    notes do, so they remain useful after the release.
 3. Add an entry under "Changes in 1.1" in `docs/spec/draft/changelog.mdx`
    (major, minor or schema), linking the pull request and the section.
-4. Run `pnpm --filter @ag-ui/spec generate`, then `pnpm --filter @ag-ui/spec test`.
+4. Run `pnpm --filter @0noxtackore/spec generate`, then `pnpm --filter @0noxtackore/spec test`.
 
 Reviewers see the whole difference with
 `git diff --no-index docs/spec/1.0 docs/spec/draft` (and the same for `spec/`).

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Shared State example for AWS Strands (TypeScript): a collaborative recipe
  * editor. `predictState` is what streams the recipe into the UI while the model
  * is still emitting the tool call; `stateFromArgs` fires once the arguments are
@@ -8,8 +8,8 @@
 
 import { Agent, tool } from "@strands-agents/sdk";
 import { z } from "zod";
-import { StrandsAgent, type StrandsAgentConfig } from "@ag-ui/aws-strands";
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
+import { StrandsAgent, type StrandsAgentConfig } from "@0noxtackore/aws-strands";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
 import { createModel } from "../model-factory";
 import { demoPort, listenOrExit, runIfMain } from "../run-if-main";
 

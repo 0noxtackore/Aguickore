@@ -1,6 +1,6 @@
-import { EventEncoder } from "../encoder";
-import { EventType, TextMessageStartEvent } from "@ag-ui/core";
-import * as proto from "@ag-ui/proto";
+﻿import { EventEncoder } from "../encoder";
+import { EventType, TextMessageStartEvent } from "@0noxtackore/core";
+import * as proto from "@0noxtackore/proto";
 
 describe("Encoder Tests", () => {
   // Create a valid TextMessageStartEvent event

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
 import { of, concat, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { transformChunks } from "../transform";
@@ -10,7 +10,7 @@ import {
   ToolCallChunkEvent,
   ReasoningMessageChunkEvent,
   RunFinishedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 describe("transformChunks debug logging", () => {
   let debugSpy: MockInstance<typeof console.debug>;

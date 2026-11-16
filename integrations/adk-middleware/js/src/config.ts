@@ -1,5 +1,5 @@
-import type { AgentConfig } from "@ag-ui/client";
-import type { AgentCapabilities, RunAgentInput } from "@ag-ui/core";
+﻿import type { AgentConfig } from "@0noxtackore/client";
+import type { AgentCapabilities, RunAgentInput } from "@0noxtackore/core";
 import type {
   BaseSessionService,
   Event,
@@ -29,7 +29,7 @@ export type ADKJSLogger = Pick<Console, "warn" | "error">;
  *   event types, so still safe for older clients.
  * - `attributed`: everything in `steps` plus the AG-UI subagent protocol:
  *   `SUBAGENT_STARTED/FINISHED/ERROR` and `subagentRunId` on every event,
- *   message, and interrupt a sub-agent produces. Needs `@ag-ui/client` > 0.0.57.
+ *   message, and interrupt a sub-agent produces. Needs `@0noxtackore/client` > 0.0.57.
  */
 export type ADKJSSubagentMode = "off" | "steps" | "attributed";
 

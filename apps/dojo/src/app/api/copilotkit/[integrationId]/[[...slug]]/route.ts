@@ -1,11 +1,11 @@
-import {
+﻿import {
   CopilotRuntime,
   InMemoryAgentRunner,
   createCopilotEndpointSingleRoute,
 } from "@copilotkit/runtime/v2";
 import { handle } from "hono/vercel";
 import type { NextRequest } from "next/server";
-import type { AbstractAgent } from "@ag-ui/client";
+import type { AbstractAgent } from "@0noxtackore/client";
 
 import {
   agentsIntegrations,
@@ -49,7 +49,7 @@ async function getHandler(integrationId: string) {
   // LangGraph + Mastra + MAF-python rely on the runtime forwarding
   // `injectA2UITool`: their demos wire NO A2UI tool and the adapter/bridge
   // auto-injects `generate_a2ui` when it sees the flag (Mastra via
-  // @ag-ui/mastra planA2UIInjection in the bridge; MAF-python via the adapter's
+  // @0noxtackore/mastra planA2UIInjection in the bridge; MAF-python via the adapter's
   // plan_a2ui_injection, server-side). Strands/ADK apply their OWN per-agent
   // middleware instead.
   const injectsA2UITool =

@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/adk",
+﻿{
+  "name": "@0noxtackore/adk",
   "version": "0.0.3",
   "description": "AG-UI integration for Google ADK (Agent Development Kit) - thin TypeScript client for ADK-backed AG-UI agents",
   "main": "./dist/index.js",
@@ -31,16 +31,16 @@
     "unlink:global": "pnpm unlink --global"
   },
   "peerDependencies": {
-    "@ag-ui/core": ">=1.0.0",
-    "@ag-ui/client": ">=1.0.0",
+    "@0noxtackore/core": ">=1.0.0",
+    "@0noxtackore/client": ">=1.0.0",
     "rxjs": "7.8.1"
   },
   "dependencies": {
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "publint": "^0.3.12",
     "@arethetypeswrong/cli": "^0.17.4",

@@ -1,6 +1,6 @@
-// The `@ag-ui/core/schemas` subpath: the zod validators, and nothing else.
+﻿// The `@0noxtackore/core/schemas` subpath: the zod validators, and nothing else.
 // Type-only consumers import the main entry; runtime validation imports this.
-// Regenerate the generated source with `pnpm --filter @ag-ui/spec generate`.
+// Regenerate the generated source with `pnpm --filter @0noxtackore/spec generate`.
 //
 // This is the ONLY entry of this package that touches zod, which is what lets
 // zod be an optional peer dependency: an application that never validates

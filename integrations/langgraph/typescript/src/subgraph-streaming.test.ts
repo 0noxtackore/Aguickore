@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for subgraph streaming: detection, ordering fix, and snapshot dispatch.
  *
  * The bug: when a subgraph (e.g. hotels_agent) commits a message mid-stream,
@@ -13,8 +13,8 @@
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import type { MockedFunction } from "vitest";
-import { EventType } from "@ag-ui/core";
-import type { MessagesSnapshotEvent, StateSnapshotEvent } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
+import type { MessagesSnapshotEvent, StateSnapshotEvent } from "@0noxtackore/core";
 import { LangGraphAgent } from "./agent";
 import type { LangGraphAgentConfig } from "./agent";
 // @langchain/langgraph-sdk is a graph persistence client, not an LLM provider;

@@ -1,6 +1,6 @@
-{
+﻿{
   "private": true,
-  "name": "@ag-ui/aws-strands-examples",
+  "name": "@0noxtackore/aws-strands-examples",
   "version": "0.0.0",
   "description": "Runnable AG-UI + Strands examples. Each file under server/api/ exports the only definition of its agent, and most also run standalone; server.ts mounts them all at once for the dojo.",
   "scripts": {
@@ -19,11 +19,11 @@
     "tool-based-generative-ui": "tsx --env-file-if-exists=.env server/api/tool-based-generative-ui.ts"
   },
   "dependencies": {
-    "@ag-ui/a2ui-toolkit": "workspace:*",
-    "@ag-ui/aws-strands": "workspace:*",
-    "@ag-ui/client": "workspace:*",
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/encoder": "workspace:*",
+    "@0noxtackore/a2ui-toolkit": "workspace:*",
+    "@0noxtackore/aws-strands": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/encoder": "workspace:*",
     "@anthropic-ai/sdk": "^0.92.0",
     "@google/genai": "^1.40.0",
     "@modelcontextprotocol/sdk": "^1.29.0",

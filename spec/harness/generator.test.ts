@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+﻿import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { buildModel } from "../generator/ir";
@@ -76,7 +76,7 @@ describe("the generator", () => {
     for (const file of files) {
       expect(
         readFileSync(file.path, "utf8"),
-        `${file.path} is stale — run: pnpm --filter @ag-ui/spec generate`,
+        `${file.path} is stale — run: pnpm --filter @0noxtackore/spec generate`,
       ).toBe(file.content);
     }
   });
@@ -93,7 +93,7 @@ describe("the generator", () => {
     // expectation.
     expect(
       readFileSync(RECONCILIATION_PATH, "utf8"),
-      "spec/RECONCILIATION.md is stale — run: pnpm --filter @ag-ui/spec reconcile",
+      "spec/RECONCILIATION.md is stale — run: pnpm --filter @0noxtackore/spec reconcile",
     ).toBe(renderReconciliation());
   });
 

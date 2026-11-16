@@ -1,14 +1,14 @@
-import { Subject, firstValueFrom, toArray } from "rxjs";
+﻿import { Subject, firstValueFrom, toArray } from "rxjs";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { BaseEvent } from "@ag-ui/core";
-import * as proto from "@ag-ui/proto";
+import { BaseEvent } from "@0noxtackore/core";
+import * as proto from "@0noxtackore/proto";
 import { transformHttpEventStream } from "../http";
 import { enforceEvents } from "../../enforce";
 import { verifyEvents } from "../../verify";
 import { HttpEvent, HttpEventType } from "../../run/http-request";
 
 // Real encoding, not a stub: the point of these tests is what the wire does.
-vi.unmock("@ag-ui/proto");
+vi.unmock("@0noxtackore/proto");
 
 /**
  * The two transports must be interchangeable.

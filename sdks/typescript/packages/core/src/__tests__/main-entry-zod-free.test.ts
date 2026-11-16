@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { build } from "esbuild";
 
 /**
@@ -6,7 +6,7 @@ import { build } from "esbuild";
  *
  * That is the whole reason zod is an OPTIONAL peer dependency: an application
  * that only wants the protocol TYPES (erased at compile time) and the
- * zod-free helpers must be able to install `@ag-ui/core` without installing
+ * zod-free helpers must be able to install `@0noxtackore/core` without installing
  * zod at all. One `export * from "./generated/schemas"` anywhere reachable
  * from src/index.ts silently breaks that, and nothing else in the suite would
  * notice — the tests all run in a workspace where zod resolves fine.

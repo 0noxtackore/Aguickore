@@ -1,6 +1,6 @@
-import { AbstractAgent } from "@/agent";
+﻿import { AbstractAgent } from "@/agent";
 import { defaultApplyEvents } from "../default";
-import { EventType, Message, StateDeltaEvent } from "@ag-ui/core";
+import { EventType, Message, StateDeltaEvent } from "@0noxtackore/core";
 import { of } from "rxjs";
 import { AgentStateMutation } from "@/agent/subscriber";
 import { describe, it, expect, vi } from "vitest";

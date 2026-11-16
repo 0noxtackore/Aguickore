@@ -1,9 +1,9 @@
-import { lastValueFrom, toArray } from "rxjs";
+﻿import { lastValueFrom, toArray } from "rxjs";
 import { mkdtemp, readFile, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import type { RunAgentInput } from "@ag-ui/client";
+import type { RunAgentInput } from "@0noxtackore/client";
 import { ManagedAgentsAgent } from "../agent";
 import { InMemorySessionStore } from "../sessions";
 import { createFakeClient } from "./fake-client";

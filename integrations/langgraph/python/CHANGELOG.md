@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## 0.0.47 — 2026-10-07
 
@@ -22,7 +22,7 @@
 
 ### Breaking changes
 
-- Adapters now take validators from `@ag-ui/core/schemas` and follow the 1.0 model part renames; file sources that are provider handles are dropped with a warning rather than forwarded.
+- Adapters now take validators from `@0noxtackore/core/schemas` and follow the 1.0 model part renames; file sources that are provider handles are dropped with a warning rather than forwarded.
 - `ag-ui-protocol>=0.1.21` is now required.
 - Whitespace-only or leading-whitespace `image_url` payloads are now rejected (tightened validation).
 - `CustomEventNames.Exit` is advisory and does not terminate the stream; verify if you relied on exit behavior.
@@ -34,13 +34,13 @@
 - Retain Gemini video compatibility by keeping video on `image_url` for that provider.
 - Surface provider failures as terminal run errors instead of silent or uncaught failures.
 - Preserve non-image media types across runtimes.
-- Adopt the 1.0 models: validators now sourced from `@ag-ui/core/schemas`, with part renames, flattened tool result content, and dropped file sources emitted with a warning.
+- Adopt the 1.0 models: validators now sourced from `@0noxtackore/core/schemas`, with part renames, flattened tool result content, and dropped file sources emitted with a warning.
 - No longer crash when `tool_call.arguments` contains malformed JSON; invalid arguments are handled gracefully.
 - Added Changelog URL to published package metadata.
 
 ### Breaking changes
 
-- Validators now come from `@ag-ui/core/schemas` and follow 1.0 part renames; re-verify message/part serialization against the new models.
+- Validators now come from `@0noxtackore/core/schemas` and follow 1.0 part renames; re-verify message/part serialization against the new models.
 - A part type dropped during conversion is named by its wire type, and file sources that cannot be sent are dropped with a warning rather than forwarded.
 - Provider failures now terminate the run as errors; verify error-handling paths.
 

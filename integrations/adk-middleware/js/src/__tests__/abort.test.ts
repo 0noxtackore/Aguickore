@@ -1,5 +1,5 @@
-import { createRequire } from "node:module";
-import { EventType } from "@ag-ui/core";
+﻿import { createRequire } from "node:module";
+import { EventType } from "@0noxtackore/core";
 import { InMemorySessionService, Runner, createEvent } from "@google/adk";
 import { describe, expect, it, vi } from "vitest";
 

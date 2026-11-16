@@ -1,11 +1,11 @@
-/**
+﻿/**
  * LlamaIndex is a simple, flexible framework for building agentic generative AI applications that allow large language models to work with your data in any format.
  * Check more about using LlamaIndex: https://docs.llamaindex.ai/
  */
 
-import { HttpAgent } from "@ag-ui/client";
-import { contentHasMedia, contentToText } from "@ag-ui/core";
-import type { BaseEvent, Message, RunAgentInput } from "@ag-ui/core";
+import { HttpAgent } from "@0noxtackore/client";
+import { contentHasMedia, contentToText } from "@0noxtackore/core";
+import type { BaseEvent, Message, RunAgentInput } from "@0noxtackore/core";
 import { Observable } from "rxjs";
 
 /**

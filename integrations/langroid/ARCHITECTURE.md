@@ -1,4 +1,4 @@
-# Langroid Integration Architecture
+﻿# Langroid Integration Architecture
 
 This document explains how the Langroid integration inside `integrations/langroid/` is implemented today. It covers the Python adapter that speaks the AG-UI protocol and the FastAPI transport helpers.
 
@@ -9,7 +9,7 @@ This document explains how the Langroid integration inside `integrations/langroi
 ```
 ┌─────────────┐      RunAgentInput        ┌──────────────────────────┐
 │  AG-UI UI   │ ────────────────► │ AG-UI HttpAgent (standard) │
-└─────────────┘   (messages,      │  e.g., @ag-ui/client       │
+└─────────────┘   (messages,      │  e.g., @0noxtackore/client       │
                    tools, state)  └──────────────────────────┬──────┘
                                                              │ HTTP(S) POST + SSE
                                                              ▼

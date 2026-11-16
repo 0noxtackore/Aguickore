@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/mcp-middleware",
+﻿{
+  "name": "@0noxtackore/mcp-middleware",
   "author": "Markus Ecker <markus.ecker@gmail.com>",
   "version": "0.0.2",
   "license": "MIT",
@@ -30,11 +30,11 @@
     "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "peerDependencies": {
-    "@ag-ui/client": ">=0.0.40",
+    "@0noxtackore/client": ">=0.0.40",
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "@vitest/coverage-istanbul": "^4.0.18",
     "publint": "^0.3.12",

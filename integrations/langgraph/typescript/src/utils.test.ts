@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for multimodal message conversion between AG-UI and LangChain formats.
  */
 
@@ -13,7 +13,7 @@ import {
   AudioPart,
   VideoPart,
   DocumentPart,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 // Imported at the TOP LEVEL, not dynamically inside the boundary tests below.
 // `@langchain/openai` pulls a large module graph, and on a cold CI runner the
 // first `await import()` of it took 7.9s — charged to the test that happened to
@@ -27,7 +27,7 @@ import {
   resolveReasoningContent,
 } from "./utils";
 
-// The legacy binary part left @ag-ui/core in 1.0; this boundary still reads
+// The legacy binary part left @0noxtackore/core in 1.0; this boundary still reads
 // it (see utils.ts), so the tests type it locally.
 //
 // Hence the `as LegacyBinaryInputContent as unknown as ContentPart` on the fixtures

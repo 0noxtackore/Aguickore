@@ -1,5 +1,5 @@
-import { firstValueFrom, from, toArray } from "rxjs";
-import { BaseEvent, EventType, Message, RunAgentInput } from "@ag-ui/core";
+﻿import { firstValueFrom, from, toArray } from "rxjs";
+import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { defaultApplyEvents, keepToolResultsWithCalls } from "../default";
 import { AbstractAgent } from "@/agent";
 

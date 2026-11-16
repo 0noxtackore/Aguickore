@@ -1,11 +1,11 @@
-# @ag-ui/watsonx
+﻿# @0noxtackore/watsonx
 
 AG-UI integration for [IBM watsonx orchestrate](https://www.ibm.com/products/watsonx-orchestrate) agents.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/watsonx
+npm install @0noxtackore/watsonx
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @ag-ui/watsonx
 `WatsonxAgent` extends `AbstractAgent` and calls the watsonx orchestrate API directly, translating OpenAI-compatible SSE deltas into AG-UI events. It handles IAM token exchange and auto-refresh.
 
 ```typescript
-import { WatsonxAgent } from "@ag-ui/watsonx";
+import { WatsonxAgent } from "@0noxtackore/watsonx";
 import {
   CopilotRuntime,
   ExperimentalEmptyAdapter,
@@ -120,7 +120,7 @@ POST https://api.{region}.watson-orchestrate.cloud.ibm.com/instances/{instanceId
 Use it when your UI needs the data behind the answer, for example to fill a table or a chart from a tool's JSON instead of parsing the agent's Markdown.
 
 ```typescript
-import { WatsonxRunsAgent } from "@ag-ui/watsonx";
+import { WatsonxRunsAgent } from "@0noxtackore/watsonx";
 
 const agent = new WatsonxRunsAgent({
   region: "eu-de",

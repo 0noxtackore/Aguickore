@@ -1,4 +1,4 @@
-import type { Tool } from "@ag-ui/core";
+﻿import type { Tool } from "@0noxtackore/core";
 import {
   BaseTool,
   BaseToolset,

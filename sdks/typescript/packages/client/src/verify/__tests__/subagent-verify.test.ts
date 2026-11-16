@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 import { from, firstValueFrom } from "rxjs";
 import { tap, toArray } from "rxjs/operators";
 import { verifyEvents } from "../verify";
@@ -15,7 +15,7 @@ import {
   ToolCallStartEvent,
   ToolCallArgsEvent,
   ToolCallEndEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 describe("verifyEvents subagent lifecycle", () => {
   // Test: A well-formed subagent lifecycle within a run resolves

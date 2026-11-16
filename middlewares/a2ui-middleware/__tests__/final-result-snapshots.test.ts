@@ -1,10 +1,10 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import {
   ActivitySnapshotEvent,
   BaseEvent,
   EventType,
   ToolCallResultEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import {
   A2UIActivityType,
   A2UIMiddleware,

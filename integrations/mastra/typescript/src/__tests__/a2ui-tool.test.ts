@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import type { A2UIAttemptRecord } from "@ag-ui/a2ui-toolkit";
+﻿import { describe, it, expect, vi, beforeEach } from "vitest";
+import type { A2UIAttemptRecord } from "@0noxtackore/a2ui-toolkit";
 
 // The render subagent runs through a Mastra `Agent`. Mock it so we control what
 // the forced `render_a2ui` call "returns" per recovery attempt: the mock's

@@ -1,11 +1,11 @@
-# @ag-ui/claude-managed-agents
+﻿# @0noxtackore/claude-managed-agents
 
 Connect an [AG-UI](https://ag-ui.com) frontend to [Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview), Anthropic's hosted agent runtime. Each AG-UI thread maps to one managed session. Each run drives one turn of that session and streams the agent's events back as AG-UI events.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/claude-managed-agents @anthropic-ai/sdk
+npm install @0noxtackore/claude-managed-agents @anthropic-ai/sdk
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install @ag-ui/claude-managed-agents @anthropic-ai/sdk
 Create a managed agent and an environment once (in the Console, or via the SDK), then wrap them:
 
 ```typescript
-import { ManagedAgentsAgent } from "@ag-ui/claude-managed-agents";
+import { ManagedAgentsAgent } from "@0noxtackore/claude-managed-agents";
 
 const agent = new ManagedAgentsAgent({
   managedAgentId: "agent_...",

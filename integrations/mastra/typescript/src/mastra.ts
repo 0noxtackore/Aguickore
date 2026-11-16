@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   ActivityDeltaEvent,
   ActivitySnapshotEvent,
   AgentCapabilities,
@@ -24,16 +24,16 @@ import type {
   ToolCallEndEvent,
   ToolCallResultEvent,
   ToolCallStartEvent,
-} from "@ag-ui/client";
-import { AbstractAgent, EventType, PROTOCOL_VERSION } from "@ag-ui/client";
+} from "@0noxtackore/client";
+import { AbstractAgent, EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
 import {
   TokenUsage,
   aggregateTokenUsage,
   tokenUsageFromAiSdkUsage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import type { Agent as LocalMastraAgent } from "@mastra/core/agent";
 import { RequestContext } from "@mastra/core/request-context";
-import { randomUUID } from "@ag-ui/client";
+import { randomUUID } from "@0noxtackore/client";
 import jsonpatch from "fast-json-patch";
 // Vendored synchronous copy of @ai-sdk/ui-utils' parsePartialJson, as Mastra did in
 // https://github.com/mastra-ai/mastra/pull/27297. Fixes
@@ -799,7 +799,7 @@ export interface MastraAgentConfig extends AgentConfig {
    * never sent back to Mastra on a later turn. A sub-agent's text follows
    * `useProcessedFinalText` like the agent's own.
    *
-   * `"attributed"` needs an AG-UI 1.0 client (`@ag-ui/client` >= 1.0,
+   * `"attributed"` needs an AG-UI 1.0 client (`@0noxtackore/client` >= 1.0,
    * CopilotKit >= 1.76). A sub-agent's `data-*` chunks, workflows used as
    * tools, and `agent.network()` are not attributed. In either visibility the
    * run's token usage includes its sub-agents' model calls.
@@ -3609,9 +3609,9 @@ export class MastraAgent extends AbstractAgent {
         // A2UI progressive streaming (pillar 2): the auto-injected / explicit
         // `generate_a2ui` tool runs its `render_a2ui` subagent via `.stream()`
         // and pushes the render call's arg deltas onto this stream as custom
-        // `data-a2ui-render` chunks (see @ag-ui/mastra a2ui-tool renderSubagent).
+        // `data-a2ui-render` chunks (see @0noxtackore/mastra a2ui-tool renderSubagent).
         // Translate them into synthetic INNER `render_a2ui` TOOL_CALL_* events so
-        // the @ag-ui/a2ui-middleware paints the "building" skeleton + fills the
+        // the @0noxtackore/a2ui-middleware paints the "building" skeleton + fills the
         // surface incrementally instead of bulk-painting the final envelope.
         case "data-a2ui-render": {
           const p = chunk.payload as {

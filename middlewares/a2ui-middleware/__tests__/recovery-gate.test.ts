@@ -1,13 +1,13 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import {
   ActivitySnapshotEvent,
   BaseEvent,
   EventType,
   RunAgentInput,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable, firstValueFrom, toArray } from "rxjs";
 import { A2UIMiddleware, A2UIActivityType } from "../src/index";
-import { AbstractAgent } from "@ag-ui/client";
+import { AbstractAgent } from "@0noxtackore/client";
 
 // Minimal mock agent that replays a fixed event sequence.
 class MockAgent extends AbstractAgent {

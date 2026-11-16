@@ -1,11 +1,11 @@
-import type { Locator, Page } from "@playwright/test";
+﻿import type { Locator, Page } from "@playwright/test";
 import { test, expect } from "../../test-isolation-helper";
 import { CopilotSelectors } from "../../utils/copilot-selectors";
 import { awaitResponseAfterAction } from "../../utils/copilot-actions";
 import { DEFAULT_WELCOME_MESSAGE } from "../../lib/constants";
 
 // Native tool approval for Mastra: `record_expense` sets `requireApproval`, so
-// Mastra pauses the call before it runs. The @ag-ui/mastra bridge surfaces the
+// Mastra pauses the call before it runs. The @0noxtackore/mastra bridge surfaces the
 // pending approval as an interrupt, CopilotKit's v2 `useInterrupt` renders
 // Approve / Reject, and the decision is handed back to Mastra's own
 // approveToolCall / declineToolCall for the original call.

@@ -1,4 +1,4 @@
-import { Observable, of, Subscriber } from "rxjs";
+﻿import { Observable, of, Subscriber } from "rxjs";
 import { AbstractAgent } from "@/agent";
 import {
   BaseEvent,
@@ -8,7 +8,7 @@ import {
   RunFinishedEvent,
   RunStartedEvent,
   TextMessageStartEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 /** Emits RUN_STARTED and stays open until detached. */
 class HangingAgent extends AbstractAgent {

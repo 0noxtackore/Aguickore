@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { beforeEach, describe, expect, it, vi } from "vitest";
 import { MASTRA_RESOURCE_ID_KEY } from "@mastra/core/request-context";
 
 /**
@@ -22,8 +22,8 @@ const mocks = vi.hoisted(() => ({
 }));
 
 // The same runtime stand-in for CopilotKit 1.x (`@copilotkit/runtime/v2`,
-// used by `@ag-ui/mastra/copilotkit`) and 2.x (`@copilotkit/runtime`, used by
-// `@ag-ui/mastra/copilotkit-2`).
+// used by `@0noxtackore/mastra/copilotkit`) and 2.x (`@copilotkit/runtime`, used by
+// `@0noxtackore/mastra/copilotkit-2`).
 const runtimeModule = vi.hoisted(() => () => ({
   CopilotRuntime: class {
     constructor(options: any) {

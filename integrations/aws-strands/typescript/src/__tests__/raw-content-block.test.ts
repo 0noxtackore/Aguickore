@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Issue #2291 regression — the RAW fallback must not re-deliver assembled
  * content blocks.
  *
@@ -28,7 +28,7 @@ import {
   ReasoningBlock,
   TextBlock,
 } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 
 import { collect, scriptedStrandsAgent, stream } from "./helpers";
 

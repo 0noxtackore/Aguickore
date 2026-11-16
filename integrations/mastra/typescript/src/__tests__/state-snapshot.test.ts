@@ -1,4 +1,4 @@
-import { EventType } from "@ag-ui/client";
+﻿import { EventType } from "@0noxtackore/client";
 import {
   FakeMemory,
   makeLocalMastraAgent,

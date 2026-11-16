@@ -1,10 +1,10 @@
-import { describe, expect, it, vi } from "vitest";
+﻿import { describe, expect, it, vi } from "vitest";
 import {
   EventType,
   PROTOCOL_VERSION,
   type BaseEvent,
   type RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { LangGraphAgent } from "../agent";
 
 /**

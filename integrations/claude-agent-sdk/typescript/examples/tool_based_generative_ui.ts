@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tool-based generative UI agent configuration.
  *
  * This module demonstrates how frontend tools (defined by the client) are dynamically
@@ -8,7 +8,7 @@
  * and Claude can discover and call them without backend implementation.
  */
 
-import { ClaudeAgentAdapter } from "@ag-ui/claude-agent-sdk";
+import { ClaudeAgentAdapter } from "@0noxtackore/claude-agent-sdk";
 import { DEFAULT_DISALLOWED_TOOLS } from "./constants";
 
 const systemPrompt = `You are a creative writing assistant that renders content using beautiful UI components.

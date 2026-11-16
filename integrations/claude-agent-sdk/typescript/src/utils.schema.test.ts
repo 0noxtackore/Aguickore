@@ -1,8 +1,8 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { createSdkMcpServer } from "@anthropic-ai/claude-agent-sdk";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
-import type { Tool } from "@ag-ui/core";
+import type { Tool } from "@0noxtackore/core";
 import { convertAguiToolToClaudeSdk } from "./utils";
 
 /** Serve one converted frontend tool over MCP, as the model would see it. */

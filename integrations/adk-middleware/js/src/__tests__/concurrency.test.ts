@@ -1,4 +1,4 @@
-import { EventType } from "@ag-ui/core";
+﻿import { EventType } from "@0noxtackore/core";
 import { InMemorySessionService, Runner } from "@google/adk";
 import { describe, expect, it } from "vitest";
 

@@ -1,6 +1,6 @@
-import stateTool from "../../../contracts/state-tool-v1.json";
-import { EventType, PROTOCOL_VERSION } from "@ag-ui/client";
-import type { BaseEvent, RunAgentInput } from "@ag-ui/client";
+﻿import stateTool from "../../../contracts/state-tool-v1.json";
+import { EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
+import type { BaseEvent, RunAgentInput } from "@0noxtackore/client";
 import { lastValueFrom, toArray } from "rxjs";
 import { describe, expect, it, vi } from "vitest";
 import { ManagedAgentsAgent } from "../agent";

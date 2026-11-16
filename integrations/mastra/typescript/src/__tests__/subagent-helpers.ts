@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+﻿import { readFileSync } from "node:fs";
 import {
   EventType,
   enforceEvents,
@@ -6,7 +6,7 @@ import {
   verifyEvents,
   type BaseEvent,
   type RunAgentInput,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { from, lastValueFrom, toArray } from "rxjs";
 import { MastraAgent, type MastraAgentConfig } from "../mastra";
 import {

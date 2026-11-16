@@ -1,4 +1,4 @@
-import {
+﻿import {
   STATE_TOOL,
   primaryThread,
   attachState,
@@ -28,8 +28,8 @@ type ToolResultBlock = NonNullable<
   BetaManagedAgentsUserCustomToolResultEventParams["content"]
 >[number];
 import type { SessionCreateParams } from "@anthropic-ai/sdk/resources/beta/sessions/sessions";
-import { AbstractAgent, EventType, PROTOCOL_VERSION } from "@ag-ui/client";
-import type { BaseEvent, Message, RunAgentInput, Tool } from "@ag-ui/client";
+import { AbstractAgent, EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
+import type { BaseEvent, Message, RunAgentInput, Tool } from "@0noxtackore/client";
 import { Observable } from "rxjs";
 import {
   BEST_EFFORT_SEND_TIMEOUT_MS,
@@ -350,11 +350,11 @@ export class ManagedAgentsAgent extends AbstractAgent {
         if (event.type === EventType.RAW) {
           rememberChildCall(
             session,
-            (event as import("@ag-ui/client").RawEvent).event,
+            (event as import("@0noxtackore/client").RawEvent).event,
           );
         }
         if (event.type === EventType.TOOL_CALL_RESULT) {
-          const id = (event as import("@ag-ui/client").ToolCallResultEvent)
+          const id = (event as import("@0noxtackore/client").ToolCallResultEvent)
             .toolCallId;
           if (session.childToolCalls?.[id]) {
             if (delivered.has(id)) return;

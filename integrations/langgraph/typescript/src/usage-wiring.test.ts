@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { EventType } from "@ag-ui/core";
+﻿import { describe, expect, it } from "vitest";
+import { EventType } from "@0noxtackore/core";
 import { LangGraphAgent } from "./agent";
 import { LangGraphEventTypes } from "./types";
 

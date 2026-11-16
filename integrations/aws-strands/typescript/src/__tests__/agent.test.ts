@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Unit tests for StrandsAgent.
  *
  * We don't spin up a full Strands Agent — instead we inject a stub that
@@ -17,8 +17,8 @@ import {
   VideoBlock,
 } from "@strands-agents/sdk";
 import type { AgentStreamEvent } from "@strands-agents/sdk";
-import { EventType, PROTOCOL_VERSION } from "@ag-ui/core";
-import type { BaseEvent } from "@ag-ui/core";
+import { EventType, PROTOCOL_VERSION } from "@0noxtackore/core";
+import type { BaseEvent } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import {
@@ -28,7 +28,7 @@ import {
   scriptedStrandsAgent,
   stream,
 } from "./helpers";
-import type { RunAgentInput } from "@ag-ui/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 
 function types(events: BaseEvent[]): string[] {
   return events.map((e) => e.type);

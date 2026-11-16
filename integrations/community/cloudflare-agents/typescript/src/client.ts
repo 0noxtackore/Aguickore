@@ -1,4 +1,4 @@
-import {
+﻿import {
   AbstractAgent,
   AgentConfig,
   randomUUID,
@@ -20,7 +20,7 @@ import {
   type StepFinishedEvent,
   type RawEvent,
   type CustomEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable, Subscriber } from "rxjs";
 
 export interface CloudflareAgentsClientConfig extends AgentConfig {

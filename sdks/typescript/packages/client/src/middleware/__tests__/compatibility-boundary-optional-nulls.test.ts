@@ -1,7 +1,7 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { from, type Observable } from "rxjs";
-import { EventType, type BaseEvent, type Message } from "@ag-ui/core";
-import { EventSchema } from "@ag-ui/core/schemas";
+import { EventType, type BaseEvent, type Message } from "@0noxtackore/core";
+import { EventSchema } from "@0noxtackore/core/schemas";
 import { AbstractAgent, HttpAgent } from "@/agent";
 
 // The tolerated optional nulls (PNI-573), end to end. The fixtures below are

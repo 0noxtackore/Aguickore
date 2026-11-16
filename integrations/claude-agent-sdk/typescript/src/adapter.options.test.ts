@@ -1,7 +1,7 @@
-import { describe, it, expect, vi } from "vitest";
+﻿import { describe, it, expect, vi } from "vitest";
 
 // Mock workspace packages that aren't built in worktree isolation
-vi.mock("@ag-ui/client", () => {
+vi.mock("@0noxtackore/client", () => {
   class AbstractAgent {
     constructor(_config?: Record<string, unknown>) {}
   }

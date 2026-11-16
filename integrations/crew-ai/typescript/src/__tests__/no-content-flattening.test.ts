@@ -1,12 +1,12 @@
-/**
+﻿/**
  * PNI-216: the 0.0.39 content-flattening compat middleware must not be
  * applied on CrewAI's path. CrewAIAgent inherits maxVersion from
- * @ag-ui/client, which sits above every backward-compat threshold, so
+ * @0noxtackore/client, which sits above every backward-compat threshold, so
  * structured message content has to reach the wire intact instead of
  * being flattened to a text-only string.
  */
 import { describe, it, expect } from "vitest";
-import type { InputContent, RunAgentInput } from "@ag-ui/core";
+import type { InputContent, RunAgentInput } from "@0noxtackore/core";
 import { CrewAIAgent } from "../index";
 
 const multimodalContent: InputContent[] = [

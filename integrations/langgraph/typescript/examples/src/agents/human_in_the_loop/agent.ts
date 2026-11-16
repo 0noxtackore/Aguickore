@@ -1,8 +1,8 @@
-/**
+﻿/**
  * A LangGraph implementation of the human-in-the-loop agent.
  *
  * AG-UI interrupt protocol note:
- *   The @ag-ui/langgraph integration now supports the AG-UI standard
+ *   The @0noxtackore/langgraph integration now supports the AG-UI standard
  *   interrupt protocol. Clients can resume execution by sending
  *   RunAgentInput.resume = [ResumeEntry({interruptId, status:"resolved",
  *   payload})] instead of the legacy forwardedProps.command.resume. When a

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Interrupt example for AWS Strands (TypeScript).
  *
  * Mirrors `python/examples/server/api/interrupt.py`.
@@ -21,8 +21,8 @@
 
 import { Agent, tool } from "@strands-agents/sdk";
 import { z } from "zod";
-import { StrandsAgent } from "@ag-ui/aws-strands";
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
 import { createModel } from "../model-factory";
 import { demoPort, listenOrExit, runIfMain } from "../run-if-main";
 

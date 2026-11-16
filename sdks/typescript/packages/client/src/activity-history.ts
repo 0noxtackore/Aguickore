@@ -1,7 +1,7 @@
-import { MessagesSnapshotEvent } from "@ag-ui/core";
+﻿import { MessagesSnapshotEvent } from "@0noxtackore/core";
 
 /** Package-owned convention. The protocol-reserved `ag-ui` namespace is untouched. */
-export const ACTIVITY_HISTORY_METADATA = "@ag-ui/client";
+export const ACTIVITY_HISTORY_METADATA = "@0noxtackore/client";
 
 /**
  * Null owns all types; arrays own their types. Absent declarations use legacy

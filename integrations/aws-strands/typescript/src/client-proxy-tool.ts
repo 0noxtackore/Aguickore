@@ -1,4 +1,4 @@
-/** Utilities for forwarding client-defined tools to the Strands agent at runtime. */
+﻿/** Utilities for forwarding client-defined tools to the Strands agent at runtime. */
 
 import {
   Agent,
@@ -9,11 +9,11 @@ import {
   type ToolSpec,
   type ToolStreamGenerator,
 } from "@strands-agents/sdk";
-import type { Tool as AguiTool } from "@ag-ui/core";
+import type { Tool as AguiTool } from "@0noxtackore/core";
 
 import { DEFAULT_LOGGER, type Logger } from "./logger";
 
-const LOG_PREFIX = "[@ag-ui/aws-strands]";
+const LOG_PREFIX = "[@0noxtackore/aws-strands]";
 
 /**
  * Result text a proxy tool returns server-side, standing in for the answer the
@@ -27,7 +27,7 @@ export const PROXY_RESULT_PLACEHOLDER = "Forwarded to client";
 export type StrandsToolRegistry = Agent["toolRegistry"];
 
 // Symbol set on proxy tools so we can distinguish them from native tools.
-const PROXY_MARKER = Symbol.for("@ag-ui/aws-strands.proxyTool");
+const PROXY_MARKER = Symbol.for("@0noxtackore/aws-strands.proxyTool");
 
 interface ProxyTool extends Tool {
   readonly [PROXY_MARKER]: true;

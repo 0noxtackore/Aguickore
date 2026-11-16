@@ -1,7 +1,7 @@
-import Anthropic from "@anthropic-ai/sdk";
+﻿import Anthropic from "@anthropic-ai/sdk";
 import { expect, it } from "vitest";
 import { lastValueFrom, toArray } from "rxjs";
-import type { RunAgentInput } from "@ag-ui/client";
+import type { RunAgentInput } from "@0noxtackore/client";
 import { ManagedAgentsAgent } from "../agent";
 import { InMemorySessionStore } from "../sessions";
 import { createFakeClient, withoutStateSnapshots } from "./fake-client";

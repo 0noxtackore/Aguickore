@@ -1,4 +1,4 @@
-# Native recovery validation — 2026-10-23
+﻿# Native recovery validation — 2026-10-23
 
 The opt-in `nativeChildRecovery` / `native_child_recovery` path uses native SDK
 files and a trusted host executor/lease. It does not require Intelligence, AG-UI
@@ -104,7 +104,7 @@ From the repository root with dependencies installed:
 
 ```sh
 NX_DAEMON=false pnpm exec nx run-many -t test,typecheck,build \
-  --projects=@ag-ui/claude-agent-sdk --excludeTaskDependencies --parallel=1
+  --projects=@0noxtackore/claude-agent-sdk --excludeTaskDependencies --parallel=1
 ```
 
 Use the Python integration environment for the subprocess harnesses:

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Build clients"
 description:
   "Showcase: build a conversational CLI agent from scratch using AG-UI and Mastra"
@@ -29,7 +29,7 @@ protocol. For production use, use a full-featured client like
 
 In this guide, we'll create a CLI client that:
 
-1. Uses the `MastraAgent` from `@ag-ui/mastra`
+1. Uses the `MastraAgent` from `@0noxtackore/mastra`
 2. Connects to OpenAI's GPT-4o model
 3. Implements a weather tool for real-world functionality
 4. Provides an interactive chat interface in the terminal
@@ -125,7 +125,7 @@ Install the core AG-UI packages and dependencies:
 
 ```bash
 # Core AG-UI packages
-pnpm add @ag-ui/client @ag-ui/core @ag-ui/mastra
+pnpm add @0noxtackore/client @0noxtackore/core @0noxtackore/mastra
 
 # Mastra ecosystem packages
 pnpm add @mastra/core @mastra/client-js @mastra/memory @mastra/libsql
@@ -140,7 +140,7 @@ Let's create a basic conversational agent. Create `src/agent.ts`:
 
 ```typescript
 import { Agent } from "@mastra/core/agent"
-import { MastraAgent } from "@ag-ui/mastra"
+import { MastraAgent } from "@0noxtackore/mastra"
 import { Memory } from "@mastra/memory"
 import { LibSQLStore } from "@mastra/libsql"
 
@@ -181,7 +181,7 @@ Now let's create the interactive chat interface. Create `src/index.ts`:
 ```typescript
 import * as readline from "readline"
 import { agent } from "./agent"
-import { randomUUID } from "@ag-ui/client"
+import { randomUUID } from "@0noxtackore/client"
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -553,7 +553,7 @@ Update `src/agent.ts` to include both tools:
 
 ```typescript
 import { Agent } from "@mastra/core/agent"
-import { MastraAgent } from "@ag-ui/mastra"
+import { MastraAgent } from "@0noxtackore/mastra"
 import { Memory } from "@mastra/memory"
 import { LibSQLStore } from "@mastra/libsql"
 import { weatherTool } from "./tools/weather.tool"

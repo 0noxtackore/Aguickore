@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+﻿import { describe, it, expect } from "vitest";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 import express from "express";
 import type { AddressInfo } from "net";
 

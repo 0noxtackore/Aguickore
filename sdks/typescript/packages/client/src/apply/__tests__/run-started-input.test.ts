@@ -1,4 +1,4 @@
-import { AbstractAgent } from "../../agent/agent";
+﻿import { AbstractAgent } from "../../agent/agent";
 import {
   BaseEvent,
   EventType,
@@ -9,7 +9,7 @@ import {
   TextMessageStartEvent,
   TextMessageContentEvent,
   TextMessageEndEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Observable, of } from "rxjs";
 import { AgentSubscriber } from "../../agent/subscriber";
 

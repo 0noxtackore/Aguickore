@@ -1,7 +1,7 @@
-import { vi } from "vitest";
-import { EventType } from "@ag-ui/client";
-import type { BaseEvent, Interrupt } from "@ag-ui/client";
-import { RunFinishedEventSchema } from "@ag-ui/core/schemas";
+﻿import { vi } from "vitest";
+import { EventType } from "@0noxtackore/client";
+import type { BaseEvent, Interrupt } from "@0noxtackore/client";
+import { RunFinishedEventSchema } from "@0noxtackore/core/schemas";
 import {
   FakeLocalAgent,
   FakeRemoteAgent,
@@ -1373,10 +1373,10 @@ describe("interrupt bridge: resume path", () => {
     expect(endAt).toBeGreaterThan(argsAt);
     expect(resultAt).toBeGreaterThan(endAt);
 
-    const start = events[startAt] as import("@ag-ui/client").ToolCallStartEvent;
+    const start = events[startAt] as import("@0noxtackore/client").ToolCallStartEvent;
     expect(start.toolCallId).toBe("tc-1");
     expect(start.toolCallName).toBe("process-expense");
-    const args = events[argsAt] as import("@ag-ui/client").ToolCallArgsEvent;
+    const args = events[argsAt] as import("@0noxtackore/client").ToolCallArgsEvent;
     expect(args.toolCallId).toBe("tc-1");
     expect(JSON.parse(args.delta)).toEqual({
       amount: 250,
@@ -1384,7 +1384,7 @@ describe("interrupt bridge: resume path", () => {
     });
     const result = events[
       resultAt
-    ] as import("@ag-ui/client").ToolCallResultEvent;
+    ] as import("@0noxtackore/client").ToolCallResultEvent;
     expect(result.toolCallId).toBe("tc-1");
   });
 
@@ -1421,7 +1421,7 @@ describe("interrupt bridge: resume path", () => {
       expect(argsEvent).toBeDefined();
       expect(
         JSON.parse(
-          (argsEvent as import("@ag-ui/client").ToolCallArgsEvent).delta,
+          (argsEvent as import("@0noxtackore/client").ToolCallArgsEvent).delta,
         ),
       ).toEqual({ amount: 250, description: "team dinner" });
       expect(

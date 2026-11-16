@@ -1,10 +1,10 @@
-/**
+﻿/**
  * Tests for clone() and abortRun() behavior.
  */
 
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { WatsonxAgent } from "../index";
-import { EventType, type BaseEvent, type RunAgentInput, type Message } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput, type Message } from "@0noxtackore/core";
 import { firstValueFrom, toArray } from "rxjs";
 
 // ---------------------------------------------------------------------------

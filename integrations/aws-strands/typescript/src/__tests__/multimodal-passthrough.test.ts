@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Multimodal `RunAgentInput.messages[*].content` must be passed to
  * `agent.stream()` as `ContentBlock[]`, not flattened to a text string.
  *
@@ -7,7 +7,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type InputContent } from "@ag-ui/core";
+import { EventType, type InputContent } from "@0noxtackore/core";
 import {
   collect,
   minimalRunInput,

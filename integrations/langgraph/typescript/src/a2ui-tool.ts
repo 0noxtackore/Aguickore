@@ -1,7 +1,7 @@
-/**
+﻿/**
  * A2UI subagent tool factory for LangGraph TS agents.
  *
- * Thin adapter over ``@ag-ui/a2ui-toolkit`` — the heavy lifting (op builders,
+ * Thin adapter over ``@0noxtackore/a2ui-toolkit`` — the heavy lifting (op builders,
  * prompt assembly, history walkers, output envelope) lives in the toolkit so
  * each new framework adapter (ADK, Mastra, Strands, …) only owns the
  * framework-specific glue: tool decorator, runtime state access, model
@@ -20,7 +20,7 @@
  *
  * Example usage in a chat node:
  *
- *   import { getA2UITools } from "@ag-ui/langgraph";
+ *   import { getA2UITools } from "@0noxtackore/langgraph";
  *
  *   const a2ui = getA2UITools({ model: new ChatOpenAI({ model: "gpt-4o" }) });
  *
@@ -30,7 +30,7 @@
  *   );
  *
  * Signature note: the factory takes a single `A2UIToolParams` object owned by
- * `@ag-ui/a2ui-toolkit`. Every framework adapter (LG, Strands, ADK, …) shares
+ * `@0noxtackore/a2ui-toolkit`. Every framework adapter (LG, Strands, ADK, …) shares
  * that exact params shape — only the body below is framework-specific. A new
  * knob added to `A2UIToolParams` reaches this adapter with no signature change.
  */
@@ -48,7 +48,7 @@ import {
   wrapErrorEnvelope,
   runA2UIGenerationWithRecovery,
   type A2UIToolParams,
-} from "@ag-ui/a2ui-toolkit";
+} from "@0noxtackore/a2ui-toolkit";
 
 /** Name of the render tool the A2UI middleware injects (and the subagent binds). */
 const RENDER_A2UI_TOOL_NAME = RENDER_A2UI_TOOL_DEF.function.name;

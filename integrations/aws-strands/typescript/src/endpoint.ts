@@ -1,4 +1,4 @@
-/** Express endpoint utilities for AWS Strands integration. */
+﻿/** Express endpoint utilities for AWS Strands integration. */
 
 import type {
   Express,
@@ -8,9 +8,9 @@ import type {
   Response,
 } from "express";
 import { STATUS_CODES } from "http";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
-import { RunAgentInputSchema } from "@ag-ui/core/schemas";
-import { EventEncoder } from "@ag-ui/encoder";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
+import { RunAgentInputSchema } from "@0noxtackore/core/schemas";
+import { EventEncoder } from "@0noxtackore/encoder";
 import type { StrandsAgent } from "./agent";
 import { resolveLogger, type Logger } from "./logger";
 

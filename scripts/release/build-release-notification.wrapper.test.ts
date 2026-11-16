@@ -1,4 +1,4 @@
-import test from "node:test";
+﻿import test from "node:test";
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { mkdtempSync, writeFileSync, readFileSync, rmSync } from "node:fs";
@@ -187,9 +187,9 @@ test('resolveJobResultSafe coerces an unknown job result to "failure" (page-on-u
 // ---- parsePackagesSafe ------------------------------------------------------
 test("parsePackagesSafe parses a valid JSON array of {name,version}", () => {
   const parsed = parsePackagesSafe(
-    '[{"name":"@ag-ui/core","version":"1.0.0","path":"x"}]',
+    '[{"name":"@0noxtackore/core","version":"1.0.0","path":"x"}]',
   );
-  assert.deepEqual(parsed, [{ name: "@ag-ui/core", version: "1.0.0" }]);
+  assert.deepEqual(parsed, [{ name: "@0noxtackore/core", version: "1.0.0" }]);
 });
 
 test("parsePackagesSafe degrades to [] on empty / malformed JSON (cosmetic, never crashes)", () => {
@@ -202,8 +202,8 @@ test("parsePackagesSafe degrades to [] on empty / malformed JSON (cosmetic, neve
 
 // ---- parseGroupsSafe --------------------------------------------------------
 test("parseGroupsSafe parses a valid dist-tag grouping object", () => {
-  assert.deepEqual(parseGroupsSafe('{"latest":["@ag-ui/core"]}'), {
-    latest: ["@ag-ui/core"],
+  assert.deepEqual(parseGroupsSafe('{"latest":["@0noxtackore/core"]}'), {
+    latest: ["@0noxtackore/core"],
   });
 });
 
@@ -224,8 +224,8 @@ test(
       MODE: "stable",
       NPM_RESULT: "success",
       BUILD_RESULT: "success",
-      TS_PACKAGES: '[{"name":"@ag-ui/core","version":"1.0.0"}]',
-      TS_GROUPS: '{"latest":["@ag-ui/core"]}',
+      TS_PACKAGES: '[{"name":"@0noxtackore/core","version":"1.0.0"}]',
+      TS_GROUPS: '{"latest":["@0noxtackore/core"]}',
     });
     assert.notEqual(status, 0);
     assert.match(stderr, /::error::/);
@@ -246,8 +246,8 @@ test(
         MODE: "stable",
         NPM_RESULT: "success",
         BUILD_RESULT: "success",
-        TS_PACKAGES: '[{"name":"@ag-ui/core","version":"1.0.0"}]',
-        TS_GROUPS: '{"latest":["@ag-ui/core"]}',
+        TS_PACKAGES: '[{"name":"@0noxtackore/core","version":"1.0.0"}]',
+        TS_GROUPS: '{"latest":["@0noxtackore/core"]}',
       });
       assert.equal(status, 0);
       const raw = readFileSync(out, "utf8");
@@ -273,8 +273,8 @@ async function postFor(
       MODE: "stable",
       NPM_RESULT: "success",
       BUILD_RESULT: "success",
-      TS_PACKAGES: '[{"name":"@ag-ui/core","version":"1.0.0"}]',
-      TS_GROUPS: '{"latest":["@ag-ui/core"]}',
+      TS_PACKAGES: '[{"name":"@0noxtackore/core","version":"1.0.0"}]',
+      TS_GROUPS: '{"latest":["@0noxtackore/core"]}',
       DRY_RUN: dryRun,
     });
     return { status, raw: readFileSync(out, "utf8") };
@@ -329,8 +329,8 @@ test(
         NPM_RESULT: "success",
         BUILD_RESULT: "success",
         NPM_INTENDED: "true",
-        TS_PACKAGES: '[{"name":"@ag-ui/core","version":"1.0.0"}]',
-        TS_GROUPS: '{"latest":["@ag-ui/core"]}',
+        TS_PACKAGES: '[{"name":"@0noxtackore/core","version":"1.0.0"}]',
+        TS_GROUPS: '{"latest":["@0noxtackore/core"]}',
         PY_INTENDED: "true",
         PY_RESULT: "failure",
         PY_BUILD_RESULT: "success",

@@ -1,4 +1,4 @@
-import { test, expect } from "../../test-isolation-helper";
+﻿import { test, expect } from "../../test-isolation-helper";
 import { A2UIPage } from "../../featurePages/A2UIPage";
 
 // A2UI error-recovery showcase — AWS Strands (Python) port.
@@ -43,7 +43,7 @@ test("[AWS Strands] A2UI recovery — exhaustion: hard-failure UI, no faulty pai
   // send would pass trivially before the agent produced anything. The
   // tasteful hard-failure message rides the same renderer path as the
   // LangGraph recovery demo (the recovery activity is produced by the shared
-  // @ag-ui/a2ui-middleware, regardless of backend framework). Target the
+  // @0noxtackore/a2ui-middleware, regardless of backend framework). Target the
   // title specifically to avoid Playwright strict-mode matching the
   // "Something went wrong…" subtitle as well.
   await expect(

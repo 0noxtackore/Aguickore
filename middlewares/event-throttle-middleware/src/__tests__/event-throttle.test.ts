@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+﻿import { describe, it, expect, vi } from "vitest";
 import { Observable, Subject, Subscription } from "rxjs";
 import {
   AbstractAgent,
@@ -6,7 +6,7 @@ import {
   BaseEvent,
   EventType,
   RunAgentInput,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { EventThrottleMiddleware } from "../index";
 
 // ---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { AIMessage, AIMessageChunk } from "@langchain/core/messages";
-import type { TokenUsage } from "@ag-ui/core";
+import type { TokenUsage } from "@0noxtackore/core";
 import { streamLangChainResponse } from "../streaming";
 
 /** Minimal stand-in for an IterableReadableStream of chunks. */

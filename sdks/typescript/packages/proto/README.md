@@ -1,19 +1,19 @@
-# @ag-ui/proto
+﻿# @0noxtackore/proto
 
 Protocol Buffer encoding/decoding for **Agent-User Interaction (AG-UI) Protocol** events.
 
-`@ag-ui/proto` provides high-performance binary serialization of AG-UI events using Protocol Buffers. It includes generated TypeScript definitions and utilities for converting between AG-UI's JSON event format and compact binary representation.
+`@0noxtackore/proto` provides high-performance binary serialization of AG-UI events using Protocol Buffers. It includes generated TypeScript definitions and utilities for converting between AG-UI's JSON event format and compact binary representation.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/proto zod
-pnpm add @ag-ui/proto zod
-yarn add @ag-ui/proto zod
+npm install @0noxtackore/proto zod
+pnpm add @0noxtackore/proto zod
+yarn add @0noxtackore/proto zod
 ```
 
 zod (3.25.18+ or 4.x) is a peer dependency. `encode` validates each event with
-the schemas on `@ag-ui/core/schemas`, using the zod your application installs
+the schemas on `@0noxtackore/core/schemas`, using the zod your application installs
 rather than a bundled copy.
 
 ## Features
@@ -27,8 +27,8 @@ rather than a bundled copy.
 ## Quick example
 
 ```ts
-import { encode, decode, AGUI_MEDIA_TYPE } from "@ag-ui/proto";
-import { EventType } from "@ag-ui/core";
+import { encode, decode, AGUI_MEDIA_TYPE } from "@0noxtackore/proto";
+import { EventType } from "@0noxtackore/core";
 
 const event = {
   type: EventType.TEXT_MESSAGE_START,

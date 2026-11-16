@@ -1,4 +1,4 @@
-import {
+﻿import {
   BaseEvent,
   Interrupt,
   Message,
@@ -34,7 +34,7 @@ import {
   SubagentStartedEvent,
   SubagentFinishedEvent,
   SubagentErrorEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { AbstractAgent } from "./agent";
 import { structuredClone_ } from "@/utils";
 

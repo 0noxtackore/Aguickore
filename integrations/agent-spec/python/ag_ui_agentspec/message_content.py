@@ -1,4 +1,4 @@
-"""Narrow AG-UI 1.0 message content and roles to what the Agent Spec runtimes take.
+﻿"""Narrow AG-UI 1.0 message content and roles to what the Agent Spec runtimes take.
 
 AG-UI 1.0 lets user and tool messages carry ``ContentPart[]`` instead of a plain
 string, and clients send ``developer``, ``activity`` and ``reasoning`` messages in
@@ -28,7 +28,7 @@ def _field(part: Any, name: str) -> Any:
 def content_to_text(content: Any, *, message_id: Optional[str] = None) -> str:
     """Flatten string-or-parts content to the text the runtimes accept.
 
-    Mirrors ``contentToText()`` from ``@ag-ui/core``: a string passes through,
+    Mirrors ``contentToText()`` from ``@0noxtackore/core``: a string passes through,
     a part list becomes its text parts concatenated. Every other part (image,
     audio, video, document, whatever its source, ``FileSource`` handles
     included) is skipped with a warning, because neither runtime can take it.

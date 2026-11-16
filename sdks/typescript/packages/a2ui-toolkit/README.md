@@ -1,4 +1,4 @@
-# @ag-ui/a2ui-toolkit
+﻿# @0noxtackore/a2ui-toolkit
 
 Framework-agnostic helpers for building A2UI subagent tools.
 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Audio on an SDK that predates `AudioBlock`.
  *
  * The peer range admits `@strands-agents/sdk` releases before 1.14.0, which
@@ -9,7 +9,7 @@
  */
 
 import { describe, it, expect, afterEach, vi } from "vitest";
-import { EventType, type BaseEvent, type InputContent } from "@ag-ui/core";
+import { EventType, type BaseEvent, type InputContent } from "@0noxtackore/core";
 
 vi.mock("@strands-agents/sdk", async (importOriginal) => {
   const actual = await importOriginal<typeof import("@strands-agents/sdk")>();

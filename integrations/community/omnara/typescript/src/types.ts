@@ -1,4 +1,4 @@
-import type { AgentConfig } from "@ag-ui/client";
+﻿import type { AgentConfig } from "@0noxtackore/client";
 
 /**
  * The end user a request acts for. Set it on the server from your own auth,

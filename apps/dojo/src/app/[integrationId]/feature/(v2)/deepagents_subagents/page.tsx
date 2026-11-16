@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import "@copilotkit/react-core/v2/styles.css";
 import "./style.css";
@@ -21,7 +21,7 @@ interface DeepagentsSubagentsProps {
   }>;
 }
 
-// `subagentRunId` is an AG-UI message field (see @ag-ui/core) stamped by the
+// `subagentRunId` is an AG-UI message field (see @0noxtackore/core) stamped by the
 // integration on messages a subagent produced. It isn't part of the CopilotKit
 // AssistantMessage type surface yet, so read it off the message via a cast.
 function getSubagentRunId(message: unknown): string | undefined {

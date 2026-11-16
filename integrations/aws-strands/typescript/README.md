@@ -1,4 +1,4 @@
-# AWS Strands Integration for AG-UI (TypeScript)
+﻿# AWS Strands Integration for AG-UI (TypeScript)
 
 This package exposes a lightweight wrapper that lets any `@strands-agents/sdk` `Agent` speak the AG-UI protocol. It mirrors the developer experience of the other integrations: give us a Strands agent instance, plug it into `StrandsAgent`, and wire it to Express via `createStrandsApp` (or `addStrandsExpressEndpoint`).
 
@@ -37,7 +37,7 @@ run script, which you can start on its own.
 ```bash
 # from the repo root
 pnpm install
-pnpm --filter @ag-ui/aws-strands build
+pnpm --filter @0noxtackore/aws-strands build
 
 cd integrations/aws-strands/typescript/examples
 pnpm dojo                       # all examples at http://localhost:8022
@@ -86,7 +86,7 @@ The integration has three main layers:
 
 - **StrandsAgent** – wraps `Agent.stream()` from `@strands-agents/sdk`. It translates Strands streaming events into AG-UI events (text chunks, tool calls, PredictState, snapshots, reasoning/thinking, multi-agent steps, etc.).
 - **Configuration** – `StrandsAgentConfig` + `ToolBehavior` + `PredictStateMapping` let you describe tool-specific quirks declaratively (skip message snapshots, emit state, stream args, etc.).
-- **Transport helpers** – `createStrandsApp` and `addStrandsExpressEndpoint` expose the agent via SSE. They are thin shells over the shared `@ag-ui/encoder` `EventEncoder`. Imported from `@ag-ui/aws-strands/server` — kept off the main entry so client-side bundlers (Next.js, Vite) don't pull Express into the browser graph.
+- **Transport helpers** – `createStrandsApp` and `addStrandsExpressEndpoint` expose the agent via SSE. They are thin shells over the shared `@0noxtackore/encoder` `EventEncoder`. Imported from `@0noxtackore/aws-strands/server` — kept off the main entry so client-side bundlers (Next.js, Vite) don't pull Express into the browser graph.
 
 See [../ARCHITECTURE.md](../ARCHITECTURE.md) for diagrams and a deeper dive.
 
@@ -96,7 +96,7 @@ By default, `generate_a2ui` forces its inner model to call `render_a2ui`.
 For a model that rejects forced tool choice, set `forceToolChoice: false`:
 
 ```typescript
-import { getA2UITools } from "@ag-ui/aws-strands";
+import { getA2UITools } from "@0noxtackore/aws-strands";
 
 // Auto-injection configuration for StrandsAgent({ config, ... }).
 const config = {
@@ -121,7 +121,7 @@ recovery loop (three total attempts by default). Exhaustion returns
 | `src/agent.ts`             | Core wrapper translating Strands streams into AG-UI events                      |
 | `src/config.ts`            | Config primitives (`StrandsAgentConfig`, `ToolBehavior`, `PredictStateMapping`) |
 | `src/template-tools.ts`    | Per-request filter over the template agent's tools                              |
-| `src/server.ts`            | `createStrandsApp` + Express transport (subpath: `@ag-ui/aws-strands/server`)   |
+| `src/server.ts`            | `createStrandsApp` + Express transport (subpath: `@0noxtackore/aws-strands/server`)   |
 | `src/endpoint.ts`          | Express endpoint helpers (used by `server.ts`)                                  |
 | `src/utils.ts`             | Multimodal content conversion and the `UrlFetchPolicy` that guards it           |
 | `src/client-proxy-tool.ts` | Dynamic frontend tool registration/deregistration                               |
@@ -152,7 +152,7 @@ You can also use the helper functions `addStrandsExpressEndpoint` and `addPing` 
 
 ```ts
 import express from "express";
-import { addStrandsExpressEndpoint, addPing } from "@ag-ui/aws-strands/server";
+import { addStrandsExpressEndpoint, addPing } from "@0noxtackore/aws-strands/server";
 
 const app = express();
 // No CORS middleware, so no page on a different origin can read this
@@ -367,7 +367,7 @@ import {
   DEFAULT_URL_FETCH_POLICY,
   StrandsAgent,
   type UrlFetchPolicy,
-} from "@ag-ui/aws-strands";
+} from "@0noxtackore/aws-strands";
 
 const policy: UrlFetchPolicy = {
   ...DEFAULT_URL_FETCH_POLICY,
@@ -700,7 +700,7 @@ interrupt rather than halting. Neither has a counterpart here; see
 > `{ status: "cancelled" }`. Any tool reading the raw value must now read it off
 > `.response`, and a cancellation off `.cancelled`. A resolved tool approval is
 > unaffected, still receiving its payload raw; a cancelled one now receives
-> `{ approved: false }` where it previously received `{ status: "cancelled" }`. It follows `@ag-ui/aws-strands` 0.2.3; the release that carries it
+> `{ approved: false }` where it previously received `{ status: "cancelled" }`. It follows `@0noxtackore/aws-strands` 0.2.3; the release that carries it
 > is versioned in a separate bump commit, and this is not patch-compatible.
 
 ## Reasoning / extended thinking
@@ -758,7 +758,7 @@ key and the entry type are exported as `CITATIONS_METADATA_KEY` and
 `AguiCitation`:
 
 ```ts
-import { CITATIONS_METADATA_KEY, type AguiCitation } from "@ag-ui/aws-strands";
+import { CITATIONS_METADATA_KEY, type AguiCitation } from "@0noxtackore/aws-strands";
 
 const cited = message.metadata?.[CITATIONS_METADATA_KEY] as
   | AguiCitation[]
@@ -912,10 +912,10 @@ the chunk is the only carrier a trailing citation has there.
 ## Install
 
 ```bash
-pnpm add @ag-ui/aws-strands @strands-agents/sdk \
-  @ag-ui/core @ag-ui/client @ag-ui/encoder @ag-ui/a2ui-toolkit
-# All four @ag-ui peers are non-optional: the package root imports `@ag-ui/client`
-# for the AWSStrandsAgent shim and `@ag-ui/a2ui-toolkit` for the A2UI tool.
+pnpm add @0noxtackore/aws-strands @strands-agents/sdk \
+  @0noxtackore/core @0noxtackore/client @0noxtackore/encoder @0noxtackore/a2ui-toolkit
+# All four @ag-ui peers are non-optional: the package root imports `@0noxtackore/client`
+# for the AWSStrandsAgent shim and `@0noxtackore/a2ui-toolkit` for the A2UI tool.
 # @strands-agents/sdk carries three non-optional peers of its own,
 # @modelcontextprotocol/sdk, @opentelemetry/api and zod, so your package manager
 # will ask for those too.
@@ -937,8 +937,8 @@ pnpm add @modelcontextprotocol/sdk
 
 ```ts
 import { Agent } from "@strands-agents/sdk";
-import { StrandsAgent } from "@ag-ui/aws-strands";
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
 
 // `model` accepts either a Bedrock model ID string or a constructed
 // Model instance (e.g. BedrockModel / AnthropicModel / OpenAIResponsesModel).
@@ -1283,8 +1283,8 @@ The agent route is unauthenticated by default. Pass `auth` to guard it, on
 either entry point:
 
 ```ts
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
-import type { StrandsAuthMiddleware } from "@ag-ui/aws-strands/server";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
+import type { StrandsAuthMiddleware } from "@0noxtackore/aws-strands/server";
 
 const requireBearer: StrandsAuthMiddleware = (req, res, next) => {
   const header = req.header("authorization") ?? "";
@@ -1305,7 +1305,7 @@ const app = await createStrandsApp(aguiAgent, {
 ```ts
 // Same option on the low-level helper, for an app you build yourself.
 import express from "express";
-import { addStrandsExpressEndpoint } from "@ag-ui/aws-strands/server";
+import { addStrandsExpressEndpoint } from "@0noxtackore/aws-strands/server";
 
 const app = express();
 addStrandsExpressEndpoint(app, aguiAgent, {
@@ -1394,7 +1394,7 @@ import {
   StrandsAgent,
   type StrandsAgentConfig,
   type ToolBehavior,
-} from "@ag-ui/aws-strands";
+} from "@0noxtackore/aws-strands";
 
 const config: StrandsAgentConfig = {
   toolBehaviors: {
@@ -1507,7 +1507,7 @@ using `createStrandsApp`:
 
 ```ts
 import express from "express";
-import { addStrandsExpressEndpoint, addPing } from "@ag-ui/aws-strands/server";
+import { addStrandsExpressEndpoint, addPing } from "@0noxtackore/aws-strands/server";
 
 const app = express();
 addStrandsExpressEndpoint(app, aguiAgent, {

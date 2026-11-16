@@ -1,163 +1,163 @@
-[
+﻿[
   {
     "directory": "integrations/a2a/typescript",
-    "names": ["@ag-ui/a2a"],
+    "names": ["@0noxtackore/a2a"],
     "license": "MIT",
     "notice": "integrations/a2a/typescript/LICENSE"
   },
   {
     "directory": "integrations/adk-middleware/js",
-    "names": ["@ag-ui/adk-js"],
+    "names": ["@0noxtackore/adk-js"],
     "license": "MIT",
     "notice": "integrations/adk-middleware/js/LICENSE"
   },
   {
     "directory": "integrations/adk-middleware/typescript",
-    "names": ["@ag-ui/adk"],
+    "names": ["@0noxtackore/adk"],
     "license": "MIT",
     "notice": "integrations/adk-middleware/typescript/LICENSE"
   },
   {
     "directory": "integrations/ag2/typescript",
-    "names": ["@ag-ui/ag2"],
+    "names": ["@0noxtackore/ag2"],
     "license": "MIT",
     "notice": "integrations/ag2/typescript/LICENSE"
   },
   {
     "directory": "integrations/agno/typescript",
-    "names": ["@ag-ui/agno"],
+    "names": ["@0noxtackore/agno"],
     "license": "MIT",
     "notice": "integrations/agno/typescript/LICENSE"
   },
   {
     "directory": "integrations/antigravity/typescript",
-    "names": ["@ag-ui/antigravity"],
+    "names": ["@0noxtackore/antigravity"],
     "license": "MIT",
     "notice": "integrations/antigravity/typescript/LICENSE"
   },
   {
     "directory": "integrations/aws-strands/typescript",
-    "names": ["@ag-ui/aws-strands"],
+    "names": ["@0noxtackore/aws-strands"],
     "license": "MIT",
     "notice": "integrations/aws-strands/typescript/LICENSE"
   },
   {
     "directory": "integrations/claude-agent-sdk/typescript",
-    "names": ["@ag-ui/claude-agent-sdk"],
+    "names": ["@0noxtackore/claude-agent-sdk"],
     "license": "MIT",
     "notice": "integrations/claude-agent-sdk/typescript/LICENSE"
   },
   {
     "directory": "integrations/claude-managed-agents/typescript",
-    "names": ["@ag-ui/claude-managed-agents"],
+    "names": ["@0noxtackore/claude-managed-agents"],
     "license": "MIT",
     "notice": "integrations/claude-managed-agents/typescript/LICENSE"
   },
   {
     "directory": "integrations/community/cloudflare-agents/typescript",
-    "names": ["@ag-ui/cloudflare-agents"],
+    "names": ["@0noxtackore/cloudflare-agents"],
     "license": "MIT",
     "notice": "integrations/community/cloudflare-agents/typescript/LICENSE"
   },
   {
     "directory": "integrations/community/omnara/typescript",
-    "names": ["@ag-ui/omnara"],
+    "names": ["@0noxtackore/omnara"],
     "license": "MIT",
     "notice": "integrations/community/omnara/typescript/LICENSE"
   },
   {
     "directory": "integrations/community/spring-ai/typescript",
-    "names": ["@ag-ui/spring-ai"],
+    "names": ["@0noxtackore/spring-ai"],
     "license": "Apache-2.0",
     "notice": "integrations/community/spring-ai/typescript/LICENSE"
   },
   {
     "directory": "integrations/crew-ai/typescript",
-    "names": ["@ag-ui/crewai"],
+    "names": ["@0noxtackore/crewai"],
     "license": "MIT",
     "notice": "integrations/crew-ai/typescript/LICENSE"
   },
   {
     "directory": "integrations/langchain/typescript",
-    "names": ["@ag-ui/langchain"],
+    "names": ["@0noxtackore/langchain"],
     "license": "MIT",
     "notice": "integrations/langchain/typescript/LICENSE"
   },
   {
     "directory": "integrations/langgraph/typescript",
-    "names": ["@ag-ui/langgraph"],
+    "names": ["@0noxtackore/langgraph"],
     "license": "MIT",
     "notice": "integrations/langgraph/typescript/LICENSE"
   },
   {
     "directory": "integrations/llama-index/typescript",
-    "names": ["@ag-ui/llamaindex"],
+    "names": ["@0noxtackore/llamaindex"],
     "license": "MIT",
     "notice": "integrations/llama-index/typescript/LICENSE"
   },
   {
     "directory": "integrations/mastra/typescript",
-    "names": ["@ag-ui/mastra"],
+    "names": ["@0noxtackore/mastra"],
     "license": "Apache-2.0",
     "notice": "integrations/mastra/typescript/LICENSE"
   },
   {
     "directory": "integrations/openai-agents/typescript",
-    "names": ["@ag-ui/openai-agents"],
+    "names": ["@0noxtackore/openai-agents"],
     "license": "MIT",
     "notice": "integrations/openai-agents/typescript/LICENSE"
   },
   {
     "directory": "integrations/pydantic-ai/typescript",
-    "names": ["@ag-ui/pydantic-ai"],
+    "names": ["@0noxtackore/pydantic-ai"],
     "license": "MIT",
     "notice": "integrations/pydantic-ai/typescript/LICENSE"
   },
   {
     "directory": "integrations/vercel-ai-sdk/typescript",
-    "names": ["@ag-ui/vercel-ai-sdk"],
+    "names": ["@0noxtackore/vercel-ai-sdk"],
     "license": "MIT",
     "notice": "integrations/vercel-ai-sdk/typescript/LICENSE"
   },
   {
     "directory": "integrations/watsonx/typescript",
-    "names": ["@ag-ui/watsonx"],
+    "names": ["@0noxtackore/watsonx"],
     "license": "MIT",
     "notice": "integrations/watsonx/typescript/LICENSE"
   },
   {
     "directory": "middlewares/a2a-middleware",
-    "names": ["@ag-ui/a2a-middleware"],
+    "names": ["@0noxtackore/a2a-middleware"],
     "license": "MIT",
     "notice": "middlewares/a2a-middleware/LICENSE"
   },
   {
     "directory": "middlewares/a2ui-middleware",
-    "names": ["@ag-ui/a2ui-middleware"],
+    "names": ["@0noxtackore/a2ui-middleware"],
     "license": "MIT",
     "notice": "middlewares/a2ui-middleware/LICENSE"
   },
   {
     "directory": "middlewares/event-throttle-middleware",
-    "names": ["@ag-ui/event-throttle-middleware"],
+    "names": ["@0noxtackore/event-throttle-middleware"],
     "license": "MIT",
     "notice": "middlewares/event-throttle-middleware/LICENSE"
   },
   {
     "directory": "middlewares/mcp-apps-middleware",
-    "names": ["@ag-ui/mcp-apps-middleware"],
+    "names": ["@0noxtackore/mcp-apps-middleware"],
     "license": "MIT",
     "notice": "middlewares/mcp-apps-middleware/LICENSE"
   },
   {
     "directory": "middlewares/mcp-middleware",
-    "names": ["@ag-ui/mcp-middleware"],
+    "names": ["@0noxtackore/mcp-middleware"],
     "license": "MIT",
     "notice": "middlewares/mcp-middleware/LICENSE"
   },
   {
     "directory": "sdks/typescript/packages/a2ui-toolkit",
-    "names": ["@ag-ui/a2ui-toolkit"],
+    "names": ["@0noxtackore/a2ui-toolkit"],
     "license": "MIT",
     "notice": "sdks/typescript/packages/a2ui-toolkit/LICENSE"
   },
@@ -169,25 +169,25 @@
   },
   {
     "directory": "sdks/typescript/packages/client",
-    "names": ["@ag-ui/client"],
+    "names": ["@0noxtackore/client"],
     "license": "MIT",
     "notice": "sdks/typescript/packages/client/LICENSE"
   },
   {
     "directory": "sdks/typescript/packages/core",
-    "names": ["@ag-ui/core"],
+    "names": ["@0noxtackore/core"],
     "license": "MIT",
     "notice": "sdks/typescript/packages/core/LICENSE"
   },
   {
     "directory": "sdks/typescript/packages/encoder",
-    "names": ["@ag-ui/encoder"],
+    "names": ["@0noxtackore/encoder"],
     "license": "MIT",
     "notice": "sdks/typescript/packages/encoder/LICENSE"
   },
   {
     "directory": "sdks/typescript/packages/proto",
-    "names": ["@ag-ui/proto"],
+    "names": ["@0noxtackore/proto"],
     "license": "MIT",
     "notice": "sdks/typescript/packages/proto/LICENSE"
   }

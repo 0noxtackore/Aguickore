@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import type { Tool as AguiTool } from "@ag-ui/core";
+﻿import { describe, it, expect } from "vitest";
+import type { Tool as AguiTool } from "@0noxtackore/core";
 
 import {
   createProxyTool,

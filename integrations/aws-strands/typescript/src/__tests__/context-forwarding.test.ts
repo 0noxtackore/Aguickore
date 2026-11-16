@@ -1,4 +1,4 @@
-/**
+﻿/**
  * `RunAgentInput.context` must reach the model for one call and nowhere else.
  *
  * The block the application's context renders to is shown to the model from a
@@ -24,13 +24,13 @@ import {
   SessionManager,
   tool,
 } from "@strands-agents/sdk";
-import { A2UI_SCHEMA_CONTEXT_DESCRIPTION } from "@ag-ui/a2ui-toolkit";
+import { A2UI_SCHEMA_CONTEXT_DESCRIPTION } from "@0noxtackore/a2ui-toolkit";
 import {
   EventType,
   type InputContent,
   type Message as AguiMessage,
   type RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { z } from "zod";
 
 import { StrandsAgent } from "../agent";

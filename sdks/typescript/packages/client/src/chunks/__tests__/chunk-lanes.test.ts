@@ -1,8 +1,8 @@
-import { from, firstValueFrom } from "rxjs";
+﻿import { from, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { transformChunks } from "../transform";
 import { verifyEvents } from "../../verify/verify";
-import { BaseEvent, EventType } from "@ag-ui/core";
+import { BaseEvent, EventType } from "@0noxtackore/core";
 import { describe, expect, it } from "vitest";
 
 /**

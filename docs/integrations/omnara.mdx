@@ -1,9 +1,9 @@
----
+﻿---
 title: Omnara quickstart
 description: Chat with a durable, hosted Omnara agent from any AG-UI frontend.
 ---
 
-`@ag-ui/omnara` connects an AG-UI frontend to [Omnara](https://omnara.com)
+`@0noxtackore/omnara` connects an AG-UI frontend to [Omnara](https://omnara.com)
 agents. Each chat thread gets its own Omnara agent per user, launched from an
 Omnara profile or an inline definition, and that agent keeps running in Omnara
 between requests.
@@ -11,7 +11,7 @@ between requests.
 ## Prerequisites
 
 - Node.js 22.12 or newer
-- `@ag-ui/client` and `@ag-ui/core` 1.x (use a CopilotKit release that
+- `@0noxtackore/client` and `@0noxtackore/core` 1.x (use a CopilotKit release that
   resolves the 1.x line)
 - An Omnara project, an [org API key](https://docs.omnara.com/api/authentication#org-api-keys-for-services)
   with the developer role on it, and a [profile](https://docs.omnara.com/agents/configuration)
@@ -22,7 +22,7 @@ between requests.
 Install the server dependencies:
 
 ```bash
-npm install @ag-ui/omnara @copilotkit/runtime hono
+npm install @0noxtackore/omnara @copilotkit/runtime hono
 ```
 
 Set your key and project in the environment the server reads:
@@ -37,7 +37,7 @@ Create `app/api/copilotkit/route.ts`. The agent is built per request, so its
 `user` comes from your own auth:
 
 ```typescript
-import { OmnaraAgent } from "@ag-ui/omnara"
+import { OmnaraAgent } from "@0noxtackore/omnara"
 import {
   CopilotRuntime,
   InMemoryAgentRunner,
@@ -111,7 +111,7 @@ belongs to one user: to continue a chat as someone else, start a new thread.
 - App context, and image and document attachments
 - Stable `RUN_ERROR` codes; upstream error text goes to `onError`, not the client
 
-The integration is server-only: never import `@ag-ui/omnara` from a browser
+The integration is server-only: never import `@0noxtackore/omnara` from a browser
 component. See the
 [live Dojo examples](https://dojo.ag-ui.com/omnara/feature/tool_based_generative_ui) and the
 [package README](https://github.com/ag-ui-protocol/ag-ui/tree/main/integrations/community/omnara/typescript)

@@ -1,4 +1,4 @@
-import path from "path";
+﻿import path from "path";
 import { defineConfig } from "vitest/config";
 
 /**
@@ -34,7 +34,7 @@ export default defineConfig({
       // the parent package's `test:exports`.
       //
       // Anchored rather than bare strings: Vite matches a string alias as a
-      // prefix, so a bare `@ag-ui/aws-strands` would also rewrite every
+      // prefix, so a bare `@0noxtackore/aws-strands` would also rewrite every
       // subpath, and which of the two won would depend on key order.
       {
         find: /^@ag-ui\/aws-strands$/,

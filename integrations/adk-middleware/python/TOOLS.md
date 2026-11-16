@@ -1,4 +1,4 @@
-# ADK Middleware Tool Support Guide
+﻿# ADK Middleware Tool Support Guide
 
 This guide covers the tool support functionality in the ADK Middleware.
 
@@ -331,7 +331,7 @@ ends with a `RUN_FINISHED` event carrying an
 existing frontends that render them keep working.
 
 The flag defaults to `False`. Once a `RUN_FINISHED` carries interrupts,
-`@ag-ui/client` rejects the next run unless it answers them through
+`@0noxtackore/client` rejects the next run unless it answers them through
 `RunAgentInput.resume`, so frontends that answer with a plain tool message
 (CopilotKit `useHumanInTheLoop`, the predictive-state `confirm_changes` dialog)
 would fail. Turn it on only with a frontend that resumes via

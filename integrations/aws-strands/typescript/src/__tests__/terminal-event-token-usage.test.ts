@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Provider-reported token usage on the terminal event.
  *
  * Strands reports usage per model invocation on `modelMetadataEvent`, and the
@@ -26,8 +26,8 @@ import {
   ModelMetadataEvent,
   type ModelStreamEvent,
 } from "@strands-agents/sdk";
-import { EventType, type BaseEvent, type TokenUsage } from "@ag-ui/core";
-import { RunErrorEventSchema, RunFinishedEventSchema } from "@ag-ui/core/schemas";
+import { EventType, type BaseEvent, type TokenUsage } from "@0noxtackore/core";
+import { RunErrorEventSchema, RunFinishedEventSchema } from "@0noxtackore/core/schemas";
 
 import { StrandsAgent } from "../agent";
 import {

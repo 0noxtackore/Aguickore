@@ -1,8 +1,8 @@
-import { AbstractAgent, RunAgentResult } from "./agent";
+﻿import { AbstractAgent, RunAgentResult } from "./agent";
 import { runHttpRequest } from "@/run/http-request";
 import { enforceOutgoingInput } from "@/enforce";
 import { HttpAgentConfig, HttpAgentFetchFn, RunAgentParameters } from "./types";
-import { RunAgentInput, BaseEvent } from "@ag-ui/core";
+import { RunAgentInput, BaseEvent } from "@0noxtackore/core";
 import { structuredClone_ } from "@/utils";
 import { transformHttpEventStream } from "@/transform/http";
 import { Observable } from "rxjs";

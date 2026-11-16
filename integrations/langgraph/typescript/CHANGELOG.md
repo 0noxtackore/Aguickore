@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## 0.0.46 — 2026-11-13
 
@@ -10,7 +10,7 @@
 
 ### Breaking changes
 
-- `@ag-ui/client` and related peer dependencies now require >=1.0.0; `utils.ts` uses `contentToText`/`contentHasMedia`, which only exist in 1.0.
+- `@0noxtackore/client` and related peer dependencies now require >=1.0.0; `utils.ts` uses `contentToText`/`contentHasMedia`, which only exist in 1.0.
 
 ## 0.0.45 — 2026-10-05
 
@@ -33,7 +33,7 @@
 ### Breaking changes
 
 - Validation tightened: whitespace-only image_url payloads are now rejected as malformed input.
-- Follows @ag-ui/core/schemas 1.0 part renames and content flattening; re-verify multimodal and tool-result handling.
+- Follows @0noxtackore/core/schemas 1.0 part renames and content flattening; re-verify multimodal and tool-result handling.
 - Dropped file sources now emit a warning instead of sending a provider handle.
 
 ## 0.0.44 — 2026-10-01

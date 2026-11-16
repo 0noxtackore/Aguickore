@@ -1,19 +1,19 @@
-# @ag-ui/core
+﻿# @0noxtackore/core
 
 TypeScript definitions & runtime schemas for the **Agent-User Interaction (AG-UI) Protocol**.
 
-`@ag-ui/core` delivers the strongly-typed building blocks that every other AG-UI package is built on: message & state models, run inputs and the full set of streaming event types.
+`@0noxtackore/core` delivers the strongly-typed building blocks that every other AG-UI package is built on: message & state models, run inputs and the full set of streaming event types.
 
 ## Installation
 
 ```bash
 # types and constants only — no runtime dependencies
-npm install @ag-ui/core
-pnpm add @ag-ui/core
-yarn add @ag-ui/core
+npm install @0noxtackore/core
+pnpm add @0noxtackore/core
+yarn add @0noxtackore/core
 
-# to use the validators on @ag-ui/core/schemas, add zod (3.25.18+ or 4.x)
-npm install @ag-ui/core zod
+# to use the validators on @0noxtackore/core/schemas, add zod (3.25.18+ or 4.x)
+npm install @0noxtackore/core zod
 ```
 
 zod is an optional peer dependency: the main entry never loads it, so an
@@ -29,10 +29,10 @@ application that only needs the types installs nothing else.
 ## Quick example
 
 ```ts
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 // Validators live on the /schemas subpath and need zod installed; the main
 // entry is types and constants only, so type-only consumers need no zod.
-import { EventSchemas } from "@ag-ui/core/schemas";
+import { EventSchemas } from "@0noxtackore/core/schemas";
 
 // Validate an incoming event
 EventSchemas.parse({

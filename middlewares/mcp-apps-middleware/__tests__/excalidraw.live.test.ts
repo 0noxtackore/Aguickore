@@ -1,10 +1,10 @@
-import { expect, test } from "vitest";
+﻿import { expect, test } from "vitest";
 import { SequenceAgent, toolTurn } from "./sequence-agent";
 import {
   type ActivitySnapshotEvent,
   EventType,
   type ToolCallResultEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { MCPAppsMiddleware, getServerHash } from "../src/index";
 import {
   MockAgent,

@@ -1,5 +1,5 @@
-import * as readline from "readline";
-import { randomUUID } from "@ag-ui/client";
+﻿import * as readline from "readline";
+import { randomUUID } from "@0noxtackore/client";
 import { agent } from "./agent";
 
 const rl = readline.createInterface({

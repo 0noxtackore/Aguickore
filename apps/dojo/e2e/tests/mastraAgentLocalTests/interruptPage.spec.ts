@@ -1,10 +1,10 @@
-import { test, expect } from "../../test-isolation-helper";
+﻿import { test, expect } from "../../test-isolation-helper";
 import { CopilotSelectors } from "../../utils/copilot-selectors";
 import { DEFAULT_WELCOME_MESSAGE } from "../../lib/constants";
 import { captureRuntimeSSE, expectRunFinished } from "../../utils/runtime-sse";
 
 // Native interrupt (suspend/resume) for Mastra: the agent calls the
-// suspend-backed `schedule_meeting` tool, the @ag-ui/mastra bridge ends the
+// suspend-backed `schedule_meeting` tool, the @0noxtackore/mastra bridge ends the
 // run with an interrupt outcome, and CopilotKit's v2 `useInterrupt` renders a
 // time picker.
 // Choosing a slot resolves the interrupt (resuming the suspended tool).

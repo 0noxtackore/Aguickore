@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "client-cli-example",
   "version": "0.1.0",
   "private": true,
@@ -9,9 +9,9 @@
     "clean": "git clean -fdX --exclude=\"!.env\""
   },
   "dependencies": {
-    "@ag-ui/client": "workspace:*",
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/mastra": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/mastra": "workspace:*",
     "@mastra/client-js": "^1.28.0",
     "@mastra/core": "^1.47.0",
     "@mastra/libsql": "^1.14.2",

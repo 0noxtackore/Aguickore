@@ -1,8 +1,8 @@
-import {
+﻿import {
   EventType,
   type MessagesSnapshotEvent,
   type StateSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 // @langchain/langgraph-sdk is a graph persistence client, not an LLM provider;
 // aimock does not apply to these synthetic stream-reader tests.
 import type {

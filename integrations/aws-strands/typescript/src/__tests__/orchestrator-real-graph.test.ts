@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The orchestrator path driven by a REAL `Graph` from `@strands-agents/sdk`.
  *
  * The rest of the orchestrator suite scripts a stub that yields node events and
@@ -39,8 +39,8 @@ import {
   type ModelStreamEvent,
   type StopReason,
 } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
-import type { BaseEvent } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
+import type { BaseEvent } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import { collect } from "./helpers";

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Verification server: mounts every TS example on the same paths the Python
  * reference server uses, so both implementations can be driven by the same
  * curl payloads.
@@ -10,12 +10,12 @@
  */
 import express from "express";
 import cors from "cors";
-import type { StrandsAgent } from "@ag-ui/aws-strands";
+import type { StrandsAgent } from "@0noxtackore/aws-strands";
 import {
   addStrandsExpressEndpoint,
   addPing,
   addCapabilities,
-} from "@ag-ui/aws-strands/server";
+} from "@0noxtackore/aws-strands/server";
 import { corsPolicyFromEnv } from "./cors";
 import { demoPort, listenOrExit, runIfMain } from "./run-if-main";
 import { createA2UIDynamicSchemaAgent } from "./api/a2ui-dynamic-schema";

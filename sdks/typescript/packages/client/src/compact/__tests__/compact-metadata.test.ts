@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import {
   AGUI_METADATA_KEY,
   BaseEvent,
@@ -11,7 +11,7 @@ import {
   ToolCallArgsEvent,
   ToolCallEndEvent,
   ToolCallStartEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { compactEvents } from "../compact";
 
 /**

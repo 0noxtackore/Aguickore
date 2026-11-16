@@ -1,9 +1,9 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { from, lastValueFrom, type Observable } from "rxjs";
 import { tap, toArray } from "rxjs/operators";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
-import { EventSchema, RunAgentInputSchema } from "@ag-ui/core/schemas";
-import { decode } from "@ag-ui/proto";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
+import { EventSchema, RunAgentInputSchema } from "@0noxtackore/core/schemas";
+import { decode } from "@0noxtackore/proto";
 import { AbstractAgent, HttpAgent } from "@/agent";
 import * as clientApi from "@/index";
 import * as middlewareApi from "@/middleware";

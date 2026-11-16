@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { AbstractAgent, HttpAgent } from "@/agent";
-import { BaseEvent, EventType, Message, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { Observable, of } from "rxjs";
 
 class LegacyAgent extends AbstractAgent {

@@ -1,6 +1,6 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 import { convertAGUIMessagesToMastra } from "../utils";
-import type { Message } from "@ag-ui/client";
+import type { Message } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";
 import { FakeLocalAgent, runThroughClient } from "./helpers";
 

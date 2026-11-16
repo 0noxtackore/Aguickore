@@ -1,7 +1,7 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+﻿import { afterEach, describe, expect, it, vi } from "vitest";
 import { HumanMessage } from "@langchain/core/messages";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { type UserMessage } from "@ag-ui/client";
+import { type UserMessage } from "@0noxtackore/client";
 import { aguiMessagesToLangChain } from "./utils";
 
 // Exercise the installed Gemini translator, intercepting only its HTTP transport.

@@ -1,4 +1,4 @@
-# @ag-ui/a2a
+﻿# @0noxtackore/a2a
 
 A TypeScript integration that connects AG-UI agents with remote services that expose the [A2A protocol](https://a2a.dev/). It converts AG-UI conversations into A2A payloads, forwards them through the official A2A SDK, and replays the responses back into AG-UI event streams.
 
@@ -19,13 +19,13 @@ Once dependencies are installed in the monorepo:
 
 ```bash
 pnpm install
-pnpm --filter @ag-ui/a2a build
+pnpm --filter @0noxtackore/a2a build
 ```
 
 ## Quick start
 
 ```ts
-import { A2AAgent } from "@ag-ui/a2a";
+import { A2AAgent } from "@0noxtackore/a2a";
 
 import { A2AClient } from "@a2a-js/sdk/client";
 
@@ -67,7 +67,7 @@ Pass any credentials to the `A2AClient` you provide to `A2AAgent`, or configure 
 ## Testing
 
 ```bash
-pnpm --filter @ag-ui/a2a test
+pnpm --filter @0noxtackore/a2a test
 ```
 
 The suite covers conversion edge cases and streaming / fallback behaviour using mocked A2A clients.
@@ -78,7 +78,7 @@ The suite covers conversion edge cases and streaming / fallback behaviour using 
 
 ## Release checklist
 
-1. `pnpm --filter @ag-ui/a2a build`
-2. `pnpm --filter @ag-ui/a2a test`
+1. `pnpm --filter @0noxtackore/a2a build`
+2. `pnpm --filter @0noxtackore/a2a test`
 3. Update CHANGELOG / release notes.
-4. Publish with `pnpm publish --filter @ag-ui/a2a`.
+4. Publish with `pnpm publish --filter @0noxtackore/a2a`.

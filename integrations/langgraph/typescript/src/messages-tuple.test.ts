@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for messages-tuple stream mode support.
  *
  * When "events" stream mode doesn't produce on_chat_model_stream events
@@ -9,7 +9,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { AIMessageChunk, HumanMessage } from "@langchain/core/messages";
 import { LangGraphAgent } from "./agent";
-import { EventType } from "@ag-ui/client";
+import { EventType } from "@0noxtackore/client";
 
 // The wire vocabulary. The two runtimes spell an assistant chunk differently
 // and a graph served by either one reaches this handler, so both spellings are

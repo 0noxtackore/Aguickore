@@ -1,4 +1,4 @@
-import type { ADKJSSubagentMode } from "@ag-ui/adk-js";
+﻿import type { ADKJSSubagentMode } from "@0noxtackore/adk-js";
 import { Agent, Workflow, type BaseLlm } from "@google/adk";
 
 import { createDojoAgent } from "./factory";

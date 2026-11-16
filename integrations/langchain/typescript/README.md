@@ -1,19 +1,19 @@
-# @ag-ui/langchain
+﻿# @0noxtackore/langchain
 
 Implementation of the AG-UI protocol for LangChain.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/langchain
-pnpm add @ag-ui/langchain
-yarn add @ag-ui/langchain
+npm install @0noxtackore/langchain
+pnpm add @0noxtackore/langchain
+yarn add @0noxtackore/langchain
 ```
 
 ## Usage
 
 ```ts
-import { LangChainAgent } from "@ag-ui/langchain";
+import { LangChainAgent } from "@0noxtackore/langchain";
 
 // Create an AG-UI compatible agent
 const agent = new LangChainAgent({

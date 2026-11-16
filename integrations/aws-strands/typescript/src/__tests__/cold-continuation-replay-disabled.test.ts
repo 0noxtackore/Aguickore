@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A frontend-tool continuation that arrives on a cold agent with
  * `replayHistoryIntoStrands: false` and no session manager.
  *
@@ -30,7 +30,7 @@ import {
   type Message as StrandsMessage,
   type ModelStreamEvent,
 } from "@strands-agents/sdk";
-import type { BaseEvent } from "@ag-ui/core";
+import type { BaseEvent } from "@0noxtackore/core";
 import {
   ScriptedModel,
   collect,

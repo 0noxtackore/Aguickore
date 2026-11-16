@@ -1,11 +1,11 @@
-import { test, expect } from "../../test-isolation-helper";
+﻿import { test, expect } from "../../test-isolation-helper";
 import { CopilotSelectors } from "../../utils/copilot-selectors";
 import { DEFAULT_WELCOME_MESSAGE } from "../../lib/constants";
 import { captureRuntimeSSE, expectRunFinished } from "../../utils/runtime-sse";
 
 // Native interrupt (suspend/resume) for a REMOTE Mastra agent (OSS-380). Same
 // flow as the local case (the agent's suspend-backed `schedule_meeting` tool
-// suspends, the @ag-ui/mastra bridge ends the run with the standard
+// suspends, the @0noxtackore/mastra bridge ends the run with the standard
 // RUN_FINISHED.outcome, CopilotKit v2 `useInterrupt` renders the picker), but
 // resume round-trips over @mastra/client-js' `resumeStream` instead of the
 // local agent resume stream.

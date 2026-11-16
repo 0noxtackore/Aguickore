@@ -1,5 +1,5 @@
-import { toArray } from "rxjs/operators";
-import { EventType, BaseEvent, RunAgentInput } from "@ag-ui/core";
+﻿import { toArray } from "rxjs/operators";
+import { EventType, BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent } from "../../agent/agent";
 import { Observable, lastValueFrom } from "rxjs";
 import { RunAgentParameters } from "../../agent/types";

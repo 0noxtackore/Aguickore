@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { ActivitySnapshotEvent, BaseEvent, EventType } from "@ag-ui/client";
+﻿import { describe, expect, it } from "vitest";
+import { ActivitySnapshotEvent, BaseEvent, EventType } from "@0noxtackore/client";
 import { A2UIMiddleware, A2UIMiddlewareConfig } from "../src";
 import { MockAgent, collectEvents, createRunAgentInput } from "./test-utils";
 import langgraphImport from "./fixtures/langgraph-import.json";

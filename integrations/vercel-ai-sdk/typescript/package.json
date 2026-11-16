@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/vercel-ai-sdk",
+﻿{
+  "name": "@0noxtackore/vercel-ai-sdk",
   "version": "0.0.2",
   "license": "MIT",
   "repository": {
@@ -27,13 +27,13 @@
     "unlink:global": "pnpm unlink --global"
   },
   "peerDependencies": {
-    "@ag-ui/core": ">=0.0.37",
-    "@ag-ui/client": ">=0.0.40",
+    "@0noxtackore/core": ">=0.0.37",
+    "@0noxtackore/client": ">=0.0.40",
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "@vitest/coverage-istanbul": "^4.0.18",
     "publint": "^0.3.12",

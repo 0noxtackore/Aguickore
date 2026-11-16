@@ -1,4 +1,4 @@
-import { authoritativeActivityTypes } from "../activity-history";
+﻿import { authoritativeActivityTypes } from "../activity-history";
 import type { AbstractAgent } from "@/agent/agent";
 import {
   type AgentStateMutation,
@@ -45,7 +45,7 @@ import {
   type ToolCall,
   type ToolCallStartEvent,
   type ToolMessage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import jsonpatch from "fast-json-patch";
 import { EMPTY, of } from "rxjs";
 import type { Observable } from "rxjs";

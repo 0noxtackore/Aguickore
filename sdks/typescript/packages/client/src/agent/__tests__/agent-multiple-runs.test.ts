@@ -1,4 +1,4 @@
-import { AbstractAgent } from "../agent";
+﻿import { AbstractAgent } from "../agent";
 import {
   BaseEvent,
   EventType,
@@ -10,7 +10,7 @@ import {
   RunStartedEvent,
   RunFinishedEvent,
   ActivitySnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Observable, of } from "rxjs";
 
 describe("AbstractAgent multiple runs", () => {

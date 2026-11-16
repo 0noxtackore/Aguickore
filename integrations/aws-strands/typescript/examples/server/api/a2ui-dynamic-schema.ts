@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Dynamic A2UI example for AWS Strands (TypeScript).
  *
  * A plain agent with no a2ui wiring. When the runtime enables A2UI tool
@@ -7,7 +7,7 @@
  */
 
 import { Agent } from "@strands-agents/sdk";
-import { StrandsAgent } from "@ag-ui/aws-strands";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
 import { createModel } from "../model-factory";
 
 // The dojo registers its dynamic component catalog (HotelCard, ProductCard,

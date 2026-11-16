@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
-import { EventType, type Message } from "@ag-ui/client";
+﻿import { describe, it, expect, vi, afterEach } from "vitest";
+import { EventType, type Message } from "@0noxtackore/client";
 import { collectEvents, makeInput, runThroughClient } from "./helpers";
 import {
   FIRST_TURN,

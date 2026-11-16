@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import type { Context } from "@ag-ui/client";
+﻿import { describe, it, expect } from "vitest";
+import type { Context } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";
 import {
   FakeLocalAgent,

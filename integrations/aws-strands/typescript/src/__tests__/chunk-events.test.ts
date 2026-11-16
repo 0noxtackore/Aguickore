@@ -1,11 +1,11 @@
-/**
+﻿/**
  * StrandsAgentConfig.emitChunkEvents collapses START/CONTENT/END triples
  * into self-expanding TEXT_MESSAGE_CHUNK / TOOL_CALL_CHUNK /
  * REASONING_MESSAGE_CHUNK events.
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 import { StrandsAgent } from "../agent";
 import { collect, minimalRunInput, scriptedAgent } from "./helpers";
 

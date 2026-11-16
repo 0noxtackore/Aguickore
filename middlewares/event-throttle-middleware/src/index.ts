@@ -1,4 +1,4 @@
-import {
+﻿import {
   Middleware,
   AbstractAgent,
   BaseEvent,
@@ -7,7 +7,7 @@ import {
   TextMessageChunkEvent,
   ToolCallChunkEvent,
   ReasoningMessageChunkEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable } from "rxjs";
 
 // ---------------------------------------------------------------------------
@@ -67,12 +67,12 @@ function isReasoningChunk(
 /**
  * Fold one chunk's metadata into another's, key by key, last write winning.
  *
- * Deliberately inlined rather than importing `mergeMetadata` from `@ag-ui/client`:
+ * Deliberately inlined rather than importing `mergeMetadata` from `@0noxtackore/client`:
  * this package declares a peer range of `>=0.0.40`, and that export only exists
  * from the release that introduced metadata. Importing it would break every
  * installation on an admitted older client — a missing named export under ESM,
  * or a call to `undefined` under CJS. The rule is a shallow spread, so keeping a
- * local copy costs nothing; `mergeMetadata` in `@ag-ui/core` remains canonical.
+ * local copy costs nothing; `mergeMetadata` in `@0noxtackore/core` remains canonical.
  */
 function mergeChunkMetadata(
   previous: Record<string, unknown> | undefined,

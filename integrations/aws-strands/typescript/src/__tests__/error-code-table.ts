@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The shared `error-codes.json` table, read by this bridge's suites.
  *
  * One table, two runtimes: `../../../error-codes.json` holds the codes and the
@@ -17,7 +17,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { expect } from "vitest";
 
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 
 export type Side = "python" | "typescript";
 

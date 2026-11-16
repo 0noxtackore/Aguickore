@@ -1,7 +1,7 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { lastValueFrom, Observable, of } from "rxjs";
 import { toArray } from "rxjs/operators";
-import { AGUIError, BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
+import { AGUIError, BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent } from "../agent";
 import { HttpAgent } from "../http";
 import { AgentConfig } from "../types";

@@ -1,11 +1,11 @@
-import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
 import { Subject, firstValueFrom } from "rxjs";
 import { take } from "rxjs/operators";
 import { parseSSEStream } from "../sse";
 import { transformHttpEventStream } from "../http";
 import { createDebugLogger } from "@/debug-logger";
 import { HttpEvent, HttpEventType } from "../../run/http-request";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 
 describe("parseSSEStream debug logging", () => {
   let debugSpy: MockInstance<typeof console.debug>;

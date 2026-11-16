@@ -1,4 +1,4 @@
-import { buildAguiToolMessage } from "./utils";
+﻿import { buildAguiToolMessage } from "./utils";
 import { isDeepStrictEqual } from "node:util";
 import { spawn, type ChildProcess } from "node:child_process";
 import {
@@ -8,7 +8,7 @@ import {
   type SDKUserMessage,
   type HookCallback,
 } from "@anthropic-ai/claude-agent-sdk";
-import type { RunAgentInput, RunFinishedOutcome } from "@ag-ui/core";
+import type { RunAgentInput, RunFinishedOutcome } from "@0noxtackore/core";
 import {
   NativeHistory,
   type NativeCall,

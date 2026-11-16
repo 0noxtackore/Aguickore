@@ -1,4 +1,4 @@
-"""Async human-in-the-loop (interrupt / resume) for the CrewAI AG-UI bridge.
+﻿"""Async human-in-the-loop (interrupt / resume) for the CrewAI AG-UI bridge.
 
 Covers the capability resolution, the ``_hitl`` mapping / gating helpers, the
 translator's pause capture, and an end-to-end kickoff-pause + resume through the
@@ -606,7 +606,7 @@ async def _run_resume(flow, input_data, options):
 def _assert_event_balance(events):
     """Mini AG-UI-client verifyEvents: STEP_STARTED / STEP_FINISHED must
     balance, and RUN_FINISHED must not fire while a step is still active. The
-    real @ag-ui/client rejects a stream that violates either (an interrupt that
+    real @0noxtackore/client rejects a stream that violates either (an interrupt that
     pauses a method mid-flight leaves its step open otherwise)."""
     active = []
     for e in events:

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for WatsonxRunsAgent (`/v1/orchestrate/runs/stream`).
  *
  * The streams below are synthetic, shaped after events recorded from a
@@ -11,7 +11,7 @@ import type {
   WatsonxRunsAgentConfig,
   WatsonxToolResultHandler,
 } from "../index";
-import { verifyEvents } from "@ag-ui/client";
+import { verifyEvents } from "@0noxtackore/client";
 import {
   EventType,
   PROTOCOL_VERSION,
@@ -19,7 +19,7 @@ import {
   type RunAgentInput,
   type Message,
   type ToolCallArgsEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { firstValueFrom, toArray } from "rxjs";
 
 // ---------------------------------------------------------------------------

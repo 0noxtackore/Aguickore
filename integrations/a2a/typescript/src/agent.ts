@@ -1,4 +1,4 @@
-import {
+﻿import {
   AbstractAgent,
   AgentConfig,
   BaseEvent,
@@ -8,7 +8,7 @@ import {
   RunErrorEvent,
   RunFinishedEvent,
   RunStartedEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable } from "rxjs";
 import { A2AClient } from "@a2a-js/sdk/client";
 import type {
@@ -24,7 +24,7 @@ import type {
   A2AStreamEvent,
   SurfaceTracker,
 } from "./types";
-import { randomUUID } from "@ag-ui/client";
+import { randomUUID } from "@0noxtackore/client";
 
 export interface A2AAgentConfig extends AgentConfig {
   a2aClient: A2AClient;

@@ -1,4 +1,4 @@
-import {
+﻿import {
   EventType,
   type AGUIEvent,
   type AssistantMessage,
@@ -11,7 +11,7 @@ import {
   type ToolCallArgsEvent,
   type ToolCallResultEvent,
   type ToolCallStartEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 import { ADK_METADATA_KEY } from "./constants";
 import { clone, isRecord } from "./value-utils";

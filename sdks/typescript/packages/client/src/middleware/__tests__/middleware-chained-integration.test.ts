@@ -1,4 +1,4 @@
-import { AbstractAgent } from "@/agent";
+﻿import { AbstractAgent } from "@/agent";
 import { Middleware } from "@/middleware";
 import type { EventWithState } from "@/middleware/middleware";
 import {
@@ -18,7 +18,7 @@ import {
   StateDeltaEvent,
   StateSnapshotEvent,
   MessagesSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Observable } from "rxjs";
 import { describe, it, expect, vi } from "vitest";
 

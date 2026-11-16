@@ -1,5 +1,5 @@
-import { BaseEvent, omitOptionalNulls } from "@ag-ui/core";
-import * as proto from "@ag-ui/proto";
+﻿import { BaseEvent, omitOptionalNulls } from "@0noxtackore/core";
+import * as proto from "@0noxtackore/proto";
 import { preferredMediaTypes } from "./media-type";
 
 export interface EventEncoderParams {

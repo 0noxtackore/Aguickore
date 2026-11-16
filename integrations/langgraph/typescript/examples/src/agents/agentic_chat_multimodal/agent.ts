@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A multimodal agentic chat that can analyze images and other media.
  *
  * This agent demonstrates how to:
@@ -9,7 +9,7 @@
  * Example usage:
  *
  * ```typescript
- * import { UserMessage, TextInputContent, ImageInputContent } from "@ag-ui/core";
+ * import { UserMessage, TextInputContent, ImageInputContent } from "@0noxtackore/core";
  *
  * // Create a multimodal user message
  * const message: UserMessage = {

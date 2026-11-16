@@ -1,7 +1,7 @@
-import { Middleware } from "./middleware";
+﻿import { Middleware } from "./middleware";
 import { AbstractAgent } from "@/agent";
-import type { RunAgentInput, BaseEvent, Message } from "@ag-ui/core";
-import { EventType } from "@ag-ui/core";
+import type { RunAgentInput, BaseEvent, Message } from "@0noxtackore/core";
+import { EventType } from "@0noxtackore/core";
 import { defer, type Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { randomUUID } from "@/utils";

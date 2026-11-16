@@ -1,4 +1,4 @@
-import {
+﻿import {
   AbstractAgent,
   type RunAgentInput,
   type BaseEvent,
@@ -23,7 +23,7 @@ import {
   PROTOCOL_VERSION,
   contentHasMedia,
   contentToText,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable } from "rxjs";
 
 const IAM_TOKEN_URL = "https://iam.cloud.ibm.com/identity/token";
@@ -430,7 +430,7 @@ export class WatsonxAgent extends AbstractAgent {
           ),
         ];
         console.warn(
-          `[@ag-ui/watsonx] dropping non-text content part(s) of type(s) ${dropped.join(", ")} ` +
+          `[@0noxtackore/watsonx] dropping non-text content part(s) of type(s) ${dropped.join(", ")} ` +
             `from a ${m.role} message (id ${m.id}); watsonx orchestrate only receives text`,
         );
       }

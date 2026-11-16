@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Backend Tool Rendering example for AWS Strands (TypeScript).
  *
  * Demonstrates backend-executed tools. Tool results reach the frontend as
@@ -14,8 +14,8 @@
 
 import { Agent, tool } from "@strands-agents/sdk";
 import { z } from "zod";
-import { StrandsAgent } from "@ag-ui/aws-strands";
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
 import { createModel } from "../model-factory";
 import { demoPort, listenOrExit, runIfMain } from "../run-if-main";
 

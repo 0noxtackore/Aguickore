@@ -1,4 +1,4 @@
----
+﻿---
 title: "Middleware"
 description: "Transform and intercept events in AG-UI agents"
 ---
@@ -24,7 +24,7 @@ Middleware sits between the agent execution and the event consumer, allowing you
 Middleware forms a chain where each middleware wraps the next, creating layers of functionality. When an agent runs, the event stream flows through each middleware in sequence.
 
 ```typescript
-import { AbstractAgent } from "@ag-ui/client"
+import { AbstractAgent } from "@0noxtackore/client"
 
 const agent = new MyAgent()
 
@@ -42,8 +42,8 @@ Middleware added with `agent.use(...)` is applied in `runAgent()`. `connectAgent
 For simple transformations, you can use function-based middleware. This is the most concise way to add middleware:
 
 ```typescript
-import { MiddlewareFunction } from "@ag-ui/client"
-import { EventType } from "@ag-ui/core"
+import { MiddlewareFunction } from "@0noxtackore/client"
+import { EventType } from "@0noxtackore/core"
 
 const prefixMiddleware: MiddlewareFunction = (input, next) => {
   return next.run(input).pipe(
@@ -70,7 +70,7 @@ agent.use(prefixMiddleware)
 For more complex scenarios requiring state or configuration, use class-based middleware:
 
 ```typescript
-import { Middleware } from "@ag-ui/client"
+import { Middleware } from "@0noxtackore/client"
 import { Observable } from "rxjs"
 import { tap } from "rxjs/operators"
 
@@ -114,7 +114,7 @@ AG-UI provides several built-in middleware components for common use cases:
 Filter tool calls based on allowed or disallowed lists:
 
 ```typescript
-import { FilterToolCallsMiddleware } from "@ag-ui/client"
+import { FilterToolCallsMiddleware } from "@0noxtackore/client"
 
 // Only allow specific tools
 const allowedFilter = new FilterToolCallsMiddleware({
@@ -192,7 +192,7 @@ A synthesized run uses the input's `threadId` and `runId`, like any other
 producer:
 
 ```typescript
-import { EventType, PROTOCOL_VERSION, type RunStartedEvent } from "@ag-ui/client"
+import { EventType, PROTOCOL_VERSION, type RunStartedEvent } from "@0noxtackore/client"
 
 const runStarted: RunStartedEvent = {
   type: EventType.RUN_STARTED,

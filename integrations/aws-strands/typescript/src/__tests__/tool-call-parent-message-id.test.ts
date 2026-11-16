@@ -1,4 +1,4 @@
-/**
+﻿/**
  * How `ToolCallStartEvent.parentMessageId` is derived.
  *
  * The parent must identify the assistant message that owns the tool call, so a
@@ -11,7 +11,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 import {
   collect,
   expectNoRunError,

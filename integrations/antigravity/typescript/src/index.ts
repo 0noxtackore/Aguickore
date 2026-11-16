@@ -1,6 +1,6 @@
-import { HttpAgent } from "@ag-ui/client";
-import type { AgentCapabilities } from "@ag-ui/core";
-import { AgentCapabilitiesSchema } from "@ag-ui/core/schemas";
+﻿import { HttpAgent } from "@0noxtackore/client";
+import type { AgentCapabilities } from "@0noxtackore/core";
+import { AgentCapabilitiesSchema } from "@0noxtackore/core/schemas";
 
 /**
  * Thin client for an Antigravity-backed AG-UI endpoint.

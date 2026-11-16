@@ -1,4 +1,4 @@
-import {
+﻿import {
   Middleware,
   EventType,
   type AbstractAgent,
@@ -8,7 +8,7 @@ import {
   type Tool,
   type ToolCall,
   type ToolCallResultEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable, type Subscription } from "rxjs";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";

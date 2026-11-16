@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for the full event lifecycle:
  * RUN_STARTED → STEP_STARTED → content → STEP_FINISHED → MESSAGES_SNAPSHOT → RUN_FINISHED
  * Plus error paths, RAW events, and TOOL_CALL_RESULT.
@@ -12,7 +12,7 @@ import {
   type BaseEvent,
   type RunAgentInput,
   type Message,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { firstValueFrom, toArray } from "rxjs";
 
 // ---------------------------------------------------------------------------

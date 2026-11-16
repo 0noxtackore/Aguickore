@@ -1,27 +1,27 @@
-import "server-only";
+﻿import "server-only";
 
-import type { AbstractAgent } from "@ag-ui/client";
+import type { AbstractAgent } from "@0noxtackore/client";
 import type { AgentsMap } from "./types/agents";
 import { mapAgents } from "./utils/agents";
-import { MiddlewareStarterAgent } from "@ag-ui/middleware-starter";
-import { ServerStarterAgent } from "@ag-ui/server-starter";
-import { ServerStarterAllFeaturesAgent } from "@ag-ui/server-starter-all-features";
+import { MiddlewareStarterAgent } from "@0noxtackore/middleware-starter";
+import { ServerStarterAgent } from "@0noxtackore/server-starter";
+import { ServerStarterAllFeaturesAgent } from "@0noxtackore/server-starter-all-features";
 import { MastraClient } from "@mastra/client-js";
-import { MastraAgent } from "@ag-ui/mastra";
+import { MastraAgent } from "@0noxtackore/mastra";
 
-// pnpm may resolve separate @mastra/* installations for dojo vs @ag-ui/mastra,
+// pnpm may resolve separate @mastra/* installations for dojo vs @0noxtackore/mastra,
 // which makes the client/agent types mismatch nominally on private fields. The
 // casts below are deliberate, but target these exact expected types rather than
 // widening to `any`.
 type RemoteAgentsOptions = Parameters<typeof MastraAgent.getRemoteAgents>[0];
 type LocalAgentsOptions = Parameters<typeof MastraAgent.getLocalAgents>[0];
 type MastraAgentOptions = ConstructorParameters<typeof MastraAgent>[0];
-// import { VercelAISDKAgent } from "@ag-ui/vercel-ai-sdk";
+// import { VercelAISDKAgent } from "@0noxtackore/vercel-ai-sdk";
 // import { openai } from "@ai-sdk/openai";
-import { LangGraphAgent, LangGraphHttpAgent } from "@ag-ui/langgraph";
-import { AgnoAgent } from "@ag-ui/agno";
-import { LlamaIndexAgent } from "@ag-ui/llamaindex";
-import { CrewAIAgent } from "@ag-ui/crewai";
+import { LangGraphAgent, LangGraphHttpAgent } from "@0noxtackore/langgraph";
+import { AgnoAgent } from "@0noxtackore/agno";
+import { LlamaIndexAgent } from "@0noxtackore/llamaindex";
+import { CrewAIAgent } from "@0noxtackore/crewai";
 import getEnvVars from "./env";
 import { mastra } from "./mastra";
 import {
@@ -30,22 +30,22 @@ import {
   a2uiInjectConfig,
 } from "./mastra/agents/a2ui";
 import { a2uiFixedSchemaAgent } from "./mastra/agents/a2ui-fixed";
-import { PydanticAIAgent } from "@ag-ui/pydantic-ai";
-import { ADKAgent } from "@ag-ui/adk";
-import { AntigravityAgent } from "@ag-ui/antigravity";
-import { createADKJSDojoAgents } from "@ag-ui/adk-js-examples";
-import { SpringAiAgent } from "@ag-ui/spring-ai";
-import { HttpAgent } from "@ag-ui/client";
-import { A2AMiddlewareAgent } from "@ag-ui/a2a-middleware";
-import { AWSStrandsAgent } from "@ag-ui/aws-strands";
-import { A2AAgent } from "@ag-ui/a2a";
+import { PydanticAIAgent } from "@0noxtackore/pydantic-ai";
+import { ADKAgent } from "@0noxtackore/adk";
+import { AntigravityAgent } from "@0noxtackore/antigravity";
+import { createADKJSDojoAgents } from "@0noxtackore/adk-js-examples";
+import { SpringAiAgent } from "@0noxtackore/spring-ai";
+import { HttpAgent } from "@0noxtackore/client";
+import { A2AMiddlewareAgent } from "@0noxtackore/a2a-middleware";
+import { AWSStrandsAgent } from "@0noxtackore/aws-strands";
+import { A2AAgent } from "@0noxtackore/a2a";
 import { A2AClient } from "@a2a-js/sdk/client";
-import { LangChainAgent } from "@ag-ui/langchain";
-import { Ag2Agent } from "@ag-ui/ag2";
-import { LangroidHttpAgent } from "@ag-ui/langroid";
-import { WatsonxAgent } from "@ag-ui/watsonx";
-import { OmnaraAgent, type BackendTool } from "@ag-ui/omnara";
-import { A2UIMiddleware } from "@ag-ui/a2ui-middleware";
+import { LangChainAgent } from "@0noxtackore/langchain";
+import { Ag2Agent } from "@0noxtackore/ag2";
+import { LangroidHttpAgent } from "@0noxtackore/langroid";
+import { WatsonxAgent } from "@0noxtackore/watsonx";
+import { OmnaraAgent, type BackendTool } from "@0noxtackore/omnara";
+import { A2UIMiddleware } from "@0noxtackore/a2ui-middleware";
 import { DOJO_A2UI_MIDDLEWARE_CONFIG } from "./a2ui-config";
 import {
   CREWAI_CONVERSATIONAL_AGENT_PATHS,

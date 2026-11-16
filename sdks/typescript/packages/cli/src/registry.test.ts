@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 
 import { encodePackageName, packageMetadataUrl, resolveRegistry } from "./registry";
 
@@ -41,7 +41,7 @@ describe("resolveRegistry", () => {
 
 describe("encodePackageName", () => {
   it("keeps the @ but encodes the scope separator for scoped names", () => {
-    expect(encodePackageName("@ag-ui/adk-js")).toBe("@ag-ui%2Fadk-js");
+    expect(encodePackageName("@0noxtackore/adk-js")).toBe("@ag-ui%2Fadk-js");
   });
 
   it("leaves unscoped names intact", () => {
@@ -51,13 +51,13 @@ describe("encodePackageName", () => {
 
 describe("packageMetadataUrl", () => {
   it("builds the packument URL against the given registry", () => {
-    expect(packageMetadataUrl("@ag-ui/adk-js", "http://localhost:4873")).toBe(
+    expect(packageMetadataUrl("@0noxtackore/adk-js", "http://localhost:4873")).toBe(
       "http://localhost:4873/@ag-ui%2Fadk-js",
     );
   });
 
   it("tolerates a trailing slash on the registry", () => {
-    expect(packageMetadataUrl("@ag-ui/core", "https://registry.npmjs.org/")).toBe(
+    expect(packageMetadataUrl("@0noxtackore/core", "https://registry.npmjs.org/")).toBe(
       "https://registry.npmjs.org/@ag-ui%2Fcore",
     );
   });

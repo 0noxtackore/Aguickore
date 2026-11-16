@@ -1,4 +1,4 @@
-import { EventType, MessagesSnapshotEvent } from "@ag-ui/core";
+﻿import { EventType, MessagesSnapshotEvent } from "@0noxtackore/core";
 import { authoritativeActivityTypes, withAuthoritativeActivityTypes } from "./activity-history";
 
 const snapshot = (metadata?: MessagesSnapshotEvent["metadata"]): MessagesSnapshotEvent => ({
@@ -8,7 +8,7 @@ const snapshot = (metadata?: MessagesSnapshotEvent["metadata"]): MessagesSnapsho
 });
 
 describe("activity history authority", () => {
-  it.each([undefined, {}, { trace: "keep" }, { "@ag-ui/client": { otherKey: 123 } }])(
+  it.each([undefined, {}, { trace: "keep" }, { "@0noxtackore/client": { otherKey: 123 } }])(
     "uses legacy inference when the namespace or field is absent: %j",
     (metadata) => {
       expect(authoritativeActivityTypes(snapshot(metadata))).toBeUndefined();
@@ -20,7 +20,7 @@ describe("activity history authority", () => {
     ({ scope }) => {
       expect(
         authoritativeActivityTypes(
-          snapshot({ "@ag-ui/client": { authoritativeActivityTypes: scope } }),
+          snapshot({ "@0noxtackore/client": { authoritativeActivityTypes: scope } }),
         ),
       ).toEqual(scope);
     },
@@ -40,7 +40,7 @@ describe("activity history authority", () => {
   )(
     "grants no deletion authority for a present invalid declaration: $declaration",
     ({ declaration }) => {
-      const event = snapshot({ "@ag-ui/client": declaration });
+      const event = snapshot({ "@0noxtackore/client": declaration });
       expect(authoritativeActivityTypes(event)).toEqual([]);
       expect(
         authoritativeActivityTypes(withAuthoritativeActivityTypes(event, ["projected"])),
@@ -53,12 +53,12 @@ describe("activity history authority", () => {
     const event = snapshot({
       trace: { id: "trace" },
       "ag-ui": { reserved: true },
-      "@ag-ui/client": { other: "keep", authoritativeActivityTypes: scope },
+      "@0noxtackore/client": { other: "keep", authoritativeActivityTypes: scope },
     });
     const before = structuredClone(event);
     const requested = Object.freeze(["second", "first"]);
     Object.freeze(scope);
-    Object.freeze(event.metadata?.["@ag-ui/client"]);
+    Object.freeze(event.metadata?.["@0noxtackore/client"]);
     Object.freeze(event.metadata);
     Object.freeze(event.messages);
     Object.freeze(event);
@@ -67,7 +67,7 @@ describe("activity history authority", () => {
       ...event,
       metadata: {
         ...event.metadata,
-        "@ag-ui/client": { other: "keep", authoritativeActivityTypes: ["first", "second"] },
+        "@0noxtackore/client": { other: "keep", authoritativeActivityTypes: ["first", "second"] },
       },
     });
     expect(extended.messages).toBe(event.messages);
@@ -79,7 +79,7 @@ describe("activity history authority", () => {
     "preserves explicit full authority with messages %j",
     ({ messages }) => {
       const event = {
-        ...snapshot({ "@ag-ui/client": { authoritativeActivityTypes: null } }),
+        ...snapshot({ "@0noxtackore/client": { authoritativeActivityTypes: null } }),
         messages,
       };
       expect(
@@ -111,7 +111,7 @@ describe("activity history authority", () => {
     expect(
       authoritativeActivityTypes(
         withAuthoritativeActivityTypes(
-          snapshot({ "@ag-ui/client": { authoritativeActivityTypes: [] } }),
+          snapshot({ "@0noxtackore/client": { authoritativeActivityTypes: [] } }),
           ["projected"],
         ),
       ),

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Application state a tool keeps in the Strands agent's `appState`.
  *
  * AG-UI shared state and durable application state are different things. A
@@ -20,7 +20,7 @@ import { tmpdir } from "os";
 import { join } from "path";
 import { FileStorage, SessionManager, tool } from "@strands-agents/sdk";
 import { z } from "zod";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 
 import type { StrandsAgentConfig } from "../config";
 import { AG_UI_FRONTEND_CALL_IDS_STATE_KEY } from "../session-reconcile";

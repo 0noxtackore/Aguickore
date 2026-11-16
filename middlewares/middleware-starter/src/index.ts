@@ -1,4 +1,4 @@
-import { AbstractAgent, BaseEvent, EventType, RunAgentInput } from "@ag-ui/client";
+﻿import { AbstractAgent, BaseEvent, EventType, RunAgentInput } from "@0noxtackore/client";
 import { Observable } from "rxjs";
 
 export class MiddlewareStarterAgent extends AbstractAgent {

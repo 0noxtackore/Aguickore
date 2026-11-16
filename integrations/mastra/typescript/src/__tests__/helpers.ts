@@ -1,10 +1,10 @@
-import type {
+﻿import type {
   BaseEvent,
   Message,
   RunAgentInput,
   RunAgentParameters,
-} from "@ag-ui/client";
-import { EventType } from "@ag-ui/client";
+} from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import { firstValueFrom, toArray } from "rxjs";
 import { MastraAgent } from "../mastra";
 

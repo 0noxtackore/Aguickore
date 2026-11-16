@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { EventType, type Message } from "@ag-ui/client";
+﻿import { describe, expect, it, vi } from "vitest";
+import { EventType, type Message } from "@0noxtackore/client";
 import {
   collectEvents,
   FakeLocalAgent,

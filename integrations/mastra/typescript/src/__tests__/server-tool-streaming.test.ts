@@ -1,5 +1,5 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { EventType, type BaseEvent } from "@ag-ui/client";
+﻿import { afterEach, describe, expect, it, vi } from "vitest";
+import { EventType, type BaseEvent } from "@0noxtackore/client";
 import {
   collectEvents,
   FakeLocalAgent,

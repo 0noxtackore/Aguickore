@@ -1,10 +1,10 @@
-import { A2UIMiddleware } from "../../../../middlewares/a2ui-middleware/src";
+﻿import { A2UIMiddleware } from "../../../../middlewares/a2ui-middleware/src";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { beforeEach, expect, it, vi } from "vitest";
 import { lastValueFrom, toArray, Subscriber } from "rxjs";
 import { buildAguiToolMessage } from "./utils";
-import type { RunAgentInput, BaseEvent } from "@ag-ui/core";
+import type { RunAgentInput, BaseEvent } from "@0noxtackore/core";
 const sdk = vi.hoisted(() => ({
   query: vi.fn(),
   getSessionInfo: vi.fn(),

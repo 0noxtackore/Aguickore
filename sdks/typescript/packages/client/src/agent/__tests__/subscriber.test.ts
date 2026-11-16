@@ -1,4 +1,4 @@
-import { AbstractAgent } from "../agent";
+﻿import { AbstractAgent } from "../agent";
 import { AgentSubscriber, runSubscribersWithMutation } from "../subscriber";
 import {
   BaseEvent,
@@ -18,7 +18,7 @@ import {
   CustomEvent,
   StepStartedEvent,
   StepFinishedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Observable, of, throwError, from } from "rxjs";
 import { mergeMap } from "rxjs/operators";
 import { describe, it, expect, vi, beforeEach, test } from "vitest";

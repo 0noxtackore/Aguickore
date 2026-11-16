@@ -1,4 +1,4 @@
-import test from "node:test";
+﻿import test from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync, spawnSync } from "node:child_process";
 import {
@@ -43,7 +43,7 @@ function fixture() {
         "sdk-typescript": {
           packages: [
             {
-              name: "@ag-ui/core",
+              name: "@0noxtackore/core",
               path: "sdks/typescript/packages/core",
               ecosystem: "typescript",
             },
@@ -74,7 +74,7 @@ function fixture() {
   write(SOURCE, gradle("0.4.1"));
   write(
     "sdks/typescript/packages/core/package.json",
-    JSON.stringify({ name: "@ag-ui/core", version: "1.0.0" }),
+    JSON.stringify({ name: "@0noxtackore/core", version: "1.0.0" }),
   );
   write(
     "java/pom.xml",
@@ -107,7 +107,7 @@ for (const order of [["kotlin"], ["kotlin", "npm"], ["npm", "kotlin"]]) {
         else
           f.write(
             "sdks/typescript/packages/core/package.json",
-            JSON.stringify({ name: "@ag-ui/core", version: "1.1.0" }),
+            JSON.stringify({ name: "@0noxtackore/core", version: "1.1.0" }),
           );
         f.commit();
       }

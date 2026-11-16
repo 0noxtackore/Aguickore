@@ -1,11 +1,11 @@
-import {
+﻿import {
   EventType,
   type AGUIEvent,
   type Interrupt,
   type Message,
   type RunAgentInput,
   type TokenUsage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import {
   StreamingMode,
   getPendingUserInputRequests,

@@ -1,4 +1,4 @@
-import { AbstractAgent } from "@/agent";
+﻿import { AbstractAgent } from "@/agent";
 import { Middleware } from "@/middleware";
 import {
   BaseEvent,
@@ -7,7 +7,7 @@ import {
   TextMessageChunkEvent,
   RunFinishedEvent,
   RunStartedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Observable } from "rxjs";
 
 describe("Middleware live events", () => {

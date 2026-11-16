@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Agentic Chat example for AWS Strands (TypeScript).
  *
  * Simple conversational agent. Frontend tools sent in RunAgentInput.tools
@@ -7,8 +7,8 @@
  */
 
 import { Agent } from "@strands-agents/sdk";
-import { StrandsAgent } from "@ag-ui/aws-strands";
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
 import { createModel } from "../model-factory";
 import { demoPort, listenOrExit, runIfMain } from "../run-if-main";
 

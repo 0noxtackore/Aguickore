@@ -1,4 +1,4 @@
----
+﻿---
 name: agui-dotnet-protobuf
 description: >
   Use the protobuf wire transport (instead of the default Server-Sent Events) for an AG-UI connection with the AG-UI .NET SDK — a compact binary event stream negotiated via the Accept header. USE FOR: making an AGUIChatClient prefer protobuf by wiring an AGUIEventStreamHandler with ProtobufEventStreamFormatter (then SseEventStreamFormatter as fallback) into the HttpClient; enabling a server to answer protobuf by registering ProtobufEventStreamFormatter and negotiating the response format from the request Accept header; understanding the protobuf-or-SSE fallback. DO NOT USE FOR: the default SSE transport or first-time setup (use agui-dotnet-streaming-chat); JSON event serialization questions; tools, state, interrupts, multimodal, or generative UI.
@@ -89,7 +89,7 @@ Protobuf is selected only when the client *explicitly* accepts its media type, s
 ## Anti-patterns
 
 - **Registering the protobuf formatter on only one side.** Negotiation needs both ends to agree. If the server registers protobuf but the client's handler lists only SSE (or vice versa), every connection silently falls back to SSE and the binary path is never exercised — verify the chosen `Content-Type`, don't assume.
-- **Hand-parsing the protobuf body.** The wire framing must match `@ag-ui/proto` byte-for-byte. Always read and write through `ProtobufEventStreamFormatter`; don't decode the stream yourself.
+- **Hand-parsing the protobuf body.** The wire framing must match `@0noxtackore/proto` byte-for-byte. Always read and write through `ProtobufEventStreamFormatter`; don't decode the stream yourself.
 
 ## Verify
 

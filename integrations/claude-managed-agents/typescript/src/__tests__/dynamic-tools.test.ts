@@ -1,5 +1,5 @@
-import stateTool from "../../../contracts/state-tool-v1.json";
-import type { RunAgentInput, Tool } from "@ag-ui/client";
+﻿import stateTool from "../../../contracts/state-tool-v1.json";
+import type { RunAgentInput, Tool } from "@0noxtackore/client";
 import { lastValueFrom, toArray } from "rxjs";
 import { describe, expect, it } from "vitest";
 import { ManagedAgentsAgent } from "../agent";

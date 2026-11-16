@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Strands token usage, mapped onto the AG-UI `TokenUsage` shape.
  *
  * Strands reports usage per model invocation on `modelMetadataEvent`, not only
@@ -9,13 +9,13 @@
  * terminal event to omit `usage` rather than claim a measured zero.
  *
  * The mapper stays local to this integration rather than joining the LangChain
- * and AI-SDK mappers in `@ag-ui/core`: the Python bridge consumes the PUBLISHED
+ * and AI-SDK mappers in `@0noxtackore/core`: the Python bridge consumes the PUBLISHED
  * ag-ui-protocol, so a new core mapper would not exist for it until the next
  * SDK release, and the two bridges have to ship together. Only the aggregation
  * helper is shared, because that one is already published.
  */
 
-import type { TokenUsage } from "@ag-ui/core";
+import type { TokenUsage } from "@0noxtackore/core";
 
 /**
  * The ceiling every AG-UI binding can carry a count through.
@@ -39,7 +39,7 @@ const MAX_TOKEN_COUNT = Number.MAX_SAFE_INTEGER;
  * never made. The rest of the entry survives, so one bad field does not cost
  * the caller the counts that were fine.
  *
- * `@ag-ui/core`'s shared `num()` guard checks finiteness only and leaves the
+ * `@0noxtackore/core`'s shared `num()` guard checks finiteness only and leaves the
  * integer and non-negative bounds to schema validation, which is why this is
  * its own guard rather than a reuse: the full bound has to be applied here for
  * the Python bridge's guard to behave identically.

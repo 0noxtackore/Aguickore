@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { Subject, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
@@ -10,7 +10,7 @@ import {
   TextMessageContentEvent,
   ToolCallArgsEvent,
   ToolCallChunkEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { transformChunks } from "../transform";
 
 const runTransform = async (events: BaseEvent[]): Promise<BaseEvent[]> => {

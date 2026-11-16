@@ -1,6 +1,6 @@
-import { Middleware } from "./middleware";
+﻿import { Middleware } from "./middleware";
 import { AbstractAgent } from "@/agent";
-import type { RunAgentInput, BaseEvent } from "@ag-ui/core";
+import type { RunAgentInput, BaseEvent } from "@0noxtackore/core";
 import type { Observable } from "rxjs";
 
 type InputMessage = RunAgentInput["messages"][number];

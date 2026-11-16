@@ -1,4 +1,4 @@
-import type { MenuIntegrationConfig } from "./types/integration";
+﻿import type { MenuIntegrationConfig } from "./types/integration";
 import { CREWAI_CONVERSATIONAL_FEATURES, CREWAI_FLOW_FEATURES } from "./crewai";
 export * from "./types/integration";
 
@@ -53,7 +53,7 @@ export const menuIntegrations = [
       // NOTE: no "deepagents_subagents" here. That demo needs the SUBAGENT_*
       // lifecycle events, which only the Python integration (ag_ui_langgraph)
       // emits. This Platform integration goes through the TypeScript
-      // @ag-ui/langgraph client, which has no subagent support, so the demo
+      // @0noxtackore/langgraph client, which has no subagent support, so the demo
       // would silently degrade to a plain chat. It is exposed under
       // langgraph-fastapi only.
       "a2ui_dynamic_schema",

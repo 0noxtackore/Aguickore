@@ -1,4 +1,4 @@
-"""Tests for ClaudeAgentAdapter event translation and option building.
+﻿"""Tests for ClaudeAgentAdapter event translation and option building.
 
 The adapter's job is to translate a Claude Agent SDK message stream into the
 AG-UI protocol event sequence. We drive ``_stream_claude_sdk`` directly with a
@@ -1788,7 +1788,7 @@ class TestEventsCarryOnlySpecFields:
     """TEXT_MESSAGE_* and TOOL_CALL_* events have no threadId/runId in the
     AG-UI spec (``spec/1.0/schema.json`` sets ``unevaluatedProperties:
     false``). The Python models keep unknown fields, so passing them put the
-    extra keys on the wire, and ``@ag-ui/client`` strips them with an
+    extra keys on the wire, and ``@0noxtackore/client`` strips them with an
     ``[ag-ui][enforce]`` warning for every event."""
 
     @staticmethod

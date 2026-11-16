@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/a2a-middleware",
+﻿{
+  "name": "@0noxtackore/a2a-middleware",
   "author": "Markus Ecker <markus.ecker@gmail.com>",
   "version": "0.0.6",
   "license": "MIT",
@@ -32,11 +32,11 @@
     "zod": "^3.25.18"
   },
   "peerDependencies": {
-    "@ag-ui/client": ">=1.0.0",
+    "@0noxtackore/client": ">=1.0.0",
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "@vitest/coverage-istanbul": "^4.0.18",
     "publint": "^0.3.12",

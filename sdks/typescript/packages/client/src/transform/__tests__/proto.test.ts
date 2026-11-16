@@ -1,4 +1,4 @@
-import { HttpEvent, HttpEventType, runHttpRequest } from "../../run/http-request";
+﻿import { HttpEvent, HttpEventType, runHttpRequest } from "../../run/http-request";
 import { firstValueFrom, ReplaySubject, Subject, take } from "rxjs";
 import {
   EventType,
@@ -6,11 +6,11 @@ import {
   TextMessageContentEvent,
   StateDeltaEvent,
   MessagesSnapshotEvent,
-} from "@ag-ui/core";
-import * as proto from "@ag-ui/proto";
+} from "@0noxtackore/core";
+import * as proto from "@0noxtackore/proto";
 import { transformHttpEventStream } from "../http";
 import { MAX_BUFFER_SIZE } from "../proto";
-import * as encoder from "@ag-ui/encoder";
+import * as encoder from "@0noxtackore/encoder";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
 const eventEncoder = new encoder.EventEncoder({
@@ -18,7 +18,7 @@ const eventEncoder = new encoder.EventEncoder({
 });
 
 // Don't mock the proto package so we can use real encoding/decoding
-vi.unmock("@ag-ui/proto");
+vi.unmock("@0noxtackore/proto");
 
 describe("parseProtoStream", () => {
   beforeEach(() => {

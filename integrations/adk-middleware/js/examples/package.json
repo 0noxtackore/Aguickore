@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/adk-js-examples",
+﻿{
+  "name": "@0noxtackore/adk-js-examples",
   "version": "0.0.0",
   "private": true,
   "description": "Google ADK-JS agents used by the AG-UI Dojo",
@@ -17,9 +17,9 @@
     "test:llm": "tsx scripts/live-llama-smoke.ts"
   },
   "dependencies": {
-    "@ag-ui/adk-js": "workspace:*",
-    "@ag-ui/client": "workspace:*",
-    "@ag-ui/core": "workspace:*",
+    "@0noxtackore/adk-js": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
     "@google/adk": "^2.0.0",
     "@google/genai": "^2.9.0"
   },

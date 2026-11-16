@@ -1,4 +1,4 @@
-import { test, expect } from "../../test-isolation-helper";
+﻿import { test, expect } from "../../test-isolation-helper";
 import { A2UIPage } from "../../featurePages/A2UIPage";
 
 // A2UI error-recovery showcase — Mastra (local) port.
@@ -11,8 +11,8 @@ import { A2UIPage } from "../../featurePages/A2UIPage";
 // loop feeds the error back and the second attempt is valid.
 //
 // DevEx under test: the Mastra dojo agent binds `generate_a2ui` via the shared
-// `getA2UITools` factory from `@ag-ui/mastra` (backend-owned; the CopilotKit
-// runtime applies @ag-ui/a2ui-middleware with injectA2UITool=false, so it
+// `getA2UITools` factory from `@0noxtackore/mastra` (backend-owned; the CopilotKit
+// runtime applies @0noxtackore/a2ui-middleware with injectA2UITool=false, so it
 // renders without double-injecting). The recovery loop runs inside the tool.
 
 test("[MastraAgentLocal] A2UI recovery — invalid render recovers to a valid surface", async ({
@@ -45,7 +45,7 @@ test("[MastraAgentLocal] A2UI recovery — exhaustion: hard-failure UI, no fault
 
   // Anchor on the run's terminal signal FIRST — asserting count-0 right after
   // send would pass trivially before the agent produced anything. The tasteful
-  // hard-failure message rides the shared @ag-ui/a2ui-middleware recovery
+  // hard-failure message rides the shared @0noxtackore/a2ui-middleware recovery
   // renderer, regardless of backend framework.
   await expect(page.getByText("Couldn't generate the UI").first()).toBeVisible({
     timeout: 30_000,

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Multi-agent events from the TS Strands SDK must translate to
  * AG-UI STEP_STARTED / STEP_FINISHED / CUSTOM{MultiAgentHandoff}.
  *
@@ -15,7 +15,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import type { AgentStreamEvent } from "@strands-agents/sdk";
 
 import { collect, scriptedStrandsAgent, stream } from "./helpers";

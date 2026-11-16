@@ -1,8 +1,8 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+﻿import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 const { queryMock } = vi.hoisted(() => ({ queryMock: vi.fn() }));
 
-vi.mock("@ag-ui/client", () => {
+vi.mock("@0noxtackore/client", () => {
   class AbstractAgent {
     constructor(_config?: Record<string, unknown>) {}
     clone() {

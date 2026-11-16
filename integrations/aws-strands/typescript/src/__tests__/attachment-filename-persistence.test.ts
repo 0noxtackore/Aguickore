@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Original attachment filenames survive native Strands persistence.
  *
  * A client names each attachment in the part's `metadata` (CopilotKit writes
@@ -25,7 +25,7 @@ import {
   SessionManager,
   type Message as StrandsMessage,
 } from "@strands-agents/sdk";
-import type { InputContent, Message, RunAgentInput } from "@ag-ui/core";
+import type { InputContent, Message, RunAgentInput } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import type { StrandsAgentConfig } from "../config";

@@ -1,4 +1,4 @@
-import {
+﻿import {
   BaseEvent,
   EventType,
   type Metadata,
@@ -11,7 +11,7 @@ import {
   ToolCallEndEvent,
   StateSnapshotEvent,
   StateDeltaEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import jsonpatch from "fast-json-patch";
 import { structuredClone_ } from "../utils";
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Middleware"
 description:
   "Connect to existing protocols, in process agents or custom solutions via
@@ -92,7 +92,7 @@ folder:
 
 ```json
 {
-  "name": "@ag-ui/openai",
+  "name": "@0noxtackore/openai",
   "author": "Your Name <your-email@example.com>",
   "version": "0.0.1",
 
@@ -127,7 +127,7 @@ And `apps/dojo/src/agents.ts`:
 
 ```ts
 // ...
-import { OpenAIAgent } from "@ag-ui/openai"
+import { OpenAIAgent } from "@0noxtackore/openai"
 
 export const agentsIntegrations: AgentIntegrationConfig[] = [
   // ...
@@ -145,7 +145,7 @@ export const agentsIntegrations: AgentIntegrationConfig[] = [
 
 ## Step 2 – Add package to dojo dependencies
 
-Open `apps/dojo/package.json` and add the package `@ag-ui/openai`:
+Open `apps/dojo/package.json` and add the package `@0noxtackore/openai`:
 
 ```json
 {
@@ -159,14 +159,14 @@ Open `apps/dojo/package.json` and add the package `@ag-ui/openai`:
     "lint": "next lint"
   },
   "dependencies": {
-    "@ag-ui/agno": "workspace:*",
-    "@ag-ui/langgraph": "workspace:*",
-    "@ag-ui/mastra": "workspace:*",
-    "@ag-ui/middleware-starter": "workspace:*",
-    "@ag-ui/server-starter": "workspace:*",
-    "@ag-ui/server-starter-all-features": "workspace:*",
-    "@ag-ui/vercel-ai-sdk": "workspace:*",
-    "@ag-ui/openai": "workspace:*", <- Add this line
+    "@0noxtackore/agno": "workspace:*",
+    "@0noxtackore/langgraph": "workspace:*",
+    "@0noxtackore/mastra": "workspace:*",
+    "@0noxtackore/middleware-starter": "workspace:*",
+    "@0noxtackore/server-starter": "workspace:*",
+    "@0noxtackore/server-starter-all-features": "workspace:*",
+    "@0noxtackore/vercel-ai-sdk": "workspace:*",
+    "@0noxtackore/openai": "workspace:*", <- Add this line
 
   ... rest of package.json
 }
@@ -197,7 +197,7 @@ import {
   BaseEvent,
   EventType,
   RunAgentInput,
-} from "@ag-ui/client"
+} from "@0noxtackore/client"
 import { Observable } from "rxjs"
 
 export class OpenAIAgent extends AbstractAgent {
@@ -276,7 +276,7 @@ import {
   RunAgentInput,
   EventType,
   BaseEvent,
-} from "@ag-ui/client"
+} from "@0noxtackore/client"
 import { Observable } from "rxjs"
 
 import { OpenAI } from "openai"

@@ -1,13 +1,13 @@
-/**
+﻿/**
  * Agentic Generative UI example for AWS Strands (TypeScript).
  *
  * Demonstrates streaming agent state updates to the frontend for real-time
- * UI rendering. Uses ONLY the canonical Strands + @ag-ui/aws-strands surface:
+ * UI rendering. Uses ONLY the canonical Strands + @0noxtackore/aws-strands surface:
  *
  * - `predictState` mapping streams the predicted `steps` to the FE while
  *   the LLM is still emitting `plan_task_steps` arguments.
  * - The tool itself is an async generator. Each `yield` of `{ state: {...} }`
- *   reaches the @ag-ui/aws-strands adapter as a tool stream update, which it
+ *   reaches the @0noxtackore/aws-strands adapter as a tool stream update, which it
  *   translates into an AG-UI `StateSnapshotEvent`.
  * - The FINAL value returned by the generator is the tool's result.
  *
@@ -18,8 +18,8 @@
 
 import { Agent, tool } from "@strands-agents/sdk";
 import { z } from "zod";
-import { StrandsAgent, type StrandsAgentConfig } from "@ag-ui/aws-strands";
-import { createStrandsApp } from "@ag-ui/aws-strands/server";
+import { StrandsAgent, type StrandsAgentConfig } from "@0noxtackore/aws-strands";
+import { createStrandsApp } from "@0noxtackore/aws-strands/server";
 import { createModel } from "../model-factory";
 import { demoPort, listenOrExit, runIfMain } from "../run-if-main";
 

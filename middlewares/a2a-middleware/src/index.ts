@@ -1,4 +1,4 @@
-import {
+﻿import {
   AbstractAgent,
   AgentConfig,
   BaseEvent,
@@ -13,7 +13,7 @@ import {
   RunErrorEvent,
   TextMessageStartEvent,
   TextMessageEndEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 
 import { A2AClient } from "@a2a-js/sdk/client";
 import {
@@ -23,7 +23,7 @@ import {
 } from "@a2a-js/sdk";
 import { Observable, Subscriber, tap } from "rxjs";
 import { createSystemPrompt, sendMessageToA2AAgentTool } from "./utils";
-import { randomUUID } from "@ag-ui/client";
+import { randomUUID } from "@0noxtackore/client";
 
 export interface A2AAgentConfig extends AgentConfig {
   agentUrls: string[];

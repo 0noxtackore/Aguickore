@@ -1,6 +1,6 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 import { firstValueFrom, from, toArray } from "rxjs";
-import { BaseEvent, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent } from "@/agent";
 import { defaultApplyEvents } from "../default";
 import fixture from "./fixtures/strands-native-resume.json";

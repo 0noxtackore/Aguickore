@@ -1,7 +1,7 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
-import { BaseEvent, EventType, Message, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";
 import { AbstractAgent } from "@/agent";
 import { AgentSubscriber } from "@/agent/subscriber";

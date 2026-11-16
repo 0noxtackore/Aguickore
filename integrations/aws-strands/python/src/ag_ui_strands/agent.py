@@ -1,4 +1,4 @@
-"""AWS Strands Agent adapter for AG-UI.
+﻿"""AWS Strands Agent adapter for AG-UI.
 
 Translates Strands streaming events into the AG-UI event protocol.
 """
@@ -3450,7 +3450,7 @@ def _format_agui_context(agui_context: List[Dict[str, Any]]) -> str:
 
 
 def _a2ui_render_guide_description(tool_name: str) -> str:
-    """Exact context marker emitted by ``@ag-ui/a2ui-middleware``."""
+    """Exact context marker emitted by ``@0noxtackore/a2ui-middleware``."""
     return (
         "A2UI render tool usage guide — how to call "
         f"{tool_name} with valid arguments."

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+﻿import { describe, it, expect, vi } from "vitest";
 import { Observable } from "rxjs";
 import {
   AbstractAgent,
@@ -6,7 +6,7 @@ import {
   EventType,
   RunAgentInput,
   Message,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { A2AMiddlewareAgent } from "./index";
 
 class StubOrchestrationAgent extends AbstractAgent {

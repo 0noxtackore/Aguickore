@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from "vitest";
+﻿import { describe, it, expect, beforeAll } from "vitest";
 import { spawnSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import path from "node:path";
@@ -28,7 +28,7 @@ describe("ESM consumers under Node's native loader (regression #1577)", () => {
   it("applies STATE_DELTA through the built ESM bundle without 'applyPatch is not a function'", () => {
     const script = `
       import { defaultApplyEvents } from ${JSON.stringify(distEsmUrl)};
-      import { EventType } from "@ag-ui/core";
+      import { EventType } from "@0noxtackore/core";
       import { of, firstValueFrom } from "rxjs";
 
       const initial = {

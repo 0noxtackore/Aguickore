@@ -1,19 +1,19 @@
-# @ag-ui/client
+﻿# @0noxtackore/client
 
 Client SDK for connecting to **Agent-User Interaction (AG-UI) Protocol** servers.
 
-`@ag-ui/client` provides agent implementations that handle the full lifecycle of AG-UI communication: connecting to servers, processing streaming events, managing state mutations, and providing reactive subscriber hooks.
+`@0noxtackore/client` provides agent implementations that handle the full lifecycle of AG-UI communication: connecting to servers, processing streaming events, managing state mutations, and providing reactive subscriber hooks.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/client zod
-pnpm add @ag-ui/client zod
-yarn add @ag-ui/client zod
+npm install @0noxtackore/client zod
+pnpm add @0noxtackore/client zod
+yarn add @0noxtackore/client zod
 ```
 
 zod (3.25.18+ or 4.x) is a peer dependency. The client's enforcement stage
-validates every event with the schemas on `@ag-ui/core/schemas`, using the zod
+validates every event with the schemas on `@0noxtackore/core/schemas`, using the zod
 your application installs rather than a bundled copy.
 
 ## Features
@@ -28,7 +28,7 @@ your application installs rather than a bundled copy.
 ## Quick example
 
 ```ts
-import { HttpAgent } from "@ag-ui/client";
+import { HttpAgent } from "@0noxtackore/client";
 
 const agent = new HttpAgent({
   url: "https://api.example.com/agent",
@@ -64,7 +64,7 @@ applied downstream at full cost.
 ## Using Middleware
 
 ```ts
-import { HttpAgent, FilterToolCallsMiddleware } from "@ag-ui/client";
+import { HttpAgent, FilterToolCallsMiddleware } from "@0noxtackore/client";
 
 const agent = new HttpAgent({
   url: "https://api.example.com/agent",
@@ -102,7 +102,7 @@ MIT © 2025 AG-UI Protocol Contributors
 
 ## Activity snapshots
 
-`MESSAGES_SNAPSHOT.metadata["@ag-ui/client"].authoritativeActivityTypes`
+`MESSAGES_SNAPSHOT.metadata["@0noxtackore/client"].authoritativeActivityTypes`
 controls which activity types the snapshot replaces. An array owns those types;
 `[]` owns none, and `null` owns all types, even for an empty snapshot. Without
 a declaration, the existing rule applies: a snapshot containing any activity

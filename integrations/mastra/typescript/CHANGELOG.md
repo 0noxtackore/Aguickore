@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## 2.0.2 — 2026-10-27
 
@@ -38,7 +38,7 @@ None.
 
 ### Breaking changes
 
-- Requires `@ag-ui/core` and `@ag-ui/client` >=1.0.0; optional `@copilotkit/runtime` peer raised to ^1.76.0.
+- Requires `@0noxtackore/core` and `@0noxtackore/client` >=1.0.0; optional `@copilotkit/runtime` peer raised to ^1.76.0.
 - Removed the legacy CUSTOM `on_interrupt` event, `forwardedProps.command` resume input, and `emitInterruptOutcome` option; use the RUN_FINISHED interrupt outcome and `RunAgentInput.resume`.
 - Removed the legacy binary content part and the ignored `registerCopilotKit` serviceAdapter option.
 - Tool-result URLs now serialize as URL items, not base64 media; re-verify wire output.
@@ -66,7 +66,7 @@ None.
 - Original attachment filenames and image MIME types are preserved in native memory.
 - Per-run remote handles are reused instead of rebuilt, fixing 404s when configured agentId differs from the backend agent.
 - Public agentId aliases are retained across clone() and runtime aliases; empty configured agentId is treated as unset.
-- Adapter validators come from `@ag-ui/core/schemas` and follow the 1.0 part renames.
+- Adapter validators come from `@0noxtackore/core/schemas` and follow the 1.0 part renames.
 - CopilotKit peer dependency is now optional.
 
 ### Breaking changes

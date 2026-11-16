@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   BaseEvent,
   Interrupt,
   Message,
@@ -9,8 +9,8 @@ import type {
   SubagentStartedEvent,
   ToolCallEndEvent,
   ToolCallResultEvent,
-} from "@ag-ui/client";
-import { EventType, randomUUID } from "@ag-ui/client";
+} from "@0noxtackore/client";
+import { EventType, randomUUID } from "@0noxtackore/client";
 import { toolErrorMessage } from "./tool-results";
 
 /**

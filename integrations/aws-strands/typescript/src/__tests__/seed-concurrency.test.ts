@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Seed building for one thread with slow multimodal URL fetches must not
  * serialize cold-cache inits for OTHER threads behind the global
  * _threadInitLock.
@@ -18,7 +18,7 @@
 
 import { describe, it, expect, afterEach, vi } from "vitest";
 import dns from "node:dns";
-import type { BaseEvent } from "@ag-ui/core";
+import type { BaseEvent } from "@0noxtackore/core";
 import {
   expectCompletedRun,
   minimalRunInput,

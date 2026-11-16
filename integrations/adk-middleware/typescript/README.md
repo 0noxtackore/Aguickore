@@ -1,21 +1,21 @@
-# @ag-ui/adk
+﻿# @0noxtackore/adk
 
 AG-UI integration for [Google ADK](https://google.github.io/adk-docs/) (Agent Development Kit). This package ships a thin TypeScript client, `ADKAgent`, that connects an AG-UI front end to an ADK-backed agent endpoint served by the companion Python middleware (`ag_ui_adk`).
 
-`ADKAgent` extends `HttpAgent` from `@ag-ui/client`, so it speaks the full AG-UI protocol over HTTP/SSE out of the box. On top of that it adds a `getCapabilities()` method that fetches and validates the agent's advertised capabilities.
+`ADKAgent` extends `HttpAgent` from `@0noxtackore/client`, so it speaks the full AG-UI protocol over HTTP/SSE out of the box. On top of that it adds a `getCapabilities()` method that fetches and validates the agent's advertised capabilities.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/adk
+npm install @0noxtackore/adk
 # or
-pnpm add @ag-ui/adk
+pnpm add @0noxtackore/adk
 ```
 
 ### Peer Dependencies
 
-- `@ag-ui/client` (>=0.0.55)
-- `@ag-ui/core` (>=0.0.59)
+- `@0noxtackore/client` (>=0.0.55)
+- `@0noxtackore/core` (>=0.0.59)
 - `rxjs` (7.8.1)
 
 ## TypeScript Client Usage
@@ -23,7 +23,7 @@ pnpm add @ag-ui/adk
 ### Connect to an ADK-backed agent
 
 ```typescript
-import { ADKAgent } from "@ag-ui/adk";
+import { ADKAgent } from "@0noxtackore/adk";
 
 // `threadId` and `initialMessages` are constructor options (AgentConfig),
 // not run-time parameters.
@@ -69,7 +69,7 @@ agent
 `getCapabilities()` issues a `GET` against the agent's `/capabilities` endpoint (derived from the configured `url`), parses the JSON response, and validates it against the AG-UI `AgentCapabilitiesSchema`. It rejects on HTTP errors, unparseable bodies, or schema-invalid responses.
 
 ```typescript
-import { ADKAgent } from "@ag-ui/adk";
+import { ADKAgent } from "@0noxtackore/adk";
 
 const agent = new ADKAgent({ url: "http://localhost:8000/chat" });
 

@@ -1,11 +1,11 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import {
   AbstractAgent,
   EventType,
   type BaseEvent,
   type RunAgentInput,
   type Message,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { from, firstValueFrom, toArray } from "rxjs";
 import { A2UIMiddleware, A2UI_SCHEMA_CONTEXT_DESCRIPTION } from "../src/index";
 import history from "./fixtures/pni-568-orphan.json";

@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray, catchError } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { verifyEvents } from "../verify";
@@ -21,7 +21,7 @@ import {
   StateSnapshotEvent,
   StateDeltaEvent,
   MessagesSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 const defaultRunContext = { threadId: "test-thread-id", runId: "test-run-id" };
 const finishedEvent: RunFinishedEvent = { type: EventType.RUN_FINISHED, ...defaultRunContext };

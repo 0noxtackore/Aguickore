@@ -1,4 +1,4 @@
-# MCP Middleware
+﻿# MCP Middleware
 
 AG-UI middleware that connects an agent run to one or more [MCP](https://modelcontextprotocol.io)
 servers. It lists each server's tools, injects them into the run, executes the
@@ -8,7 +8,7 @@ remain — all presented to the consumer as a single, continuous run.
 ## Usage
 
 ```ts
-import { MCPMiddleware } from "@ag-ui/mcp-middleware";
+import { MCPMiddleware } from "@0noxtackore/mcp-middleware";
 
 agent.use(
   new MCPMiddleware([

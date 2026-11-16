@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Outcome tests for the predict_state / state-streaming mechanism.
  *
  * Tests observable behavior: when a tracked tool call streams its args,
@@ -7,7 +7,7 @@
  */
 
 import { describe, it, expect, vi } from "vitest";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import { LangGraphAgent } from "./agent";
 import type { LangGraphAgentConfig } from "./agent";
 

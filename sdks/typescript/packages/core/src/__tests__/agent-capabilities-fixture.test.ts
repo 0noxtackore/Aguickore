@@ -1,4 +1,4 @@
-import fixture from "../../../../../fixtures/agent-capabilities.json";
+﻿import fixture from "../../../../../fixtures/agent-capabilities.json";
 
 import { AgentCapabilitiesSchema } from "../schemas";
 
@@ -13,7 +13,7 @@ import { AgentCapabilitiesSchema } from "../schemas";
  * SDK's normal JSON path, and require exactly `expected` — no invented defaults for a group
  * the input left out, and no unset optional member surfacing as `null`.
  *
- * `sdks/fixtures` sits outside this project directory, so `@ag-ui/core` turns off Nx caching
+ * `sdks/fixtures` sits outside this project directory, so `@0noxtackore/core` turns off Nx caching
  * for its `test` target (see `nx.targets` in `package.json` and the wiring note in
  * `sdks/fixtures/README.md`); without that an edit to the fixture could leave a stale green
  * result behind.

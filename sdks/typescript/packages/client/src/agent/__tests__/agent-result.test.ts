@@ -1,4 +1,4 @@
-import { AbstractAgent } from "../agent";
+﻿import { AbstractAgent } from "../agent";
 import { AgentSubscriber } from "../subscriber";
 import {
   ActivityDeltaEvent,
@@ -13,8 +13,8 @@ import {
   TextMessageStartEvent,
   TextMessageContentEvent,
   TextMessageEndEvent,
-} from "@ag-ui/core";
-import { EventSchema } from "@ag-ui/core/schemas";
+} from "@0noxtackore/core";
+import { EventSchema } from "@0noxtackore/core/schemas";
 import { Observable, of, Subject } from "rxjs";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 

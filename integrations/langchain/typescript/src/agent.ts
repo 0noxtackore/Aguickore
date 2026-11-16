@@ -1,4 +1,4 @@
-import {
+﻿import {
   AbstractAgent,
   BaseEvent,
   RunAgentInput,
@@ -6,11 +6,11 @@ import {
   RunStartedEvent,
   RunFinishedEvent,
   RunErrorEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { BaseMessage } from "@langchain/core/messages";
 import { DynamicStructuredTool } from "@langchain/core/tools";
-import { PROTOCOL_VERSION, TokenUsage, aggregateTokenUsage } from "@ag-ui/core";
+import { PROTOCOL_VERSION, TokenUsage, aggregateTokenUsage } from "@0noxtackore/core";
 import { LangChainResponse, streamLangChainResponse } from "./streaming";
 import { convertAGUIToolsToLangChain } from "./tools";
 import { Observable } from "rxjs";

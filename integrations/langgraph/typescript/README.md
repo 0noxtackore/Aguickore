@@ -1,4 +1,4 @@
-# @ag-ui/langgraph
+﻿# @0noxtackore/langgraph
 
 Implementation of the AG-UI protocol for LangGraph.
 
@@ -38,15 +38,15 @@ existing error behavior.
 ## Installation
 
 ```bash
-npm install @ag-ui/langgraph
-pnpm add @ag-ui/langgraph
-yarn add @ag-ui/langgraph
+npm install @0noxtackore/langgraph
+pnpm add @0noxtackore/langgraph
+yarn add @0noxtackore/langgraph
 ```
 
 ## Usage
 
 ```ts
-import { LangGraphAgent } from "@ag-ui/langgraph";
+import { LangGraphAgent } from "@0noxtackore/langgraph";
 
 // Create an AG-UI compatible agent
 const agent = new LangGraphAgent({
@@ -174,8 +174,8 @@ Consumers should migrate to reading `outcome` from `RunFinishedEvent` rather tha
 If your graph uses a middleware whose interrupt value carries structured payloads (e.g. LangChain's `HumanInTheLoopMiddleware` with `action_requests` / `review_configs`), you can override two protected methods instead of monkey-patching the run loop:
 
 ```ts
-import { LangGraphAgent, langGraphInterruptToAGUI } from "@ag-ui/langgraph";
-import type { Interrupt as AGUIInterrupt, ResumeEntry } from "@ag-ui/core";
+import { LangGraphAgent, langGraphInterruptToAGUI } from "@0noxtackore/langgraph";
+import type { Interrupt as AGUIInterrupt, ResumeEntry } from "@0noxtackore/core";
 import type { Interrupt as LangGraphInterrupt } from "@langchain/langgraph-sdk";
 
 class HITLLangGraphAgent extends LangGraphAgent {

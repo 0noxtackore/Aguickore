@@ -1,4 +1,4 @@
-import { execFileSync } from "node:child_process";
+﻿import { execFileSync } from "node:child_process";
 import {
   existsSync,
   mkdirSync,
@@ -11,8 +11,8 @@ import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import { EventType } from "@ag-ui/core";
-import { EventSchemas } from "@ag-ui/core/schemas";
+import { EventType } from "@0noxtackore/core";
+import { EventSchemas } from "@0noxtackore/core/schemas";
 import * as protoEvents from "../src/generated/events";
 import * as protoTypes from "../src/generated/types";
 import * as protoPatch from "../src/generated/patch";
@@ -773,7 +773,7 @@ describe("the wire code drift gate", () => {
     for (const file of fresh) {
       expect(
         readFileSync(join(committedDir, file), "utf8"),
-        `${file} is stale — run: pnpm --filter @ag-ui/proto generate`,
+        `${file} is stale — run: pnpm --filter @0noxtackore/proto generate`,
       ).toBe(readFileSync(join(out, file), "utf8"));
     }
   }, 30000);

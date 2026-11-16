@@ -1,4 +1,4 @@
-import asyncio
+﻿import asyncio
 import unittest
 from unittest.mock import AsyncMock, MagicMock
 
@@ -1335,7 +1335,7 @@ class TestNestedSubagentParent(unittest.TestCase):
 class TestEmitSubagentEventsOff(unittest.TestCase):
     """The DEFAULT path: emit_subagent_events=False.
 
-    A released @ag-ui/client (<= 0.0.57) validates each event against a discriminated
+    A released @0noxtackore/client (<= 0.0.57) validates each event against a discriminated
     union in its HTTP transport, with the throwing `EventSchemas.parse`, before any
     middleware runs -- so one SUBAGENT_STARTED ends the stream and no consumer-side
     filter can prevent it. With the flag off this integration must look exactly like it

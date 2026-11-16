@@ -1,9 +1,9 @@
-/**
+﻿/**
  * AG-UI client for agents served by the community Spring AI integration
  * (`com.ag-ui.community:ag-ui-spring-ai-*`, sources in sdks/community/java/spring).
  */
 
-import { HttpAgent } from "@ag-ui/client";
+import { HttpAgent } from "@0noxtackore/client";
 
 /**
  * The newest AG-UI version the Spring AI server can parse. The community Java

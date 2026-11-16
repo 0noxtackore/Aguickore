@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A2UI Fixed Schema example for AWS Strands (TypeScript, OSS-158).
  *
  * Strands port of the LangGraph / ADK `a2ui_fixed_schema` demo. Unlike the
@@ -18,13 +18,13 @@
 import { Agent, tool } from "@strands-agents/sdk";
 import type { JSONValue } from "@strands-agents/sdk";
 import { z } from "zod";
-import { StrandsAgent } from "@ag-ui/aws-strands";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
 import {
   A2UI_OPERATIONS_KEY,
   createSurface,
   updateComponents,
   updateDataModel,
-} from "@ag-ui/a2ui-toolkit";
+} from "@0noxtackore/a2ui-toolkit";
 import { createModel } from "../model-factory";
 
 // Both surfaces render against the dojo's fixed catalog (Row / FlightCard /

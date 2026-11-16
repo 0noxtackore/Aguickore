@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Attachments in Strands' own durable history.
  *
  * With a session manager wired, Strands owns the thread's history and the
@@ -29,7 +29,7 @@ import {
   type BaseEvent,
   type InputContent,
   type Message as AguiMessage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import type { StrandsAgentConfig } from "../config";

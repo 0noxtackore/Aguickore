@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 #
 # Runs the full AG-UI .NET SDK test suite with one command.
 #
@@ -59,7 +59,7 @@ if [[ "$RUN_CROSS_LANGUAGE" == "1" ]]; then
   fi
 
   echo "==> cross-language phase 1 (TS client -> C# server) [vitest]"
-  (cd "$REPO_ROOT" && pnpm --filter '@ag-ui/cross-language-tests' test)
+  (cd "$REPO_ROOT" && pnpm --filter '@0noxtackore/cross-language-tests' test)
 
   echo "==> cross-language phase 2 (C# client -> TS server)"
   dotnet test tests/AGUI.CrossLanguage.IntegrationTests -c "$CONFIGURATION"

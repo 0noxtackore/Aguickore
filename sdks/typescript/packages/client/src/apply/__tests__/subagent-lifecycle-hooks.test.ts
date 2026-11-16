@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { vi } from "vitest";
@@ -10,7 +10,7 @@ import {
   SubagentStartedEvent,
   SubagentFinishedEvent,
   SubagentErrorEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";
 import { AbstractAgent } from "@/agent";
 import { AgentSubscriber } from "@/agent/subscriber";

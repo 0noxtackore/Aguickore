@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 import { Command } from "commander";
 import inquirer from "inquirer";
 import { spawn } from "child_process";
@@ -213,7 +213,7 @@ program.parse();
 
 // Helper function to get package versions from the configured npm registry
 async function getCurrentPackageVersions(
-  packages = ["@ag-ui/client", "@ag-ui/core", "@ag-ui/mastra"],
+  packages = ["@0noxtackore/client", "@0noxtackore/core", "@0noxtackore/mastra"],
 ): Promise<{ [key: string]: string }> {
   const versions: { [key: string]: string } = {};
   const registry = resolveRegistry();

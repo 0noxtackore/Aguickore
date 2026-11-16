@@ -1,4 +1,4 @@
-import { BaseEvent, EventType, type ToolCallStartEvent } from "@ag-ui/core";
+﻿import { BaseEvent, EventType, type ToolCallStartEvent } from "@0noxtackore/core";
 import { firstValueFrom, from } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { compactEvents } from "../compact";

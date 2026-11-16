@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import {
@@ -17,7 +17,7 @@ import {
   ReasoningMessageEndEvent,
   ActivitySnapshotEvent,
   RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";
 import { AbstractAgent } from "@/agent";
 

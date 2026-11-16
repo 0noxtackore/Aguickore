@@ -1,6 +1,6 @@
-import { describe, it, expect, vi } from "vitest";
-import { EventType } from "@ag-ui/client";
-import { AgentCapabilitiesSchema } from "@ag-ui/core/schemas";
+﻿import { describe, it, expect, vi } from "vitest";
+import { EventType } from "@0noxtackore/client";
+import { AgentCapabilitiesSchema } from "@0noxtackore/core/schemas";
 import { Agent } from "@mastra/core/agent";
 import { MockMemory } from "@mastra/core/memory";
 import { MastraLanguageModelV2Mock } from "@mastra/core/test-utils/llm-mock";

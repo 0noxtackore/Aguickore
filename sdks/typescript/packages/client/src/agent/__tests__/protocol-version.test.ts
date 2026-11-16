@@ -1,5 +1,5 @@
-import { of, Observable } from "rxjs";
-import { BaseEvent, EventType, PROTOCOL_VERSION, RunAgentInput } from "@ag-ui/core";
+﻿import { of, Observable } from "rxjs";
+import { BaseEvent, EventType, PROTOCOL_VERSION, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent, compareDeclaredProtocol } from "../agent";
 import packageJson from "../../../package.json";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";

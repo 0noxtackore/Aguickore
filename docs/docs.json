@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "Agent User Interaction Protocol",
@@ -225,7 +225,7 @@
             "group": "TypeScript",
             "pages": [
               {
-                "group": "@ag-ui/core",
+                "group": "@0noxtackore/core",
                 "pages": [
                   "sdk/js/core/overview",
                   "sdk/js/core/types",
@@ -234,7 +234,7 @@
                 ]
               },
               {
-                "group": "@ag-ui/client",
+                "group": "@0noxtackore/client",
                 "pages": [
                   "sdk/js/client/overview",
                   "sdk/js/client/abstract-agent",

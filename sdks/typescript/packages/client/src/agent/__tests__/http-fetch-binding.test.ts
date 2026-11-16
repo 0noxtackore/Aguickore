@@ -1,6 +1,6 @@
-import { HttpAgent } from "../http";
+﻿import { HttpAgent } from "../http";
 import { runHttpRequest } from "@/run/http-request";
-import { RunAgentInput } from "@ag-ui/core";
+import { RunAgentInput } from "@0noxtackore/core";
 import { describe, it, expect, vi, beforeEach, afterEach, Mock } from "vitest";
 
 // Capture the fetch thunk passed to runHttpRequest without performing a real request.

@@ -1,4 +1,4 @@
-export * from "./apply";
+﻿export * from "./apply";
 export * from "./verify";
 export * from "./transform";
 export * from "./run";
@@ -6,7 +6,7 @@ export * from "./legacy";
 export * from "./agent";
 export * from "./utils";
 export * from "./compact";
-export * from "@ag-ui/core";
+export * from "@0noxtackore/core";
 export * from "./chunks";
 export * from "./middleware";
 export * from "./interrupts";

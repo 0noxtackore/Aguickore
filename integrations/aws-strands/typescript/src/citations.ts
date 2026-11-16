@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Model citations, folded onto the assistant message they annotate.
  *
  * When a model answers over documents with citations enabled, it returns the
@@ -279,7 +279,7 @@ function normalizeCitation(
           ? "array"
           : typeof citation;
     log.warn(
-      `[@ag-ui/aws-strands] Dropping a citation that is not an object ` +
+      `[@0noxtackore/aws-strands] Dropping a citation that is not an object ` +
         `(got ${kind})`,
     );
     return undefined;
@@ -302,7 +302,7 @@ function normalizeCitation(
     // named a source; dropping the whole citation over a field this adapter
     // cannot place would lose more than it protects.
     log.warn(
-      `[@ag-ui/aws-strands] Omitting a citation location that is not in ` +
+      `[@0noxtackore/aws-strands] Omitting a citation location that is not in ` +
         `tagged form (${
           typeof source.location === "object" && !Array.isArray(source.location)
             ? `keys=${describeKeys(source.location as object)}`
@@ -317,7 +317,7 @@ function normalizeCitation(
 
   if (Object.keys(entry).length === 0) {
     log.warn(
-      `[@ag-ui/aws-strands] Dropping a citation carrying no source fields ` +
+      `[@0noxtackore/aws-strands] Dropping a citation carrying no source fields ` +
         `(keys=${describeKeys(source)})`,
     );
     return undefined;
@@ -328,7 +328,7 @@ function normalizeCitation(
   const encodable = jsonRoundTrip({ ...entry, textOffset } as AguiCitation);
   if (encodable === undefined) {
     log.warn(
-      `[@ag-ui/aws-strands] Dropping unserializable citation ` +
+      `[@0noxtackore/aws-strands] Dropping unserializable citation ` +
         `(keys=${describeKeys(entry)})`,
     );
   }
@@ -354,7 +354,7 @@ export function copyCitationMetadata(
   const copied = jsonRoundTrip(metadata);
   if (copied === undefined) {
     log.warn(
-      `[@ag-ui/aws-strands] Dropping a citation list that no longer encodes`,
+      `[@0noxtackore/aws-strands] Dropping a citation list that no longer encodes`,
     );
   }
   return copied;
@@ -411,14 +411,14 @@ export class CitationAccumulator {
     const content = textEntries(candidate.content);
     if (!Array.isArray(candidate.citations)) {
       this.log.warn(
-        `[@ag-ui/aws-strands] Ignoring a citationsDelta whose citations field ` +
+        `[@0noxtackore/aws-strands] Ignoring a citationsDelta whose citations field ` +
           `is ${candidate.citations === undefined ? "absent" : "not an array"}`,
       );
       return true;
     }
     if (candidate.citations.length === 0) {
       this.log.warn(
-        `[@ag-ui/aws-strands] Ignoring a citationsDelta carrying no citations`,
+        `[@0noxtackore/aws-strands] Ignoring a citationsDelta carrying no citations`,
       );
       return true;
     }
@@ -463,7 +463,7 @@ export class CitationAccumulator {
       // away so a future change that admits a raw value cannot ship a
       // `{ citations: undefined }` payload.
       this.log.warn(
-        `[@ag-ui/aws-strands] Dropping ${this.items.length} citation(s) that ` +
+        `[@0noxtackore/aws-strands] Dropping ${this.items.length} citation(s) that ` +
           `no longer encode`,
       );
       return undefined;
@@ -517,7 +517,7 @@ export function discardOrphanCitations(
   citations.take();
   if (dropped === 0) return;
   log.warn(
-    `[@ag-ui/aws-strands] Dropping ${dropped} citation(s) that arrived with no ` +
+    `[@0noxtackore/aws-strands] Dropping ${dropped} citation(s) that arrived with no ` +
       `open assistant message (${context})`,
   );
 }

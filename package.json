@@ -1,6 +1,6 @@
 {
   "name": "ag-ui",
-  "author": "Markus Ecker <markus.ecker@gmail.com>",
+  "author": "0noxtackore",
   "private": true,
   "scripts": {
     "build": "nx run-many -t build",

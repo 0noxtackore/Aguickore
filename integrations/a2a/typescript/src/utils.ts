@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   BaseEvent,
   ContentPart,
   InputContent,
@@ -9,8 +9,8 @@ import type {
   ToolCallEndEvent,
   ToolCallStartEvent,
   ToolCallResultEvent,
-} from "@ag-ui/client";
-import { EventType, randomUUID } from "@ag-ui/client";
+} from "@0noxtackore/client";
+import { EventType, randomUUID } from "@0noxtackore/client";
 import type {
   A2AMessage,
   A2APart,
@@ -42,7 +42,7 @@ const SURFACE_OPERATION_KEYS = [
 type SurfaceOperationKey = (typeof SURFACE_OPERATION_KEYS)[number];
 
 /**
- * The legacy binary content part, which left `@ag-ui/core` in 1.0. Old
+ * The legacy binary content part, which left `@0noxtackore/core` in 1.0. Old
  * producers still send it, so this boundary keeps reading it — typed locally,
  * because the protocol no longer knows the shape.
  */

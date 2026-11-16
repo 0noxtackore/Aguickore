@@ -1,8 +1,8 @@
-import { transformHttpEventStream } from "../http";
+﻿import { transformHttpEventStream } from "../http";
 import { HttpEvent, HttpEventType } from "../../run/http-request";
 import { parseProtoStream } from "../proto";
-import * as proto from "@ag-ui/proto";
-import { BaseEvent, EventType } from "@ag-ui/core";
+import * as proto from "@0noxtackore/proto";
+import { BaseEvent, EventType } from "@0noxtackore/core";
 import { Subject, of, throwError } from "rxjs";
 import { describe, expect, vi, beforeEach, Mock, test } from "vitest";
 

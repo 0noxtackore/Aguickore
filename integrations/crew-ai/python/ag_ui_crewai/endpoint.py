@@ -1,4 +1,4 @@
-"""
+﻿"""
 AG-UI FastAPI server for CrewAI.
 """
 import asyncio
@@ -47,7 +47,7 @@ from ag_ui.encoder import EventEncoder
 from .context import flow_context
 from .utils import camel_to_snake, dump_agui_message
 # Toolkit split: routes the A2UI component-schema context entry (stamped by
-# ``@ag-ui/a2ui-middleware``) into ``state["ag-ui"]`` for the a2ui subagent tool.
+# ``@0noxtackore/a2ui-middleware``) into ``state["ag-ui"]`` for the a2ui subagent tool.
 from ag_ui_a2ui_toolkit import split_a2ui_schema_context
 from .sdk import reset_node_snapshot_suppression
 from .crews import ChatWithCrewFlow, CrewBaseInstance
@@ -749,7 +749,7 @@ async def _run_flow_frame_stream(
     foreign_events: dict[str, Any] = {}
     # RAW mirrors that arrived BEFORE RUN_STARTED, from either source. Released in
     # order right after the run opens: crewai raises some events before the flow
-    # starts, and a RAW first event makes @ag-ui/client's verifyEvents throw
+    # starts, and a RAW first event makes @0noxtackore/client's verifyEvents throw
     # "First event must be 'RUN_STARTED'".
     pending_raw: list[Any] = []
     conversational_user_id: str | None = None

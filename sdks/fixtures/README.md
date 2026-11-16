@@ -1,4 +1,4 @@
-# Cross-language fixtures
+﻿# Cross-language fixtures
 
 Fixtures in this directory are shared by more than one AG-UI SDK. They exist so a wire-format
 expectation is written down **once** and every SDK is held to the same text, instead of each SDK
@@ -82,7 +82,7 @@ with explicitly, or an edit here can leave a stale green result behind:
   handled.
 - **Python** is run directly by `unittest`, with no caching layer. Nothing to do.
 - **TypeScript** runs under Nx, which caches `test` on `{projectRoot}/**/*` — this directory is not
-  in it. `@ag-ui/encoder` therefore sets `nx.targets.test.cache: false` in its `package.json`; its
+  in it. `@0noxtackore/encoder` therefore sets `nx.targets.test.cache: false` in its `package.json`; its
   suite takes well under a second, so always running it is cheaper than the risk.
 
 A second thing a new consumer needs: **a CI trigger**. This directory sits outside every path list

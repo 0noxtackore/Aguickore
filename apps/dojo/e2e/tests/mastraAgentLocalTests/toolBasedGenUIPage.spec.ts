@@ -1,4 +1,4 @@
-import { test, expect } from "../../test-isolation-helper";
+﻿import { test, expect } from "../../test-isolation-helper";
 import { ToolBaseGenUIPage } from "../../featurePages/ToolBaseGenUIPage";
 
 const pageURL = "/mastra-agent-local/feature/tool_based_generative_ui";
@@ -16,7 +16,7 @@ test("[Mastra Agent Local] Haiku generation and display verification", async ({
   await genAIAgent.checkHaikuDisplay(page);
 });
 
-// OSS-393: the @ag-ui/mastra bridge must consume Mastra's tool-call-delta
+// OSS-393: the @0noxtackore/mastra bridge must consume Mastra's tool-call-delta
 // chunks and forward them as incremental TOOL_CALL_ARGS, so tool-call args
 // render progressively. Asserting on the completed SSE body keeps this
 // flake-free (no live timing).

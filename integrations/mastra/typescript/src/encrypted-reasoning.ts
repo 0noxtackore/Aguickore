@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The provider artefacts of one reasoning span: what a provider needs back on a
  * later turn to restore the reasoning it stands for (an Anthropic thinking
  * signature or redacted block, an OpenAI reasoning item id and encrypted
@@ -16,7 +16,7 @@ export interface ReasoningArtifact {
   redactedData?: unknown;
 }
 
-const ENVELOPE_TAG = "@ag-ui/mastra/reasoning";
+const ENVELOPE_TAG = "@0noxtackore/mastra/reasoning";
 const ENVELOPE_VERSION = 1;
 
 function isRecord(value: unknown): value is Record<string, unknown> {

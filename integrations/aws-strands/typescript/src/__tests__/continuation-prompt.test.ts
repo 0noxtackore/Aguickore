@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The synthetic continuation prompt: what the model is told after a frontend
  * tool resolves.
  *
@@ -14,7 +14,7 @@
 
 import { describe, it, expect } from "vitest";
 import type { Agent } from "@strands-agents/sdk";
-import type { Message, RunAgentInput } from "@ag-ui/core";
+import type { Message, RunAgentInput } from "@0noxtackore/core";
 
 import type { StrandsAgentConfig } from "../config";
 import {

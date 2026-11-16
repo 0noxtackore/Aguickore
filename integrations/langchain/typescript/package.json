@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/langchain",
+﻿{
+  "name": "@0noxtackore/langchain",
   "version": "0.0.4",
   "repository": {
     "type": "git",
@@ -34,14 +34,14 @@
     "rxjs": "7.8.1"
   },
   "peerDependencies": {
-    "@ag-ui/core": ">=1.0.0",
-    "@ag-ui/client": ">=1.0.0",
+    "@0noxtackore/core": ">=1.0.0",
+    "@0noxtackore/client": ">=1.0.0",
     "@langchain/core": ">=0.3.0 <2.0.0",
     "zod": "^3.25.67"
   },
   "devDependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@langchain/core": ">=1.1.0 <2.0.0",
     "@types/node": "^20.11.19",
     "@vitest/coverage-istanbul": "^4.0.18",

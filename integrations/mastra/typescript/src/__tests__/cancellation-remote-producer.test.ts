@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
-import { EventType, type BaseEvent } from "@ag-ui/client";
+﻿import { describe, it, expect, vi, afterEach } from "vitest";
+import { EventType, type BaseEvent } from "@0noxtackore/client";
 
 // ---------------------------------------------------------------------------
 // #2288, remote half: cancelling a remote run must stop the PRODUCER, not just

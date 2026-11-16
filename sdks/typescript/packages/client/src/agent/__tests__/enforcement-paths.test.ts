@@ -1,13 +1,13 @@
-import { describe, it, expect, vi, beforeEach, afterEach, Mock } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach, Mock } from "vitest";
 import { scheduled, asyncScheduler, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { HttpAgent } from "../http";
 import { AbstractAgent } from "../agent";
 import { runHttpRequest, HttpEventType } from "@/run/http-request";
 import { Middleware } from "@/middleware";
-import { BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
-import { EventEncoder } from "@ag-ui/encoder";
-import * as proto from "@ag-ui/proto";
+import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
+import { EventEncoder } from "@0noxtackore/encoder";
+import * as proto from "@0noxtackore/proto";
 
 // Every transport must feed the same boundary: middleware first, enforcement
 // after. One test per path — streaming (SSE), binary (protobuf framing), and

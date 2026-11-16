@@ -1,4 +1,4 @@
-{
+﻿{
   "prereleaseTag": "canary",
   "scopes": {
     "sdk-ts": {
@@ -6,10 +6,10 @@
       "sharedVersion": true,
       "versionSource": "sdks/typescript/packages/core/package.json",
       "packages": [
-        { "name": "@ag-ui/core", "path": "sdks/typescript/packages/core", "ecosystem": "typescript" },
-        { "name": "@ag-ui/client", "path": "sdks/typescript/packages/client", "ecosystem": "typescript" },
-        { "name": "@ag-ui/encoder", "path": "sdks/typescript/packages/encoder", "ecosystem": "typescript" },
-        { "name": "@ag-ui/proto", "path": "sdks/typescript/packages/proto", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/core", "path": "sdks/typescript/packages/core", "ecosystem": "typescript" },
+        { "name": "@0noxtackore/client", "path": "sdks/typescript/packages/client", "ecosystem": "typescript" },
+        { "name": "@0noxtackore/encoder", "path": "sdks/typescript/packages/encoder", "ecosystem": "typescript" },
+        { "name": "@0noxtackore/proto", "path": "sdks/typescript/packages/proto", "ecosystem": "typescript" }
       ]
     },
     "sdk-dotnet": {
@@ -35,7 +35,7 @@
       "description": "A2UI Toolkit (standalone TypeScript SDK package, independently versioned)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/a2ui-toolkit", "path": "sdks/typescript/packages/a2ui-toolkit", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/a2ui-toolkit", "path": "sdks/typescript/packages/a2ui-toolkit", "ecosystem": "typescript" }
       ]
     },
     "sdk-py-a2ui-toolkit": {
@@ -88,21 +88,21 @@
       "description": "A2A integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/a2a", "path": "integrations/a2a/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/a2a", "path": "integrations/a2a/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-adk-js": {
       "description": "ADK JS integration (Google ADK JavaScript, TypeScript package)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/adk-js", "path": "integrations/adk-middleware/js", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/adk-js", "path": "integrations/adk-middleware/js", "ecosystem": "typescript" }
       ]
     },
     "integration-adk-ts": {
       "description": "ADK integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/adk", "path": "integrations/adk-middleware/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/adk", "path": "integrations/adk-middleware/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-adk-py": {
@@ -116,7 +116,7 @@
       "description": "AG2 integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/ag2", "path": "integrations/ag2/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/ag2", "path": "integrations/ag2/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-agent-spec": {
@@ -130,14 +130,14 @@
       "description": "Agno integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/agno", "path": "integrations/agno/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/agno", "path": "integrations/agno/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-aws-strands-ts": {
       "description": "AWS Strands integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/aws-strands", "path": "integrations/aws-strands/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/aws-strands", "path": "integrations/aws-strands/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-antigravity-py": {
@@ -151,7 +151,7 @@
       "description": "Google Antigravity integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/antigravity", "path": "integrations/antigravity/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/antigravity", "path": "integrations/antigravity/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-aws-strands-py": {
@@ -165,7 +165,7 @@
       "description": "Claude Agent SDK integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/claude-agent-sdk", "path": "integrations/claude-agent-sdk/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/claude-agent-sdk", "path": "integrations/claude-agent-sdk/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-claude-agent-sdk-py": {
@@ -179,7 +179,7 @@
       "description": "Claude Managed Agents integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/claude-managed-agents", "path": "integrations/claude-managed-agents/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/claude-managed-agents", "path": "integrations/claude-managed-agents/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-claude-managed-agents-py": {
@@ -201,14 +201,14 @@
       "description": "Cloudflare Agents integration (community, TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/cloudflare-agents", "path": "integrations/community/cloudflare-agents/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/cloudflare-agents", "path": "integrations/community/cloudflare-agents/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-crewai-ts": {
       "description": "CrewAI integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/crewai", "path": "integrations/crew-ai/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/crewai", "path": "integrations/crew-ai/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-crewai-py": {
@@ -222,14 +222,14 @@
       "description": "LangChain integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/langchain", "path": "integrations/langchain/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/langchain", "path": "integrations/langchain/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-langgraph-ts": {
       "description": "LangGraph integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/langgraph", "path": "integrations/langgraph/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/langgraph", "path": "integrations/langgraph/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-langgraph-py": {
@@ -250,21 +250,21 @@
       "description": "Llama Index integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/llamaindex", "path": "integrations/llama-index/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/llamaindex", "path": "integrations/llama-index/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-mastra": {
       "description": "Mastra integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/mastra", "path": "integrations/mastra/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/mastra", "path": "integrations/mastra/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-omnara": {
       "description": "Omnara integration (community, TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/omnara", "path": "integrations/community/omnara/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/omnara", "path": "integrations/community/omnara/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-openai-agents-py": {
@@ -278,28 +278,28 @@
       "description": "OpenAI Agents SDK integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/openai-agents", "path": "integrations/openai-agents/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/openai-agents", "path": "integrations/openai-agents/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-pydantic-ai": {
       "description": "Pydantic AI integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/pydantic-ai", "path": "integrations/pydantic-ai/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/pydantic-ai", "path": "integrations/pydantic-ai/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-spring-ai": {
       "description": "Spring AI integration (community, TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/spring-ai", "path": "integrations/community/spring-ai/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/spring-ai", "path": "integrations/community/spring-ai/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-watsonx-ts": {
       "description": "Watsonx integration (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/watsonx", "path": "integrations/watsonx/typescript", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/watsonx", "path": "integrations/watsonx/typescript", "ecosystem": "typescript" }
       ]
     },
     "integration-watsonx-py": {
@@ -313,28 +313,28 @@
       "description": "A2A Middleware (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/a2a-middleware", "path": "middlewares/a2a-middleware", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/a2a-middleware", "path": "middlewares/a2a-middleware", "ecosystem": "typescript" }
       ]
     },
     "middleware-a2ui": {
       "description": "A2UI Middleware (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/a2ui-middleware", "path": "middlewares/a2ui-middleware", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/a2ui-middleware", "path": "middlewares/a2ui-middleware", "ecosystem": "typescript" }
       ]
     },
     "middleware-mcp-apps": {
       "description": "MCP Apps Middleware (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/mcp-apps-middleware", "path": "middlewares/mcp-apps-middleware", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/mcp-apps-middleware", "path": "middlewares/mcp-apps-middleware", "ecosystem": "typescript" }
       ]
     },
     "middleware-mcp": {
       "description": "MCP Middleware (TypeScript)",
       "sharedVersion": false,
       "packages": [
-        { "name": "@ag-ui/mcp-middleware", "path": "middlewares/mcp-middleware", "ecosystem": "typescript" }
+        { "name": "@0noxtackore/mcp-middleware", "path": "middlewares/mcp-middleware", "ecosystem": "typescript" }
       ]
     },
     "sdk-kotlin": {

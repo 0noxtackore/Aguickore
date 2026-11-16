@@ -1,8 +1,8 @@
-/**
- * Server-side entry point for `@ag-ui/aws-strands`.
+﻿/**
+ * Server-side entry point for `@0noxtackore/aws-strands`.
  *
- * Import from `@ag-ui/aws-strands/server` when you need the Express transport
- * helpers. The main entry point (`@ag-ui/aws-strands`) stays free of Express
+ * Import from `@0noxtackore/aws-strands/server` when you need the Express transport
+ * helpers. The main entry point (`@0noxtackore/aws-strands`) stays free of Express
  * / cors references so Next.js / Turbopack / Vite bundlers tracing the
  * client-side graph don't pull server-only modules into the browser build.
  */

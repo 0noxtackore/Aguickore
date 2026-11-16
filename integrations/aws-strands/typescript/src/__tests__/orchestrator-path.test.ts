@@ -1,4 +1,4 @@
-/**
+﻿/**
  * StrandsAgent, when given a multi-agent orchestrator (Graph/Swarm)
  * instead of an Agent, drives `.stream()` and translates the real TS SDK
  * multi-agent event classes into AG-UI STEP_* / MultiAgentHandoff /
@@ -6,7 +6,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import { StrandsAgent } from "../agent";
 import { collect } from "./helpers";
 

@@ -1,10 +1,10 @@
-import {
+﻿import {
   EventType,
   type AGUIEvent,
   type JsonPatch,
   type StateDeltaEvent,
   type TokenUsage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import {
   REQUEST_CONFIRMATION_FUNCTION_CALL_NAME,
   REQUEST_CREDENTIAL_FUNCTION_CALL_NAME,

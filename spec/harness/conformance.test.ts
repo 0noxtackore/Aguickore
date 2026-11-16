@@ -1,8 +1,8 @@
-/**
+﻿/**
  * The gate over the conformance fixture corpus.
  *
  * The fixtures themselves are run by each client's own lane — TypeScript in
- * `@ag-ui/client`, .NET in `AGUI.Client.UnitTests` — because only a client can
+ * `@0noxtackore/client`, .NET in `AGUI.Client.UnitTests` — because only a client can
  * say what a client does. What belongs here is everything true of the corpus
  * regardless of who consumes it: that each file is well formed, that a
  * divergence between the two clients is always explained, and that the

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Per-request filtering of the tools the template agent contributed.
  *
  * The adapter keeps one Strands `Agent` per thread and that instance is
@@ -17,7 +17,7 @@
  */
 
 import { describe, it, expect, vi } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 import {
   Agent as StrandsAgentCore,
   BeforeModelCallEvent,

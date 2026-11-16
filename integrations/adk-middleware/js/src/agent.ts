@@ -1,11 +1,11 @@
-import { AbstractAgent } from "@ag-ui/client";
+﻿import { AbstractAgent } from "@0noxtackore/client";
 import {
   EventType,
   PROTOCOL_VERSION,
   type AGUIEvent,
   type AgentCapabilities,
   type RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Runner, isIntentMismatchError } from "@google/adk";
 import { Observable } from "rxjs";
 

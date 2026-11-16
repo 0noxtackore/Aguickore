@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 # scripts/release/create-tags.sh
 #
 # Idempotent, retry-safe git tag creation + push for release workflows.
@@ -29,7 +29,7 @@ set -euo pipefail
 PACKAGES_JSON="${1:?Usage: $0 <packages-json>}"
 
 # Regex guards for tag components. Names are a superset of npm + PyPI
-# (allowing scoped npm names like @ag-ui/core and PyPI names like ag-ui-protocol).
+# (allowing scoped npm names like @0noxtackore/core and PyPI names like ag-ui-protocol).
 # Versions accept PEP 440 + semver shapes.
 NAME_RE='^[A-Za-z0-9._@/-]+$'
 VERSION_RE='^[A-Za-z0-9.+_!-]+$'

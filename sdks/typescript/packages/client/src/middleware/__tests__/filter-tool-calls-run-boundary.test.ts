@@ -1,4 +1,4 @@
-import { AbstractAgent } from "@/agent";
+﻿import { AbstractAgent } from "@/agent";
 import { FilterToolCallsMiddleware } from "@/middleware/filter-tool-calls";
 import {
   BaseEvent,
@@ -8,7 +8,7 @@ import {
   ToolCallEndEvent,
   ToolCallResultEvent,
   ToolCallStartEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Observable, Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 

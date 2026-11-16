@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A producer-sent RUN_ERROR is reported, not raised.
  *
  * The stream is well formed — an agent honestly reporting that its run failed
@@ -25,7 +25,7 @@ import {
   RunAgentInput,
   RunFinishedEvent,
   RunStartedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import type { AgentStateMutation, AgentSubscriber } from "../subscriber";
 import type { RunAgentResult } from "../agent";
 

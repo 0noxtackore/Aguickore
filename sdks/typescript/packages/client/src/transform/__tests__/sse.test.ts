@@ -1,8 +1,8 @@
-import { ReplaySubject, Subject } from "rxjs";
+﻿import { ReplaySubject, Subject } from "rxjs";
 import { firstValueFrom } from "rxjs";
 import { take } from "rxjs/operators";
 import { transformHttpEventStream } from "../http";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import { HttpEvent, HttpEventType, runHttpRequest } from "../../run/http-request";
 import { MAX_BUFFER_SIZE } from "../sse";
 

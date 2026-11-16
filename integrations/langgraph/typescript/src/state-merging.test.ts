@@ -1,8 +1,8 @@
-/**
+﻿/**
  * Tests for langGraphDefaultMergeState.
  * Covers basic merging, tool deduplication, and the orphaned-tools fix for #1412.
  *
- * NOTE: LangGraphAgent extends AbstractAgent from @ag-ui/client, which isn't
+ * NOTE: LangGraphAgent extends AbstractAgent from @0noxtackore/client, which isn't
  * buildable without protoc (network-dependent). So we can't instantiate the
  * real agent in tests. Instead, we duplicate the merge logic inline here.
  * This is a known drift risk — if agent.ts diverges, these tests won't catch it.

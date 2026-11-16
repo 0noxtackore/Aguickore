@@ -1,4 +1,4 @@
-/**
+﻿/**
  * What a paused tool actually receives when a resume reaches it.
  *
  * This is the cross-language contract: a tool body written against one
@@ -13,7 +13,7 @@
  * interrupts. Those script the agent deliberately and say so.
  */
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 import { tool, type ToolContext } from "@strands-agents/sdk";
 import { z } from "zod";
 

@@ -1,6 +1,6 @@
-import { expect, it, vi } from "vitest";
+﻿import { expect, it, vi } from "vitest";
 import { type HookInput, type Options } from "@anthropic-ai/claude-agent-sdk";
-import type { RunAgentInput } from "@ag-ui/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 import { NativeHistory, type ChildCheckpoint } from "./native-history";
 import { NativeChildRecovery } from "./native-recovery";
 const { queryMock } = vi.hoisted(() => ({ queryMock: vi.fn() }));

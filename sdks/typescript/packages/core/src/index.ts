@@ -1,8 +1,8 @@
-// The generated protocol source: types and constants, regenerated from
-// spec/1.0/schema.json (`pnpm --filter @ag-ui/spec generate`).
+﻿// The generated protocol source: types and constants, regenerated from
+// spec/1.0/schema.json (`pnpm --filter @0noxtackore/spec generate`).
 //
 // The zod validators are deliberately NOT here. They live behind the
-// `@ag-ui/core/schemas` subpath so that importing this entry pulls no zod at
+// `@0noxtackore/core/schemas` subpath so that importing this entry pulls no zod at
 // runtime — which is what lets zod be an OPTIONAL peer dependency of this
 // package. Types (including every capability type) are erased at compile time
 // and stay on this entry.

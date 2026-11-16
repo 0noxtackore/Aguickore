@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for session manager provider lifecycle in StrandsAgent.
  *
  * Port of Python's test_session_manager.py — covers caching, async providers,
@@ -7,7 +7,7 @@
 
 import { describe, it, expect, vi } from "vitest";
 import { SessionManager } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import { collect, minimalRunInput, scriptedAgent } from "./helpers";

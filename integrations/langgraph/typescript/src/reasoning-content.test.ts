@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for resolveReasoningContent and resolveEncryptedReasoningContent.
  * Covers all supported AI provider formats including the Bedrock Converse API
  * fix for issue #1361.
@@ -6,7 +6,7 @@
 
 import { resolveReasoningContent, resolveEncryptedReasoningContent } from "./utils";
 import { LangGraphAgent } from "./agent";
-import { EventType } from "@ag-ui/client";
+import { EventType } from "@0noxtackore/client";
 
 describe("resolveReasoningContent", () => {
   it("should handle Anthropic old format (thinking)", () => {

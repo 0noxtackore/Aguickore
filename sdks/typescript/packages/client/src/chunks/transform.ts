@@ -1,4 +1,4 @@
-import { mergeMap, Observable, finalize } from "rxjs";
+﻿import { mergeMap, Observable, finalize } from "rxjs";
 import {
   BaseEvent,
   TextMessageChunkEvent,
@@ -13,13 +13,13 @@ import {
   ReasoningMessageContentEvent,
   ReasoningMessageEndEvent,
   ReasoningMessageStartEvent,
-} from "@ag-ui/core";
-import { EventType } from "@ag-ui/core";
+} from "@0noxtackore/core";
+import { EventType } from "@0noxtackore/core";
 import {
   TextMessageChunkEventSchema,
   ToolCallChunkEventSchema,
   ReasoningMessageChunkEventSchema,
-} from "@ag-ui/core/schemas";
+} from "@0noxtackore/core/schemas";
 import { type DebugLoggerInput, resolveDebugLogger } from "@/debug-logger";
 
 interface TextMessageFields {
@@ -131,7 +131,7 @@ const withChunkOrigin = <T extends BaseEvent>(event: T, chunk: BaseEvent): T => 
  * genuinely cannot do — it runs upstream of enforcement on the middleware
  * path. Nothing is validated or stripped at this line: it reads the list of
  * names the schema declares, once per shape at import time.
- * `@ag-ui/core/schemas` is already a runtime import of this package
+ * `@0noxtackore/core/schemas` is already a runtime import of this package
  * (enforce/) and zod is already a hard dependency, so this adds no edge.
  */
 const describedFields = (schema: { shape: Record<string, unknown> }): ReadonlySet<string> =>

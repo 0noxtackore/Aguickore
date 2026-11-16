@@ -1,10 +1,10 @@
-/**
+﻿/**
  * The peer ceiling (`maxProtocolVersion`, and its deprecated alias
  * `maxVersion`) must preserve subclass overrides through both spellings.
  * Constructor version gates run before subclass instance fields exist.
  */
 import { AbstractAgent } from "@/agent";
-import { BaseEvent, Message, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, Message, RunAgentInput } from "@0noxtackore/core";
 import { Observable } from "rxjs";
 import packageJson from "../../../package.json";
 

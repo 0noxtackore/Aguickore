@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A producer-sent RUN_ERROR does NOT end the stream.
  *
  * The verifier has always admitted a RUN_STARTED after a RUN_ERROR — it resets
@@ -18,7 +18,7 @@ import { Observable, Subject } from "rxjs";
 import { transformHttpEventStream } from "@/transform/http";
 import { HttpEventType, type HttpEvent } from "@/run/http-request";
 import { AbstractAgent } from "../agent";
-import { BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 import type { AgentSubscriber } from "../subscriber";
 import type { RunAgentResult } from "../agent";
 

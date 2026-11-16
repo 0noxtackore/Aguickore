@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import {
   langGraphInterruptToAGUI,
   langGraphInterruptsToAGUI,
@@ -6,7 +6,7 @@ import {
   DEFAULT_RESUME_SENTINEL_CANCELLED,
   DEFAULT_RESUME_SENTINEL_MAP,
 } from "./interrupts";
-import type { ResumeEntry, Interrupt as AGUIInterrupt } from "@ag-ui/core";
+import type { ResumeEntry, Interrupt as AGUIInterrupt } from "@0noxtackore/core";
 import type { Interrupt as LangGraphInterrupt } from "@langchain/langgraph-sdk";
 import { LangGraphAgent, LangGraphAgentConfig } from "./agent";
 

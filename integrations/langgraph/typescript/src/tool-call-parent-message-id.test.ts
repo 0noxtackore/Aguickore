@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Which message a non-streamed tool call is attached to.
  *
  * A tool call that never streamed through `OnChatModelStream` is announced
@@ -13,7 +13,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import { LangGraphAgent } from "./agent";
 
 function createAgent() {

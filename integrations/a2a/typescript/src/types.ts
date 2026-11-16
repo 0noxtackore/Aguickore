@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   MessageSendConfiguration,
   MessageSendParams,
   Message as A2AMessage,
@@ -10,7 +10,7 @@ import type {
   TaskStatusUpdateEvent as A2ATaskStatusUpdateEvent,
   TaskArtifactUpdateEvent as A2ATaskArtifactUpdateEvent,
 } from "@a2a-js/sdk";
-import type { Message as AGUIMessage } from "@ag-ui/client";
+import type { Message as AGUIMessage } from "@0noxtackore/client";
 
 export type {
   A2AMessage,

@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
 import { z } from "zod/v4";
@@ -6,7 +6,7 @@ import { stripUnknown } from "../strip";
 
 /**
  * Two zod copies in one process is the normal case, not the exotic one: an
- * application installs its own zod, `@ag-ui/core` declares zod as an optional
+ * application installs its own zod, `@0noxtackore/core` declares zod as an optional
  * peer, and any hoisting accident or version skew lands a second copy in
  * node_modules. `stripUnknown` narrows entirely by `instanceof z.ZodObject` /
  * `z.ZodArray` / `z.ZodUnion`, so if `instanceof` were copy-local it would

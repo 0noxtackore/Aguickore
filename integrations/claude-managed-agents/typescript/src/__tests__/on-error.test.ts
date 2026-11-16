@@ -1,5 +1,5 @@
-import { EventType } from "@ag-ui/client";
-import type { BaseEvent } from "@ag-ui/client";
+﻿import { EventType } from "@0noxtackore/client";
+import type { BaseEvent } from "@0noxtackore/client";
 import { describe, expect, it } from "vitest";
 import { ManagedAgentsAgent } from "../agent";
 import { reportSwallowedFailure } from "../report";

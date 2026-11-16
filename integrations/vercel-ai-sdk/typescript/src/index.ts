@@ -1,4 +1,4 @@
-import {
+﻿import {
   AgentConfig,
   AbstractAgent,
   EventType,
@@ -15,7 +15,7 @@ import {
   ToolCallStartEvent,
   ToolCall,
   ToolMessage,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable } from "rxjs";
 import {
   CoreMessage,
@@ -29,7 +29,7 @@ import {
   ImagePart,
   TextPart,
 } from "ai";
-import { randomUUID } from "@ag-ui/client";
+import { randomUUID } from "@0noxtackore/client";
 import { z } from "zod";
 
 type VercelUserContent = Extract<CoreMessage, { role: "user" }>["content"];

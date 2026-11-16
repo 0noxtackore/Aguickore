@@ -1,4 +1,4 @@
-import { convertMessagesToLegacyFormat, convertToLegacyEvents } from "../convert";
+﻿import { convertMessagesToLegacyFormat, convertToLegacyEvents } from "../convert";
 import { of } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
@@ -7,7 +7,7 @@ import {
   Message,
   MessagesSnapshotEvent,
   RunFinishedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { LegacyRunError, LegacyRuntimeProtocolEvent } from "../types";
 
 const messagesWithMalformedToolArgs = (): Message[] => [

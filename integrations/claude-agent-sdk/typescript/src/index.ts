@@ -1,4 +1,4 @@
-/**
+﻿/**
  * AG-UI integration for Anthropic Claude Agent SDK.
  *
  * The adapter manages the SDK query lifecycle internally — just call
@@ -6,7 +6,7 @@
  *
  * @example
  * ```typescript
- * import { ClaudeAgentAdapter } from "@ag-ui/claude-agent-sdk";
+ * import { ClaudeAgentAdapter } from "@0noxtackore/claude-agent-sdk";
  *
  * const adapter = new ClaudeAgentAdapter({ model: "claude-haiku-4-5" });
  * const events$ = adapter.run(input);

@@ -1,7 +1,7 @@
-import { afterEach, vi } from "vitest";
+﻿import { afterEach, vi } from "vitest";
 import { Agent } from "@mastra/core/agent";
 import { MastraAgent } from "../mastra";
-import { EventType, type TextMessageChunkEvent } from "@ag-ui/client";
+import { EventType, type TextMessageChunkEvent } from "@0noxtackore/client";
 import {
   makeLocalMastraAgent,
   makeRemoteMastraAgent,

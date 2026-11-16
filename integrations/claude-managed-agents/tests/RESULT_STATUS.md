@@ -1,4 +1,4 @@
-# Managed tool-result failure fidelity (PNI-691)
+﻿# Managed tool-result failure fidelity (PNI-691)
 
 Native `agent.tool_result`, `agent.mcp_tool_result` and recovered
 `user.custom_tool_result` events preserve their original result and call IDs.
@@ -24,7 +24,7 @@ message; this patch does not change that importer.
 Run commands from the repository root, with one build/test worker:
 
 ```sh
-AGUI_TEST_PYTHON=python3 NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @ag-ui/claude-managed-agents:test --parallel=1 --maxWorkers=1
+AGUI_TEST_PYTHON=python3 NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @0noxtackore/claude-managed-agents:test --parallel=1 --maxWorkers=1
 cd integrations/claude-managed-agents/python
 uv sync --group dev
 uv run pytest -q

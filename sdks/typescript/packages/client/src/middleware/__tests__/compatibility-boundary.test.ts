@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { of, Observable } from "rxjs";
-import { BaseEvent, EventType, Message, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent } from "@/agent";
 
 // The always-on inbound boundary is installed by the agent itself (innermost,

@@ -1,4 +1,4 @@
-import {
+﻿import {
   AgentsConfig,
   CopilotCorsConfig,
   CopilotRuntime,
@@ -16,7 +16,7 @@ import {
  * This function creates an API route that handles CopilotKit requests and forwards them to Mastra agents, enabling seamless integration between CopilotKit's UI components and Mastra's agent framework.
  *
  * For CopilotKit 1.x. With CopilotKit 2.x, import it from
- * `@ag-ui/mastra/copilotkit-2`.
+ * `@0noxtackore/mastra/copilotkit-2`.
  *
  * @example
  * ```ts

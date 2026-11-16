@@ -1,4 +1,4 @@
-"""The governing contract for ``emit_subagent_events``.
+﻿"""The governing contract for ``emit_subagent_events``.
 
 With the flag OFF (the default) the emitted stream must be indistinguishable
 from the pre-subagent integration: no SUBAGENT_* events, no ``subagentRunId``
@@ -383,7 +383,7 @@ class TestFlagOffStreamLoopGate(unittest.IsolatedAsyncioTestCase):
         ]
         self.assertEqual(
             leaked, [],
-            "a released @ag-ui/client rejects unknown event types as they come "
+            "a released @0noxtackore/client rejects unknown event types as they come "
             "off the wire, so not one SUBAGENT_* event may escape",
         )
 

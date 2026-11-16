@@ -1,4 +1,4 @@
-import { Message as LangGraphMessage } from "@langchain/langgraph-sdk";
+﻿import { Message as LangGraphMessage } from "@langchain/langgraph-sdk";
 import { State, SchemaKeys, LangGraphReasoning } from "./types";
 import {
   Message,
@@ -14,7 +14,7 @@ import {
   UserMessage,
   contentHasMedia,
   contentToText,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 
 export const DEFAULT_SCHEMA_KEYS = ["messages", "tools"];
 
@@ -1127,7 +1127,7 @@ function convertLangchainMultimodalToAgui(
 }
 
 /**
- * The legacy binary content part, which left `@ag-ui/core` in 1.0 (the
+ * The legacy binary content part, which left `@0noxtackore/core` in 1.0 (the
  * 0.0.47 client middleware converts it on modern pipelines). Old producers
  * still send it straight to servers, so this boundary keeps reading it —
  * typed locally, because the protocol no longer knows the shape.

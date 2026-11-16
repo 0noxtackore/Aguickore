@@ -1,7 +1,7 @@
-import { Observable, Subject } from "rxjs";
+﻿import { Observable, Subject } from "rxjs";
 import { HttpEvent, HttpEventType } from "../run/http-request";
-import { BaseEvent } from "@ag-ui/core";
-import * as proto from "@ag-ui/proto";
+import { BaseEvent } from "@0noxtackore/core";
+import * as proto from "@0noxtackore/proto";
 import { type DebugLoggerInput, resolveDebugLogger } from "@/debug-logger";
 
 /**

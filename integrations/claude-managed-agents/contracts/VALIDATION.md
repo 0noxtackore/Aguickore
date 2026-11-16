@@ -1,4 +1,4 @@
-# PNI-692 implementation validation
+﻿# PNI-692 implementation validation
 
 Base: `b5562fd9c46482828e434fb67d3e33d5dc55f5db` (origin/main).
 Branch: `fix/managed-shared-state`.
@@ -43,9 +43,9 @@ httpx 0.28.1. .NET SDK 10.0.201/runtime 10.0.5 loads Anthropic 12.37.0.
 Run from the repository root:
 
 ```sh
-NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @ag-ui/claude-managed-agents:build --parallel=1
-NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @ag-ui/claude-managed-agents:typecheck --excludeTaskDependencies --parallel=1
-NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @ag-ui/claude-managed-agents:test --excludeTaskDependencies --parallel=1 -- --maxWorkers=1
+NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @0noxtackore/claude-managed-agents:build --parallel=1
+NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @0noxtackore/claude-managed-agents:typecheck --excludeTaskDependencies --parallel=1
+NX_DAEMON=false NX_ISOLATE_PLUGINS=false pnpm exec nx run @0noxtackore/claude-managed-agents:test --excludeTaskDependencies --parallel=1 -- --maxWorkers=1
 ```
 
 Run Python from `integrations/claude-managed-agents/python` with its environment:

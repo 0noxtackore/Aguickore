@@ -1,4 +1,4 @@
-import {
+﻿import {
   EventType,
   PROTOCOL_VERSION,
   type AGUIEvent,
@@ -9,7 +9,7 @@ import {
   type RunFinishedOutcome,
   type ToolMessage,
   type UserMessage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { createHash } from "node:crypto";
 import {
   codeOf,

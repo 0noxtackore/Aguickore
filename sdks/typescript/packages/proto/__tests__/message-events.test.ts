@@ -1,11 +1,11 @@
-import {
+﻿import {
   BaseEvent,
   EventType,
   MessagesSnapshotEvent,
   TextMessageStartEvent,
   TextMessageContentEvent,
   TextMessageEndEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { describe, it, expect } from "vitest";
 import { encode, decode } from "../src/proto";
 import { expectRoundTripEquality } from "./test-utils";

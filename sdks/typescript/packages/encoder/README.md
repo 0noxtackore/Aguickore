@@ -1,19 +1,19 @@
-# @ag-ui/encoder
+﻿# @0noxtackore/encoder
 
 Event encoding utilities for the **Agent-User Interaction (AG-UI) Protocol**.
 
-`@ag-ui/encoder` handles content negotiation and format encoding for AG-UI events. It automatically chooses between Server-Sent Events (JSON) and Protocol Buffers based on client `Accept` headers, ensuring optimal transport efficiency.
+`@0noxtackore/encoder` handles content negotiation and format encoding for AG-UI events. It automatically chooses between Server-Sent Events (JSON) and Protocol Buffers based on client `Accept` headers, ensuring optimal transport efficiency.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/encoder zod
-pnpm add @ag-ui/encoder zod
-yarn add @ag-ui/encoder zod
+npm install @0noxtackore/encoder zod
+pnpm add @0noxtackore/encoder zod
+yarn add @0noxtackore/encoder zod
 ```
 
 zod (3.25.18+ or 4.x) is a peer dependency. Protobuf encoding validates each
-event with the schemas on `@ag-ui/core/schemas`, using the zod your application
+event with the schemas on `@0noxtackore/core/schemas`, using the zod your application
 installs rather than a bundled copy.
 
 ## Features
@@ -26,8 +26,8 @@ installs rather than a bundled copy.
 ## Quick example
 
 ```ts
-import { EventEncoder } from "@ag-ui/encoder";
-import { EventType } from "@ag-ui/core";
+import { EventEncoder } from "@0noxtackore/encoder";
+import { EventType } from "@0noxtackore/core";
 
 const encoder = new EventEncoder({
   accept: "application/vnd.ag-ui.event+proto, text/event-stream",

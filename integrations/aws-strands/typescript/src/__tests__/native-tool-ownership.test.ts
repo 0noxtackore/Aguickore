@@ -1,4 +1,4 @@
-import { mkdtempSync, rmSync } from "node:fs";
+﻿import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -7,7 +7,7 @@ import {
   type MessagesSnapshotEvent,
   type BaseEvent,
   type RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import {
   BeforeToolCallEvent,
   FileStorage,

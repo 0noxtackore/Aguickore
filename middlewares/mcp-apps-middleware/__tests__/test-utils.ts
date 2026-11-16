@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+﻿/* eslint-disable @typescript-eslint/no-unused-vars */
 import { vi } from "vitest";
-import { AbstractAgent, BaseEvent, EventType, RunAgentInput, Message, Tool, AssistantMessage } from "@ag-ui/client";
+import { AbstractAgent, BaseEvent, EventType, RunAgentInput, Message, Tool, AssistantMessage } from "@0noxtackore/client";
 import { Observable } from "rxjs";
 import { firstValueFrom, toArray } from "rxjs";
 

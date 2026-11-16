@@ -1,4 +1,4 @@
-"""
+﻿"""
 ag-ui-a2ui-toolkit
 ==================
 
@@ -85,11 +85,11 @@ A2UI_SCHEMA_CONTEXT_DESCRIPTION = (
     "A2UI Component Schema — available components for generating UI surfaces. "
     "Use these component names and properties when creating A2UI operations."
 )
-"""Context-entry description the ``@ag-ui/a2ui-middleware`` stamps onto the A2UI
+"""Context-entry description the ``@0noxtackore/a2ui-middleware`` stamps onto the A2UI
 component schema it injects into ``RunAgentInput.context``. Single home for the
 constant so every framework adapter splits on the same string. MUST stay
 byte-identical to ``A2UI_SCHEMA_CONTEXT_DESCRIPTION`` in
-``@ag-ui/a2ui-middleware`` (the TypeScript twin cannot import this Python copy).
+``@0noxtackore/a2ui-middleware`` (the TypeScript twin cannot import this Python copy).
 ``split_a2ui_schema_context`` matches it by exact equality — any drift silently
 routes the schema into the generic context block instead of
 ``## Available Components``."""
@@ -210,7 +210,7 @@ def build_context_prompt(state: dict) -> str:
 def split_a2ui_schema_context(context: Optional[list]) -> tuple:
     """Split AG-UI context entries into the A2UI component-schema entry and the
     rest. The schema entry is the one whose ``description`` exactly equals
-    ``A2UI_SCHEMA_CONTEXT_DESCRIPTION`` (stamped by ``@ag-ui/a2ui-middleware``).
+    ``A2UI_SCHEMA_CONTEXT_DESCRIPTION`` (stamped by ``@0noxtackore/a2ui-middleware``).
 
     Returns ``(schema_value, regular_context)``: framework adapters route
     ``schema_value`` to ``state["ag-ui"]["a2ui_schema"]`` (rendered as

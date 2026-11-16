@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Durable recovery of frontend tool results across a process restart.
  *
  * A frontend tool executes on the client, so server-side the proxy persists a
@@ -30,7 +30,7 @@ import {
   type ModelStreamEvent,
   type StopReason,
 } from "@strands-agents/sdk";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 
 import { FrontendToolIdentityError, StrandsAgent } from "../agent";
 import { PROXY_RESULT_PLACEHOLDER } from "../client-proxy-tool";

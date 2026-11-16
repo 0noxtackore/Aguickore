@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/adk-js",
+﻿{
+  "name": "@0noxtackore/adk-js",
   "version": "0.0.1",
   "description": "AG-UI integration for running Google ADK JavaScript agents in Node.js",
   "type": "commonjs",
@@ -38,14 +38,14 @@
     "@cfworker/json-schema": "^4.1.1"
   },
   "peerDependencies": {
-    "@ag-ui/client": "^1.0.0",
-    "@ag-ui/core": "^1.0.0",
+    "@0noxtackore/client": "^1.0.0",
+    "@0noxtackore/core": "^1.0.0",
     "@google/adk": ">=2.0.0 <3",
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@ag-ui/client": "workspace:*",
-    "@ag-ui/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
     "@arethetypeswrong/cli": "^0.17.4",
     "@google/adk": "^2.0.0",
     "@types/node": "^20.11.19",

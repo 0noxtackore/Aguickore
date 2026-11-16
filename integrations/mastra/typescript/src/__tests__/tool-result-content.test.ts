@@ -1,7 +1,7 @@
-import { afterEach, beforeEach, describe, it, expect, vi } from "vitest";
-import { EventType } from "@ag-ui/client";
-import type { BaseEvent, ContentPart, Message, Tool } from "@ag-ui/client";
-import { ToolCallResultEventSchema } from "@ag-ui/core/schemas";
+﻿import { afterEach, beforeEach, describe, it, expect, vi } from "vitest";
+import { EventType } from "@0noxtackore/client";
+import type { BaseEvent, ContentPart, Message, Tool } from "@0noxtackore/client";
+import { ToolCallResultEventSchema } from "@0noxtackore/core/schemas";
 import { Agent } from "@mastra/core/agent";
 import { MockMemory } from "@mastra/core/memory";
 import { createTool } from "@mastra/core/tools";

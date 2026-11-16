@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import express from "express";
 import type { AddressInfo } from "net";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 
 import { addStrandsExpressEndpoint } from "../endpoint";
 import { StrandsAgent } from "../agent";

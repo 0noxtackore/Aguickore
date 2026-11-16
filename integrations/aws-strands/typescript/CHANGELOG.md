@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## Unreleased
 
@@ -34,11 +34,11 @@ None.
 - Audio attachments retain the client's original filename in native message metadata, matching image, document and video.
 - `_runStarted` now sets `protocolVersion: PROTOCOL_VERSION` on RUN_STARTED.
 - Frontend tool results now reconciled into snapshot sessions (`SnapshotSessionManager`), replacing synthetic placeholder messages.
-- Validators now sourced from `@ag-ui/core/schemas`, with part renames and provider-specific tool result flattening.
+- Validators now sourced from `@0noxtackore/core/schemas`, with part renames and provider-specific tool result flattening.
 
 ### Breaking changes
 
-- Peer floors for `@ag-ui/core` and `@ag-ui/client` moved to `>=1.0.0`; code imports `@ag-ui/core/schemas`, which does not exist before 1.0.
+- Peer floors for `@0noxtackore/core` and `@0noxtackore/client` moved to `>=1.0.0`; code imports `@0noxtackore/core/schemas`, which does not exist before 1.0.
 - Model-class audio auto-detection and seed rebuild removed; audio no longer delivered automatically based on BedrockModel detection in some paths—set `audioInputSupported` explicitly.
 - Binary inputs retired and SDK checkpoint floor unified; re-verify media handling.
 

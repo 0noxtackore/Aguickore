@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import type { Message, State } from "@ag-ui/core";
+﻿import { describe, it, expect, vi, beforeEach } from "vitest";
+import type { Message, State } from "@0noxtackore/core";
 
 // Spy on the clone helper so we can COUNT how many full structuredClone_ calls
 // runSubscribersWithMutation makes per invocation. This is the cost that, when

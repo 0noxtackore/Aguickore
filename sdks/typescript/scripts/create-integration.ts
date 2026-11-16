@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 const args = process.argv.slice(2);
 
@@ -90,10 +90,10 @@ if (hasMiddleware) {
     console.log(`Updating package.json...`);
 
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
-    packageJson.name = `@ag-ui/${integrationName}`;
+    packageJson.name = `@0noxtackore/${integrationName}`;
 
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
-    console.log(`✓ Updated package name to @ag-ui/${integrationName}`);
+    console.log(`✓ Updated package name to @0noxtackore/${integrationName}`);
 
     // Convert kebab-case to PascalCase
     const pascalCaseName = integrationName
@@ -143,7 +143,7 @@ if (hasMiddleware) {
     let agentsContent = fs.readFileSync(agentsPath, "utf8");
 
     // Add import statement at the top
-    const importStatement = `import { ${agentClassName} } from "@ag-ui/${integrationName}";\n`;
+    const importStatement = `import { ${agentClassName} } from "@0noxtackore/${integrationName}";\n`;
     agentsContent = importStatement + agentsContent;
 
     const newAgentIntegration = `  {
@@ -172,13 +172,13 @@ if (hasMiddleware) {
 
     // Add the new integration as a dependency at the beginning
     const newDependencies = {
-      [`@ag-ui/${integrationName}`]: "workspace:*",
+      [`@0noxtackore/${integrationName}`]: "workspace:*",
       ...dojoPackageJson.dependencies
     };
     dojoPackageJson.dependencies = newDependencies;
 
     fs.writeFileSync(dojoPackageJsonPath, JSON.stringify(dojoPackageJson, null, 2) + "\n");
-    console.log(`✓ Added @ag-ui/${integrationName} to dojo dependencies`);
+    console.log(`✓ Added @0noxtackore/${integrationName} to dojo dependencies`);
   } catch (error) {
     console.error("Error creating integration:", error);
     process.exit(1);
@@ -220,10 +220,10 @@ if (hasServer) {
     console.log(`Updating package.json...`);
 
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
-    packageJson.name = `@ag-ui/${integrationName}`;
+    packageJson.name = `@0noxtackore/${integrationName}`;
 
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + "\n");
-    console.log(`✓ Updated package name to @ag-ui/${integrationName}`);
+    console.log(`✓ Updated package name to @0noxtackore/${integrationName}`);
 
     // Convert kebab-case to PascalCase
     const pascalCaseName = integrationName
@@ -273,7 +273,7 @@ if (hasServer) {
     let agentsContent = fs.readFileSync(agentsPath, "utf8");
 
     // Add import statement at the top
-    const importStatement = `import { ${agentClassName} } from "@ag-ui/${integrationName}";\n`;
+    const importStatement = `import { ${agentClassName} } from "@0noxtackore/${integrationName}";\n`;
     agentsContent = importStatement + agentsContent;
 
     const newAgentIntegration = `  {
@@ -302,13 +302,13 @@ if (hasServer) {
 
     // Add the new integration as a dependency at the beginning
     const newDependencies = {
-      [`@ag-ui/${integrationName}`]: "workspace:*",
+      [`@0noxtackore/${integrationName}`]: "workspace:*",
       ...dojoPackageJson.dependencies
     };
     dojoPackageJson.dependencies = newDependencies;
 
     fs.writeFileSync(dojoPackageJsonPath, JSON.stringify(dojoPackageJson, null, 2) + "\n");
-    console.log(`✓ Added @ag-ui/${integrationName} to dojo dependencies`);
+    console.log(`✓ Added @0noxtackore/${integrationName} to dojo dependencies`);
   } catch (error) {
     console.error("Error creating integration:", error);
     process.exit(1);

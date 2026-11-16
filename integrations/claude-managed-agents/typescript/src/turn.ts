@@ -1,4 +1,4 @@
-import { splitOutbound } from "./context";
+﻿import { splitOutbound } from "./context";
 import { toolContent } from "./content";
 import type { SessionStream } from "./recovery";
 import type { PendingConfirmation } from "./types";
@@ -9,8 +9,8 @@ import type {
 } from "@anthropic-ai/sdk/resources/beta/sessions/events";
 import { accumulateManagedAgentsEvent } from "@anthropic-ai/sdk/lib/sessions/accumulate";
 import type { AccumulatedEvent } from "@anthropic-ai/sdk/lib/sessions/accumulate";
-import { EventType } from "@ag-ui/client";
-import type { BaseEvent } from "@ag-ui/client";
+import { EventType } from "@0noxtackore/client";
+import type { BaseEvent } from "@0noxtackore/client";
 import {
   BEST_EFFORT_SEND_TIMEOUT_MS,
   PARKED_RETRY_DELAYS_MS,

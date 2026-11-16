@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Regression tests for issue #2014.
  *
  * On a HITL resume, `handleStreamEvents` resets `emittedToolCallStartIds` to a
@@ -14,7 +14,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 import { LangGraphAgent } from "./agent";
 import type { LangGraphAgentConfig } from "./agent";
 

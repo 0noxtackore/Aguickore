@@ -1,4 +1,4 @@
-import { of, concat } from "rxjs";
+﻿import { of, concat } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { transformChunks } from "../transform";
 import {
@@ -15,7 +15,7 @@ import {
   RunStartedEvent,
   RawEvent,
   RunFinishedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { firstValueFrom } from "rxjs";
 import { describe, expect, it } from "vitest";
 

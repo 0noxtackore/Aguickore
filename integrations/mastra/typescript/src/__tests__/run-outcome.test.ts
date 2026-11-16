@@ -1,16 +1,16 @@
-import { describe, it, expect, vi } from "vitest";
-import { EventType, PROTOCOL_VERSION } from "@ag-ui/client";
+﻿import { describe, it, expect, vi } from "vitest";
+import { EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
 import type {
   BaseEvent,
   RunFinishedEvent,
   Tool,
   ToolCallResultEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import {
   RunFinishedEventSchema,
   RunStartedEventSchema,
   ToolCallResultEventSchema,
-} from "@ag-ui/core/schemas";
+} from "@0noxtackore/core/schemas";
 import {
   FakeLocalAgent,
   FakeRemoteAgent,

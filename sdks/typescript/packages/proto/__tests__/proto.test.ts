@@ -1,11 +1,11 @@
-import { encode, decode } from "../src/proto";
+﻿import { encode, decode } from "../src/proto";
 import {
   BaseEvent,
   EventType,
   StateDeltaEvent,
   ToolCallStartEvent,
   MessagesSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { describe, it, expect } from "vitest";
 import * as protoEvents from "../src/generated/events";
 

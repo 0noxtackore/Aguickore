@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/omnara",
+﻿{
+  "name": "@0noxtackore/omnara",
   "version": "0.0.1",
   "description": "AG-UI integration for Omnara (hosted, durable agents)",
   "license": "MIT",
@@ -47,12 +47,12 @@
     "yaml": "^2.8.4"
   },
   "peerDependencies": {
-    "@ag-ui/core": ">=1.0.0",
-    "@ag-ui/client": ">=1.0.0"
+    "@0noxtackore/core": ">=1.0.0",
+    "@0noxtackore/client": ">=1.0.0"
   },
   "devDependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "publint": "^0.3.12",
     "@arethetypeswrong/cli": "^0.17.4",

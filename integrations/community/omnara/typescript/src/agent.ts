@@ -1,5 +1,5 @@
-import { AbstractAgent } from "@ag-ui/client";
-import type { BaseEvent, RunAgentInput } from "@ag-ui/core";
+﻿import { AbstractAgent } from "@0noxtackore/client";
+import type { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { Observable } from "rxjs";
 import { createOmnaraApi, type OmnaraApi } from "./api";
 import { OmnaraRun } from "./run";
@@ -104,7 +104,7 @@ export class OmnaraAgent extends AbstractAgent {
   ): Promise<void> {
     try {
       if (this.config.onError) await this.config.onError(error, context);
-      else console.error(`[@ag-ui/omnara] ${context.operation}`, error);
+      else console.error(`[@0noxtackore/omnara] ${context.operation}`, error);
     } catch {
       // A broken hook must not break the run.
     }

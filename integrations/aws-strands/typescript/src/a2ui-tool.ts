@@ -1,7 +1,7 @@
-/**
+﻿/**
  * A2UI subagent tool for AWS Strands agents.
  *
- * Thin adapter over `@ag-ui/a2ui-toolkit` — the recovery loop, validation, op
+ * Thin adapter over `@0noxtackore/a2ui-toolkit` — the recovery loop, validation, op
  * builders, prompt assembly and output envelope all live in the toolkit. This
  * file owns only the Strands-specific glue:
  *
@@ -35,7 +35,7 @@ import {
   type ToolContext,
   type ToolStreamGenerator,
 } from "@strands-agents/sdk";
-import type { Message as AguiMessage, RunAgentInput } from "@ag-ui/core";
+import type { Message as AguiMessage, RunAgentInput } from "@0noxtackore/core";
 import {
   A2UI_OPERATIONS_KEY,
   GENERATE_A2UI_ARG_DESCRIPTIONS,
@@ -53,7 +53,7 @@ import {
   type A2UIRecoveryConfig,
   type A2UIToolParams as SharedA2UIToolParams,
   type A2UIValidationCatalog,
-} from "@ag-ui/a2ui-toolkit";
+} from "@0noxtackore/a2ui-toolkit";
 
 import { flattenContentToText } from "./utils";
 import { DEFAULT_LOGGER, type Logger } from "./logger";
@@ -82,7 +82,7 @@ const RENDER_A2UI_TOOL_NAME = RENDER_A2UI_TOOL_DEF.function.name;
  * distinguish the two and leaks the raw `render_a2ui` tool back to the model.
  */
 export const A2UI_AUTOINJECT_MARKER = Symbol.for(
-  "@ag-ui/aws-strands.a2uiAutoInjected",
+  "@0noxtackore/aws-strands.a2uiAutoInjected",
 );
 
 /** Tool arguments exposed to the main agent's planner. */
@@ -179,7 +179,7 @@ export function getA2UITools<TModel = Model>(
     ? (record: A2UIAttemptRecord) => {
         const reportHookError = (err: unknown) => {
           DEFAULT_LOGGER.warn(
-            `[@ag-ui/aws-strands] A2UI onA2UIAttempt hook threw on attempt ${
+            `[@0noxtackore/aws-strands] A2UI onA2UIAttempt hook threw on attempt ${
               record.attempt
             }; ignoring: ${err instanceof Error ? err.message : String(err)}`,
           );
@@ -279,7 +279,7 @@ export function getA2UITools<TModel = Model>(
         // The model still reads the envelope (it can self-correct), but
         // leave a server-side breadcrumb so these are countable.
         DEFAULT_LOGGER.warn(
-          `[@ag-ui/aws-strands] A2UI request prep failed: ${prep.error}`,
+          `[@0noxtackore/aws-strands] A2UI request prep failed: ${prep.error}`,
         );
       }
       // Disconnect channel (mirrors the Python adapter's threading.Event):
@@ -367,7 +367,7 @@ export function getA2UITools<TModel = Model>(
             const name = (err as { name?: string })?.name;
             if (name === "CancelledError" || name === "AbortError") return;
             DEFAULT_LOGGER.warn(
-              `[@ag-ui/aws-strands] A2UI recovery loop failed after the consumer disconnected: ${
+              `[@0noxtackore/aws-strands] A2UI recovery loop failed after the consumer disconnected: ${
                 err instanceof Error ? err.message : String(err)
               }`,
             );
@@ -587,7 +587,7 @@ async function invokeRenderSubagent(
     // return null so the loop records a failed attempt and retries or emits the
     // tasteful hard-failure envelope.
     DEFAULT_LOGGER.warn(
-      `[@ag-ui/aws-strands] A2UI sub-agent invoke failed; treating as a failed attempt: ${
+      `[@0noxtackore/aws-strands] A2UI sub-agent invoke failed; treating as a failed attempt: ${
         err instanceof Error ? err.message : String(err)
       }`,
     );
@@ -738,7 +738,7 @@ export function strandsToolResultsToAgui(
 // ---------------------------------------------------------------------------
 
 /**
- * Exact description `@ag-ui/a2ui-middleware` stamps on the usage guide it
+ * Exact description `@0noxtackore/a2ui-middleware` stamps on the usage guide it
  * injects for a render tool. A wire-format marker, not prose: it must stay
  * byte-identical to the middleware's string and to the Python bridge's
  * `_a2ui_render_guide_description`, em dash included.
@@ -917,7 +917,7 @@ export function planA2UIInjection<TModel = Model>(
 
   if (args.model == null) {
     log.warn(
-      "[@ag-ui/aws-strands] A2UI tool injection requested but no model could be " +
+      "[@0noxtackore/aws-strands] A2UI tool injection requested but no model could be " +
         "inferred from the agent (multi-agent orchestrators like Graph/Swarm have " +
         "no `.model`). Skipping auto-injection — wire getA2UITools() explicitly.",
     );

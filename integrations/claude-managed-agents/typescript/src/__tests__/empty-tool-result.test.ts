@@ -1,4 +1,4 @@
-import { EventType, type RunAgentInput } from "@ag-ui/client";
+﻿import { EventType, type RunAgentInput } from "@0noxtackore/client";
 import { lastValueFrom, toArray } from "rxjs";
 import { expect, it } from "vitest";
 import { ManagedAgentsAgent } from "../agent";

@@ -1,17 +1,17 @@
-# @ag-ui/langroid
+﻿# @0noxtackore/langroid
 
 TypeScript client integration for Langroid agents with AG-UI.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/langroid
+npm install @0noxtackore/langroid
 ```
 
 ## Usage
 
 ```typescript
-import { LangroidHttpAgent } from "@ag-ui/langroid";
+import { LangroidHttpAgent } from "@0noxtackore/langroid";
 
 const agent = new LangroidHttpAgent({
   url: "http://localhost:8000/",

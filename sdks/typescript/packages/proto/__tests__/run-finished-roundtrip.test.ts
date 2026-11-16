@@ -1,6 +1,6 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { encode, decode } from "../src/proto";
-import { EventType, RunFinishedEvent } from "@ag-ui/core";
+import { EventType, RunFinishedEvent } from "@0noxtackore/core";
 import { expectRoundTripEquality } from "./test-utils";
 
 describe("RunFinishedEvent — proto round-trip", () => {

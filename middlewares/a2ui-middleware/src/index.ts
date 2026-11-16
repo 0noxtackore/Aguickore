@@ -1,4 +1,4 @@
-import { createHash, randomUUID } from "node:crypto";
+﻿import { createHash, randomUUID } from "node:crypto";
 import {
   Middleware,
   RunAgentInput,
@@ -20,7 +20,7 @@ import {
   TextMessageEndEvent,
   Tool,
   contentToText,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable, Subscription } from "rxjs";
 
 import { A2UIMiddlewareConfig, A2UIForwardedProps } from "./types";
@@ -44,7 +44,7 @@ import {
   validateA2UIComponents,
   MAX_A2UI_ATTEMPTS,
   type A2UIValidationCatalog,
-} from "@ag-ui/a2ui-toolkit";
+} from "@0noxtackore/a2ui-toolkit";
 import {
   basicCatalogId,
   catalogProtocolVersion,

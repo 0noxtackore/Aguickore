@@ -1,4 +1,4 @@
-lockfileVersion: '9.0'
+﻿lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
@@ -8,10 +8,10 @@ importers:
 
   .:
     dependencies:
-      '@ag-ui/client':
+      '@0noxtackore/client':
         specifier: link:../../../../../sdks/typescript/packages/client
         version: link:../../../../../sdks/typescript/packages/client
-      '@ag-ui/cloudflare-agents':
+      '@0noxtackore/cloudflare-agents':
         specifier: link:..
         version: link:..
       '@ai-sdk/openai':

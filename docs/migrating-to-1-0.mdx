@@ -1,4 +1,4 @@
----
+﻿---
 title: "Migrating to 1.0"
 description: "What changes for an application or integration moving to AG-UI 1.0, per SDK — and what does not"
 ---
@@ -64,7 +64,7 @@ RunStartedEvent(
 **TypeScript:** set `protocolVersion` on the `RUN_STARTED` object.
 
 ```ts
-import { EventType, PROTOCOL_VERSION, type RunStartedEvent } from "@ag-ui/core";
+import { EventType, PROTOCOL_VERSION, type RunStartedEvent } from "@0noxtackore/core";
 
 const runStarted: RunStartedEvent = {
   type: EventType.RUN_STARTED,
@@ -141,36 +141,36 @@ This compatibility is limited to the fields listed above. Event or message
 such as `CUSTOM.value`, and null values inside state, metadata, or other
 application data, remain valid and are preserved.
 
-### zod is an optional peer dependency of `@ag-ui/core`
+### zod is an optional peer dependency of `@0noxtackore/core`
 
-`@ag-ui/core`'s main entry is types and constants only and never loads zod.
+`@0noxtackore/core`'s main entry is types and constants only and never loads zod.
 The validators live on a subpath, and importing them requires zod (`3.25.18`
 or newer, or any `4.x`):
 
 ```ts
 // before
-import { EventSchemas, UserMessageSchema, EventType } from "@ag-ui/core";
+import { EventSchemas, UserMessageSchema, EventType } from "@0noxtackore/core";
 
 // after
-import { EventType } from "@ag-ui/core";
-import { EventSchemas, UserMessageSchema } from "@ag-ui/core/schemas";
+import { EventType } from "@0noxtackore/core";
+import { EventSchemas, UserMessageSchema } from "@0noxtackore/core/schemas";
 ```
 
 ```bash
-npm install @ag-ui/core          # types only — nothing else to install
-npm install @ag-ui/core zod      # if you use the validators
+npm install @0noxtackore/core          # types only — nothing else to install
+npm install @0noxtackore/core zod      # if you use the validators
 ```
 
 Every validator moves, including the historic aliases (`EventSchemas`, the
 `*InputPartSchema` names, `OptionalMetadataSchema`) and the capability
-schemas. `@ag-ui/client` no longer re-exports them either — it re-exports
-core's main entry, and they are not on it. `@ag-ui/client` itself still
+schemas. `@0noxtackore/client` no longer re-exports them either — it re-exports
+core's main entry, and they are not on it. `@0noxtackore/client` itself still
 needs zod, because its enforcement stage validates with it. It takes zod as a
-peer dependency (as do `@ag-ui/encoder` and `@ag-ui/proto`), so install zod
+peer dependency (as do `@0noxtackore/encoder` and `@0noxtackore/proto`), so install zod
 alongside it:
 
 ```bash
-npm install @ag-ui/client zod
+npm install @0noxtackore/client zod
 ```
 
 ### Unknown material no longer reaches your code
@@ -231,7 +231,7 @@ own `onRunErrorEvent` subscriber; the client will not do it for you.
 - `BinaryInputContent` (`{ type: "binary" }`). Use the media parts — `image`,
   `audio`, `video`, `document` — with a `source`. Incoming legacy parts are
   still translated.
-- `stripUnknown` and `StripResult` from `@ag-ui/client`. They were the
+- `stripUnknown` and `StripResult` from `@0noxtackore/client`. They were the
   enforcement stage's internals.
 
 ### Renames and type changes
@@ -261,7 +261,7 @@ own `onRunErrorEvent` subscriber; the client will not do it for you.
 - `ToolMessage.content` and `ToolCallResultEvent.content` are
   `string | ContentPart[]`, as `UserMessage.content` already was. Code that
   passed a tool result straight into a string slot narrows it first;
-  `contentToText()` from `@ag-ui/core` gives the text parts concatenated and
+  `contentToText()` from `@0noxtackore/core` gives the text parts concatenated and
   `contentHasMedia()` says whether that flattening would lose anything. The
   legacy `ActionExecutionResult` bridge flattens this way and warns.
 - Every content part has an optional `id`, and `TextPart` has the optional

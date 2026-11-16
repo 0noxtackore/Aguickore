@@ -1,6 +1,6 @@
-import { AbstractAgent } from "@/agent";
+﻿import { AbstractAgent } from "@/agent";
 import { Middleware } from "@/middleware";
-import { BaseEvent, EventType, Message, RunAgentInput, TextMessageChunkEvent } from "@ag-ui/core";
+import { BaseEvent, EventType, Message, RunAgentInput, TextMessageChunkEvent } from "@0noxtackore/core";
 import { Observable } from "rxjs";
 
 describe("Middleware chained runNextWithState", () => {

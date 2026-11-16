@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## 0.0.2 — 2026-09-11
 
@@ -14,4 +14,4 @@
 
 ### Breaking changes
 
-- `@ag-ui/client` moved from dependencies to a peer dependency (>=0.0.40); consumers must install it themselves.
+- `@0noxtackore/client` moved from dependencies to a peer dependency (>=0.0.40); consumers must install it themselves.

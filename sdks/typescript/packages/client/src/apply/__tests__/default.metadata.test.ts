@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+﻿import { describe, expect, it, vi } from "vitest";
 import { Subject, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
@@ -27,7 +27,7 @@ import {
   ToolCallEndEvent,
   ToolCallResultEvent,
   ToolCallStartEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";
 import { transformChunks } from "@/chunks/transform";
 import { AbstractAgent } from "@/agent";

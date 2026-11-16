@@ -1,6 +1,6 @@
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+﻿import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { AbstractAgent } from "@/agent";
-import { BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 import { Observable, from, lastValueFrom, toArray } from "rxjs";
 import { BackwardCompatibility_0_0_57 } from "../backward-compatibility-0-0-57";
 

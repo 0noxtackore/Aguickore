@@ -1,16 +1,16 @@
-import pkg from "../../package.json";
+﻿import pkg from "../../package.json";
 
 /**
  * Regression guard for #2418.
  *
- * In the workspace, `@ag-ui/core` and `@ag-ui/client` resolve through
+ * In the workspace, `@0noxtackore/core` and `@0noxtackore/client` resolve through
  * `workspace:*` devDependencies, so CI never exercises the floor declared in
- * `peerDependencies`. A consumer installing `@ag-ui/mastra` from npm resolves
+ * `peerDependencies`. A consumer installing `@0noxtackore/mastra` from npm resolves
  * that floor instead — if it is lower than the version that actually exports
  * the symbols `src/` imports, the package fails to load at require time.
  *
  * The adapter speaks AG-UI 1.0: `PROTOCOL_VERSION` and `contentToText` first
- * ship in `@ag-ui/core@1.0.0`, and it relies on the 1.0 client's compatibility
+ * ship in `@0noxtackore/core@1.0.0`, and it relies on the 1.0 client's compatibility
  * boundary to upgrade retired input shapes (the `binary` part) before `run()`,
  * so the declared floors must not admit anything older.
  */
@@ -38,32 +38,32 @@ function compare(a: string, b: string): number {
 }
 
 describe("peer dependency floors (#2418)", () => {
-  it("declares an @ag-ui/core floor that exports every symbol src/ imports", () => {
-    const range = pkg.peerDependencies["@ag-ui/core"];
+  it("declares an @0noxtackore/core floor that exports every symbol src/ imports", () => {
+    const range = pkg.peerDependencies["@0noxtackore/core"];
     expect(compare(floorOf(range), MIN_CORE)).toBeGreaterThanOrEqual(0);
   });
 
-  it("declares an @ag-ui/client floor that exports every symbol src/ imports", () => {
-    const range = pkg.peerDependencies["@ag-ui/client"];
+  it("declares an @0noxtackore/client floor that exports every symbol src/ imports", () => {
+    const range = pkg.peerDependencies["@0noxtackore/client"];
     expect(compare(floorOf(range), MIN_CLIENT)).toBeGreaterThanOrEqual(0);
   });
 
   it("does not declare a floor above the workspace version under test", () => {
     // The floors must stay reachable: a floor newer than what the workspace
     // builds and tests against would be untested by CI.
-    const coreVersion = require("@ag-ui/core/package.json").version;
-    const clientVersion = require("@ag-ui/client/package.json").version;
+    const coreVersion = require("@0noxtackore/core/package.json").version;
+    const clientVersion = require("@0noxtackore/client/package.json").version;
     expect(
-      compare(floorOf(pkg.peerDependencies["@ag-ui/core"]), coreVersion),
+      compare(floorOf(pkg.peerDependencies["@0noxtackore/core"]), coreVersion),
     ).toBeLessThanOrEqual(0);
     expect(
-      compare(floorOf(pkg.peerDependencies["@ag-ui/client"]), clientVersion),
+      compare(floorOf(pkg.peerDependencies["@0noxtackore/client"]), clientVersion),
     ).toBeLessThanOrEqual(0);
   });
 
   it("uses the AG-UI 1.0 CopilotKit baseline for the integration and its tests", () => {
-    // `@ag-ui/mastra/copilotkit` is for CopilotKit 1.x and
-    // `@ag-ui/mastra/copilotkit-2` for CopilotKit 2.x, so the peer takes both.
+    // `@0noxtackore/mastra/copilotkit` is for CopilotKit 1.x and
+    // `@0noxtackore/mastra/copilotkit-2` for CopilotKit 2.x, so the peer takes both.
     expect(pkg.peerDependencies["@copilotkit/runtime"]).toBe(
       "^1.76.0 || >=2.0.0-rc.0 <3.0.0-0",
     );

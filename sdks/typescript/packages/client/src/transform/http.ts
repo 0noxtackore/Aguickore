@@ -1,10 +1,10 @@
-import { BaseEvent } from "@ag-ui/core";
+﻿import { BaseEvent } from "@0noxtackore/core";
 import { Subject, ReplaySubject, Observable, Subscription } from "rxjs";
 import { HttpEvent, HttpEventType } from "../run/http-request";
 import { parseSSEStream } from "./sse";
 import { parseProtoStream } from "./proto";
-import * as proto from "@ag-ui/proto";
-import { EventType } from "@ag-ui/core";
+import * as proto from "@0noxtackore/proto";
+import { EventType } from "@0noxtackore/core";
 import { type DebugLoggerInput, resolveDebugLogger } from "@/debug-logger";
 
 /**

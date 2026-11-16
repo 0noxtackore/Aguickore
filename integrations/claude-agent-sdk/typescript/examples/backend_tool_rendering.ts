@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Backend tool rendering example.
  *
  * This example demonstrates how to create an agent with backend-defined MCP tools.
  * The tools are rendered in the AG-UI frontend when the agent uses them.
  */
 
-import { ClaudeAgentAdapter } from "@ag-ui/claude-agent-sdk";
+import { ClaudeAgentAdapter } from "@0noxtackore/claude-agent-sdk";
 import { DEFAULT_DISALLOWED_TOOLS } from "./constants";
 import { tool, createSdkMcpServer } from "@anthropic-ai/claude-agent-sdk";
 import { z } from "zod";

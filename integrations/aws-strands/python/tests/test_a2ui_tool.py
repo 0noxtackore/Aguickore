@@ -1,4 +1,4 @@
-"""Unit tests for the AWS Strands A2UI subagent tool — Python.
+﻿"""Unit tests for the AWS Strands A2UI subagent tool — Python.
 
 Mirrors the TypeScript suite
 (integrations/aws-strands/typescript/src/__tests__/a2ui-tool.test.ts), covering
@@ -18,7 +18,7 @@ the sub-agent streaming translation:
 
 String literals mirror the shared constants (``GENERATE_A2UI_TOOL_NAME`` from
 ag-ui-a2ui-toolkit, ``RENDER_A2UI_TOOL_NAME`` + ``A2UI_SCHEMA_CONTEXT_DESCRIPTION``
-from @ag-ui/a2ui-middleware), hardcoded ON PURPOSE: these are cross-package
+from @0noxtackore/a2ui-middleware), hardcoded ON PURPOSE: these are cross-package
 wire contracts, and a hardcoded copy makes the suite fail if an upstream
 constant drifts (importing the constant would hide the drift).
 """

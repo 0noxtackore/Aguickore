@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { EventType, RunErrorEvent, RunFinishedEvent } from "@ag-ui/core";
+﻿import { describe, expect, it } from "vitest";
+import { EventType, RunErrorEvent, RunFinishedEvent } from "@0noxtackore/core";
 import { decode, encode } from "../src/proto";
 import { expectRoundTripEquality, roundTrip } from "./test-utils";
 

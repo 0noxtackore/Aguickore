@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Native interrupt flow (Strands SDK 1.1.0+): when the underlying
  * `AgentResult` comes back with `stopReason === "interrupt"`, the adapter
  * emits the interrupt-variant `RUN_FINISHED` and records the interrupt IDs
@@ -12,7 +12,7 @@ import {
   type BaseEvent,
   type Interrupt as AguiInterrupt,
   type ResumeEntry,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import {
   AgentResult as StrandsAgentResult,
   InterruptResponseContent,
@@ -310,7 +310,7 @@ describe("StrandsAgent native interrupt bridge (Strands SDK 1.1.0+)", () => {
     expect(
       traced.some(
         (message) =>
-          message.includes("[@ag-ui/aws-strands]") &&
+          message.includes("[@0noxtackore/aws-strands]") &&
           /stopped for an interrupt with an empty interrupts list/.test(
             message,
           ) &&

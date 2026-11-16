@@ -1,4 +1,4 @@
-import { recoverA2UIHistory, preserveCompletedA2UIResults } from "./a2ui-history";
+﻿import { recoverA2UIHistory, preserveCompletedA2UIResults } from "./a2ui-history";
 import { Observable, Subscriber } from "rxjs";
 import {
   Client as LangGraphClient,
@@ -12,7 +12,7 @@ import {
   Interrupt as LangGraphInterrupt,
   Thread,
 } from "@langchain/langgraph-sdk";
-import { randomUUID } from "@ag-ui/client";
+import { randomUUID } from "@0noxtackore/client";
 import {
   LangGraphPlatformMessage,
   CustomEventNames,
@@ -65,7 +65,7 @@ import {
   ReasoningEndEvent,
   ReasoningEncryptedValueEvent,
   PROTOCOL_VERSION,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import {
   langGraphInterruptsToAGUI,
   buildLgCommandResumeFromAgui,
@@ -265,7 +265,7 @@ export class LangGraphAgent extends AbstractAgent {
 
     if (config?.client && config.headerFactory) {
       console.debug(
-        "[@ag-ui/langgraph] Both `config.client` and `config.headerFactory` were set. " +
+        "[@0noxtackore/langgraph] Both `config.client` and `config.headerFactory` were set. " +
           "Custom clients bypass the adapter's onRequest hook — `headerFactory` will not " +
           "be invoked. Either omit `client` to enable adapter-managed header forwarding, " +
           "or wire headers into your custom client directly.",
@@ -565,7 +565,7 @@ export class LangGraphAgent extends AbstractAgent {
 
     if (hasContext && hasConfigurable) {
       console.warn(
-        `[@ag-ui/langgraph] Dropping configurable keys not in context_schema: [${Object.keys(remainingConfigurable).join(", ")}]. Use context instead.`,
+        `[@0noxtackore/langgraph] Dropping configurable keys not in context_schema: [${Object.keys(remainingConfigurable).join(", ")}]. Use context instead.`,
       );
     }
 
@@ -698,11 +698,11 @@ export class LangGraphAgent extends AbstractAgent {
 
     if (aguiResume && legacyResume !== undefined) {
       console.warn(
-        "[@ag-ui/langgraph] both input.resume and forwardedProps.command.resume were provided; input.resume wins.",
+        "[@0noxtackore/langgraph] both input.resume and forwardedProps.command.resume were provided; input.resume wins.",
       );
     } else if (!aguiResume && legacyResume !== undefined) {
       console.warn(
-        "[@ag-ui/langgraph] forwardedProps.command.resume is deprecated; send RunAgentInput.resume[] instead.",
+        "[@0noxtackore/langgraph] forwardedProps.command.resume is deprecated; send RunAgentInput.resume[] instead.",
       );
     }
 

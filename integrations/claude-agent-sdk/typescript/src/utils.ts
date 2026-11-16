@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Utility functions for Claude Agent SDK adapter.
  *
  * Helper functions for message processing, tool conversion, and prompt building.
@@ -15,7 +15,7 @@ import type {
   InputContent,
   ToolMessage,
   ContentPart,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import type {
   SDKAssistantMessage,
   SDKUserMessage,

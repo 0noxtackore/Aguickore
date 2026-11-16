@@ -1,4 +1,4 @@
-# The AG-UI specification
+﻿# The AG-UI specification
 
 The protocol's contract as JSON Schema, and the suite that checks it.
 
@@ -184,9 +184,9 @@ to tell it apart from an oversight.
 ## Commands
 
 ```bash
-pnpm --filter @ag-ui/spec test        # the suite
-pnpm --filter @ag-ui/spec generate    # regenerate the TypeScript output from the schema
-pnpm --filter @ag-ui/spec reconcile   # regenerate RECONCILIATION.md
+pnpm --filter @0noxtackore/spec test        # the suite
+pnpm --filter @0noxtackore/spec generate    # regenerate the TypeScript output from the schema
+pnpm --filter @0noxtackore/spec reconcile   # regenerate RECONCILIATION.md
 ```
 
 ## What this does not check

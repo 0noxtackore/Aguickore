@@ -1,4 +1,4 @@
-# @ag-ui/vercel-ai-sdk
+﻿# @0noxtackore/vercel-ai-sdk
 
 Implementation of the AG-UI protocol for Vercel AI SDK.
 
@@ -7,15 +7,15 @@ Connects Vercel AI SDK models and tools to frontend applications via the AG-UI p
 ## Installation
 
 ```bash
-npm install @ag-ui/vercel-ai-sdk
-pnpm add @ag-ui/vercel-ai-sdk
-yarn add @ag-ui/vercel-ai-sdk
+npm install @0noxtackore/vercel-ai-sdk
+pnpm add @0noxtackore/vercel-ai-sdk
+yarn add @0noxtackore/vercel-ai-sdk
 ```
 
 ## Usage
 
 ```ts
-import { VercelAISDKAgent } from "@ag-ui/vercel-ai-sdk";
+import { VercelAISDKAgent } from "@0noxtackore/vercel-ai-sdk";
 import { openai } from "ai/openai";
 
 // Create an AG-UI compatible agent

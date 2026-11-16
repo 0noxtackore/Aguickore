@@ -1,7 +1,7 @@
-import { BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
-import { EventSchemas } from "@ag-ui/core/schemas";
-import { EventEncoder } from "@ag-ui/encoder";
-import { decode } from "@ag-ui/proto";
+﻿import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
+import { EventSchemas } from "@0noxtackore/core/schemas";
+import { EventEncoder } from "@0noxtackore/encoder";
+import { decode } from "@0noxtackore/proto";
 import { enforceOutgoingInput } from "../enforce";
 
 describe("optional null at producer boundaries", () => {

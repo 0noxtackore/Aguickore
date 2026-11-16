@@ -1,8 +1,8 @@
-# Changelog
+﻿# Changelog
 
 ## 0.0.4 — 2026-10-13
 
-- Requires AG-UI 1.0 (`@ag-ui/core` / `@ag-ui/client` `>=1.0.0`).
+- Requires AG-UI 1.0 (`@0noxtackore/core` / `@0noxtackore/client` `>=1.0.0`).
 - Caps the protocol at 0.0.39 through `maxProtocolVersion` (was the deprecated `maxVersion`), because the community Java SDK is not on 1.0 yet. The client flattens message content to text before sending; images, audio, video and documents are dropped with a console warning.
 - The README now documents Spring AI (it had been copied from LlamaIndex).
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 # scripts/release/create-or-update-release.sh
 #
 # Creates or updates a daily GitHub Release with published package info and
@@ -8,7 +8,7 @@
 # Usage: ./create-or-update-release.sh <ecosystem> <packages-json>
 #   ecosystem: "typescript", "python", "dotnet", or "maven"
 #   packages-json: JSON array string of published packages
-#     TS format:  [{"name":"@ag-ui/core","version":"0.0.49","path":"..."}]
+#     TS format:  [{"name":"@0noxtackore/core","version":"0.0.49","path":"..."}]
 #     Py format:  [{"name":"ag-ui-protocol","version":"0.1.15","dir":"..."}]
 #     .NET format: [{"name":"AGUI.Client","version":"0.1.0","path":"..."}]
 #     Maven format: [{"name":"java-core","version":"0.1.0","path":"...","groupId":"com.ag-ui.community"}]

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useMemo, useState } from "react";
 import "@copilotkit/react-core/v2/styles.css";
 import {
@@ -15,7 +15,7 @@ interface InterruptProps {
 }
 
 // Payload the Mastra `schedule_meeting` tool sends via `suspend(...)`. The
-// @ag-ui/mastra bridge carries it on the interrupt under
+// @0noxtackore/mastra bridge carries it on the interrupt under
 // `metadata.mastra.suspendPayload`.
 interface SuspendPayload {
   topic?: string;

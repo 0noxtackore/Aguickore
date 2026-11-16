@@ -1,12 +1,12 @@
-/**
+﻿/**
  * Tests for SSE parsing: text content, tool calls, edge cases, and buffer handling.
  */
 
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { WatsonxAgent } from "../index";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 import { firstValueFrom, toArray } from "rxjs";
-import type { RunAgentInput, Message } from "@ag-ui/core";
+import type { RunAgentInput, Message } from "@0noxtackore/core";
 
 // ---------------------------------------------------------------------------
 // Helpers

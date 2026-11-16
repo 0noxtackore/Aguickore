@@ -1,10 +1,10 @@
-/**
+﻿/**
  * Prior conversation history is converted into Strands `MessageData` and
  * seeded on the per-thread agent's `AgentConfig.messages`.
  */
 
 import { describe, it, expect } from "vitest";
-import type { Message as AguiMessage } from "@ag-ui/core";
+import type { Message as AguiMessage } from "@0noxtackore/core";
 import { Agent as StrandsAgentCore, type Model } from "@strands-agents/sdk";
 import {
   StrandsAgent,

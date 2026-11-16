@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   Event,
   BaseEvent as ProtocolBaseEvent,
   ContentPart,
@@ -17,7 +17,7 @@ import { EventType } from "./generated/types";
 /**
  * Compatibility layer: the names this package has always exported, pointed at
  * the generated protocol source. Everything protocol-shaped lives in
- * src/generated (regenerate with `pnpm --filter @ag-ui/spec generate`); this
+ * src/generated (regenerate with `pnpm --filter @0noxtackore/spec generate`); this
  * file only aliases, derives, and carries the package's own error types.
  */
 

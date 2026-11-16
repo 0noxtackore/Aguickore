@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { EventType, type RunAgentInput } from "@ag-ui/core";
+﻿import { describe, expect, it, vi } from "vitest";
+import { EventType, type RunAgentInput } from "@0noxtackore/core";
 import { LangGraphAgent } from "../agent";
 
 const input: RunAgentInput = {

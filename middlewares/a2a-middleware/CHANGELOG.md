@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## 0.0.6 — 2026-10-13
 
@@ -19,8 +19,8 @@ None.
 
 ## 0.0.4 — 2026-10-12
 
-- Requires `@ag-ui/client` `>=1.0.0`; the unused `@ag-ui/core` peer is gone.
-- Drops an unused `@ag-ui/core/schemas` import, so the package no longer imports anything from `@ag-ui/core`.
+- Requires `@0noxtackore/client` `>=1.0.0`; the unused `@0noxtackore/core` peer is gone.
+- Drops an unused `@0noxtackore/core/schemas` import, so the package no longer imports anything from `@0noxtackore/core`.
 
 ### Breaking changes
 

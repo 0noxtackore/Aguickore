@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Per-request filtering of the tools the template agent contributed.
  *
  * The adapter builds one Strands `Agent` per thread and keeps it. That instance
@@ -22,7 +22,7 @@ import { isAutoInjectedA2UITool } from "./a2ui-tool";
 import { isProxyTool, type StrandsToolRegistry } from "./client-proxy-tool";
 import { DEFAULT_LOGGER, type Logger } from "./logger";
 
-const LOG_PREFIX = "[@ag-ui/aws-strands]";
+const LOG_PREFIX = "[@0noxtackore/aws-strands]";
 
 /** One entry a `templateToolsProvider` may return: a template tool or its name. */
 export type TemplateToolSelectionEntry = Tool | string;
@@ -39,7 +39,7 @@ export type TemplateToolSelection =
  * the agent's own state, which a `SessionManager` persists; this is per-request
  * scratch that must not outlive the process.
  */
-const ALLOWED_KEY = Symbol.for("@ag-ui/aws-strands.templateToolsAllowed");
+const ALLOWED_KEY = Symbol.for("@0noxtackore/aws-strands.templateToolsAllowed");
 
 /** A provider answer this hook cannot read as a selection of tools. */
 export class TemplateToolsSelectionError extends Error {
@@ -56,7 +56,7 @@ export class TemplateToolsSelectionError extends Error {
  * exemptions" wherever `exemptNames` is passed, and the two are opposites.
  */
 export const EXEMPT_EVERY_TEMPLATE_TOOL = Symbol.for(
-  "@ag-ui/aws-strands.exemptEveryTemplateTool",
+  "@0noxtackore/aws-strands.exemptEveryTemplateTool",
 );
 
 /** Names to hold registered, or the sentinel meaning "hold all of them". */

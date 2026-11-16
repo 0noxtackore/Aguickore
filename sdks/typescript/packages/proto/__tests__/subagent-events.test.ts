@@ -1,11 +1,11 @@
-import {
+﻿import {
   BaseEvent,
   EventType,
   SubagentStartedEvent,
   SubagentFinishedEvent,
   SubagentErrorEvent,
   MessagesSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { describe, it, expect } from "vitest";
 import { encode, decode } from "../src/proto";
 import { EventType as ProtoEventType } from "../src/generated/events";

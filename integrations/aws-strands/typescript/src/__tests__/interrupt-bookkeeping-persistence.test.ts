@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Regression coverage for interrupt bookkeeping surviving a process restart.
  *
  * `_pendingInterruptsByThread` and `_lastResumeFingerprint` are the
@@ -20,7 +20,7 @@
 
 import { describe, it, expect, vi } from "vitest";
 import { SessionManager, StateStore } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import { collect, minimalRunInput, scriptedAgent } from "./helpers";

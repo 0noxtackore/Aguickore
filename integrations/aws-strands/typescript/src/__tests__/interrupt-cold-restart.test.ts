@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Regression coverage for the "resume validation happens before session
  * restoration" gap: on a cold process start, `_pendingInterruptsByThread`
  * is empty even though a `sessionManagerProvider`-backed thread may have a
@@ -10,8 +10,8 @@
 
 import { beforeEach, describe, it, expect, vi } from "vitest";
 import { SessionManager } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
-import type { BaseEvent } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
+import type { BaseEvent } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import { collect, minimalRunInput, scriptedAgent, stream } from "./helpers";

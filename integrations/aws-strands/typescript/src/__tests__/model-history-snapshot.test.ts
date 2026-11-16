@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Fidelity of the model-facing history a scripted model records.
  *
  * Real-SDK tests assert what the model saw on a given turn by reading
@@ -29,7 +29,7 @@ import {
   ToolResultBlock,
   type Message as StrandsMessage,
 } from "@strands-agents/sdk";
-import type { RunAgentInput } from "@ag-ui/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 
 import {
   collect,

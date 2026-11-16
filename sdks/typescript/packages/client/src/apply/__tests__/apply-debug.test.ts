@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
 import { Subject, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
@@ -10,7 +10,7 @@ import {
   TextMessageEndEvent,
   RunFinishedEvent,
   RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";
 import { AbstractAgent } from "@/agent";
 import { createDebugLogger } from "@/debug-logger";

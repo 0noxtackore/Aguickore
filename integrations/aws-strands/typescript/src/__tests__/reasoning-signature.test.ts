@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests that `reasoningSignatureEvent` events are silently consumed
  * (not yielded) by the StrandsAgent adapter.
  *
@@ -11,7 +11,7 @@
 
 import { describe, it, expect } from "vitest";
 import type { AgentStreamEvent } from "@strands-agents/sdk";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 
 import {
   collect,

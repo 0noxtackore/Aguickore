@@ -1,4 +1,4 @@
-# @ag-ui/llamaindex
+﻿# @0noxtackore/llamaindex
 
 Implementation of the AG-UI protocol for LlamaIndex.
 
@@ -7,15 +7,15 @@ Connects LlamaIndex workflows to frontend applications via the AG-UI protocol. P
 ## Installation
 
 ```bash
-npm install @ag-ui/llamaindex
-pnpm add @ag-ui/llamaindex
-yarn add @ag-ui/llamaindex
+npm install @0noxtackore/llamaindex
+pnpm add @0noxtackore/llamaindex
+yarn add @0noxtackore/llamaindex
 ```
 
 ## Usage
 
 ```ts
-import { LlamaIndexAgent } from "@ag-ui/llamaindex";
+import { LlamaIndexAgent } from "@0noxtackore/llamaindex";
 
 // Create an AG-UI compatible agent
 const agent = new LlamaIndexAgent({

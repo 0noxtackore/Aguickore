@@ -1,4 +1,4 @@
-import { type TraceEvent, parseEventTraceSse } from "./event-trace-events";
+﻿import { type TraceEvent, parseEventTraceSse } from "./event-trace-events";
 
 /**
  * Shared AG-UI 1.0 version-declaration check (PNI-537).
@@ -38,20 +38,20 @@ export const PROTOCOL_VERSION_LANES: ReadonlySet<string> = new Set([
   // The A2A middleware passes through its orchestrator's RUN_STARTED, and the
   // demo's orchestrator is ag_ui_adk.
   "a2a",
-  // ag_ui_claude_sdk and @ag-ui/claude-agent-sdk declare PROTOCOL_VERSION on RUN_STARTED.
+  // ag_ui_claude_sdk and @0noxtackore/claude-agent-sdk declare PROTOCOL_VERSION on RUN_STARTED.
   "claude-agent-sdk-python",
   "claude-agent-sdk-typescript",
-  // ag_ui_strands and @ag-ui/aws-strands declare PROTOCOL_VERSION on RUN_STARTED.
+  // ag_ui_strands and @0noxtackore/aws-strands declare PROTOCOL_VERSION on RUN_STARTED.
   "aws-strands",
   "aws-strands-typescript",
-  // @ag-ui/langchain declares PROTOCOL_VERSION on RUN_STARTED.
+  // @0noxtackore/langchain declares PROTOCOL_VERSION on RUN_STARTED.
   "langchain",
   // The server-starter templates declare PROTOCOL_VERSION on every RUN_STARTED.
   "server-starter",
   "server-starter-all-features",
-  // @ag-ui/watsonx declares PROTOCOL_VERSION on RUN_STARTED.
+  // @0noxtackore/watsonx declares PROTOCOL_VERSION on RUN_STARTED.
   "watsonx",
-  // @ag-ui/langgraph declares PROTOCOL_VERSION on every RUN_STARTED.
+  // @0noxtackore/langgraph declares PROTOCOL_VERSION on every RUN_STARTED.
   "langgraph-typescript",
   // MAF .NET streams through AGUI.Server, which declares PROTOCOL_VERSION on
   // RUN_STARTED from 1.0.1 (the Dojo example pins it).
@@ -63,7 +63,7 @@ export const PROTOCOL_VERSION_LANES: ReadonlySet<string> = new Set([
   // ag_ui_agentspec declares PROTOCOL_VERSION on RUN_STARTED (both runtimes).
   "agent-spec-langgraph",
   "agent-spec-wayflow",
-  // @ag-ui/cloudflare-agents declares PROTOCOL_VERSION on RUN_STARTED.
+  // @0noxtackore/cloudflare-agents declares PROTOCOL_VERSION on RUN_STARTED.
   "cloudflare-agents",
   // The Claude Managed Agents adapters (Python, TypeScript, .NET) declare the
   // protocol version on RUN_STARTED.

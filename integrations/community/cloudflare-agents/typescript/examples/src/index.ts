@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Cloudflare Agents Worker for the AG-UI Dojo.
  *
  * Each AG-UI thread maps to one `AgUiAgent` Durable Object (the Agents SDK
@@ -11,11 +11,11 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { jsonSchema, streamText, tool, type ToolSet } from "ai";
 import { z } from "zod";
 import { from } from "rxjs";
-import type { RunAgentInput } from "@ag-ui/client";
+import type { RunAgentInput } from "@0noxtackore/client";
 import {
   AgentsToAGUIAdapter,
   createSSEResponse,
-} from "@ag-ui/cloudflare-agents";
+} from "@0noxtackore/cloudflare-agents";
 import { toModelMessages } from "./messages";
 
 export interface Env {

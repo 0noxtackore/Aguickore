@@ -1,8 +1,8 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+﻿import { describe, it, expect, vi, afterEach } from "vitest";
 import { LangGraphAgent } from "./agent";
-import { EventType } from "@ag-ui/core";
-import { RunFinishedEventSchema } from "@ag-ui/core/schemas";
-import type { AgentSubscriber } from "@ag-ui/client";
+import { EventType } from "@0noxtackore/core";
+import { RunFinishedEventSchema } from "@0noxtackore/core/schemas";
+import type { AgentSubscriber } from "@0noxtackore/client";
 
 /**
  * End-to-end coverage for the OPT-IN structured-interrupt path

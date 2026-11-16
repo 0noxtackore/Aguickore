@@ -1,4 +1,4 @@
-// Proves the built package works under both supported zod majors, in both
+﻿// Proves the built package works under both supported zod majors, in both
 // module formats, and that the main entry works with NO zod installed. zod is
 // an optional peer; all runtime code uses the `zod/v4` subpath API, which zod
 // ships in 3.25+ and in 4.x — so a consumer forcing either major must get a
@@ -43,7 +43,7 @@ module.exports = { check };
 // must be fatal. Both depend on the per-type validator map the client builds from core's
 // schemas, which is exactly what breaks when the two packages hold different zod copies.
 const CLIENT_SMOKE = `
-import { AbstractAgent, EventType } from "@ag-ui/client";
+import { AbstractAgent, EventType } from "@0noxtackore/client";
 import { of } from "rxjs";
 const fail = (m) => { throw new Error("client: " + m); };
 const agent = (mutate) => new (class extends AbstractAgent {
@@ -71,13 +71,13 @@ console.log("client pipeline: ok (unknown stripped + warned, malformed fatal)");
 
 const SMOKE_CJS = `
 const { check } = require("./check.cjs");
-check(require("@ag-ui/core"), require("@ag-ui/core/schemas"), "require");
+check(require("@0noxtackore/core"), require("@0noxtackore/core/schemas"), "require");
 `;
 
 const SMOKE_MJS = `
 import { createRequire } from "node:module";
-import * as core from "@ag-ui/core";
-import * as schemas from "@ag-ui/core/schemas";
+import * as core from "@0noxtackore/core";
+import * as schemas from "@0noxtackore/core/schemas";
 const { check } = createRequire(import.meta.url)("./check.cjs");
 check(core, schemas, "import");
 `;
@@ -100,7 +100,7 @@ try {
         .pop(),
     );
   const tarball = pack(PACKAGE_DIR);
-  // The client cell: @ag-ui/client, encoder and proto take zod as a peer, so the client's
+  // The client cell: @0noxtackore/client, encoder and proto take zod as a peer, so the client's
   // enforcement must run on whichever supported zod the application installed — and must
   // not drag in a second copy of its own. A core-only matrix is blind here (zod@3.25.18
   // once keyed every event schema under "undefined" in the client's enforcement).
@@ -119,9 +119,9 @@ try {
             name: "agui-zod-matrix-consumer",
             private: true,
             dependencies: {
-              "@ag-ui/core": `file:${join(packDir, tarball)}`,
+              "@0noxtackore/core": `file:${join(packDir, tarball)}`,
               ...Object.fromEntries(
-                SIBLINGS.map((name) => [`@ag-ui/${name}`, `file:${join(packDir, siblingTarballs[name])}`]),
+                SIBLINGS.map((name) => [`@0noxtackore/${name}`, `file:${join(packDir, siblingTarballs[name])}`]),
               ),
               rxjs: "7.8.1",
               zod: zodVersion,
@@ -146,7 +146,7 @@ try {
         throw new Error(`expected zod ${zodVersion}, got ${installed}`);
       }
       // The peer guarantee: every package resolves the consumer's zod, so an application
-      // that pins a patched zod gets no older copy nested beneath @ag-ui/*.
+      // that pins a patched zod gets no older copy nested beneath @0noxtackore/*.
       const consumerZodPath = realpathSync(
         execFileSync("node", ["-p", "require.resolve('zod/package.json')"], {
           cwd: consumer,
@@ -158,22 +158,22 @@ try {
           "node",
           [
             "-p",
-            `require(require.resolve("zod/package.json", { paths: [require.resolve("@ag-ui/${name}/package.json")] })).version`,
+            `require(require.resolve("zod/package.json", { paths: [require.resolve("@0noxtackore/${name}/package.json")] })).version`,
           ],
           { cwd: consumer, encoding: "utf8" },
         ).trim();
         if (resolved !== installed) {
-          throw new Error(`@ag-ui/${name} resolved zod ${resolved}, not the consumer's ${installed}`);
+          throw new Error(`@0noxtackore/${name} resolved zod ${resolved}, not the consumer's ${installed}`);
         }
         const resolvedPath = realpathSync(
           execFileSync(
             "node",
-            ["-p", `require.resolve("zod/package.json", { paths: [require.resolve("@ag-ui/${name}/package.json")] })`],
+            ["-p", `require.resolve("zod/package.json", { paths: [require.resolve("@0noxtackore/${name}/package.json")] })`],
             { cwd: consumer, encoding: "utf8" },
           ).trim(),
         );
         if (resolvedPath !== consumerZodPath) {
-          throw new Error(`@ag-ui/${name} resolved a different zod installation: ${resolvedPath}, not ${consumerZodPath}`);
+          throw new Error(`@0noxtackore/${name} resolved a different zod installation: ${resolvedPath}, not ${consumerZodPath}`);
         }
       }
       console.log(`\n== zod@${installed} ==`);
@@ -191,17 +191,17 @@ try {
     writeFileSync(
       join(bare, "package.json"),
       JSON.stringify(
-        { name: "agui-zod-none-consumer", private: true, dependencies: { "@ag-ui/core": `file:${join(packDir, tarball)}` } },
+        { name: "agui-zod-none-consumer", private: true, dependencies: { "@0noxtackore/core": `file:${join(packDir, tarball)}` } },
         null,
         2,
       ),
     );
     writeFileSync(
       join(bare, "smoke.cjs"),
-      `const core = require("@ag-ui/core");
+      `const core = require("@0noxtackore/core");
 if (core.EventType.TEXT_MESSAGE_START !== "TEXT_MESSAGE_START") throw new Error("no zod: EventType constant");
 if (core.EventSchemas !== undefined) throw new Error("no zod: main entry served a validator");
-let threw = false; try { require("@ag-ui/core/schemas"); } catch { threw = true; }
+let threw = false; try { require("@0noxtackore/core/schemas"); } catch { threw = true; }
 if (!threw) throw new Error("no zod: the schemas subpath should fail without zod");
 console.log("no zod: main entry ok, subpath unavailable as expected");`,
     );

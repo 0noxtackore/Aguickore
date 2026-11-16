@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto";
+﻿import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { dirname, extname, join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -71,7 +71,7 @@ describe.each(PUBLISHED)(
     it("is published where the docs site serves it", () => {
       expect(
         existsSync(publishedPath),
-        `${publishedPath} is missing — run: pnpm --filter @ag-ui/spec generate`,
+        `${publishedPath} is missing — run: pnpm --filter @0noxtackore/spec generate`,
       ).toBe(true);
     });
 

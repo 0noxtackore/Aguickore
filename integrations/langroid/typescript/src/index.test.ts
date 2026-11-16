@@ -1,5 +1,5 @@
-import { LangroidHttpAgent } from "./index";
-import { HttpAgent } from "@ag-ui/client";
+﻿import { LangroidHttpAgent } from "./index";
+import { HttpAgent } from "@0noxtackore/client";
 
 describe("LangroidHttpAgent", () => {
   it("should be a subclass of HttpAgent", () => {

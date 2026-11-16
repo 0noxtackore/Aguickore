@@ -1,6 +1,6 @@
-import { describe, expect, it, vi } from "vitest";
+﻿import { describe, expect, it, vi } from "vitest";
 import { AIMessageChunk } from "@langchain/core/messages";
-import { EventType, RunAgentInput, RunFinishedEvent } from "@ag-ui/client";
+import { EventType, RunAgentInput, RunFinishedEvent } from "@0noxtackore/client";
 import { firstValueFrom, toArray } from "rxjs";
 import { LangChainAgent } from "../agent";
 

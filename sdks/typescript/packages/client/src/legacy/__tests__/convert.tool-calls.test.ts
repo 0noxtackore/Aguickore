@@ -1,4 +1,4 @@
-import { convertToLegacyEvents } from "../convert";
+﻿import { convertToLegacyEvents } from "../convert";
 import { of } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
@@ -7,7 +7,7 @@ import {
   ToolCallStartEvent,
   ToolCallArgsEvent,
   ToolCallEndEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { LegacyRuntimeProtocolEvent } from "../types";
 
 describe("convertToLegacyEvents - Tool Call Sequences", () => {

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Multi-agent server for Claude Agent SDK integration (TypeScript).
  *
  * The adapter manages the SDK lifecycle internally — the server just
@@ -9,9 +9,9 @@
  */
 
 import http from "node:http";
-import { EventEncoder } from "@ag-ui/encoder";
-import type { RunAgentInput } from "@ag-ui/core";
-import { RunAgentInputSchema } from "@ag-ui/core/schemas";
+import { EventEncoder } from "@0noxtackore/encoder";
+import type { RunAgentInput } from "@0noxtackore/core";
+import { RunAgentInputSchema } from "@0noxtackore/core/schemas";
 import type { ClaudeAgentAdapter } from "../src";
 
 import { createAgenticChatAdapter } from "./agentic_chat";

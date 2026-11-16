@@ -1,4 +1,4 @@
-import logging
+﻿import logging
 import re
 import uuid
 import json
@@ -732,7 +732,7 @@ class LangGraphAgent:
         # makes them stop sending a resume directive). See _emit_interrupt_finish.
         self.emit_interrupt_outcome = emit_interrupt_outcome
         # Opt-in: emit the subagent protocol surface. OFF by default, because a client
-        # cannot be protected from it after the fact. An @ag-ui/client at or below
+        # cannot be protected from it after the fact. An @0noxtackore/client at or below
         # 0.0.57 validates every event against a discriminated union AS IT COMES OFF THE
         # WIRE, in the HTTP transport, using the throwing `EventSchemas.parse`. So a
         # single SUBAGENT_STARTED kills the whole stream before any middleware could

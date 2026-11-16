@@ -1,7 +1,7 @@
-import { vi } from "vitest";
+﻿import { vi } from "vitest";
 import { AbstractAgent } from "../agent";
 import { HttpAgent } from "../http";
-import { BaseEvent, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { EMPTY, Observable } from "rxjs";
 
 // Cloudflare workerd forbids crypto randomness during global-scope evaluation,

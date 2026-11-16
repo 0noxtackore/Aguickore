@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   predictive-state review (`reason: "confirm_changes"`, with the `predict_state`
   mappings in `metadata`). The tool call events are still emitted, and ordinary
   frontend tool calls are not reported as interrupts. It is off by default
-  because `@ag-ui/client` rejects the next run unless it answers reported
+  because `@0noxtackore/client` rejects the next run unless it answers reported
   interrupts through `RunAgentInput.resume`, which breaks frontends that answer
   with a plain tool message (CopilotKit `useHumanInTheLoop`, the predictive-state
   `confirm_changes` dialog). Enable it with a frontend that resumes via
@@ -424,7 +424,7 @@ None.
 - CORS no longer reflects arbitrary origins with credentials enabled; re-verify cross-origin setups.
 - Minimum `ag-ui-protocol` raised to >=0.1.18.
 - Framework adapters updated to the 1.0 models with part renames and content flattening; re-verify tool-result and file-part handling.
-- `@ag-ui/client` rejects a run that answers an interrupted run with a plain tool message; use `resume[]` or keep `emit_interrupt_outcome` off.
+- `@0noxtackore/client` rejects a run that answers an interrupted run with a plain tool message; use `resume[]` or keep `emit_interrupt_outcome` off.
 
 ## [0.7.0] - 2026-06-22
 
@@ -508,7 +508,7 @@ None.
   (#1892). When a tool raised mid-stream, the background queue path emitted
   `RUN_ERROR` and the consumer loop then fell through to its unconditional
   `RUN_FINISHED`, producing two terminal events for a single run.
-  `@ag-ui/client`'s state machine correctly rejects the second event with
+  `@0noxtackore/client`'s state machine correctly rejects the second event with
   "Cannot send event type 'RUN_FINISHED': The run has already errored". The
   consumer loop now tracks whether a `RUN_ERROR` already flowed through the
   queue and skips the trailing `RUN_FINISHED`, enforcing the AG-UI invariant of

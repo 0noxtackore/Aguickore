@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Concurrent runs on the same thread must be rejected with a
  * protocol-shaped RUN_ERROR/THREAD_BUSY, not the internal Strands error
  * message. The refusal only holds if the slot is also released, so the
@@ -6,7 +6,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import { minimalRunInput, scriptedAgent } from "./helpers";

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Unit tests for the AWS Strands A2UI subagent tool, covering both wiring
  * modes (explicit + auto-injected) and message-shape helpers:
  *
@@ -13,14 +13,14 @@
  *   inject.
  *
  * String literals below mirror the shared constants (`GENERATE_A2UI_TOOL_NAME`
- * from @ag-ui/a2ui-toolkit, `RENDER_A2UI_TOOL_NAME` +
- * `A2UI_SCHEMA_CONTEXT_DESCRIPTION` from @ag-ui/a2ui-middleware), hardcoded to
+ * from @0noxtackore/a2ui-toolkit, `RENDER_A2UI_TOOL_NAME` +
+ * `A2UI_SCHEMA_CONTEXT_DESCRIPTION` from @0noxtackore/a2ui-middleware), hardcoded to
  * avoid a cross-package dep just for test constants.
  */
 import { describe, it, expect, vi } from "vitest";
 
-import { EventType } from "@ag-ui/core";
-import { GENERATE_A2UI_TOOL_DESCRIPTION } from "@ag-ui/a2ui-toolkit";
+import { EventType } from "@0noxtackore/core";
+import { GENERATE_A2UI_TOOL_DESCRIPTION } from "@0noxtackore/a2ui-toolkit";
 import {
   getA2UITools,
   planA2UIInjection,

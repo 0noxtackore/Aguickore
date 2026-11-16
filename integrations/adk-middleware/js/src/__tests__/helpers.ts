@@ -1,5 +1,5 @@
-import { verifyEvents } from "@ag-ui/client";
-import { type AGUIEvent, type RunAgentInput } from "@ag-ui/core";
+﻿import { verifyEvents } from "@0noxtackore/client";
+import { type AGUIEvent, type RunAgentInput } from "@0noxtackore/core";
 import {
   BaseAgent,
   BaseLlm,

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Generic (non-tool-approval) native interrupts must stay generic.
  *
  * Interrupts NOT raised by the adapter's own interruptOnCall hook (which
@@ -12,7 +12,7 @@
  * the SDK actually produced.
  */
 import { describe, it, expect, beforeEach } from "vitest";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 import { tool, type ToolContext } from "@strands-agents/sdk";
 import { z } from "zod";
 

@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Tests for message mapping: AG-UI messages to watsonx format,
  * tool forwarding, and forwardedProps filtering.
  */
 
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { WatsonxAgent } from "../index";
-import { EventType, type BaseEvent, type RunAgentInput, type Message, type Tool } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput, type Message, type Tool } from "@0noxtackore/core";
 import { firstValueFrom, toArray } from "rxjs";
 
 // ---------------------------------------------------------------------------

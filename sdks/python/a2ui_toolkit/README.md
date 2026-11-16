@@ -1,4 +1,4 @@
-# ag-ui-a2ui-toolkit
+﻿# ag-ui-a2ui-toolkit
 
 Framework-agnostic helpers for building A2UI subagent tools.
 
@@ -22,5 +22,5 @@ binding + invoke. Nothing in this package depends on any agent framework.
 ## See also
 
 The TypeScript counterpart lives in
-[`@ag-ui/a2ui-toolkit`](../../typescript/packages/a2ui-toolkit) and exposes the
+[`@0noxtackore/a2ui-toolkit`](../../typescript/packages/a2ui-toolkit) and exposes the
 same surface in camelCase.

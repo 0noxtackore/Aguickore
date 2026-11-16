@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Multi-agent example for AWS Strands (TypeScript).
  *
  * Mirrors `python/examples/server/api/multi_agent.py`: a Strands `Graph` of
@@ -14,7 +14,7 @@
 
 import { Agent } from "@strands-agents/sdk";
 import { Graph } from "@strands-agents/sdk/multiagent";
-import { StrandsAgent } from "@ag-ui/aws-strands";
+import { StrandsAgent } from "@0noxtackore/aws-strands";
 import { createModel } from "../model-factory";
 
 const RESEARCHER_PROMPT = `

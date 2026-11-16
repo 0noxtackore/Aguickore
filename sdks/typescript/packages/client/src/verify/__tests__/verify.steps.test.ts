@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { verifyEvents } from "../verify";
 import {
   BaseEvent,
@@ -8,7 +8,7 @@ import {
   RunFinishedEvent,
   StepStartedEvent,
   StepFinishedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 describe("verifyEvents steps", () => {
   // Test: STEP_FINISHED must have matching name with STEP_STARTED

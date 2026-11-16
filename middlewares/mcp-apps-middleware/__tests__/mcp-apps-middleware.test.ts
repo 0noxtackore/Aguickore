@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+﻿/* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { EventType, BaseEvent, PROTOCOL_VERSION } from "@ag-ui/client";
+import { EventType, BaseEvent, PROTOCOL_VERSION } from "@0noxtackore/client";
 import { SequenceAgent, toolTurn } from "./sequence-agent";
 import {
   MCPAppsMiddleware,

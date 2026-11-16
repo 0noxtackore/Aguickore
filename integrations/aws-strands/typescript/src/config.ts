@@ -1,6 +1,6 @@
-/** Configuration primitives for customizing Strands agent behavior. */
+﻿/** Configuration primitives for customizing Strands agent behavior. */
 
-import type { RunAgentInput, BaseEvent } from "@ag-ui/core";
+import type { RunAgentInput, BaseEvent } from "@0noxtackore/core";
 import type { AgentConfig, SessionManager } from "@strands-agents/sdk";
 import type { A2UIInjectConfig } from "./a2ui-tool";
 import type { TemplateToolSelectionEntry } from "./template-tools";
@@ -378,7 +378,7 @@ export interface StrandsAgentConfig {
    * split DNS spreads the opt-in over the default:
    *
    * ```ts
-   * import { DEFAULT_URL_FETCH_POLICY } from "@ag-ui/aws-strands";
+   * import { DEFAULT_URL_FETCH_POLICY } from "@0noxtackore/aws-strands";
    *
    * config: {
    *   urlFetchPolicy: {

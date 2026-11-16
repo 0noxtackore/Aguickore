@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import "@copilotkit/react-core/v2/styles.css";
 import {
@@ -26,7 +26,7 @@ interface ApprovalPayload extends ApprovalRequest {
   type?: unknown;
 }
 
-// The @ag-ui/mastra bridge publishes a pending approval as a standard
+// The @0noxtackore/mastra bridge publishes a pending approval as a standard
 // interrupt: `event.value` is the Interrupt, with the details under
 // `metadata.mastra`. Returns null for any other interrupt so this hook ignores
 // it.

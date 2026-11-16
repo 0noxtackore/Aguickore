@@ -1,4 +1,4 @@
-import { BaseEvent } from "@ag-ui/core";
+﻿import { BaseEvent } from "@0noxtackore/core";
 import { encode, decode } from "../src/proto";
 import { describe, it, expect } from "vitest";
 

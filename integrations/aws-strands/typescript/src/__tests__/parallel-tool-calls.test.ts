@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for parallel frontend tool-call handling in StrandsAgent.
  *
  * Port of Python's test_parallel_tool_call_handling.py.
@@ -15,9 +15,9 @@
 import { describe, it, expect } from "vitest";
 import { ToolUseBlock, TextBlock, ToolResultBlock } from "@strands-agents/sdk";
 import type { AgentStreamEvent } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
-import type { BaseEvent } from "@ag-ui/core";
-import { verifyEvents } from "@ag-ui/client";
+import { EventType } from "@0noxtackore/core";
+import type { BaseEvent } from "@0noxtackore/core";
+import { verifyEvents } from "@0noxtackore/client";
 import { from, lastValueFrom, toArray } from "rxjs";
 
 import type { StrandsAgentConfig } from "../config";

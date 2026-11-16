@@ -1,4 +1,4 @@
-/**
+﻿/**
  * An example demonstrating multimodal message support with images.
  *
  * This agent demonstrates how to:
@@ -9,7 +9,7 @@
  * Example usage:
  *
  * ```typescript
- * import { UserMessage, TextInputContent, BinaryInputContent } from "@ag-ui/core";
+ * import { UserMessage, TextInputContent, BinaryInputContent } from "@0noxtackore/core";
  *
  * // Create a multimodal user message
  * const message: UserMessage = {

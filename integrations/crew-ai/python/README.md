@@ -1,4 +1,4 @@
-# ag-ui-crewai
+﻿# ag-ui-crewai
 
 ## Native streaming migration (PNI-561)
 
@@ -313,7 +313,7 @@ add_crewai_flow_fastapi_endpoint(app, MyFlow(), "/flow", emission_shape="chunks"
 
 The two shapes are **not** equivalent. In `chunks` mode a `copilotkit_emit_state` /
 `copilotkit_predict_state` call that lands between two tool-call argument deltas makes
-`@ag-ui/client`'s chunk transform close the call and then throw on the next delta;
+`@0noxtackore/client`'s chunk transform close the call and then throw on the next delta;
 triples keep the call open server-side, because the server knows more deltas are
 coming and the client does not. Triples are also the form any consumer can apply
 directly (`apply/default.ts` throws if a chunk reaches it untransformed), so a raw

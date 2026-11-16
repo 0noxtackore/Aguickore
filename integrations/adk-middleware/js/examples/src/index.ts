@@ -1,4 +1,4 @@
-import type { AbstractAgent } from "@ag-ui/client";
+﻿import type { AbstractAgent } from "@0noxtackore/client";
 import { createAgenticChatAgent } from "./agentic-chat";
 import { createBackendToolRenderingAgent } from "./backend-tool-rendering";
 import { createInterruptAgent } from "./interrupt";

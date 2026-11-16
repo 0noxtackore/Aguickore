@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The TypeScript conformance lane: every shared fixture stream, replayed over
  * real HTTP/SSE into a real HttpAgent, asserted against the outcome the
  * specification requires.
@@ -17,7 +17,7 @@ import { fileURLToPath } from "node:url";
 import { AGUIMock } from "@copilotkit/aimock/agui";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { HttpAgent } from "@/agent";
-import type { RunAgentInput } from "@ag-ui/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 import {
   resolveExpectation,
   type StreamExpectation,

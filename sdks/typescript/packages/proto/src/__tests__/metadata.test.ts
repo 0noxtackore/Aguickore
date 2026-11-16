@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { EventType, type TextMessageStartEvent, type MessagesSnapshotEvent } from "@ag-ui/core";
+﻿import { describe, expect, it } from "vitest";
+import { EventType, type TextMessageStartEvent, type MessagesSnapshotEvent } from "@0noxtackore/core";
 import { decode, encode } from "../proto";
 
 // Every JSON shape the protocol promises must survive the binary transport.

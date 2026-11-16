@@ -1,4 +1,4 @@
-import test from "node:test";
+﻿import test from "node:test";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import {
@@ -41,7 +41,7 @@ function fixtureRoot(): string {
           sharedVersion: false,
           packages: [
             {
-              name: "@ag-ui/mastra",
+              name: "@0noxtackore/mastra",
               path: "integrations/mastra",
               ecosystem: "typescript",
             },
@@ -52,7 +52,7 @@ function fixtureRoot(): string {
           sharedVersion: false,
           packages: [
             {
-              name: "@ag-ui/agno",
+              name: "@0noxtackore/agno",
               path: "integrations/agno",
               ecosystem: "typescript",
             },
@@ -101,7 +101,7 @@ function runExtract(
 test("extracts exactly the requested version's body, without the heading", () => {
   const root = fixtureRoot();
   try {
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /Forwarded tool call results/);
     assert.match(r.stdout, /### Breaking changes/);
@@ -115,7 +115,7 @@ test("extracts exactly the requested version's body, without the heading", () =>
 test("--demote shifts headings so the entry nests under the release body", () => {
   const root = fixtureRoot();
   try {
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0", "--demote", "2"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0", "--demote", "2"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /^##### Breaking changes$/m);
   } finally {
@@ -141,7 +141,7 @@ test("extracts Keep-a-Changelog bracketed headings (hand-maintained files)", () 
         "",
       ].join("\n"),
     );
-    const r = runExtract(root, ["@ag-ui/mastra", "0.3.0"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.3.0"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /Hand-written in Keep-a-Changelog style/);
     assert.doesNotMatch(r.stdout, /Older entry/);
@@ -176,7 +176,7 @@ test("a matching heading inside a fence ABOVE the entry is not mistaken for it, 
         "",
       ].join("\n"),
     );
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /The real entry/);
     assert.match(r.stdout, /heading inside tilde fence/);
@@ -213,7 +213,7 @@ test("a '## ' line inside a fenced code block does not truncate the entry", () =
         "",
       ].join("\n"),
     );
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /Example heading inside a fence/);
     assert.match(r.stdout, /### Breaking changes/);
@@ -275,7 +275,7 @@ for (const { name, fence } of [
           "",
         ].join("\n"),
       );
-      const r = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+      const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
       assert.equal(r.status, 0, r.stderr);
       assert.match(r.stdout, /Inside the block/);
       assert.match(r.stdout, /### Breaking changes/);
@@ -312,7 +312,7 @@ test("a four-space indented ``` does not open a fence and swallow later entries"
         "",
       ].join("\n"),
     );
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /literal backticks/);
     assert.doesNotMatch(r.stdout, /Older entry/);
@@ -346,7 +346,7 @@ test("a backtick in a backtick fence's info string does not open a fence", () =>
         "",
       ].join("\n"),
     );
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /current/);
     assert.match(r.stdout, /literal/);
@@ -384,7 +384,7 @@ test("a backtick in a tilde fence's info string still opens a fence", () => {
         "",
       ].join("\n"),
     );
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /Inside the block/);
     assert.match(r.stdout, /### Breaking changes/);
@@ -397,10 +397,10 @@ test("a backtick in a tilde fence's info string still opens a fence", () => {
 test("exits 3 for an unknown package, a missing file, and a missing version", () => {
   const root = fixtureRoot();
   try {
-    assert.equal(runExtract(root, ["@ag-ui/unknown", "1.0.0"]).status, 3);
-    assert.equal(runExtract(root, ["@ag-ui/mastra", "9.9.9"]).status, 3);
+    assert.equal(runExtract(root, ["@0noxtackore/unknown", "1.0.0"]).status, 3);
+    assert.equal(runExtract(root, ["@0noxtackore/mastra", "9.9.9"]).status, 3);
     rmSync(join(root, "integrations/mastra/CHANGELOG.md"));
-    assert.equal(runExtract(root, ["@ag-ui/mastra", "0.2.0"]).status, 3);
+    assert.equal(runExtract(root, ["@0noxtackore/mastra", "0.2.0"]).status, 3);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
@@ -501,7 +501,7 @@ test("a table row inside approved notes does not suppress a later package's appe
   try {
     // Existing body written by the current script version (has sentinels for
     // another package) whose notes contain a compatibility table row that
-    // looks exactly like @ag-ui/mastra's install row key.
+    // looks exactly like @0noxtackore/mastra's install row key.
     const bodyFile = join(root, "body.txt");
     writeFileSync(
       bodyFile,
@@ -518,7 +518,7 @@ test("a table row inside approved notes does not suppress a later package's appe
         "",
         "| Peer | Version |",
         "|------|---------|",
-        "| @ag-ui/mastra | 0.2.0 |",
+        "| @0noxtackore/mastra | 0.2.0 |",
         "",
         "<!-- ag-ui-published: ag_ui_strands@0.3.1 -->",
       ].join("\n"),
@@ -528,7 +528,7 @@ test("a table row inside approved notes does not suppress a later package's appe
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -554,13 +554,13 @@ test("a genuinely recorded package is not appended twice (sentinel path), and le
     const updatedFile = join(root, "updated.txt");
     writeFileSync(
       bodyFile,
-      "## Packages Published\n| @ag-ui/mastra | 0.2.0 | `npm install @ag-ui/mastra@0.2.0` |\n<!-- ag-ui-published: @ag-ui/mastra@0.2.0 -->\n",
+      "## Packages Published\n| @0noxtackore/mastra | 0.2.0 | `npm install @0noxtackore/mastra@0.2.0` |\n<!-- ag-ui-published: @0noxtackore/mastra@0.2.0 -->\n",
     );
     let r = runReleaseScript(
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -574,13 +574,13 @@ test("a genuinely recorded package is not appended twice (sentinel path), and le
     // Legacy body (no sentinels anywhere) with the plain row → also no update.
     writeFileSync(
       bodyFile,
-      "## Packages Published\n| @ag-ui/mastra | 0.2.0 | `npm install @ag-ui/mastra@0.2.0` |\n",
+      "## Packages Published\n| @0noxtackore/mastra | 0.2.0 | `npm install @0noxtackore/mastra@0.2.0` |\n",
     );
     r = runReleaseScript(
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -603,7 +603,7 @@ test("the create path builds a new release with the approved notes", () => {
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -641,7 +641,7 @@ test("an extractor FAULT is reported, not published as 'no notes approved'", () 
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -682,7 +682,7 @@ test("a fault is marked retryable, so reconcile repairs it once fixed", () => {
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -716,7 +716,7 @@ test("a fault is marked retryable, so reconcile repairs it once fixed", () => {
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -756,7 +756,7 @@ test("the create path budgets its notes too, not just the append path", () => {
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -799,7 +799,7 @@ test("the append path budgets against the body already on the release", () => {
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -846,7 +846,7 @@ test("an over-budget FAULT stays retryable instead of being marked published", (
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -898,7 +898,7 @@ test("an over-budget MISSING entry keeps its disclosure instead of a pointer", (
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "8.8.8",
           path: "integrations/mastra",
         },
@@ -934,18 +934,18 @@ test("a persistent fault is not appended twice, and a repair adds no second row"
       [
         "## Packages Published",
         "### TypeScript (npm) - published at 10:00:00 UTC",
-        "| @ag-ui/mastra | 0.2.0 | `npm install @ag-ui/mastra@0.2.0` |",
+        "| @0noxtackore/mastra | 0.2.0 | `npm install @0noxtackore/mastra@0.2.0` |",
         "",
-        "#### @ag-ui/mastra@0.2.0",
+        "#### @0noxtackore/mastra@0.2.0",
         "",
         "_Release notes could not be read..._",
         "",
-        "<!-- ag-ui-unreadable: @ag-ui/mastra@0.2.0 -->",
+        "<!-- ag-ui-unreadable: @0noxtackore/mastra@0.2.0 -->",
       ].join("\n"),
     );
     const updatedFile = join(root, "updated.txt");
     const pkgs = [
-      { name: "@ag-ui/mastra", version: "0.2.0", path: "integrations/mastra" },
+      { name: "@0noxtackore/mastra", version: "0.2.0", path: "integrations/mastra" },
     ];
 
     // Still unreadable: nothing new to say, so nothing is appended.
@@ -965,7 +965,7 @@ test("a persistent fault is not appended twice, and a repair adds no second row"
     assert.match(updated, /Repaired notes/);
     assert.match(updated, /<!-- ag-ui-published: @ag-ui\/mastra@0\.2\.0 -->/);
     const rowCount =
-      updated.split("`npm install @ag-ui/mastra@0.2.0`").length - 1;
+      updated.split("`npm install @0noxtackore/mastra@0.2.0`").length - 1;
     assert.equal(rowCount, 1, "the install row must not be duplicated");
   } finally {
     rmSync(root, { recursive: true, force: true });
@@ -1091,7 +1091,7 @@ test("a marker quoted inside approved notes cannot fake a recorded package", () 
         "- Release bodies now carry a per-package marker, for example:",
         "",
         "```html",
-        "<!-- ag-ui-published: @ag-ui/agno@9.9.9 -->",
+        "<!-- ag-ui-published: @0noxtackore/agno@9.9.9 -->",
         "```",
         "",
       ].join("\n"),
@@ -1101,7 +1101,7 @@ test("a marker quoted inside approved notes cannot fake a recorded package", () 
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -1126,7 +1126,7 @@ test("a marker quoted inside approved notes cannot fake a recorded package", () 
     writeFileSync(bodyFile, body);
     const appended = runReleaseScript(
       root,
-      [{ name: "@ag-ui/agno", version: "9.9.9", path: "integrations/agno" }],
+      [{ name: "@0noxtackore/agno", version: "9.9.9", path: "integrations/agno" }],
       bodyFile,
       join(root, "updated2.txt"),
     );
@@ -1150,13 +1150,13 @@ test("a repaired fault whose version has no entry stops being retried", () => {
       bodyFile,
       [
         "## Packages Published",
-        "| @ag-ui/mastra | 7.7.7 | `npm install @ag-ui/mastra@7.7.7` |",
+        "| @0noxtackore/mastra | 7.7.7 | `npm install @0noxtackore/mastra@7.7.7` |",
         "",
-        "#### @ag-ui/mastra@7.7.7",
+        "#### @0noxtackore/mastra@7.7.7",
         "",
         "_Release notes could not be read..._",
         "",
-        "<!-- ag-ui-unreadable: @ag-ui/mastra@7.7.7 -->",
+        "<!-- ag-ui-unreadable: @0noxtackore/mastra@7.7.7 -->",
       ].join("\n"),
     );
     // The changelog is readable now, but has no entry for 7.7.7 → exit 3.
@@ -1167,7 +1167,7 @@ test("a repaired fault whose version has no entry stops being retried", () => {
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "7.7.7",
           path: "integrations/mastra",
         },
@@ -1202,7 +1202,7 @@ test("reconcile keys on sentinels, not on look-alike rows in approved notes", ()
         "",
         "| Peer | Version |",
         "|------|---------|",
-        "| @ag-ui/mastra | 0.2.0 |",
+        "| @0noxtackore/mastra | 0.2.0 |",
         "",
         "<!-- ag-ui-published: ag_ui_strands@0.3.1 -->",
       ].join("\n"),
@@ -1212,7 +1212,7 @@ test("reconcile keys on sentinels, not on look-alike rows in approved notes", ()
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -1237,14 +1237,14 @@ test("reconcile does nothing when the sentinel is genuinely present", () => {
     const bodyFile = join(root, "body.txt");
     writeFileSync(
       bodyFile,
-      "## Packages Published\n<!-- ag-ui-published: @ag-ui/mastra@0.2.0 -->\n",
+      "## Packages Published\n<!-- ag-ui-published: @0noxtackore/mastra@0.2.0 -->\n",
     );
     const updatedFile = join(root, "updated.txt");
     const r = runReleaseScript(
       root,
       [
         {
-          name: "@ag-ui/mastra",
+          name: "@0noxtackore/mastra",
           version: "0.2.0",
           path: "integrations/mastra",
         },
@@ -1286,7 +1286,7 @@ test("fenced headings survive the --demote path the publisher actually uses", ()
     );
     // --demote 2 is what create-or-update-release.sh passes, so fence
     // awareness must hold on THAT path, not just on the undemoted one.
-    const r = runExtract(root, ["@ag-ui/mastra", "0.2.0", "--demote", "2"]);
+    const r = runExtract(root, ["@0noxtackore/mastra", "0.2.0", "--demote", "2"]);
     assert.equal(r.status, 0, r.stderr);
     assert.match(r.stdout, /^##### Breaking changes$/m, "prose is demoted");
     assert.match(
@@ -1306,7 +1306,7 @@ test("exit code 1 marks a fault: unreadable config and bad --demote", () => {
       join(root, "scripts/release/release.config.json"),
       "{ not json",
     );
-    const bad = runExtract(root, ["@ag-ui/mastra", "0.2.0"]);
+    const bad = runExtract(root, ["@0noxtackore/mastra", "0.2.0"]);
     assert.equal(
       bad.status,
       1,
@@ -1317,14 +1317,14 @@ test("exit code 1 marks a fault: unreadable config and bad --demote", () => {
     const root2 = fixtureRoot();
     try {
       const usage = runExtract(root2, [
-        "@ag-ui/mastra",
+        "@0noxtackore/mastra",
         "0.2.0",
         "--demote",
         "x",
       ]);
       assert.equal(usage.status, 1);
       assert.match(usage.stderr, /--demote requires an integer/);
-      const argc = runExtract(root2, ["@ag-ui/mastra"]);
+      const argc = runExtract(root2, ["@0noxtackore/mastra"]);
       assert.equal(argc.status, 1);
       assert.match(argc.stderr, /Usage:/);
     } finally {
@@ -1339,8 +1339,8 @@ test("dry-run release body carries the approved entry and flags missing ones", (
   const root = fixtureRoot();
   try {
     const packages = JSON.stringify([
-      { name: "@ag-ui/mastra", version: "0.2.0", path: "integrations/mastra" },
-      { name: "@ag-ui/mastra", version: "9.9.9", path: "integrations/mastra" },
+      { name: "@0noxtackore/mastra", version: "0.2.0", path: "integrations/mastra" },
+      { name: "@0noxtackore/mastra", version: "9.9.9", path: "integrations/mastra" },
     ]);
     const r = spawnSync("bash", [RELEASE_SH, "typescript", packages], {
       encoding: "utf8",

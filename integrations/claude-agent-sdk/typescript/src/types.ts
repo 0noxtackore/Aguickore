@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Type definitions for AG-UI Claude SDK integration.
  *
  * Only defines types specific to this adapter.
  * For SDK types, import directly from @anthropic-ai/claude-agent-sdk or @anthropic-ai/sdk.
  */
 
-import type { AgentConfig } from "@ag-ui/client";
+import type { AgentConfig } from "@0noxtackore/client";
 import type { Options } from "@anthropic-ai/claude-agent-sdk";
 import type {
   RunStartedEvent,
@@ -27,7 +27,7 @@ import type {
   StateSnapshotEvent,
   MessagesSnapshotEvent,
   CustomEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 /**
  * Configuration for ClaudeAgentAdapter.

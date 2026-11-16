@@ -1,4 +1,4 @@
-import { EventType } from "@ag-ui/client";
+﻿import { EventType } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";
 import {
   FakeLocalAgent,
@@ -8,7 +8,7 @@ import {
 } from "./helpers";
 
 /**
- * These tests lock in the contract between the @ag-ui/mastra adapter and
+ * These tests lock in the contract between the @0noxtackore/mastra adapter and
  * Mastra's Memory API: every call that takes a `resourceId` MUST receive it.
  *
  * Mastra's real `Memory.getThreadById` REQUIRES `resourceId` and throws

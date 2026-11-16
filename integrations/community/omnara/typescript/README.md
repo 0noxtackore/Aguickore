@@ -1,11 +1,11 @@
-# @ag-ui/omnara
+﻿# @0noxtackore/omnara
 
 Connect an [AG-UI](https://ag-ui.com) frontend, such as [CopilotKit](https://copilotkit.ai), to [Omnara](https://omnara.com), the open-source control plane for durable, hosted agents. Each chat thread gets its own Omnara agent, per user, launched from a [profile or an inline definition](https://docs.omnara.com/agents/configuration).
 
 ## Installation
 
 ```bash
-npm install @ag-ui/omnara
+npm install @0noxtackore/omnara
 ```
 
 Requires Node 22.12+ (the CommonJS build loads the ESM-only `@omnara/sdk`).
@@ -13,7 +13,7 @@ Requires Node 22.12+ (the CommonJS build loads the ESM-only `@omnara/sdk`).
 ## Usage
 
 ```typescript
-import { OmnaraAgent } from "@ag-ui/omnara";
+import { OmnaraAgent } from "@0noxtackore/omnara";
 
 const agent = new OmnaraAgent({
   apiKey: process.env.OMNARA_API_KEY, // org API key, developer role on the project

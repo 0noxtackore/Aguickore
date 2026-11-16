@@ -1,7 +1,7 @@
-import { of, concat, from, firstValueFrom } from "rxjs";
+﻿import { of, concat, from, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { transformChunks } from "../transform";
-import type { BaseEvent } from "@ag-ui/core";
+import type { BaseEvent } from "@0noxtackore/core";
 import {
   EventType,
   TextMessageChunkEvent,
@@ -14,7 +14,7 @@ import {
   SubagentStartedEvent,
   SubagentFinishedEvent,
   SubagentErrorEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { describe, expect, it } from "vitest";
 
 describe("transformChunks subagentRunId propagation", () => {

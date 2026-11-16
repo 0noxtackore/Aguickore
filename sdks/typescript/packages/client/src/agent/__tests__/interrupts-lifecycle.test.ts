@@ -1,8 +1,8 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import { of } from "rxjs";
 import { AbstractAgent } from "../agent";
-import type { BaseEvent, RunAgentInput } from "@ag-ui/core";
-import { EventType } from "@ag-ui/core";
+import type { BaseEvent, RunAgentInput } from "@0noxtackore/core";
+import { EventType } from "@0noxtackore/core";
 
 class StubAgent extends AbstractAgent {
   public received?: RunAgentInput;

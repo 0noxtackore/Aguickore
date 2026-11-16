@@ -1,7 +1,7 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
-import { BaseEvent, EventType, Message, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";
 import { AbstractAgent } from "@/agent";
 import { AgentStateMutation } from "@/agent/subscriber";
@@ -816,7 +816,7 @@ it("preserves existing order and appends new activities when replacing an owned 
     events.next({
       type: EventType.MESSAGES_SNAPSHOT,
       messages: [user, owned, answer],
-      metadata: { "@ag-ui/client": { authoritativeActivityTypes: ["a2ui-surface"] } },
+      metadata: { "@0noxtackore/client": { authoritativeActivityTypes: ["a2ui-surface"] } },
     });
   });
   expect(updates.at(-1)?.messages?.map((message) => message.id)).toEqual([
@@ -874,7 +874,7 @@ it.each([
     const snapshot = {
       type: EventType.MESSAGES_SNAPSHOT,
       messages: [incoming, updated],
-      metadata: { "@ag-ui/client": declaration },
+      metadata: { "@0noxtackore/client": declaration },
     };
     const updates = await emitAndCollect([omitted, previous], (events) => {
       events.next(snapshot);
@@ -909,7 +909,7 @@ it.each([
       type: EventType.MESSAGES_SNAPSHOT,
       messages: [],
       metadata: {
-        "@ag-ui/client": { authoritativeActivityTypes: scope },
+        "@0noxtackore/client": { authoritativeActivityTypes: scope },
       },
     });
   });

@@ -1,4 +1,4 @@
-import type { RunAgentInput } from "@ag-ui/core";
+﻿import type { RunAgentInput } from "@0noxtackore/core";
 
 type InputMessage = RunAgentInput["messages"][number];
 

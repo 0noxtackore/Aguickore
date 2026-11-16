@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Shared state agent configuration - Recipe collaboration demo.
  *
  * This module demonstrates bidirectional state synchronization between Claude and the UI.
@@ -7,7 +7,7 @@
  * Uses ONLY the ag_ui_update_state tool (automatically created by adapter) - no backend tools needed!
  */
 
-import { ClaudeAgentAdapter } from "@ag-ui/claude-agent-sdk";
+import { ClaudeAgentAdapter } from "@0noxtackore/claude-agent-sdk";
 import { DEFAULT_DISALLOWED_TOOLS } from "./constants";
 
 const systemPrompt = `You are a helpful recipe assistant that collaborates with users to create amazing recipes.

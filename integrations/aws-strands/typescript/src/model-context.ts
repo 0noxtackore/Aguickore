@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Request-scoped model context for the AWS Strands bridge.
  *
  * `RunAgentInput.context` is what the application knew at the moment the user
@@ -43,7 +43,7 @@ import {
   Message as StrandsMessage,
   TextBlock,
 } from "@strands-agents/sdk";
-import { splitA2UISchemaContext } from "@ag-ui/a2ui-toolkit";
+import { splitA2UISchemaContext } from "@0noxtackore/a2ui-toolkit";
 
 /** One `RunAgentInput.context` entry, flattened to the two fields the block reads. */
 export interface AguiContextEntry {

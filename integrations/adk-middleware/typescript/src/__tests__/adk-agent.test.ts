@@ -1,6 +1,6 @@
-import { ADKAgent } from "../index";
+﻿import { ADKAgent } from "../index";
 import { describe, it, expect, vi, afterEach, Mock } from "vitest";
-import { AgentCapabilities } from "@ag-ui/core";
+import { AgentCapabilities } from "@0noxtackore/core";
 
 describe("ADKAgent.getCapabilities", () => {
   const originalFetch = globalThis.fetch;

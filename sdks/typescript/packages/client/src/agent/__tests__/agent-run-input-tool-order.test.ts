@@ -1,6 +1,6 @@
-import { AbstractAgent } from "../agent";
+﻿import { AbstractAgent } from "../agent";
 import { AgentSubscriber } from "../subscriber";
-import { BaseEvent, EventType, Message, RunAgentInput } from "@ag-ui/core";
+import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { Observable, of } from "rxjs";
 import { describe, it, expect } from "vitest";
 

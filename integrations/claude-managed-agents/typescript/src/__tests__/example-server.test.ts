@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Lifecycle and failure handling of the Dojo example server. The example is what
  * people copy, so its rejected-handler, aborted-client and mid-stream-failure
  * paths are worth pinning down.
@@ -6,8 +6,8 @@
 
 import http from "node:http";
 import type { AddressInfo } from "node:net";
-import { EventEncoder } from "@ag-ui/encoder";
-import type { BaseEvent, RunAgentInput } from "@ag-ui/core";
+import { EventEncoder } from "@0noxtackore/encoder";
+import type { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { Observable, throwError, concat, of } from "rxjs";
 import { afterEach, describe, expect, it } from "vitest";
 import { safeHandler, streamRun } from "../../examples/server";

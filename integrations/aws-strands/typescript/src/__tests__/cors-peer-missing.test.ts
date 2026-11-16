@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+﻿import { describe, it, expect, vi } from "vitest";
 
 import { createStrandsApp } from "../server";
 import { FixedAgent } from "./transport-harness";
@@ -58,7 +58,7 @@ describe("a missing cors peer names itself and the fix", () => {
     ],
     [
       "the Vite family",
-      'Could not resolve "cors" imported by "@ag-ui/aws-strands". Is it installed?',
+      'Could not resolve "cors" imported by "@0noxtackore/aws-strands". Is it installed?',
     ],
   ])("replaces the wording %s produces", async (_label, loaderMessage) => {
     failing.message = loaderMessage;

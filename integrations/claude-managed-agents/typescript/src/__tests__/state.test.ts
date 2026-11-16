@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import { lastValueFrom, toArray } from "rxjs";
 import { ManagedAgentsAgent } from "../agent";
 import {
@@ -14,7 +14,7 @@ import {
 } from "../state";
 import { InMemorySessionStore } from "../sessions";
 import { createFakeClient } from "./fake-client";
-import type { RunAgentInput } from "@ag-ui/client";
+import type { RunAgentInput } from "@0noxtackore/client";
 import type { SessionRecord } from "../types";
 const idle = {
   id: "idle",

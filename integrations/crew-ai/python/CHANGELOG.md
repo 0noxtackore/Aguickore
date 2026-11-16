@@ -1,9 +1,9 @@
-# Changelog
+﻿# Changelog
 
 ## 1.0.0 — 2026-10-09
 
 - Declares `protocol_version=PROTOCOL_VERSION` on every `RunStartedEvent`, including both StreamFrameTranslator sites and the legacy bus listener.
-- Adapter now sources validators from `@ag-ui/core/schemas`, follows part renames, flattens tool result content to text where needed, and drops file sources with a warning instead of sending provider handles.
+- Adapter now sources validators from `@0noxtackore/core/schemas`, follows part renames, flattens tool result content to text where needed, and drops file sources with a warning instead of sending provider handles.
 - Resumed native sessions now require native frames and use unified streaming; teardown is bounded and cleanup is cancelled at its deadline.
 - Removed the leftover `uvicorn<0.35.0` cap, allowing installation alongside packages needing uvicorn 0.35+ such as fastmcp 2.14 (floor remains 0.34.3).
 

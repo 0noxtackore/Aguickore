@@ -1,4 +1,4 @@
-import os
+﻿import os
 
 import uvicorn
 from dotenv import load_dotenv
@@ -94,7 +94,7 @@ agents = {
         description="A deepagents supervisor delegating to a research subagent with in-subagent HITL (subagent attribution demo).",
         graph=deepagents_subagents_graph,
         # The whole point of this demo is the subagent surface, so it opts in. The flag
-        # defaults to OFF because a released @ag-ui/client rejects the SUBAGENT_* events
+        # defaults to OFF because a released @0noxtackore/client rejects the SUBAGENT_* events
         # outright -- see subagent_visibility in ag_ui_langgraph/agent.py. The dojo runs
         # a preview client that understands them.
         subagent_visibility="attributed",

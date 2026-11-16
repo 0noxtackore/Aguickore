@@ -1,5 +1,5 @@
-import type { RunFinishedEvent, TextMessageChunkEvent } from "@ag-ui/client";
-import { EventType } from "@ag-ui/client";
+﻿import type { RunFinishedEvent, TextMessageChunkEvent } from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";
 import {
   FakeLocalAgent,

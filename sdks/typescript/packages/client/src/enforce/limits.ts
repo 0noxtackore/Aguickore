@@ -1,4 +1,4 @@
-import { AGUIError } from "@ag-ui/core";
+﻿import { AGUIError } from "@0noxtackore/core";
 
 /**
  * How many container entries the enforcement stage will walk for ONE event or

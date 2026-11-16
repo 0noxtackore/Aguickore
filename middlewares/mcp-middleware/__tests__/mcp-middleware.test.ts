@@ -1,11 +1,11 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach } from "vitest";
 import {
   AbstractAgent,
   BaseEvent,
   EventType,
   RunAgentInput,
   Tool,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { Observable, firstValueFrom, toArray } from "rxjs";
 
 // --- Mock the MCP SDK ---------------------------------------------------------

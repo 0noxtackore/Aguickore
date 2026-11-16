@@ -1,4 +1,4 @@
-import { test, expect } from "../../test-isolation-helper";
+﻿import { test, expect } from "../../test-isolation-helper";
 import { A2UIPage } from "../../featurePages/A2UIPage";
 
 // A2UI dynamic-schema showcase — AWS Strands (TypeScript) port.
@@ -8,7 +8,7 @@ import { A2UIPage } from "../../featurePages/A2UIPage";
 // generate_a2ui / render_a2ui tools + hotel/product/team keywords, not on the
 // integration. The Strands demo agent is a plain Strands agent
 // with NO a2ui wiring; the runtime sends `injectA2UITool` and the
-// @ag-ui/aws-strands adapter auto-injects `generate_a2ui`.
+// @0noxtackore/aws-strands adapter auto-injects `generate_a2ui`.
 
 test("[AWS Strands TS] A2UI Dynamic Schema renders hotel comparison surface", async ({
   page,

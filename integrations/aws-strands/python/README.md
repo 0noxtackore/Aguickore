@@ -1,4 +1,4 @@
-# AWS Strands Integration for AG-UI
+﻿# AWS Strands Integration for AG-UI
 
 This package exposes a lightweight wrapper that lets any `strands.Agent` speak the AG-UI protocol. It mirrors the developer experience of the other integrations: give us a Strands agent instance, plug it into `StrandsAgent`, and wire it to FastAPI via `create_strands_app` (or `add_strands_fastapi_endpoint`).
 
@@ -544,7 +544,7 @@ payload=...)]`. The minimum supported Strands release gates its resume on
   receives. Treat what you receive as read-only: it is the
   same object Strands records as the answer, so mutating it changes what a later
   replay is compared against. This is the same contract the
-  `@ag-ui/aws-strands` TypeScript package applies, so a tool body ports between
+  `@0noxtackore/aws-strands` TypeScript package applies, so a tool body ports between
   the two unchanged.
 
 - Adapter-managed `interrupt_on_call` approvals are the exception in both

@@ -1,9 +1,9 @@
-import type { Interrupt as LangGraphInterrupt } from "@langchain/langgraph-sdk";
+﻿import type { Interrupt as LangGraphInterrupt } from "@langchain/langgraph-sdk";
 import type {
   Interrupt as AGUIInterrupt,
   ResumeEntry,
   RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 const isPlainObject = (v: unknown): v is Record<string, unknown> =>
   typeof v === "object" && v !== null && !Array.isArray(v);

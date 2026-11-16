@@ -1,11 +1,11 @@
----
+﻿---
 title: "Middleware"
 description: "Event stream transformation and filtering for AG-UI agents"
 ---
 
 # Middleware
 
-The middleware system in `@ag-ui/client` provides a powerful way to transform, filter, and augment event streams flowing through agents. Middleware can intercept and modify events, add logging, implement authentication, filter tool calls, and more.
+The middleware system in `@0noxtackore/client` provides a powerful way to transform, filter, and augment event streams flowing through agents. Middleware can intercept and modify events, add logging, implement authentication, filter tool calls, and more.
 
 ```typescript
 import {
@@ -17,7 +17,7 @@ import {
   Middleware,
   MiddlewareFunction,
   RunAgentInput
-} from "@ag-ui/client"
+} from "@0noxtackore/client"
 import { Observable } from "rxjs"
 ```
 
@@ -225,7 +225,7 @@ Filters tool calls based on allowed or disallowed lists.
 `FilterToolCallsMiddleware` filters emitted `TOOL_CALL_*` events (including args/results for blocked calls). It does not prevent tool execution in the upstream model/runtime.
 
 ```typescript
-import { FilterToolCallsMiddleware } from "@ag-ui/client"
+import { FilterToolCallsMiddleware } from "@0noxtackore/client"
 ```
 
 #### Configuration
@@ -368,7 +368,7 @@ import {
   BaseEvent,
   MiddlewareFunction,
   RunAgentInput
-} from "@ag-ui/client"
+} from "@0noxtackore/client"
 import { Observable } from "rxjs"
 
 // Type-safe middleware function

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * `ToolBehavior.continueAfterFrontendCall = true` must keep the stream
  * alive after a frontend tool call completes. Without the flag, the
  * adapter sets `pendingHalt` after emitting TOOL_CALL_END and silences
@@ -10,7 +10,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { ToolUseBlock } from "@strands-agents/sdk";
 import type { AgentStreamEvent, ModelStreamEvent } from "@strands-agents/sdk";
-import { EventType, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type RunAgentInput } from "@0noxtackore/core";
 
 import { createProxyTool } from "../client-proxy-tool";
 import {

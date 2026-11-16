@@ -1,4 +1,4 @@
-# AG-UI .NET SDK Architecture
+﻿# AG-UI .NET SDK Architecture
 
 ## What this SDK does
 
@@ -20,11 +20,11 @@ The core design philosophy is: **you should not have to learn a new programming 
         AGUI.Client (consumer)
 ```
 
-**`AGUI.Abstractions`** defines the protocol: events, messages, tools, capabilities, and their JSON serialization (`AGUIJsonSerializerContext`). The model classes under `Generated/` are emitted from `spec/1.0/schema.json` (`pnpm --filter @ag-ui/spec generate`) — edit the schema, not them; the converters, the `AGUIContent` union and the serializer context around them stay hand-written. It has no opinion about HTTP, ASP.NET Core, or any hosting framework. Every other package depends on it. It also hosts `AGUIJsonUtilities.RegisterInterruptContentTypes`, the STJ-only registration for interrupt content types.
+**`AGUI.Abstractions`** defines the protocol: events, messages, tools, capabilities, and their JSON serialization (`AGUIJsonSerializerContext`). The model classes under `Generated/` are emitted from `spec/1.0/schema.json` (`pnpm --filter @0noxtackore/spec generate`) — edit the schema, not them; the converters, the `AGUIContent` union and the serializer context around them stay hand-written. It has no opinion about HTTP, ASP.NET Core, or any hosting framework. Every other package depends on it. It also hosts `AGUIJsonUtilities.RegisterInterruptContentTypes`, the STJ-only registration for interrupt content types.
 
 **`AGUI.Formatting`** defines the wire-format abstraction: `IAGUIEventStreamFormatter` (a bidirectional read/write formatter) and `SseEventStreamFormatter`, the Server-Sent Events wire format. It depends only on Abstractions and `System.Net.ServerSentEvents`.
 
-**`AGUI.Protobuf`** provides the protobuf codec (the `internal` `AGUIProtobuf`), the public `ProtobufEventStreamFormatter`, and a `JsonElement`↔`google.protobuf.Value` bridge. The generated proto types are `internal`; the `.proto` schema is referenced from `sdks/typescript/packages/proto` (it is not copied), keeping the wire format in lockstep with `@ag-ui/proto`. It depends on Abstractions, Formatting, and `Google.Protobuf`.
+**`AGUI.Protobuf`** provides the protobuf codec (the `internal` `AGUIProtobuf`), the public `ProtobufEventStreamFormatter`, and a `JsonElement`↔`google.protobuf.Value` bridge. The generated proto types are `internal`; the `.proto` schema is referenced from `sdks/typescript/packages/proto` (it is not copied), keeping the wire format in lockstep with `@0noxtackore/proto`. It depends on Abstractions, Formatting, and `Google.Protobuf`.
 
 **`AGUI.Server`** is the **framework-agnostic** server-side adapter (the rename of the former `AGUI.Hosting.AspNetCore`, with all ASP.NET stripped). It provides extension methods that convert a stream of `ChatResponseUpdate` objects (the output of any `IChatClient`) into a stream of AG-UI events: `ToChatRequestContext`/`ChatRequestContext`, `AsAGUIEventStreamAsync`, `AGUIStreamOptions`, and `AGUIConstants`. It references only Abstractions and `Microsoft.Extensions.AI.Abstractions` — **no ASP.NET**.
 
@@ -75,7 +75,7 @@ The event stream is independent of the wire format. A formatter (`IAGUIEventStre
 - **Server-Sent Events** (`SseEventStreamFormatter`, `text/event-stream`) is the default transport and always available.
 - **Protobuf** (`ProtobufEventStreamFormatter`, `application/vnd.ag-ui.event+proto`, from `AGUI.Protobuf`) is opt-in. The server enables it by registering the formatter as an `IAGUIEventStreamFormatter`; the client advertises it through the `Accept` header.
 
-On the server, the negotiating `AGUIResults.Events` result picks the formatter from the request `Accept` header (falling back to SSE). On the client, `AGUIChatClient` advertises the formats it accepts and decodes whichever one the server returns. The protobuf schema is referenced directly from `sdks/typescript/packages/proto`, so both transports stay wire-compatible with `@ag-ui/proto`. Because both formats decode to the same `BaseEvent`/`ChatResponseUpdate` stream, application code and tests are transport-agnostic.
+On the server, the negotiating `AGUIResults.Events` result picks the formatter from the request `Accept` header (falling back to SSE). On the client, `AGUIChatClient` advertises the formats it accepts and decodes whichever one the server returns. The protobuf schema is referenced directly from `sdks/typescript/packages/proto`, so both transports stay wire-compatible with `@0noxtackore/proto`. Because both formats decode to the same `BaseEvent`/`ChatResponseUpdate` stream, application code and tests are transport-agnostic.
 
 ### Tool mapping with AGUIStreamOptions
 

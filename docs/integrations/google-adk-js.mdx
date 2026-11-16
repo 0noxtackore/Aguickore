@@ -1,17 +1,17 @@
----
+﻿---
 title: Google ADK JavaScript quickstart
 description: Run a native Google ADK JavaScript agent behind an AG-UI endpoint.
 ---
 
-`@ag-ui/adk-js` adapts a server-side Google ADK JavaScript `Runner` to an AG-UI
+`@0noxtackore/adk-js` adapts a server-side Google ADK JavaScript `Runner` to an AG-UI
 `AbstractAgent`. Use it when the agent and web runtime run in Node.js. The
-existing `@ag-ui/adk` package remains the HTTP client for the Python ADK
+existing `@0noxtackore/adk` package remains the HTTP client for the Python ADK
 middleware.
 
 ## Prerequisites
 
 - Node.js 20.19 or newer
-- `@ag-ui/client` and `@ag-ui/core` 1.x (use a CopilotKit release that
+- `@0noxtackore/client` and `@0noxtackore/core` 1.x (use a CopilotKit release that
   resolves the 1.x line)
 - A Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey)
 
@@ -20,10 +20,10 @@ middleware.
 Install the server dependencies:
 
 ```bash
-npm install @ag-ui/adk-js @google/adk @copilotkit/runtime hono
+npm install @0noxtackore/adk-js @google/adk @copilotkit/runtime hono
 ```
 
-`@ag-ui/adk-js` requires `@google/adk` 2.x.
+`@0noxtackore/adk-js` requires `@google/adk` 2.x.
 
 Set your Gemini key in the environment the server reads:
 
@@ -35,7 +35,7 @@ GOOGLE_GENAI_USE_VERTEXAI=0
 Create `app/api/copilotkit/route.ts`:
 
 ```typescript
-import { ADKJSAgent } from "@ag-ui/adk-js"
+import { ADKJSAgent } from "@0noxtackore/adk-js"
 import {
   CopilotRuntime,
   InMemoryAgentRunner,
@@ -101,7 +101,7 @@ configured Runner. Failures after the client disconnected go to `logger`
   as sub-agents and their frontend tools are discovered)
 - The AG-UI subagent protocol for ADK multi-agent trees (see below)
 
-The integration is server-only. Never import `@ag-ui/adk-js` or `@google/adk`
+The integration is server-only. Never import `@0noxtackore/adk-js` or `@google/adk`
 from a browser component. See the
 [live Dojo examples](https://dojo.ag-ui.com/adk-js/feature/agentic_chat?openCopilot=true)
 for tools, shared state, generative UI, and interrupts.
@@ -113,6 +113,6 @@ for tools, shared state, generative UI, and interrupts.
 client and what the Dojo multi-agent page reads. `subagents: "attributed"` adds
 the AG-UI subagent protocol (`SUBAGENT_STARTED/FINISHED/ERROR`, `subagentRunId`
 on events, messages, and interrupts, continuation of a suspended sub-agent under
-the same id on resume); the consuming client needs `@ag-ui/client` 1.x,
+the same id on resume); the consuming client needs `@0noxtackore/client` 1.x,
 because older clients reject those event types before any application code
 runs. The default is `off`.

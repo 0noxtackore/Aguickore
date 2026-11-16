@@ -1,7 +1,7 @@
-import { Middleware } from "./middleware";
+﻿import { Middleware } from "./middleware";
 import { AbstractAgent } from "@/agent";
-import type { RunAgentInput, BaseEvent } from "@ag-ui/core";
-import { EventType } from "@ag-ui/core";
+import type { RunAgentInput, BaseEvent } from "@0noxtackore/core";
+import { EventType } from "@0noxtackore/core";
 import type { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { randomUUID } from "@/utils";
@@ -40,7 +40,7 @@ export class BackwardCompatibility_0_0_45 extends Middleware {
     )
       return;
     console.warn(
-      `AG-UI is converting ${from} to ${to}. To remove this warning, upgrade your AG-UI integration package (e.g. @ag-ui/langgraph). To surpress it, set SUPPRESS_TRANSFORMATION_WARNINGS=true in your .env file.`,
+      `AG-UI is converting ${from} to ${to}. To remove this warning, upgrade your AG-UI integration package (e.g. @0noxtackore/langgraph). To surpress it, set SUPPRESS_TRANSFORMATION_WARNINGS=true in your .env file.`,
     );
   }
   override run(input: RunAgentInput, next: AbstractAgent): Observable<BaseEvent> {

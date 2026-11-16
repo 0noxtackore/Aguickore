@@ -1,4 +1,4 @@
-import { Agent } from "@mastra/core/agent";
+﻿import { Agent } from "@mastra/core/agent";
 import { createTool } from "@mastra/core/tools";
 import { z } from "zod";
 
@@ -7,7 +7,7 @@ import { z } from "zod";
  * the generate_a2ui/subagent path). The component layout is authored in code
  * (FLIGHT_SCHEMA / HOTEL_SCHEMA); the model only supplies the DATA. Each backend
  * tool returns a complete `a2ui_operations` envelope which the
- * `@ag-ui/a2ui-middleware` detects in the tool result and paints — no subagent,
+ * `@0noxtackore/a2ui-middleware` detects in the tool result and paints — no subagent,
  * no recovery, no auto-injection. Mirrors the LangGraph/Strands fixed-schema
  * demos; renders against the dojo fixedSchemaCatalog (fixed_catalog.json:
  * Row / FlightCard / HotelCard / StarRating).

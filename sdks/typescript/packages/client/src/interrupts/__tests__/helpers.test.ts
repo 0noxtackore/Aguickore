@@ -1,6 +1,6 @@
-import { describe, expect, it } from "vitest";
-import type { Interrupt, RunFinishedEvent } from "@ag-ui/core";
-import { EventType } from "@ag-ui/core";
+﻿import { describe, expect, it } from "vitest";
+import type { Interrupt, RunFinishedEvent } from "@0noxtackore/core";
+import { EventType } from "@0noxtackore/core";
 import { getRunOutcome, isInterruptExpired, buildResumeArray } from "../index";
 
 describe("getRunOutcome", () => {

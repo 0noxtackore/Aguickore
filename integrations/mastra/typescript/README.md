@@ -1,4 +1,4 @@
-# @ag-ui/mastra
+﻿# @0noxtackore/mastra
 
 Implementation of the AG-UI protocol for Mastra.
 
@@ -6,21 +6,21 @@ Connects Mastra agents (local and remote) to frontend applications via the AG-UI
 
 ## Installation
 
-Install the `@ag-ui/mastra` package:
+Install the `@0noxtackore/mastra` package:
 
 ```bash
 # npm
-npm install @ag-ui/mastra
+npm install @0noxtackore/mastra
 # pnpm
-pnpm add @ag-ui/mastra
+pnpm add @0noxtackore/mastra
 # yarn
-yarn add @ag-ui/mastra
+yarn add @0noxtackore/mastra
 ```
 
 Install the required peer dependencies:
 
 ```bash
-npm install @mastra/client-js @mastra/core @ag-ui/core @ag-ui/client
+npm install @mastra/client-js @mastra/core @0noxtackore/core @0noxtackore/client
 ```
 
 The optional CopilotKit integration exports `registerCopilotKit`. Import it
@@ -30,8 +30,8 @@ runtime options are the `CopilotRuntime` options of that CopilotKit version.
 
 | CopilotKit | Entry point                  | Peer dependency                         |
 | ---------- | ---------------------------- | --------------------------------------- |
-| 1.x        | `@ag-ui/mastra/copilotkit`   | `@copilotkit/runtime` `^1.76.0`         |
-| 2.x        | `@ag-ui/mastra/copilotkit-2` | `@copilotkit/runtime` `>=2.0.0-rc.0 <3` |
+| 1.x        | `@0noxtackore/mastra/copilotkit`   | `@copilotkit/runtime` `^1.76.0`         |
+| 2.x        | `@0noxtackore/mastra/copilotkit-2` | `@copilotkit/runtime` `>=2.0.0-rc.0 <3` |
 
 CopilotKit 1.76.0 is the first 1.x release with AG-UI 1.0 agent types and
 protocol. The runtime and shared development dependencies use 1.76.0, so the
@@ -48,7 +48,7 @@ npm install @copilotkit/runtime@next
 ## Usage
 
 ```ts
-import { MastraAgent } from "@ag-ui/mastra";
+import { MastraAgent } from "@0noxtackore/mastra";
 import { mastra } from "./mastra"; // Your Mastra instance
 
 // Create an AG-UI compatible agent

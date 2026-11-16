@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The native interrupt path, driven through a genuine Strands `Agent`.
  *
  * Every other interrupt suite fabricates the interrupt: `Interrupt` is
@@ -14,7 +14,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 import { Agent, tool } from "@strands-agents/sdk";
 import { z } from "zod";
 

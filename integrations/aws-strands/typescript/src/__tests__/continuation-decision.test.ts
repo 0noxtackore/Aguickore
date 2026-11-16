@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The continuation decision, enumerated.
  *
  * What a continuation turn should do is one decision over one input space, and
@@ -48,7 +48,7 @@ import { mkdtempSync, rmSync, writeFileSync } from "fs";
 import { tmpdir } from "os";
 import { join } from "path";
 import { FileStorage, SessionManager } from "@strands-agents/sdk";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 
 import { PROXY_RESULT_PLACEHOLDER } from "../client-proxy-tool";
 import type { StrandsAgentConfig } from "../config";
@@ -1379,7 +1379,7 @@ describe("a declined repair", () => {
     await collect(second.agent, continuationFor(SLID_PAST_ROW));
 
     expect(warn.mock.calls.map((args) => String(args[0]))).toContain(
-      "[@ag-ui/aws-strands] Frontend tool result reconciliation corrected " +
+      "[@0noxtackore/aws-strands] Frontend tool result reconciliation corrected " +
         `nothing for native ids ${FIRST}; the client's answer has to reach the ` +
         "model through the continuation prompt instead",
     );

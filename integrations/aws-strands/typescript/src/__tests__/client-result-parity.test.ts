@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Parity between the two paths that carry a client tool result to the model.
  *
  * A frontend tool runs on the client, so its answer arrives on the NEXT request
@@ -21,7 +21,7 @@ import { mkdtempSync, rmSync } from "fs";
 import { tmpdir } from "os";
 import { join } from "path";
 import { FileStorage, SessionManager } from "@strands-agents/sdk";
-import type { RunAgentInput } from "@ag-ui/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 
 import {
   collect,

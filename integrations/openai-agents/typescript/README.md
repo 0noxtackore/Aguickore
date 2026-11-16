@@ -1,4 +1,4 @@
-# @ag-ui/openai-agents
+﻿# @0noxtackore/openai-agents
 
 TypeScript client for connecting an AG-UI front end to a server built with
 the companion Python integration
@@ -12,13 +12,13 @@ server speaks plain AG-UI over HTTP and has no extra endpoints to call.
 ## Installation
 
 ```bash
-npm install @ag-ui/openai-agents
+npm install @0noxtackore/openai-agents
 ```
 
 ## Usage
 
 ```typescript
-import { OpenAIAgentsHttpAgent } from "@ag-ui/openai-agents";
+import { OpenAIAgentsHttpAgent } from "@0noxtackore/openai-agents";
 
 const agent = new OpenAIAgentsHttpAgent({
   url: "http://localhost:8031/agentic_chat/",

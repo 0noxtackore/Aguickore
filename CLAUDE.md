@@ -1,4 +1,4 @@
-# CLAUDE.md
+﻿# CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -81,7 +81,7 @@ AG-UI is an event-based protocol that standardizes agent-user interactions. The 
 
 ### Repository Structure
 - `/sdks/typescript/`: Main TypeScript implementation
-  - `/packages/`: Core protocol packages (@ag-ui/core, @ag-ui/client, @ag-ui/encoder, @ag-ui/proto)
+  - `/packages/`: Core protocol packages (@0noxtackore/core, @0noxtackore/client, @0noxtackore/encoder, @0noxtackore/proto)
 - `/integrations/`: Framework integrations (langgraph, mastra, crew-ai, etc.)
 - `/apps/`: Example applications including the AG-UI Dojo demo viewer
 - `/sdks/python/`: Python implementation of the protocol

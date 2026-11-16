@@ -1,4 +1,4 @@
-import { compactEvents } from "../compact";
+﻿import { compactEvents } from "../compact";
 import {
   EventType,
   TextMessageStartEvent,
@@ -7,7 +7,7 @@ import {
   ToolCallArgsEvent,
   CustomEvent,
   StateSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 describe("Event Compaction", () => {
   describe("Text Message Compaction", () => {

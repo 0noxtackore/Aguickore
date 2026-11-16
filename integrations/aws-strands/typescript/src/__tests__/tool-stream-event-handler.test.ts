@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Verifies that a custom toolStreamEventHandler suppresses the default
  * STATE_SNAPSHOT behavior and yields custom events instead.
  */
 
 import { describe, it, expect } from "vitest";
 import type { AgentStreamEvent } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
 
 import { collect, scriptedStrandsAgent } from "./helpers";
 

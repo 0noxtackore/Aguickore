@@ -1,4 +1,4 @@
-/** Utility functions for AWS Strands integration. */
+﻿/** Utility functions for AWS Strands integration. */
 
 import type {
   InputContent,
@@ -8,7 +8,7 @@ import type {
   VideoInputContent,
   AudioInputContent,
   InputContentSource,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import {
   ImageBlock,
   DocumentBlock,
@@ -23,7 +23,7 @@ import {
 import * as strandsSdk from "@strands-agents/sdk";
 import { DEFAULT_LOGGER, type Logger } from "./logger";
 
-const LOG_PREFIX = "[@ag-ui/aws-strands]";
+const LOG_PREFIX = "[@0noxtackore/aws-strands]";
 
 // Allowed formats per media type for Strands ContentBlock
 const IMAGE_FORMATS = new Set<string>(["png", "jpeg", "gif", "webp"]);

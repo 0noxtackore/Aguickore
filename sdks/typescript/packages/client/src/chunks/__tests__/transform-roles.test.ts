@@ -1,4 +1,4 @@
-import { from } from "rxjs";
+﻿import { from } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
   EventType,
@@ -8,7 +8,7 @@ import {
   TextMessageEndEvent,
   RunFinishedEvent,
   Role,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { transformChunks } from "../transform";
 import { describe, expect, it } from "vitest";
 

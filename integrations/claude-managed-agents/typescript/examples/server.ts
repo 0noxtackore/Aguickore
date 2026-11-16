@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Dojo example server: one AG-UI endpoint per feature, each backed by a
  * managed agent. Provision the agents first with `pnpm setup:examples`.
  *
@@ -8,9 +8,9 @@
 
 import http from "node:http";
 import { readFileSync } from "node:fs";
-import { EventEncoder } from "@ag-ui/encoder";
-import type { RunAgentInput } from "@ag-ui/core";
-import { RunAgentInputSchema } from "@ag-ui/core/schemas";
+import { EventEncoder } from "@0noxtackore/encoder";
+import type { RunAgentInput } from "@0noxtackore/core";
+import { RunAgentInputSchema } from "@0noxtackore/core/schemas";
 import { ManagedAgentsAgent } from "../src";
 import type { BackendCustomTool } from "../src";
 import { FEATURE_AGENTS } from "./agents";

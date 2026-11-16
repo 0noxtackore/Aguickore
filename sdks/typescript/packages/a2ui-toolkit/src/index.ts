@@ -1,5 +1,5 @@
-/**
- * @ag-ui/a2ui-toolkit
+﻿/**
+ * @0noxtackore/a2ui-toolkit
  *
  * Framework-agnostic building blocks for A2UI subagent tools. Each per-
  * framework adapter (LangGraph, ADK, Mastra, etc.) composes these helpers
@@ -128,11 +128,11 @@ export function buildContextPrompt(state: Record<string, unknown>): string {
 }
 
 /**
- * Context-entry description the ``@ag-ui/a2ui-middleware`` stamps onto the A2UI
+ * Context-entry description the ``@0noxtackore/a2ui-middleware`` stamps onto the A2UI
  * component schema it injects into ``RunAgentInput.context``. Single home for
  * the constant so every framework adapter splits on the same string. MUST stay
  * byte-identical to ``A2UI_SCHEMA_CONTEXT_DESCRIPTION`` in
- * ``@ag-ui/a2ui-middleware`` (this is a wire contract, not prose).
+ * ``@0noxtackore/a2ui-middleware`` (this is a wire contract, not prose).
  */
 export const A2UI_SCHEMA_CONTEXT_DESCRIPTION =
   "A2UI Component Schema — available components for generating UI surfaces. " +

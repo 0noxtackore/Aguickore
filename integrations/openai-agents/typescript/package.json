@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/openai-agents",
+﻿{
+  "name": "@0noxtackore/openai-agents",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -33,13 +33,13 @@
     "unlink:global": "pnpm unlink --global"
   },
   "peerDependencies": {
-    "@ag-ui/core": ">=1.0.0",
-    "@ag-ui/client": ">=1.0.0",
+    "@0noxtackore/core": ">=1.0.0",
+    "@0noxtackore/client": ">=1.0.0",
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
     "@types/node": "^20.11.19",
     "tsdown": "^0.20.1",
     "typescript": "^5.3.3",

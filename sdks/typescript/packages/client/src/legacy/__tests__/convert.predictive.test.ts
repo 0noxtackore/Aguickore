@@ -1,4 +1,4 @@
-import { convertToLegacyEvents } from "../convert";
+﻿import { convertToLegacyEvents } from "../convert";
 import { of } from "rxjs";
 import {
   BaseEvent,
@@ -10,7 +10,7 @@ import {
   StepStartedEvent,
   StepFinishedEvent,
   StateSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { LegacyRuntimeProtocolEvent } from "../types";
 import { toArray } from "rxjs/operators";
 

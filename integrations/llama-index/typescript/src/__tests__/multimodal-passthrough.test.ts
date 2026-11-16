@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Multimodal `RunAgentInput.messages[*].content` must be POSTed to the
  * LlamaIndex AG-UI server as the original parts array, not flattened to a
  * text string.
@@ -11,7 +11,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import type { InputContent } from "@ag-ui/core";
+import type { InputContent } from "@0noxtackore/core";
 import { LlamaIndexAgent } from "../index";
 
 /** Build an SSE Response for the events runAgent needs to complete. */

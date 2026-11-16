@@ -1,4 +1,4 @@
-# tests/test_adk_agent.py
+﻿# tests/test_adk_agent.py
 
 """Tests for ADKAgent middleware."""
 from ag_ui_adk.client_proxy_toolset import ClientProxyToolset
@@ -440,7 +440,7 @@ class TestADKAgent:
 
         # Should get RUN_STARTED then RUN_ERROR, and NO trailing RUN_FINISHED.
         # The AG-UI spec allows at most one terminal event per run; emitting
-        # RUN_FINISHED after RUN_ERROR makes @ag-ui/client's state machine throw
+        # RUN_FINISHED after RUN_ERROR makes @0noxtackore/client's state machine throw
         # ("The run has already errored"). See issue #1892.
         assert len(events) == 2
         assert events[0].type == EventType.RUN_STARTED
@@ -458,7 +458,7 @@ class TestADKAgent:
         Regression test for issue #1892: the background queue path emits
         RUN_ERROR, after which the consumer loop must NOT fall through to its
         unconditional RUN_FINISHED. Two terminal events violate the AG-UI spec
-        and are rejected by @ag-ui/client.
+        and are rejected by @0noxtackore/client.
         """
         error = Exception('boom mid-stream')
         adk_agent = self._failing_agent(error)

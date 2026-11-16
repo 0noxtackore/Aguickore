@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+﻿import { describe, expect, it } from "vitest";
 import {
   AbstractAgent,
   ActivitySnapshotEvent,
@@ -6,7 +6,7 @@ import {
   EventType,
   RunAgentInput,
   ToolCallResultEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import { from } from "rxjs";
 import { A2UIMiddleware } from "../src/index";
 import { collectEvents, createRunAgentInput, MockAgent } from "./test-utils";

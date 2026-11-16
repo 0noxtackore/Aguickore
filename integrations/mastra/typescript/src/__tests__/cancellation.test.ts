@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
-import { EventType, type BaseEvent } from "@ag-ui/client";
-import { RunFinishedEventSchema } from "@ag-ui/core/schemas";
+﻿import { describe, it, expect, vi, afterEach } from "vitest";
+import { EventType, type BaseEvent } from "@0noxtackore/client";
+import { RunFinishedEventSchema } from "@0noxtackore/core/schemas";
 import { Agent } from "@mastra/core/agent";
 import { MockMemory } from "@mastra/core/memory";
 import { MastraLanguageModelV2Mock } from "@mastra/core/test-utils/llm-mock";

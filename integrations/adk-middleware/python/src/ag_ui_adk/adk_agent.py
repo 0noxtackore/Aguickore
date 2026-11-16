@@ -1,4 +1,4 @@
-# src/adk_agent.py
+﻿# src/adk_agent.py
 
 """Main ADKAgent implementation for bridging AG-UI Protocol with Google ADK."""
 from ag_ui_adk.agui_toolset import AGUIToolset
@@ -503,7 +503,7 @@ class ADKAgent:
                 decision (an ADK tool confirmation or a predictive-state
                 ``confirm_changes`` review) ends with ``RUN_FINISHED.outcome`` of
                 type ``interrupt``. Defaults to False: once a RUN_FINISHED carries
-                interrupts, ``@ag-ui/client`` rejects the next run unless it
+                interrupts, ``@0noxtackore/client`` rejects the next run unless it
                 answers them through ``RunAgentInput.resume``, which breaks
                 frontends that answer with a plain tool message (for example
                 CopilotKit ``useHumanInTheLoop`` and the predictive-state
@@ -3344,7 +3344,7 @@ class ADKAgent:
             # event (see _run_adk_in_background) rather than by raising, so the
             # loop below completes normally and would otherwise fall through to
             # the unconditional RUN_FINISHED. The AG-UI spec allows at most one
-            # terminal event per run, and @ag-ui/client's state machine rejects
+            # terminal event per run, and @0noxtackore/client's state machine rejects
             # a RUN_FINISHED that follows a RUN_ERROR. See issue #1892.
             run_errored = False
             async with aclosing(self._stream_events(execution)) as events:

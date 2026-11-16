@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Reconcile frontend (proxy) tool results into a Strands `SessionManager`.
  *
  * Frontend tools are executed on the client, so server-side the proxy returns a
@@ -37,7 +37,7 @@ import { PROXY_RESULT_PLACEHOLDER } from "./client-proxy-tool";
 import { resolveLogger, type Logger } from "./logger";
 import { _buildToolResultContent } from "./utils";
 
-const LOG_PREFIX = "[@ag-ui/aws-strands]";
+const LOG_PREFIX = "[@0noxtackore/aws-strands]";
 
 /**
  * Key under which the adapter stores the ids of the frontend tool calls it has

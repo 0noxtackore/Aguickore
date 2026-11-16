@@ -1,5 +1,5 @@
-import { Agent } from "@mastra/core/agent";
-import type { A2UIAttemptRecord, A2UIInjectConfig } from "@ag-ui/mastra";
+﻿import { Agent } from "@mastra/core/agent";
+import type { A2UIAttemptRecord, A2UIInjectConfig } from "@0noxtackore/mastra";
 
 // Provider-string model, resolved by Mastra's model router (respects
 // OPENAI_BASE_URL, so it targets aimock in e2e and a real key in dev). Matches
@@ -11,7 +11,7 @@ const A2UI_MODEL = "openai/gpt-4.1";
 /**
  * Mastra A2UI demo agents (dynamic-schema + error-recovery).
  *
- * These are PLAIN Mastra agents — they wire NO A2UI tool. The `@ag-ui/mastra`
+ * These are PLAIN Mastra agents — they wire NO A2UI tool. The `@0noxtackore/mastra`
  * bridge AUTO-INJECTS the backend-owned `generate_a2ui` tool per run (pillar 1:
  * easy devex) when the runtime forwards `injectA2UITool` (the dojo copilotkit
  * route sets it for mastra-agent-local). Injection carries the shared toolkit

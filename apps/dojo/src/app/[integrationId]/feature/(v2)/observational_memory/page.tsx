@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import "@copilotkit/react-core/v2/styles.css";
 import {
@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 
 // Mirrors the `content` shape the AG-UI Mastra bridge emits for the
 // "mastra-observational-memory" activity (see
-// MASTRA_OBSERVATIONAL_MEMORY_ACTIVITY_TYPE in @ag-ui/mastra). The bridge builds
+// MASTRA_OBSERVATIONAL_MEMORY_ACTIVITY_TYPE in @0noxtackore/mastra). The bridge builds
 // the object up incrementally via a snapshot + JSON-patch deltas, so every
 // field beyond the identifiers is optional at render time.
 const omContentSchema = z

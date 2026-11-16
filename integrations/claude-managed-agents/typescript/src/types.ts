@@ -1,5 +1,5 @@
-import type Anthropic from "@anthropic-ai/sdk";
-import type { AgentConfig } from "@ag-ui/client";
+﻿import type Anthropic from "@anthropic-ai/sdk";
+import type { AgentConfig } from "@0noxtackore/client";
 
 /**
  * A tool the agent may call, executed on this server rather than in the

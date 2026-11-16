@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## Unreleased
 
@@ -73,7 +73,7 @@ None.
 - Recognize `SnapshotSessionManager` during reconciliation, in addition to repository-backed managers.
 - Drop the pre-1.55 inner run-loop close that could save transient context, swallow save failures, and read a private SDK frame local; strands-agents 1.55+ recommended.
 - Respect the manager's `save_latest_on` setting during snapshot reconciliation.
-- Adopt @ag-ui/core/schemas validators and the 1.0 model part renames; flatten tool result content to text and drop file sources with a warning rather than forwarding a provider handle.
+- Adopt @0noxtackore/core/schemas validators and the 1.0 model part renames; flatten tool result content to text and drop file sources with a warning rather than forwarding a provider handle.
 
 ### Breaking changes
 

@@ -1,6 +1,6 @@
-import { describe, expect, it } from "vitest";
-import { EventType } from "@ag-ui/client";
-import type { BaseEvent } from "@ag-ui/client";
+﻿import { describe, expect, it } from "vitest";
+import { EventType } from "@0noxtackore/client";
+import type { BaseEvent } from "@0noxtackore/client";
 import { AIMessage, AIMessageChunk } from "@langchain/core/messages";
 import { streamLangChainResponse } from "../streaming";
 

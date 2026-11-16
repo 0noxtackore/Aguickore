@@ -1,4 +1,4 @@
-import { EventType, PROTOCOL_VERSION, type BaseEvent } from "@ag-ui/core";
+﻿import { EventType, PROTOCOL_VERSION, type BaseEvent } from "@0noxtackore/core";
 import {
   InMemorySessionService,
   IntentMismatchError,

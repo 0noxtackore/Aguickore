@@ -1,11 +1,11 @@
-/**
+﻿/**
  * Event handlers for Claude SDK stream processing.
  *
  * Breaks down stream processing into focused handler functions.
  */
 
 import { Subscriber } from "rxjs";
-import { EventType, randomUUID } from "@ag-ui/client";
+import { EventType, randomUUID } from "@0noxtackore/client";
 import type { BetaToolUseBlock } from "@anthropic-ai/sdk/resources/beta/messages/messages";
 import {
   stripMcpPrefix,

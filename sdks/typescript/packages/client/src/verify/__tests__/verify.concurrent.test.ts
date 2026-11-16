@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray, catchError } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { verifyEvents } from "../verify";
@@ -16,7 +16,7 @@ import {
   ToolCallEndEvent,
   StepStartedEvent,
   StepFinishedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 describe("verifyEvents concurrent operations", () => {
   // Test: Concurrent text messages with different IDs should be allowed

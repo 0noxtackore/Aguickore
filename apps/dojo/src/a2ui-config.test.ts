@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+﻿import assert from "node:assert/strict";
 import test from "node:test";
 import { realpathSync } from "node:fs";
 import { createRequire } from "node:module";
@@ -9,7 +9,7 @@ import {
   type BaseEvent,
   EventType,
   type RunAgentInput,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 import {
   A2UIMiddleware,
   A2UI_SCHEMA_CONTEXT_DESCRIPTION,

@@ -1,4 +1,4 @@
-# @ag-ui/a2ui-middleware
+﻿# @0noxtackore/a2ui-middleware
 
 Middleware for streaming A2UI surfaces and generation recovery activities.
 
@@ -14,7 +14,7 @@ distinguished reliably from nested renders. If your adapter does this, you can
 opt into stricter association by listing your generation wrappers:
 
 ```ts
-import { A2UIMiddleware } from "@ag-ui/a2ui-middleware";
+import { A2UIMiddleware } from "@0noxtackore/a2ui-middleware";
 
 const middleware = new A2UIMiddleware({
   a2uiGenerationToolNames: ["generate_a2ui", "create_dashboard"],

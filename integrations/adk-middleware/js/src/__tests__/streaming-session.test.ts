@@ -1,9 +1,9 @@
-import {
+﻿import {
   EventType,
   type AGUIEvent,
   type Message,
   type RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import {
   Agent,
   BaseTool,

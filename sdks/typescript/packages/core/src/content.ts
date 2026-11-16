@@ -1,4 +1,4 @@
-import type { ContentPart } from "./generated/types";
+﻿import type { ContentPart } from "./generated/types";
 
 /**
  * The text of string-or-parts content, for a consumer that can only hold a
@@ -12,7 +12,7 @@ import type { ContentPart } from "./generated/types";
  *
  * Losing content is never meant to be silent. This helper only reshapes; a
  * caller that knows it is talking to an older peer warns as well, the way the
- * era shims in `@ag-ui/client` do.
+ * era shims in `@0noxtackore/client` do.
  */
 export function contentToText(content: string | ContentPart[] | undefined): string {
   if (content === undefined) return "";

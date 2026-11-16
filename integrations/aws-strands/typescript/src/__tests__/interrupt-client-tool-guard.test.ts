@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { EventType, type Tool as AguiTool } from "@ag-ui/core";
+﻿import { describe, expect, it, vi } from "vitest";
+import { EventType, type Tool as AguiTool } from "@0noxtackore/core";
 import {
   Agent,
   Model,

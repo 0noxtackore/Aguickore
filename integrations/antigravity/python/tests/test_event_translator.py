@@ -1,4 +1,4 @@
-"""Translator tests, built from the step shapes the real harness emits.
+﻿"""Translator tests, built from the step shapes the real harness emits.
 
 The fixtures mirror what a live `receive_steps()` actually yields (captured
 during the P0 spike): the same logical step re-emitted with a growing
@@ -825,7 +825,7 @@ class TestSubagentRedelivery:
 
 
 class TestReasoningBracketing:
-    """@ag-ui/client's verifyEvents is unconditionally in AbstractAgent's
+    """@0noxtackore/client's verifyEvents is unconditionally in AbstractAgent's
     pipeline and rejects a REASONING_MESSAGE_START with no reasoning span in
     progress -- which aborts the entire run, not just the reasoning block."""
 

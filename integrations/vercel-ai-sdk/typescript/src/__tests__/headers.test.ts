@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+﻿import { describe, it, expect, vi, beforeEach } from "vitest";
 import { VercelAISDKAgent } from "../index";
-import { RunAgentInput } from "@ag-ui/client";
+import { RunAgentInput } from "@0noxtackore/client";
 import { firstValueFrom, toArray } from "rxjs";
 
 // Mock the `ai` module so we can intercept streamText calls

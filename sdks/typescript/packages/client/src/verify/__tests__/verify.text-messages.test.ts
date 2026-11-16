@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray, catchError } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { verifyEvents } from "../verify";
@@ -21,7 +21,7 @@ import {
   StateSnapshotEvent,
   StateDeltaEvent,
   MessagesSnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 describe("verifyEvents text messages", () => {
   // Test: Cannot send TEXT_MESSAGE_CONTENT before TEXT_MESSAGE_START

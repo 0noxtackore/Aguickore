@@ -1,4 +1,4 @@
-# Cross-Language E2E Testing: .NET ↔ TypeScript Interop
+﻿# Cross-Language E2E Testing: .NET ↔ TypeScript Interop
 
 ## Goal
 
@@ -280,13 +280,13 @@ sdks/dotnet/tests/
 
 ### Part 1: TS Client → C# Server (Vitest)
 
-These tests use the TS `HttpAgent` (from `@ag-ui/client`) against the real C# server, with LLMock providing the upstream LLM responses.
+These tests use the TS `HttpAgent` (from `@0noxtackore/client`) against the real C# server, with LLMock providing the upstream LLM responses.
 
 ```typescript
 // tests/agentic-chat.test.ts
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { HttpAgent } from "@ag-ui/client";
-import { EventType, BaseEvent, RunAgentInput } from "@ag-ui/core";
+import { HttpAgent } from "@0noxtackore/client";
+import { EventType, BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { firstValueFrom, toArray } from "rxjs";
 import { startDotnetServer, stopDotnetServer } from "../helpers/dotnet-server";
 import { startLLMock, stopLLMock } from "../helpers/llmock";
@@ -514,7 +514,7 @@ What needs to happen:
 This is the simpler direction — no browser needed, just `HttpAgent` + raw event assertions.
 
 1. Create `sdks/dotnet/tests/CrossLanguage.Vitest/` Node project
-2. Add `@ag-ui/client`, `@ag-ui/core`, `@copilotkit/aimock` as dependencies
+2. Add `@0noxtackore/client`, `@0noxtackore/core`, `@copilotkit/aimock` as dependencies
 3. Write `helpers/dotnet-server.ts` (start C# server as child process with `OPENAI_BASE_URL=http://localhost:5555/v1`)
 4. Write `helpers/llmock.ts` (start LLMock with existing fixtures from `apps/dojo/e2e/fixtures/openai/`)
 5. Write Vitest tests that use `HttpAgent` against the C# server
@@ -556,7 +556,7 @@ The C# server is **already registered** in the dojo framework (`run-dojo-everyth
 
 ## Dependencies
 
-- `@ag-ui/client` and `@ag-ui/core` — consumed as npm packages (workspace link or published version)
+- `@0noxtackore/client` and `@0noxtackore/core` — consumed as npm packages (workspace link or published version)
 - `@copilotkit/aimock` — LLMock server
 - `dotnet` CLI — to build and run C# server/client
 - The C# server must support `OPENAI_BASE_URL` environment variable to point at LLMock
@@ -581,15 +581,15 @@ This section describes the harness as it exists today under `sdks/dotnet/tests/`
 | Path | What it is |
 |---|---|
 | `tests/CrossLanguage.TestServer/` | Minimal C# AG-UI server that consumes `OPENAI_BASE_URL`. Built on the local `AGUI.Abstractions` + `AGUI.Server` + `AGUI.Protobuf` + `AGUI.Samples.Shared` project references — exercises *our* code, not the published NuGet packages. Hosts `/agentic_chat` and `/backend_tool_rendering`. |
-| `tests/CrossLanguage.Vitest/` | Phase 1: TypeScript `HttpAgent` (from `@ag-ui/client`) drives the C# server above. LLMock (`@copilotkit/aimock`) supplies the upstream LLM responses. The `server/` subdirectory also contains a fake-agent TS HTTP server used by Phase 2. |
-| `tests/AGUI.CrossLanguage.IntegrationTests/` | Phase 2: C# `AGUIChatClient` drives the fake-agent TS server (`CrossLanguage.Vitest/server/main.ts`). The TS server emits canned AG-UI events via `@ag-ui/encoder`, mirroring the in-memory `class FooAgent extends AbstractAgent` pattern the TS SDK's own tests use. |
+| `tests/CrossLanguage.Vitest/` | Phase 1: TypeScript `HttpAgent` (from `@0noxtackore/client`) drives the C# server above. LLMock (`@copilotkit/aimock`) supplies the upstream LLM responses. The `server/` subdirectory also contains a fake-agent TS HTTP server used by Phase 2. |
+| `tests/AGUI.CrossLanguage.IntegrationTests/` | Phase 2: C# `AGUIChatClient` drives the fake-agent TS server (`CrossLanguage.Vitest/server/main.ts`). The TS server emits canned AG-UI events via `@0noxtackore/encoder`, mirroring the in-memory `class FooAgent extends AbstractAgent` pattern the TS SDK's own tests use. |
 
 ### Why two TS servers (LLMock-backed vs fake-agent)
 
 The TS SDK ships no reference HTTP server — the only runnable AG-UI servers in the repo are integration packages (aws-strands, claude-agent-sdk, etc.). Rather than depend on an integration, the cross-language tests use two purpose-built servers:
 
 - **Phase 1's "real" server is the C# one** (`CrossLanguage.TestServer`) — it makes actual OpenAI-shaped calls which LLMock answers from JSON fixtures. This verifies the C# server's LLM → AG-UI translation pipeline against the real TS client.
-- **Phase 2's "real" server is the TS fake-agent** (`CrossLanguage.Vitest/server/main.ts`) — it skips the LLM entirely and emits canned AG-UI events directly via `@ag-ui/encoder`, just like every TS SDK test does with `class TestAgent extends AbstractAgent { run() { return of(...events); } }`. This verifies the C# client correctly consumes real TS-encoded AG-UI events.
+- **Phase 2's "real" server is the TS fake-agent** (`CrossLanguage.Vitest/server/main.ts`) — it skips the LLM entirely and emits canned AG-UI events directly via `@0noxtackore/encoder`, just like every TS SDK test does with `class TestAgent extends AbstractAgent { run() { return of(...events); } }`. This verifies the C# client correctly consumes real TS-encoded AG-UI events.
 
 ### Prerequisites
 
@@ -610,7 +610,7 @@ pnpm test
 
 #### Phase 1b (protobuf wire compatibility) — Vitest
 
-`tests/protobuf-parity.test.ts` proves the .NET `AGUIProtobuf` codec and the TypeScript `@ag-ui/proto` package are wire-compatible in BOTH directions, for a representative instance of each of the 16 supported events (`fixtures/protobuf-events.ts`). It reuses the same `CrossLanguage.TestServer` on :8091, which exposes three codec routes (`ProtobufParityRoute.cs`):
+`tests/protobuf-parity.test.ts` proves the .NET `AGUIProtobuf` codec and the TypeScript `@0noxtackore/proto` package are wire-compatible in BOTH directions, for a representative instance of each of the 16 supported events (`fixtures/protobuf-events.ts`). It reuses the same `CrossLanguage.TestServer` on :8091, which exposes three codec routes (`ProtobufParityRoute.cs`):
 
 | Route | Body in | Body out | Backed by |
 |---|---|---|---|
@@ -618,7 +618,7 @@ pnpm test
 | `POST /protobuf/decode` | raw proto message bytes | AG-UI event JSON | `AGUIProtobuf.Decode` |
 | `POST /protobuf/decode-framed` | 4-byte BE length-prefixed frames | AG-UI event JSON array | `AGUIProtobuf.ReadFramedAsync` |
 
-For each event the test asserts round-trip semantic equivalence — `proto.encode` (TS) → `/protobuf/decode` (.NET) and `/protobuf/encode` (.NET) → `proto.decode` (TS) both yield the TS canonical event. Strict byte parity is asserted only for scalar-field events; events with `google.protobuf.Struct` (object) payloads only require round-trip equivalence because protobuf `map<string, Value>` entry ordering is not canonical across encoders (the test logs whether the bytes matched). A framing test drives `@ag-ui/encoder`'s `encodeProtobuf` (4-byte BE prefix) through `/protobuf/decode-framed` to exercise `ReadFramedAsync`.
+For each event the test asserts round-trip semantic equivalence — `proto.encode` (TS) → `/protobuf/decode` (.NET) and `/protobuf/encode` (.NET) → `proto.decode` (TS) both yield the TS canonical event. Strict byte parity is asserted only for scalar-field events; events with `google.protobuf.Struct` (object) payloads only require round-trip equivalence because protobuf `map<string, Value>` entry ordering is not canonical across encoders (the test logs whether the bytes matched). A framing test drives `@0noxtackore/encoder`'s `encodeProtobuf` (4-byte BE prefix) through `/protobuf/decode-framed` to exercise `ReadFramedAsync`.
 
 Run just this suite:
 

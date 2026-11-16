@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useEffect, useState } from "react";
 import "@copilotkit/react-core/v2/styles.css";
 import {
@@ -18,7 +18,7 @@ const CITATIONS_KEY = "citations";
  * One citation as the AWS Strands adapter puts it on the wire, under the
  * `citations` key of the assistant message's metadata.
  *
- * Mirrors `AguiCitation` in `@ag-ui/aws-strands` rather than importing it: the
+ * Mirrors `AguiCitation` in `@0noxtackore/aws-strands` rather than importing it: the
  * dojo renders whatever an integration attaches to a message, and typing it
  * here keeps the page honest about the fields it actually reads.
  */
@@ -155,7 +155,7 @@ const Chat = () => {
   //
   // Read off the message's own events rather than off `message.metadata`,
   // because the metadata reducer that folds event metadata onto the assembled
-  // message first ships in `@ag-ui/client` 0.0.59 and the CopilotKit release
+  // message first ships in `@0noxtackore/client` 0.0.59 and the CopilotKit release
   // this dojo pins resolves 0.0.57. The wire carries it either way: event
   // schemas are passthrough, so the data arrives and only the folding is
   // missing. On a client with the reducer, the same list is readable directly

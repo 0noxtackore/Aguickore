@@ -1,4 +1,4 @@
-/**
+﻿/**
  * What one cold run costs a deployment in egress, and what it tells a client
  * when an attachment does not make it to the model.
  *
@@ -10,7 +10,7 @@
 
 import { describe, it, expect, afterEach, vi } from "vitest";
 import dns from "node:dns";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 import {
   expectCompletedRun,
   minimalRunInput,

@@ -1,5 +1,5 @@
-import { EventType } from "@ag-ui/client";
-import type { ActivitySnapshotEvent, ActivityDeltaEvent } from "@ag-ui/client";
+﻿import { EventType } from "@0noxtackore/client";
+import type { ActivitySnapshotEvent, ActivityDeltaEvent } from "@0noxtackore/client";
 import {
   makeLocalMastraAgent,
   makeRemoteMastraAgent,

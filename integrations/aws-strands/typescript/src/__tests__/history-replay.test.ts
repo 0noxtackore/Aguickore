@@ -1,4 +1,4 @@
-/**
+﻿/**
  * History reconciliation (replayHistoryIntoStrands). Fixes the "chart loops
  * forever" symptom: without replay, the LLM never sees the client-produced
  * tool result on the next turn and re-fires the same tool.
@@ -8,7 +8,7 @@
  */
 
 import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 import { Agent as StrandsAgentCore } from "@strands-agents/sdk";
 import { StrandsAgent } from "../agent";
 import { PROXY_RESULT_PLACEHOLDER } from "../client-proxy-tool";

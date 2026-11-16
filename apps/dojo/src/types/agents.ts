@@ -1,4 +1,4 @@
-import type { AbstractAgent } from "@ag-ui/client";
+﻿import type { AbstractAgent } from "@0noxtackore/client";
 import type { FeatureFor, IntegrationId } from "./integration";
 
 /** Features that are UI-only and don't require a backend agent entry */

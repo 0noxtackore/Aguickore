@@ -1,4 +1,4 @@
-"""With ``emit_interrupt_outcome=True``, RUN_FINISHED carries a structured
+﻿"""With ``emit_interrupt_outcome=True``, RUN_FINISHED carries a structured
 interrupt outcome when a run pauses on a human decision: ADK tool confirmation
 (``adk_request_confirmation``) or the predictive-state ``confirm_changes``
 review. Ordinary runs and ordinary frontend tool calls keep a plain
@@ -181,7 +181,7 @@ class TestConfirmChangesInterruptOutcome:
 class TestInterruptOutcomeDefaultOff:
     """Frontends that answer with a plain tool message (CopilotKit
     ``useHumanInTheLoop``, the predictive-state confirm dialog) are rejected by
-    ``@ag-ui/client`` once a RUN_FINISHED carried interrupts, so by default no
+    ``@0noxtackore/client`` once a RUN_FINISHED carried interrupts, so by default no
     RUN_FINISHED carries an outcome."""
 
     @pytest.mark.asyncio

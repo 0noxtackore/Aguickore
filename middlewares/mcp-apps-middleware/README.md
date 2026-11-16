@@ -1,19 +1,19 @@
-# @ag-ui/mcp-apps-middleware
+﻿# @0noxtackore/mcp-apps-middleware
 
 MCP Apps middleware for AG-UI that enables UI-enabled tools from MCP (Model Context Protocol) servers.
 
 ## Installation
 
 ```bash
-npm install @ag-ui/mcp-apps-middleware
+npm install @0noxtackore/mcp-apps-middleware
 # or
-pnpm add @ag-ui/mcp-apps-middleware
+pnpm add @0noxtackore/mcp-apps-middleware
 ```
 
 ## Usage
 
 ```typescript
-import { MCPAppsMiddleware } from "@ag-ui/mcp-apps-middleware";
+import { MCPAppsMiddleware } from "@0noxtackore/mcp-apps-middleware";
 
 const agent = new YourAgent().use(
   new MCPAppsMiddleware({
@@ -114,7 +114,7 @@ Server lookup prefers `serverId` if provided, falling back to `serverHash`.
 import {
   MCPAppsActivityType, // "mcp-apps" constant
   getServerHash, // Hash transport type and URL; excludes headers
-} from "@ag-ui/mcp-apps-middleware";
+} from "@0noxtackore/mcp-apps-middleware";
 ```
 
 ## Proxy connections
@@ -162,7 +162,7 @@ MIT
 Run the opt-in public Excalidraw integration test from the repository root:
 
 ```sh
-MCP_APPS_LIVE_TEST=1 pnpm exec nx run @ag-ui/mcp-apps-middleware:test --skip-nx-cache
+MCP_APPS_LIVE_TEST=1 pnpm exec nx run @0noxtackore/mcp-apps-middleware:test --skip-nx-cache
 ```
 
 This exercises real MCP tool discovery, prerequisite and UI tool execution, and UI resource retrieval. Model choice, browser rendering, and replay behavior require downstream application validation.

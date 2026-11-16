@@ -1,5 +1,5 @@
-import { EventType } from "@ag-ui/client";
-import type { StateDeltaEvent, StateSnapshotEvent } from "@ag-ui/client";
+﻿import { EventType } from "@0noxtackore/client";
+import type { StateDeltaEvent, StateSnapshotEvent } from "@0noxtackore/client";
 import { applyPatch } from "fast-json-patch";
 import {
   FakeMemory,

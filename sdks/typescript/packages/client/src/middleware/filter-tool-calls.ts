@@ -1,4 +1,4 @@
-import { Middleware } from "./middleware";
+﻿import { Middleware } from "./middleware";
 import { AbstractAgent } from "@/agent";
 import {
   RunAgentInput,
@@ -8,7 +8,7 @@ import {
   ToolCallArgsEvent,
   ToolCallEndEvent,
   ToolCallResultEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { defer, Observable } from "rxjs";
 import { filter } from "rxjs/operators";
 

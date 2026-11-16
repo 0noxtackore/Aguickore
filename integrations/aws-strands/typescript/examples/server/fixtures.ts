@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Typed stand-ins for the objects the adapter hands to a demo's config hooks.
  *
  * Built from the real exported types rather than cast with `as never`. A cast
@@ -6,8 +6,8 @@
  * is exactly the assertion that looks like coverage and is not.
  */
 
-import type { RunAgentInput } from "@ag-ui/core";
-import type { ToolCallContext, ToolResultContext } from "@ag-ui/aws-strands";
+import type { RunAgentInput } from "@0noxtackore/core";
+import type { ToolCallContext, ToolResultContext } from "@0noxtackore/aws-strands";
 
 export function runAgentInput(state: unknown = {}): RunAgentInput {
   return {

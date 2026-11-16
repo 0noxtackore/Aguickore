@@ -1,4 +1,4 @@
-import { defaultApplyEvents, keepToolResultsWithCalls } from "@/apply/default";
+﻿import { defaultApplyEvents, keepToolResultsWithCalls } from "@/apply/default";
 import {
   Message,
   State,
@@ -9,7 +9,7 @@ import {
   // The version this client declares and judges a producer's declaration
   // against, generated from the schema's $id rather than written beside it.
   PROTOCOL_VERSION,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 import {
   AgentConfig,
@@ -38,7 +38,7 @@ import {
   compatibilityBoundaryOperator,
 } from "@/middleware/compatibility-boundary";
 import { AgentStateMutation, AgentSubscriber, runSubscribersWithMutation } from "./subscriber";
-import { AGUIConnectNotImplementedError, AGUIError } from "@ag-ui/core";
+import { AGUIConnectNotImplementedError, AGUIError } from "@0noxtackore/core";
 import { isInterruptExpired } from "@/interrupts";
 import {
   Middleware,

@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## 0.0.3 — 2026-10-12
 
@@ -8,6 +8,6 @@
 
 ### Breaking changes
 
-- Requires `@ag-ui/core` and `@ag-ui/client` >=1.0.0 as peer dependencies.
+- Requires `@0noxtackore/core` and `@0noxtackore/client` >=1.0.0 as peer dependencies.
 - Part renames and tool result content flattening change wire output; re-verify against providers.
 - Unsupported file sources are now dropped instead of forwarded.

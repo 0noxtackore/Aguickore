@@ -1,9 +1,9 @@
-// Vendored from @ai-sdk/ui-utils@1.2.11 (Apache-2.0, Copyright Vercel, Inc.), via the
+﻿// Vendored from @ai-sdk/ui-utils@1.2.11 (Apache-2.0, Copyright Vercel, Inc.), via the
 // identical copy Mastra made in @mastra/client-js when it dropped the same dependency:
 // https://github.com/mastra-ai/mastra/pull/27297 (client-sdks/client-js/src/utils/ai-sdk-v4/fix-json.ts
 // at c56d026c5194b1977e5321f429565eedbccf2c40).
 //
-// Kept in-tree so @ag-ui/mastra does not depend on @ai-sdk/ui-utils, which pins the
+// Kept in-tree so @0noxtackore/mastra does not depend on @ai-sdk/ui-utils, which pins the
 // vulnerable @ai-sdk/provider-utils@2.2.8 (GHSA-866g-f22w-33x8 / CVE-2026-8769) and
 // a zod-3-only peer (https://github.com/ag-ui-protocol/ag-ui/issues/3096,
 // https://github.com/ag-ui-protocol/ag-ui/issues/2874).

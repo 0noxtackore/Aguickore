@@ -1,8 +1,8 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import { lastValueFrom, of } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { z } from "zod/v4";
-import { AGUIError, BaseEvent, EventType, RunAgentInput } from "@ag-ui/core";
+import { AGUIError, BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 import { enforceEvents, enforceOutgoingInput } from "../enforce";
 import { AGUIEnforcementLimitError, DEFAULT_MAX_ENFORCED_ENTRIES } from "../limits";
 import { stripUnknown } from "../strip";

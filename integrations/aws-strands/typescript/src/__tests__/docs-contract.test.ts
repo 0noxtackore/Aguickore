@@ -1,4 +1,4 @@
-/**
+﻿/**
  * The README's load-bearing claims, checked against the code.
  *
  * Review of this package repeatedly found documentation that named a constant
@@ -23,7 +23,7 @@ import {
   realStrandsAgent,
   recordingTool,
 } from "./helpers";
-import { EventType, type BaseEvent } from "@ag-ui/client";
+import { EventType, type BaseEvent } from "@0noxtackore/client";
 import { tool, type ToolContext } from "@strands-agents/sdk";
 import { z } from "zod";
 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Tests for the resume-skips-regeneration fix.
  *
  * The bug: prepareStream's regeneration detection
@@ -14,7 +14,7 @@
  * set. A resume is explicitly NOT a regeneration.
  *
  * NOTE: Same constraint as interrupt-handling.test.ts — LangGraphAgent can't
- * be instantiated in isolation (requires @ag-ui/client protoc). We test the
+ * be instantiated in isolation (requires @0noxtackore/client protoc). We test the
  * decision logic directly. This MUST stay in sync with agent.ts ~line 455:
  *   if (!forwardedProps?.command?.resume && stateNonSystemCount > inputNonSystemCount)
  */

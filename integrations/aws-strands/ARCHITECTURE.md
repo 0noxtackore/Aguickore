@@ -1,4 +1,4 @@
-> Current floors: Python 1.55.0 and TypeScript 1.1.0. See [SDK compatibility](SDK_COMPATIBILITY.md) for the migration boundary. Older version observations below are historical.
+﻿> Current floors: Python 1.55.0 and TypeScript 1.1.0. See [SDK compatibility](SDK_COMPATIBILITY.md) for the migration boundary. Older version observations below are historical.
 
 # AWS Strands Integration Architecture
 
@@ -11,7 +11,7 @@ This document explains how the AWS Strands integration inside `integrations/aws-
 ```
 ┌─────────────┐      RunAgentInput        ┌────────────────────────────┐
 │  AG-UI UI   │ ────────────────────────► │ AG-UI HttpAgent (standard) │
-└─────────────┘   (messages,              │  e.g., @ag-ui/client       │
+└─────────────┘   (messages,              │  e.g., @0noxtackore/client       │
                    tools, state)          └──────────────────┬─────────┘
                                                              │ HTTP(S) POST + SSE
                                                              ▼
@@ -264,7 +264,7 @@ typescript/src/
 ```
 
 `createStrandsApp` and the rest of the Express transport are published from the
-`@ag-ui/aws-strands/server` subpath rather than the package root, so a
+`@0noxtackore/aws-strands/server` subpath rather than the package root, so a
 client-side bundler tracing the root entry does not pull Express and `cors` into
 the browser graph. `index.ts` carries a comment saying so and exports none of
 them. Python has no equivalent split: `create_strands_app` lives in

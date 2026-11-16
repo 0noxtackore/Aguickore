@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Human-in-the-loop agent configuration - Task planning with approval.
  *
  * This module demonstrates how to create agents that require human approval
@@ -15,7 +15,7 @@
  * 6. Backend continues with user's selections
  */
 
-import { ClaudeAgentAdapter } from "@ag-ui/claude-agent-sdk";
+import { ClaudeAgentAdapter } from "@0noxtackore/claude-agent-sdk";
 import { DEFAULT_DISALLOWED_TOOLS } from "./constants";
 
 const systemPrompt = `You are a task planning assistant specialized in creating clear, actionable step-by-step plans.

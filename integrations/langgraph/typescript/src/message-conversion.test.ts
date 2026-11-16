@@ -1,10 +1,10 @@
-/**
+﻿/**
  * Tests for AG-UI <-> LangChain message conversion (all message types).
  * Extends existing multimodal tests in utils.test.ts to cover full message lifecycle.
  */
 
 import { Message as LangGraphMessage } from "@langchain/langgraph-sdk";
-import { Message, ReasoningMessage } from "@ag-ui/client";
+import { Message, ReasoningMessage } from "@0noxtackore/client";
 import { aguiMessagesToLangChain, langchainMessagesToAgui } from "./utils";
 
 // Runtime shape of a reasoning content block on a LangChain assistant message

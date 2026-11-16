@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Open/close discipline on reasoning spans and reasoning messages.
  *
  * The verifier held this for text messages and tool calls but not for
@@ -18,7 +18,7 @@ import {
   EventType,
   RunFinishedEvent,
   RunStartedEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 const RUN_STARTED = {
   type: EventType.RUN_STARTED,

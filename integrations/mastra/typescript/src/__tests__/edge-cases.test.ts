@@ -1,6 +1,6 @@
-import { vi } from "vitest";
-import type { TextMessageChunkEvent, ToolCallStartEvent } from "@ag-ui/client";
-import { EventType } from "@ag-ui/client";
+﻿import { vi } from "vitest";
+import type { TextMessageChunkEvent, ToolCallStartEvent } from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";
 import {
   FakeMemory,

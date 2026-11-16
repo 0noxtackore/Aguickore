@@ -1,4 +1,4 @@
-import { type StreamTextResult } from "ai";
+﻿import { type StreamTextResult } from "ai";
 import {
   EventType,
   PROTOCOL_VERSION,
@@ -26,7 +26,7 @@ import {
   type StepFinishedEvent,
   type RawEvent,
   type CustomEvent,
-} from "@ag-ui/client";
+} from "@0noxtackore/client";
 
 export class AgentsToAGUIAdapter {
   // StreamTextResult generics are complex and caller-specific — any is intentional

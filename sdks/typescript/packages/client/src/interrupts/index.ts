@@ -1,10 +1,10 @@
-import type {
+﻿import type {
   Interrupt,
   Metadata,
   ResumeEntry,
   RunFinishedEvent,
   RunFinishedOutcome,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 export function getRunOutcome(event: RunFinishedEvent): RunFinishedOutcome | undefined {
   return event.outcome;

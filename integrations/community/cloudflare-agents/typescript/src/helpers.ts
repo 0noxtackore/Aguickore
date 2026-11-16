@@ -1,4 +1,4 @@
-import { EventType, type BaseEvent } from "@ag-ui/client";
+﻿import { EventType, type BaseEvent } from "@0noxtackore/client";
 import { Observable } from "rxjs";
 
 export function createSSEResponse(

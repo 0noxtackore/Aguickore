@@ -1,4 +1,4 @@
-# Live conversation content contract
+﻿# Live conversation content contract
 
 This describes the adapter implementation, not released product validation. TypeScript,
 Python and .NET need independent release and application validation.
@@ -104,7 +104,7 @@ and [session files](https://platform.claude.com/docs/en/managed-agents/files).
 
 ## Intelligence compatibility blocker
 
-Intelligence baseline [`7ec248a8f`](https://github.com/CopilotKit/Intelligence/blob/7ec248a8f/pnpm-lock.yaml) uses `@ag-ui/client` 0.0.57, whose `ToolCallResultEventSchema` rejects `ContentPart[]`. Its raw gateway accepts maps, but reconstruction's `stringifyContent` converts multipart arrays into JSON text. [PNI-663](https://linear.app/copilotkit/issue/PNI-663) owns the separate live recorder and reconstruction compatibility work. This branch is not product-review-ready until that companion is implemented and validated.
+Intelligence baseline [`7ec248a8f`](https://github.com/CopilotKit/Intelligence/blob/7ec248a8f/pnpm-lock.yaml) uses `@0noxtackore/client` 0.0.57, whose `ToolCallResultEventSchema` rejects `ContentPart[]`. Its raw gateway accepts maps, but reconstruction's `stringifyContent` converts multipart arrays into JSON text. [PNI-663](https://linear.app/copilotkit/issue/PNI-663) owns the separate live recorder and reconstruction compatibility work. This branch is not product-review-ready until that companion is implemented and validated.
 
 ## Child results after approval
 

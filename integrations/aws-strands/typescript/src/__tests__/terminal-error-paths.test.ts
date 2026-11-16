@@ -1,4 +1,4 @@
-/**
+﻿/**
  * One direct test per terminal RUN_ERROR this bridge can emit.
  *
  * Each test drives the real `StrandsAgent` (or the real Express endpoint) to
@@ -27,7 +27,7 @@ import {
   type BaseEvent,
   type Interrupt as AguiInterrupt,
   type RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import type { Agent, AgentStreamEvent } from "@strands-agents/sdk";
 
 import { StrandsAgent } from "../agent";

@@ -1,4 +1,4 @@
-import { mergeMap } from "rxjs/operators";
+﻿import { mergeMap } from "rxjs/operators";
 import jsonpatch from "fast-json-patch";
 
 import {
@@ -22,7 +22,7 @@ import {
   RunErrorEvent,
   contentHasMedia,
   contentToText,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { Observable } from "rxjs";
 import {
   LegacyTextMessageStart,

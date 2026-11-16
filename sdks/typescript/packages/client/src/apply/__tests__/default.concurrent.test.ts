@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+﻿import { Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { defaultApplyEvents } from "../default";
@@ -15,7 +15,7 @@ import {
   ToolCallEndEvent,
   Message,
   AssistantMessage,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { AbstractAgent } from "../../agent";
 
 const createAgent = (messages: Message[] = []) =>

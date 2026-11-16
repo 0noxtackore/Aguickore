@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Citations reach the client attached to the assistant message they annotate,
  * under the `citations` key of that message's metadata.
  *
@@ -20,7 +20,7 @@ import {
   type AgentStreamEvent,
   type ModelStreamEvent,
 } from "@strands-agents/sdk";
-import { EventType, type AssistantMessage, type BaseEvent } from "@ag-ui/core";
+import { EventType, type AssistantMessage, type BaseEvent } from "@0noxtackore/core";
 
 import { StrandsAgent } from "../agent";
 import {

@@ -1,4 +1,4 @@
-import { buildAguiToolMessage } from "./utils";
+﻿import { buildAguiToolMessage } from "./utils";
 
 /** Session bindings are host-owned metadata, separate from SDK transcript storage. */
 import type {
@@ -10,7 +10,7 @@ import type {
   RunAgentInput,
   ToolMessage,
   RunFinishedOutcome,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 export interface SessionBinding {
   sessionId: string;

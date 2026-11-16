@@ -1,4 +1,4 @@
-import { Message, ResumeEntry, RunAgentInput, State } from "@ag-ui/core";
+﻿import { Message, ResumeEntry, RunAgentInput, State } from "@0noxtackore/core";
 
 /** Normalized debug configuration for the AG-UI agent. */
 export interface ResolvedAgentDebugConfig {

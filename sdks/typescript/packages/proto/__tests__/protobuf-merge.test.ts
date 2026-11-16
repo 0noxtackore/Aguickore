@@ -1,6 +1,6 @@
-import { BinaryWriter } from "@bufbuild/protobuf/wire";
-import { EventType } from "@ag-ui/core";
-import { EventSchemas } from "@ag-ui/core/schemas";
+﻿import { BinaryWriter } from "@bufbuild/protobuf/wire";
+import { EventType } from "@0noxtackore/core";
+import { EventSchemas } from "@0noxtackore/core/schemas";
 import { describe, expect, it } from "vitest";
 import * as events from "../src/generated/events";
 import * as types from "../src/generated/types";

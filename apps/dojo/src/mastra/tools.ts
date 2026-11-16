@@ -1,4 +1,4 @@
-import { createTool } from "@mastra/core/tools";
+﻿import { createTool } from "@mastra/core/tools";
 import { z } from "zod";
 
 export const weatherTool = createTool({
@@ -22,7 +22,7 @@ export const weatherTool = createTool({
 });
 
 // Backend tool that suspends its own execution (Mastra's native HITL
-// primitive). When `suspend()` is called the @ag-ui/mastra bridge ends the run
+// primitive). When `suspend()` is called the @0noxtackore/mastra bridge ends the run
 // with an interrupt outcome; CopilotKit's v2 `useInterrupt` renders the picker
 // and resumes the tool with the user's choice via `resumeData`.
 export const scheduleMeetingTool = createTool({
@@ -72,7 +72,7 @@ export const scheduleMeetingTool = createTool({
 
 // Backend tool gated by Mastra's native approval (`requireApproval: true`).
 // Mastra pauses before `execute` runs and streams `tool-call-approval`; the
-// @ag-ui/mastra bridge surfaces that as an interrupt, CopilotKit's v2
+// @0noxtackore/mastra bridge surfaces that as an interrupt, CopilotKit's v2
 // `useInterrupt` renders Approve / Reject, and the bridge completes the pending
 // call with Mastra's approveToolCall / declineToolCall. The result is built
 // from the approved args so the UI can tell a real execution apart.

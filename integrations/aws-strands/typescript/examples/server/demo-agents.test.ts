@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Contracts the dojo depends on from the example demos.
  *
  * The dojo's code panel shows a demo's file under `server/api/` while
@@ -47,7 +47,7 @@ import {
   SYSTEM_PROMPT as REASONING_PROMPT,
 } from "./api/agentic-chat-reasoning";
 import { toolCallContext, toolResultContext, runAgentInput } from "./fixtures";
-import type { PredictStateMapping } from "@ag-ui/aws-strands";
+import type { PredictStateMapping } from "@0noxtackore/aws-strands";
 
 beforeEach(() => {
   builtModels.length = 0;

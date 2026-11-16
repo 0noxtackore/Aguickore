@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+﻿import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
@@ -33,7 +33,7 @@ describe("the protocol version each package states", () => {
   // The npm manifests carry it as a field of their own, which survives publish
   // and is readable with `npm view <pkg> agui`.
   it.each(["core", "client", "encoder", "proto"])(
-    "@ag-ui/%s states it in package.json",
+    "@0noxtackore/%s states it in package.json",
     (name) => {
       const manifest = JSON.parse(
         read("sdks", "typescript", "packages", name, "package.json"),

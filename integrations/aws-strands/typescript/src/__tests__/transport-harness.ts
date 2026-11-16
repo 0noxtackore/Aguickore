@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Shared HTTP harness for the CORS and transport suites.
  *
  * Everything here boots a real Express app on an ephemeral port and reads real
@@ -7,7 +7,7 @@
  * assertion about what the app actually emits.
  */
 
-import { EventType, type BaseEvent, type RunAgentInput } from "@ag-ui/core";
+import { EventType, type BaseEvent, type RunAgentInput } from "@0noxtackore/core";
 import type { AddressInfo } from "net";
 
 import { createStrandsApp, type CreateStrandsAppOptions } from "../server";

@@ -1,4 +1,4 @@
-/** AWS Strands integration for AG-UI. */
+﻿/** AWS Strands integration for AG-UI. */
 
 export {
   StrandsAgent,
@@ -56,7 +56,7 @@ export type {
 // Server-side Express transport helpers (`createStrandsApp`,
 // `addStrandsExpressEndpoint`, `addPing`, `addCapabilities`,
 // `capabilitiesFor`, `DEFAULT_CAPABILITIES`, and associated types) live at
-// `@ag-ui/aws-strands/server`. Keeping them off the main entry lets
+// `@0noxtackore/aws-strands/server`. Keeping them off the main entry lets
 // client-side bundlers (Next.js, Vite, etc.) trace this package without
 // pulling Express / cors into the browser graph.
 
@@ -85,5 +85,5 @@ export type {
 } from "./config";
 
 // Thin HttpAgent subclass for AG-UI clients pointing at a Strands endpoint.
-import { HttpAgent } from "@ag-ui/client";
+import { HttpAgent } from "@0noxtackore/client";
 export class AWSStrandsAgent extends HttpAgent {}

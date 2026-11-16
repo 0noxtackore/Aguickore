@@ -1,5 +1,5 @@
-import { afterEach, beforeEach, describe, expect, it, vi, type MockInstance } from "vitest";
-import { type BaseEvent, EventType } from "@ag-ui/core";
+﻿import { afterEach, beforeEach, describe, expect, it, vi, type MockInstance } from "vitest";
+import { type BaseEvent, EventType } from "@0noxtackore/core";
 import { decode, encode } from "../proto";
 
 describe("metadata on the unvalidated fallback encode path", () => {

@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 ## 0.0.16 — 2026-11-12
 
@@ -64,5 +64,5 @@ None.
 
 ### Breaking changes
 
-- Built on @ag-ui/core 1.0 generated types; 0.x names are now deprecated aliases (see DEPRECATIONS.md).
+- Built on @0noxtackore/core 1.0 generated types; 0.x names are now deprecated aliases (see DEPRECATIONS.md).
 - Re-verify integration with the new post-middleware enforcement pipeline and protobuf wire.

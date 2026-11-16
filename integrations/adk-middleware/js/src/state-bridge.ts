@@ -1,4 +1,4 @@
-import type { RunAgentInput } from "@ag-ui/core";
+﻿import type { RunAgentInput } from "@0noxtackore/core";
 import type { Session } from "@google/adk";
 
 import {
@@ -15,7 +15,7 @@ import { clone, isRecord } from "./value-utils";
 function validatePublicStateKey(key: string): void {
   if (AG_UI_INTERNAL_STATE_KEYS.has(key)) {
     throw new ADKJSProtocolError(
-      `AG-UI state key ${key} is reserved by @ag-ui/adk-js.`,
+      `AG-UI state key ${key} is reserved by @0noxtackore/adk-js.`,
       "RESERVED_STATE_KEY",
     );
   }

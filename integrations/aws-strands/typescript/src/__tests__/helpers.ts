@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Shared test helpers. These mirror the Python test helpers but adapted for
  * the TS Strands SDK's streaming shape.
  */
@@ -23,7 +23,7 @@ import {
   type BaseEvent,
   type Interrupt as AguiInterrupt,
   type RunAgentInput,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 import type OpenAI from "openai";
 import { OpenAIModel } from "@strands-agents/sdk/models/openai";

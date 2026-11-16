@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Abnormal terminal stop reasons.
  *
  * A forced stop is a failed run carrying the underlying reason; a truncated
@@ -46,8 +46,8 @@ import {
   ToolUseBlock,
 } from "@strands-agents/sdk";
 import type { Agent, AgentStreamEvent, StopReason } from "@strands-agents/sdk";
-import { EventType } from "@ag-ui/core";
-import type { BaseEvent, RunAgentInput } from "@ag-ui/core";
+import { EventType } from "@0noxtackore/core";
+import type { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 
 import { FORCE_STOP_FALLBACK } from "./error-code-table";
 import {
@@ -1008,7 +1008,7 @@ describe("diagnostics", () => {
       .map((call) => String(call[0]))
       .filter((line) => line.includes("agent_result:"));
     expect(lines).toEqual([
-      "[@ag-ui/aws-strands] agent_result: threadId=default, stopReason=endTurn",
+      "[@0noxtackore/aws-strands] agent_result: threadId=default, stopReason=endTurn",
     ]);
   });
 

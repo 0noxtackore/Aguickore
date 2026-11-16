@@ -1,4 +1,4 @@
-import type { Interrupt, ResumeEntry } from "@ag-ui/core";
+﻿import type { Interrupt, ResumeEntry } from "@0noxtackore/core";
 import type { AgentInteraction, InteractionAnswer } from "./api";
 
 // Omnara's approvals and questions as AG-UI interrupts, and the resume payload

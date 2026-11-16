@@ -1,11 +1,11 @@
-# @ag-ui/claude-agent-sdk
+﻿# @0noxtackore/claude-agent-sdk
 
 Implementation of the AG-UI protocol for the Anthropic Claude Agent SDK (TypeScript).
 
 ## Installation
 
 ```bash
-npm install @ag-ui/claude-agent-sdk @anthropic-ai/claude-agent-sdk zod
+npm install @0noxtackore/claude-agent-sdk @anthropic-ai/claude-agent-sdk zod
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install @ag-ui/claude-agent-sdk @anthropic-ai/claude-agent-sdk zod
 The adapter manages the SDK lifecycle internally — just call `adapter.run(input)`:
 
 ```typescript
-import { ClaudeAgentAdapter } from "@ag-ui/claude-agent-sdk";
+import { ClaudeAgentAdapter } from "@0noxtackore/claude-agent-sdk";
 
 const adapter = new ClaudeAgentAdapter({
   agentId: "my_agent",

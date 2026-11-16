@@ -6,17 +6,23 @@ settings:
 
 overrides:
   langium: 3.2.0
-  '@ag-ui/client@0.0.59': 1.0.1
-  '@ag-ui/core@0.0.59': 1.0.1
-  '@ag-ui/encoder@0.0.59': 1.0.1
+  '@0noxtackore/client@0.0.59': 1.0.1
+  '@0noxtackore/core@0.0.59': 1.0.1
+  '@0noxtackore/encoder@0.0.59': 1.0.1
   '@copilotkit/runtime>@langchain/core': 0.3.80
-  '@copilotkit/runtime@1.87.0>@ag-ui/a2ui-middleware': 0.0.16
-  '@copilotkit/shared@1.87.0>@ag-ui/a2ui-middleware': 0.0.16
+  '@copilotkit/runtime>@0noxtackore/client': 1.0.1
+  '@copilotkit/runtime>@0noxtackore/core': 1.0.1
+  '@copilotkit/runtime>@0noxtackore/encoder': 1.0.1
+  '@copilotkit/shared>@0noxtackore/client': 1.0.1
+  '@copilotkit/shared>@0noxtackore/core': 1.0.1
+  '@copilotkit/shared>@0noxtackore/encoder': 1.0.1
+  '@copilotkit/runtime@1.87.0>@0noxtackore/a2ui-middleware': 0.0.16
+  '@copilotkit/shared@1.87.0>@0noxtackore/a2ui-middleware': 0.0.16
   zod: 3.25.76
   '@google/adk>zod': ^4.2.1
   '@strands-agents/sdk>zod': ^4.4.3
-  '@ag-ui/aws-strands>zod': ^4.4.3
-  '@ag-ui/aws-strands-examples>zod': ^4.4.3
+  '@0noxtackore/aws-strands>zod': ^4.4.3
+  '@0noxtackore/aws-strands-examples>zod': ^4.4.3
   '@omnara/sdk>zod': ^4.4.3
   hono: 4.12.27
 

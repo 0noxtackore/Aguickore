@@ -234,7 +234,8 @@ describe("BackwardCompatibility_0_0_45 (browser environment)", () => {
       // Should have transformed the event without throwing ReferenceError
       expect(result).toHaveLength(1);
       expect(result[0].type).toBe(EventType.REASONING_START);
-      // Warning should still be logged (suppression is off since process is gone)
+      // Warning should still be logged even though `process` is gone: the warn
+      // path no longer consults `process`, it just warns.
       expect(warnSpy).toHaveBeenCalled();
 
       warnSpy.mockRestore();

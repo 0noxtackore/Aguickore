@@ -39,22 +39,6 @@ async function bridge(events: BaseEvent[]): Promise<{
   }
 }
 
-// The bridge's warnings gate on SUPPRESS_TRANSFORMATION_WARNINGS like every
-// other transformation warning in the package, so the tests that assert on one
-// have to run with the flag off whatever the surrounding environment sets.
-let priorSuppress: string | undefined;
-beforeEach(() => {
-  priorSuppress = process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-  delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-});
-afterEach(() => {
-  if (priorSuppress === undefined) {
-    delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-  } else {
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS = priorSuppress;
-  }
-});
-
 describe("the legacy bridge says what it loses", () => {
   it("survives a STATE_DELTA that cannot be applied, and warns", async () => {
     // `applyPatch(..., validate = true)` THROWS on a bad patch, so the

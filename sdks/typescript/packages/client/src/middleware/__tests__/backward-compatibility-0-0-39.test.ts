@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+﻿import { describe, it, expect, vi } from "vitest";
 import { AbstractAgent, HttpAgent } from "@/agent";
 import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { Observable, of } from "rxjs";
@@ -30,22 +30,6 @@ class LegacyAgent extends AbstractAgent {
     return { ...prepared, parentRunId: "legacy-parent" };
   }
 }
-
-// The warning tests need the suppress flag OFF, but deleting it outright leaks
-// the change into every test that runs afterwards in this worker — including
-// suites that assert warnings ARE suppressed. Saved and put back instead.
-let priorSuppress: string | undefined;
-beforeEach(() => {
-  priorSuppress = process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-  delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-});
-afterEach(() => {
-  if (priorSuppress === undefined) {
-    delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-  } else {
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS = priorSuppress;
-  }
-});
 
 describe("BackwardCompatibility_0_0_39 middleware (auto insertion)", () => {
   it("automatically strips parentRunId and flattens array message content when maxVersion <= 0.0.39", async () => {

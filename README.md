@@ -16,6 +16,89 @@ Agent experiences rarely fit a single request/response exchange. Real agents str
 - **Reasoning, activity, and subagents** — structured visibility into agent progress and delegation.
 - **Extensibility** — custom and raw events for framework-specific needs.
 
+## How aguickore works
+
+At a high level, a client starts a run by sending a structured input to an agent endpoint. The agent processes that run and emits an ordered stream of typed events back to the client, which renders and reacts in real time.
+
+```mermaid
+flowchart LR
+  subgraph Client["Client application"]
+    UI[UI / UX]
+    SDKC[aguickore client SDK]
+  end
+
+  subgraph Transport["Transport (e.g. HTTP + SSE)"]
+    REQ[RunAgentInput]
+    EVT[Typed event stream]
+  end
+
+  subgraph Agent["Agent backend"]
+    SDKS[aguickore server / adapter]
+    FW[Framework or custom logic]
+  end
+
+  UI <--> SDKC
+  SDKC -->|start run| REQ --> SDKS --> FW
+  FW --> SDKS -->|emit events| EVT --> SDKC --> UI
+```
+
+A typical run follows a simple lifecycle: it begins, produces intermediate events as work progresses, and ends with a terminal outcome.
+
+```mermaid
+sequenceDiagram
+  autonumber
+  participant App as Client app
+  participant Agent as Agent endpoint
+
+  App->>Agent: RunAgentInput (messages, tools, state, context)
+  Agent-->>App: RUN_STARTED
+  loop During execution
+    Agent-->>App: TEXT_MESSAGE_* / TOOL_CALL_* / STATE_* / ACTIVITY_* / ...
+  end
+  alt Completed
+    Agent-->>App: RUN_FINISHED
+  else Failed or interrupted
+    Agent-->>App: RUN_ERROR or interrupt outcome
+  end
+```
+
+## Protocol at a glance
+
+The protocol organizes interaction around a **run** that produces ordered, typed events. Events are grouped into families so implementations can start small and grow capabilities over time.
+
+```mermaid
+flowchart TB
+  Run[Agent run] --> L[Lifecycle]
+  Run --> M[Messages]
+  Run --> T[Tool calls]
+  Run --> S[State]
+  Run --> R[Reasoning]
+  Run --> A[Activity]
+  Run --> X[Subagents]
+  Run --> P[Passthrough]
+
+  L --> L1[RUN/STEP start · finish · error]
+  M --> M1[TEXT_MESSAGE start · content · end]
+  T --> T1[TOOL_CALL start · args · end · result]
+  S --> S1[STATE_SNAPSHOT · STATE_DELTA · MESSAGES_SNAPSHOT]
+  R --> R1[Reasoning signals]
+  A --> A1[Activity updates]
+  X --> X1[Subagent lifecycle]
+  P --> P1[RAW / CUSTOM events]
+```
+
+**Common event families:**
+- **Lifecycle:** run/step start, finish, and error
+- **Messages:** streaming assistant/user message chunks
+- **Tool calls:** tool invocation arguments, results, and streaming updates
+- **State:** full snapshots and incremental (e.g. JSON Patch-style) deltas
+- **Reasoning:** model reasoning signals (where supported)
+- **Activity:** progress/status updates for long-running work
+- **Subagents:** nested/delegated agent runs
+- **Passthrough:** raw/custom payloads for extensions
+
+For canonical event and type definitions, consult the [`spec/`](spec) in this repository and the upstream [AG-UI specification](https://docs.ag-ui.com/spec/1.0).
+
 ## What’s in this repository
 
 This is a monorepo containing protocol assets, SDKs, integrations, and apps:
@@ -97,21 +180,6 @@ await agent.runAgent({}, {
 ```
 
 > Exact package names, versions, and integration-specific setup vary by SDK/integration. Refer to the corresponding `sdks/` or `integrations/` subproject for authoritative instructions.
-
-## Protocol at a glance
-
-The protocol organizes interaction around a **run** that produces ordered, typed events. Common event families include:
-
-- **Lifecycle:** run/step start, finish, and error
-- **Messages:** streaming assistant/user message chunks
-- **Tool calls:** tool invocation arguments, results, and streaming updates
-- **State:** full snapshots and incremental (e.g. JSON Patch-style) deltas
-- **Reasoning:** model reasoning signals (where supported)
-- **Activity:** progress/status updates for long-running work
-- **Subagents:** nested/delegated agent runs
-- **Passthrough:** raw/custom payloads for extensions
-
-For the canonical event/type definitions, consult the [`spec/`](spec) in this repository and the upstream [AG-UI specification](https://docs.ag-ui.com/spec/1.0).
 
 ## SDKs
 

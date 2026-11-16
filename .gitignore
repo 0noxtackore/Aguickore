@@ -64,3 +64,5 @@ node_modules
 
 # apps/dojo/scripts/published-mode.js state (published-release Dojo runs)
 .published-mode/
+
+gitingest.txt

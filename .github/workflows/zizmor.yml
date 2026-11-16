@@ -57,10 +57,8 @@ jobs:
 
       - name: Run zizmor
         # --persona=auditor surfaces medium-confidence findings that the default
-        # persona suppresses; SARIF goes to the Security tab for triage rather
-        # than failing the build during this initial rollout. Gate via branch
-        # protection on code-scanning alerts once the baseline is established.
-        continue-on-error: true
+        # persona suppresses; the SARIF is uploaded to GitHub's Security tab for
+        # triage. The step is now a hard gate: any finding fails the job.
         run: |
           uvx zizmor \
             --config .github/zizmor.yml \

@@ -52,6 +52,7 @@ permissions:
 
 jobs:
   typecheck:
+    if: github.repository == 'ag-ui-protocol/ag-ui' || github.repository == '0noxtackore/Aguickore'
     name: typecheck
     runs-on: ubuntu-latest
 

@@ -209,10 +209,13 @@ jobs:
     # prerelease manual workflow_dispatch from any selected branch. Canary
     # publishes are intentionally branch-scoped so maintainers can push a
     # button on feature work without merging first.
+    # Disabled on forks/distributions: this workflow depends on upstream-only
+    # OIDC trusted-publisher bindings and release infrastructure.
     if: >
-      (github.event_name == 'workflow_dispatch' &&
+      github.repository == 'ag-ui-protocol/ag-ui' &&
+      ((github.event_name == 'workflow_dispatch' &&
         (inputs.mode == 'prerelease' || github.ref == 'refs/heads/main')) ||
-      github.event_name == 'push'
+      github.event_name == 'push')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

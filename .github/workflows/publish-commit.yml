@@ -14,6 +14,7 @@ permissions:
 
 jobs:
   build:
+    if: github.repository == 'ag-ui-protocol/ag-ui'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -49,6 +50,7 @@ jobs:
           retention-days: 1
 
   publish:
+    if: github.repository == 'ag-ui-protocol/ag-ui'
     needs: build
     runs-on: ubuntu-latest
     permissions:

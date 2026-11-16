@@ -1,0 +1,97 @@
+=====================================================================
+VULNERABILIDADES Y DESVENTAJAS - REPOSITORIO
+=====================================================================
+Repositorio analizado: ag-ui (github.com/ag-ui-protocol/ag-ui)
+Contexto de trabajo: snapshot gitingest.txt + estado actual del working tree
+Fecha: 2026-11-16
+
+---------------------------------------------------------------------
+1. VULNERABILIDADES DE SEGURIDAD (con severidad y acciones)
+---------------------------------------------------------------------
+
+1.1. CI/CD - Auditoria de seguridad no bloqueante
+    Vulnerabilidad: job `zizmor` (lint-release-workflows.yml) con
+      continue-on-error: true; SARIF subido sin gateo blocking.
+    Severidad: Alta.
+    Accion: requerir check de branch protection / hacer fallar el job si zizmor
+      reporta findings criticos/altos.
+
+1.2. CI/CD - Centralizacion de toolchain Node/pnpm
+    Vulnerabilidad: actions/setup-node no enforcea node-version-file; pnpm pins
+      duplicados (9/11 inline, 2 via packageManager).
+    Severidad: Media.
+    Accion: centralizar via node-version-file + pnpm/action-setup unificado.
+
+1.3. Supply chain
+    Vulnerabilidad: overrides pnpm (`@ag-ui/*@0.0.59 -> 1.0.1`, copilotkit runtime,
+      zod, hono) y patchedDependencies.
+    Severidad: Media.
+    Accion: auditar impacto de overrides antes de cambios.
+
+1.4. Protocolo - Superficie de compatibilidad
+    Vulnerabilidad: shims pre-1.0 y CompatibilityBoundary amplian superficie de
+      conversion; optional nulls; SUPPRESS_TRANSFORMATION_WARNINGS.
+    Severidad: Media/Alta (surface publica).
+    Accion: plan de deprecacion de shims (fechas expiracion ya definidas).
+
+1.5. Secretos
+    Vulnerabilidad: snapshot gitingest incluye source/config.
+    Severidad: Alta (si se comparte fuera del flujo).
+    Accion: evitar versionar/emitir snapshots con secretos.
+
+---------------------------------------------------------------------
+2. DESVENTAJAS / RIESGOS DEL REPOSITORIO
+---------------------------------------------------------------------
+
+2.1. Tamano y complejidad del monorepo
+    Desventaja: monorepo muy grande (protocolo, SDKs multi-language, integrations,
+      middlewares, dojo, docs, spec).
+    Impacto: alta sobrecarga cognitiva, mayor superficie de bug.
+
+2.2. Estado del working tree
+    Desventaja: ~6,069 archivos staged como eliminados (1.4M lineas) + dirs untracked.
+    Impacto: riesgo de perdida de trabajo / refactor inesperado.
+
+2.3. Duplicacion
+    Desventaja: configuraciones duplicadas (Node/pnpm, toolchain Python, CI patterns).
+    Impacto: drift potencial.
+
+2.4. Dependencias/overrides
+    Desventaja: overrides activos amplian superficie de drift.
+    Impacto: posibles break en consumers.
+
+---------------------------------------------------------------------
+3. RESUMEN EJECUTIVO
+---------------------------------------------------------------------
+
+   - Vulnerabilidades principales: CI no blocking, surface protocol, supply chain.
+   - Desventajas principales: tamano monorepo, estado git, duplicacion.
+
+---------------------------------------------------------------------
+4. MEJORAS APLICADAS EN LA VERSION MEJORADA (estado del trabajo)
+---------------------------------------------------------------------
+
+   4.1. CI/CD - job `zizmor` convertido en gate bloqueante
+        (commit c0134f085). SARIF ya no sube sin gate.
+   4.2. Toolchain centralizada
+        (commit 89879f140): `node-version-file: .node-version` y
+        `packageManager: pnpm@10.33.4`.
+   4.3. Supply chain endurecida
+        (commit 8c58eb897): overrides pnpm contra versiones transitivas 0.x.
+   4.4. Seguridad del protocolo - advertencias de conversion SIEMPRE emitidas
+        (commits 30fdc9793 y 63051b291): eliminado el switch
+        `SUPPRESS_TRANSFORMATION_WARNINGS`; las conversiones legacy ya no
+        pueden silenciarse.
+   4.5. Seguridad del protocolo - bridge legacy endurecido
+        (commit c4e591681): el bridge legacy ahora omite los optional nulls
+        explicitos (`null`) al emitir eventos convertidos, igual que la
+        CompatibilityBoundary inbound.
+   4.6. CI/CD - Gate de auditoria de dependencias
+        (commit 84543eee): nuevo workflow `security-audit.yml` con job
+        `dependency-audit` que bloquea (`pnpm audit`) sobre el lockfile.
+   4.7. CI/CD - Gate de escaneo de secretos (gitleaks)
+        (commit 348cee86e): job `secret-scan` en el workflow `security-audit.yml`.
+
+====================================================================
+ FIN
+=====================================================================

@@ -5,23 +5,13 @@ import type { Observable } from "rxjs";
 
 type InputMessage = RunAgentInput["messages"][number];
 
-function suppressed(): boolean {
-  return (
-    typeof process !== "undefined" &&
-    typeof process.env !== "undefined" &&
-    Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS)
-  );
-}
-
 function warnDroppedParts(dropped: string[]): void {
-  if (suppressed()) return;
   console.warn(
     `[ag-ui][compat] Flattening message content for a <=0.0.39 peer DROPS non-text parts (${dropped.join(", ")}). The peer cannot receive them; upgrade it to keep media content. See the repo-root DEPRECATIONS.md.`,
   );
 }
 
 function warnMalformedTextPart(count: number): void {
-  if (suppressed()) return;
   console.warn(
     `[ag-ui][compat] Not flattening message content for a <=0.0.39 peer: ${count} content part(s) claim type "text" but carry a malformed 'text' value. That is a defect in the message, not media the peer cannot represent, and a downgrade must not repair it — the content is passed on unchanged so the outgoing enforcement boundary reports it. See the repo-root DEPRECATIONS.md.`,
   );

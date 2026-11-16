@@ -38,13 +38,7 @@ const EVENT_SCHEMA_BY_TYPE = new Map<string, z.ZodType>(
   }),
 );
 
-const suppressed = (): boolean =>
-  typeof process !== "undefined" &&
-  typeof process.env !== "undefined" &&
-  Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS);
-
 function warnDeviation(message: string): void {
-  if (suppressed()) return;
   console.warn(`[ag-ui][enforce] ${message}`);
 }
 

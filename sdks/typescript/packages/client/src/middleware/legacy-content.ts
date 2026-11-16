@@ -61,15 +61,9 @@ export function convertBinaryToNewFormat(
   // If only `id` is present, we can't map to the new source format. The part
   // stays in its legacy shape — which the 1.0 contract no longer accepts —
   // so losing it downstream must not be silent.
-  if (
-    typeof process === "undefined" ||
-    typeof process.env === "undefined" ||
-    !process.env.SUPPRESS_TRANSFORMATION_WARNINGS
-  ) {
-    console.warn(
-      `[ag-ui][compat] A binary content part carries only an id ('${binary.id ?? ""}') and cannot be converted to a modern media part; a 1.0 peer will not accept it. Provide data or a url. See the repo-root DEPRECATIONS.md.`,
-    );
-  }
+  console.warn(
+    `[ag-ui][compat] A binary content part carries only an id ('${binary.id ?? ""}') and cannot be converted to a modern media part; a 1.0 peer will not accept it. Provide data or a url. See the repo-root DEPRECATIONS.md.`,
+  );
   return binary;
 }
 

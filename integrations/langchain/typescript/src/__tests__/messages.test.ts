@@ -125,15 +125,14 @@ describe("convertAGUIMessageToLangChain — user message content parts", () => {
     expect(warn.mock.calls[0][0]).toContain("image (file source)");
   });
 
-  it("honours SUPPRESS_TRANSFORMATION_WARNINGS", () => {
+  it("warns about dropped content parts rather than silencing them", () => {
     const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
-    vi.stubEnv("SUPPRESS_TRANSFORMATION_WARNINGS", "1");
     const msg: Message = {
       id: "u1",
       role: "user",
       content: [{ type: "audio", source: { type: "url", value: "https://example.com/a.mp3" } }],
     };
     convertAGUIMessageToLangChain(msg);
-    expect(warn).not.toHaveBeenCalled();
+    expect(warn).toHaveBeenCalledTimes(1);
   });
 });

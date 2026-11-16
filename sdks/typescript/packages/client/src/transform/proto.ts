@@ -21,13 +21,6 @@ export const MAX_BUFFER_SIZE = 10 * 1024 * 1024;
  * Each message is prefixed with a 4-byte length header (uint32 in big-endian format)
  * followed by the protocol buffer encoded message.
  */
-// The same switch the enforcement stage reads, so one variable silences both
-// halves of what is really one decision about unrecognised material.
-const suppressWarnings = (): boolean =>
-  typeof process !== "undefined" &&
-  typeof process.env !== "undefined" &&
-  Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS);
-
 export const parseProtoStream = (
   source$: Observable<HttpEvent>,
   debugLogger?: DebugLoggerInput,
@@ -132,11 +125,9 @@ export const parseProtoStream = (
         // transport — otherwise a producer that adds one event kills every
         // binary client while text clients carry on untouched.
         if (error instanceof proto.AGUIUnknownEventTypeError) {
-          if (!suppressWarnings()) {
-            console.warn(
-              "[ag-ui][proto] Dropped an event this build does not know: the protocol has a variant this SDK predates.",
-            );
-          }
+          console.warn(
+            "[ag-ui][proto] Dropped an event this build does not know: the protocol has a variant this SDK predates.",
+          );
         } else {
           const errorMessage = error instanceof Error ? error.message : String(error);
           failed = true;

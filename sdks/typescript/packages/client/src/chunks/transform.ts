@@ -211,16 +211,7 @@ const unrecognisedChunkProperties = (
  * reported, which is what "nothing is dropped without a warning" asks for.
  */
 const warnChunkAside = (sentence: string): void => {
-  if (
-    typeof process !== "undefined" &&
-    typeof process.env !== "undefined" &&
-    Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS)
-  ) {
-    return;
-  }
-  console.warn(
-    `[ag-ui][transform] ${sentence} Set SUPPRESS_TRANSFORMATION_WARNINGS=true to silence.`,
-  );
+  console.warn(`[ag-ui][transform] ${sentence}`);
 };
 
 const carryRemainderOnOpener = (

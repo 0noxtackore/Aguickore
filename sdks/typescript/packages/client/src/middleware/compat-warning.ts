@@ -5,13 +5,7 @@
  * @internal
  */
 export function warnCompatibility(what: string, replacement: string) {
-  if (
-    typeof process !== "undefined" &&
-    typeof process.env !== "undefined" &&
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS
-  )
-    return;
   console.warn(
-    `[ag-ui][compat] Converting deprecated ${what} to ${replacement}. The old shape leaves the protocol after its shim window — see the repo-root DEPRECATIONS.md. Set SUPPRESS_TRANSFORMATION_WARNINGS=true to silence.`,
+    `[ag-ui][compat] Converting deprecated ${what} to ${replacement}. The old shape leaves the protocol after its shim window — see the repo-root DEPRECATIONS.md.`,
   );
 }

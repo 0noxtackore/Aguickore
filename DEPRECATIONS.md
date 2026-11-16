@@ -24,8 +24,7 @@ all — it maps the RETURNED event stream, translating the `THINKING_*` shapes a
 old peer sends back into `REASONING_*`. Every inbound conversion warns;
 outbound, the warnings fire where a conversion loses or strands content (the
 non-lossy binary upgrade for a modern peer is silent).
-`SUPPRESS_TRANSFORMATION_WARNINGS=true` silences the warnings, not the
-conversions.
+The warnings are always emitted; the conversions cannot be silenced.
 
 | Deprecated shape                                                                            | Replacement                                                                                                               | Shim                                                                  | Expires    |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------- |

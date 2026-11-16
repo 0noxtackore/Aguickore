@@ -848,16 +848,6 @@ const asArray = (value: unknown): unknown[] =>
   Array.isArray(value) ? value : [];
 
 /**
- * The same switch the client's enforcement stage reads, so one variable
- * silences both halves of what is really one decision about unrecognised
- * material.
- */
-const suppressWarnings = (): boolean =>
-  typeof process !== "undefined" &&
-  typeof process.env !== "undefined" &&
-  Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS);
-
-/**
  * The one drop this layer makes that it cannot hand on to enforcement.
  *
  * An unrecognised role or patch operation still has a NAME — the string or the
@@ -870,7 +860,6 @@ const suppressWarnings = (): boolean =>
  * losing it in silence.
  */
 const warnDroppedContentPart = (): void => {
-  if (suppressWarnings()) return;
   console.warn(
     "[ag-ui][proto] Dropped a content part this build does not know: the protocol has a variant this SDK predates.",
   );
@@ -885,7 +874,6 @@ const warnDroppedContentPart = (): void => {
  * warning existed nothing said which part went missing or from which message.
  */
 const warnUnencodableContentPart = (at: string, index: number): void => {
-  if (suppressWarnings()) return;
   console.warn(
     \`[ag-ui][proto.encode] Dropped \${at}.\${CONTENT_FIELD}[\${index}]: no wire form for this content part, so it is not encoded.\`,
   );

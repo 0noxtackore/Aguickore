@@ -409,18 +409,10 @@ function flushToolCall(
 
 /**
  * Compaction's warnings, behind the same switch as the rest of the package.
- * `SUPPRESS_TRANSFORMATION_WARNINGS` is the one control an operator has over
- * transformation chatter (enforce.ts, transform/proto.ts and the compatibility
- * middlewares all honour it); a warning that ignored it was unsilenceable.
+ * Transformation chatter is no longer silenceable by an operator: a compaction
+ * that drops or rewrites state history always says so.
  */
 const warnCompact = (message: string): void => {
-  if (
-    typeof process !== "undefined" &&
-    typeof process.env !== "undefined" &&
-    Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS)
-  ) {
-    return;
-  }
   console.warn(message);
 };
 

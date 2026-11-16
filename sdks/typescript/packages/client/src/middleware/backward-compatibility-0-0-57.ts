@@ -81,16 +81,9 @@ function stripMessages(messages: MessageLike[]): MessageLike[] {
  */
 export class BackwardCompatibility_0_0_57 extends Middleware {
   private warnDroppedLifecycleEvent(eventType: string) {
-    if (
-      typeof process !== "undefined" &&
-      typeof process.env !== "undefined" &&
-      process.env.SUPPRESS_TRANSFORMATION_WARNINGS
-    )
-      return;
     console.warn(
       `AG-UI is dropping ${eventType} because the target agent predates subagent support. ` +
-        `To remove this warning, upgrade your AG-UI integration package. To suppress it, set ` +
-        `SUPPRESS_TRANSFORMATION_WARNINGS=true in your .env file.`,
+        `To remove this warning, upgrade your AG-UI integration package.`,
     );
   }
 

@@ -228,15 +228,7 @@ export class CompatibilityBoundary extends Middleware {
    * information-preserving.
    */
   private warnAside(sentence: string) {
-    if (
-      typeof process !== "undefined" &&
-      typeof process.env !== "undefined" &&
-      process.env.SUPPRESS_TRANSFORMATION_WARNINGS
-    )
-      return;
-    console.warn(
-      `[ag-ui][compat] ${sentence} Set SUPPRESS_TRANSFORMATION_WARNINGS=true to silence.`,
-    );
+    console.warn(`[ag-ui][compat] ${sentence}`);
   }
 
   override run(input: RunAgentInput, next: AbstractAgent): Observable<BaseEvent> {

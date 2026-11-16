@@ -40,23 +40,12 @@ const createInput = (overrides: Partial<RunAgentInput> = {}): RunAgentInput => (
 
 describe("BackwardCompatibility_0_0_57", () => {
   // Silence (and capture) the drop-warning so it doesn't pollute test output.
-  // Also neutralize SUPPRESS_TRANSFORMATION_WARNINGS so the warn-emitting tests
-  // are deterministic regardless of the ambient env (a dev/CI env may export it,
-  // since the warning text itself instructs users to set it).
   let warnSpy: ReturnType<typeof vi.spyOn>;
-  let priorSuppress: string | undefined;
   beforeEach(() => {
     warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
-    priorSuppress = process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-    delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
   });
   afterEach(() => {
     warnSpy.mockRestore();
-    if (priorSuppress === undefined) {
-      delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-    } else {
-      process.env.SUPPRESS_TRANSFORMATION_WARNINGS = priorSuppress;
-    }
   });
 
   it("keeps the drop-event string constants in sync with the EventType enum", () => {
@@ -163,7 +152,7 @@ describe("BackwardCompatibility_0_0_57", () => {
     expect(runFinished.result).toEqual({ ok: true });
   });
 
-  it("warns when dropping a SUBAGENT_* lifecycle event (suppressible)", async () => {
+  it("warns when dropping a SUBAGENT_* lifecycle event", async () => {
     const middleware = new BackwardCompatibility_0_0_57();
     const events: BaseEvent[] = [
       { type: EventType.SUBAGENT_ERROR, subagentRunId: "s1", message: "boom" } as any,
@@ -175,8 +164,7 @@ describe("BackwardCompatibility_0_0_57", () => {
     expect(String(warnSpy.mock.calls[0]?.[0])).toContain("SUBAGENT_ERROR");
   });
 
-  it("suppresses the drop-warning when SUPPRESS_TRANSFORMATION_WARNINGS is set", async () => {
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS = "true";
+  it("warns on the drop without offering a suppression switch", async () => {
     const middleware = new BackwardCompatibility_0_0_57();
     const events: BaseEvent[] = [
       { type: EventType.SUBAGENT_ERROR, subagentRunId: "s1", message: "boom" } as any,
@@ -186,8 +174,8 @@ describe("BackwardCompatibility_0_0_57", () => {
       middleware.run(createInput(), new MockAgent(events)).pipe(toArray()),
     );
 
-    expect(warnSpy).not.toHaveBeenCalled();
-    // Suppressing the warning does not change the drop behavior.
+    expect(warnSpy).toHaveBeenCalledTimes(1);
+    // The drop behavior is unchanged by the warning.
     expect(result).toHaveLength(0);
   });
 

@@ -20,18 +20,9 @@ type LangChainUserContentBlock =
   | { type: "image_url"; image_url: { url: string } };
 
 /**
- * Warns about AG-UI content this bridge cannot hand to LangChain. Honours
- * `SUPPRESS_TRANSFORMATION_WARNINGS`, the switch the rest of AG-UI's
- * transformation warnings sit behind.
+ * Warns about AG-UI content this bridge cannot hand to LangChain.
  */
 function warnDropped(message: string): void {
-  if (
-    typeof process !== "undefined" &&
-    typeof process.env !== "undefined" &&
-    Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS)
-  ) {
-    return;
-  }
   console.warn(message);
 }
 

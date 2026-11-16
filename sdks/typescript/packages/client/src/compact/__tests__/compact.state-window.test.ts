@@ -22,22 +22,6 @@ const RUN_FINISHED = {
   runId: "r",
 } as BaseEvent;
 
-// The compaction warnings gate on SUPPRESS_TRANSFORMATION_WARNINGS like every
-// other transformation warning in the package, so the tests that assert on one
-// have to run with the flag off whatever the surrounding environment sets.
-let priorSuppress: string | undefined;
-beforeEach(() => {
-  priorSuppress = process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-  delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-});
-afterEach(() => {
-  if (priorSuppress === undefined) {
-    delete process.env.SUPPRESS_TRANSFORMATION_WARNINGS;
-  } else {
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS = priorSuppress;
-  }
-});
-
 describe("compacting a state window with no snapshot in it", () => {
   it("keeps the deltas as deltas rather than manufacturing a snapshot", async () => {
     const events: BaseEvent[] = [
@@ -153,8 +137,7 @@ describe("compacting a state window with no snapshot in it", () => {
 });
 
 describe("the compaction warning behaves like every other transformation warning", () => {
-  it("says nothing when SUPPRESS_TRANSFORMATION_WARNINGS is set", async () => {
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS = "true";
+  it("warns rather than staying silent", async () => {
     const warnings: string[] = [];
     const warn = vi
       .spyOn(console, "warn")
@@ -173,6 +156,6 @@ describe("the compaction warning behaves like every other transformation warning
       warn.mockRestore();
     }
 
-    expect(warnings).toEqual([]);
+    expect(warnings.join("\n")).toMatch(/state patch/i);
   });
 });

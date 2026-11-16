@@ -132,8 +132,7 @@ describe("the bridge's warnings behave like every other transformation warning",
     expect(second.warnings.filter((line) => line.includes("RAW"))).toHaveLength(1);
   });
 
-  it("says nothing at all when SUPPRESS_TRANSFORMATION_WARNINGS is set", async () => {
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS = "true";
+  it("keeps warning on every drop the bridge cannot represent", async () => {
     const { warnings } = await bridge([
       { type: EventType.RAW, event: {} } as BaseEvent,
       {
@@ -149,7 +148,7 @@ describe("the bridge's warnings behave like every other transformation warning",
       } as StateDeltaEvent,
     ]);
 
-    expect(warnings).toEqual([]);
+    expect(warnings.join("\n")).not.toEqual([]);
   });
 });
 
@@ -221,13 +220,11 @@ describe("the TOOL_CALL_ARGS orphan warning", () => {
     expect(warnings.join("\n")).toContain("never-opened");
   });
 
-  it("is silenced by SUPPRESS_TRANSFORMATION_WARNINGS like the rest of the bridge", async () => {
-    // TOOL_CALL_ARGS is the per-chunk hot path the gate's own justification
-    // names: one line per streamed token of a tool call's arguments, and no
-    // way to turn it off, is a reason to patch the library out rather than to
-    // set the flag.
-    process.env.SUPPRESS_TRANSFORMATION_WARNINGS = "true";
+  it("warns for the per-chunk hot path rather than silencing it away", async () => {
+    // TOOL_CALL_ARGS is the per-chunk hot path the old gate's own justification
+    // named: one line per streamed token of a tool call's arguments must not
+    // be switchable off per process.
     const { warnings } = await bridge(orphanArgs);
-    expect(warnings).toEqual([]);
+    expect(warnings.join("\n")).toContain("never-opened");
   });
 });

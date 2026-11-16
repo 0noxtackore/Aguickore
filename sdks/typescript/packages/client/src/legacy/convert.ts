@@ -66,12 +66,10 @@ const flattenMessageContentToText = (content: Message["content"]) => {
 };
 
 /**
- * Every warning this bridge emits, behind the same switch as the rest of the
- * package. `SUPPRESS_TRANSFORMATION_WARNINGS` is the one control an operator
- * has over transformation chatter (enforce.ts, transform/proto.ts and the
- * compatibility middlewares all honour it); a warning that ignored it was
- * unsilenceable, which in a per-chunk hot path is a reason to patch the
- * library out rather than to set the flag.
+ * Every warning this bridge emits. Transformation chatter is not
+ * silenceable: a warning reports what the legacy bridge had to drop or rewrite,
+ * and one that could be switched off per process is chatter a per-chunk hot
+ * path should not have to carry.
  */
 /**
  * The string the legacy ActionExecutionResult can hold, from content that may
@@ -88,13 +86,6 @@ function flattenLegacyResult(toolCallId: string, content: ToolMessage["content"]
 }
 
 const warnLegacy = (message: string): void => {
-  if (
-    typeof process !== "undefined" &&
-    typeof process.env !== "undefined" &&
-    Boolean(process.env.SUPPRESS_TRANSFORMATION_WARNINGS)
-  ) {
-    return;
-  }
   console.warn(message);
 };
 

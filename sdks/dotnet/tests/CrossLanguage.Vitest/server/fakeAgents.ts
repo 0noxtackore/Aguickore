@@ -1,4 +1,4 @@
-import {
+﻿import {
   EventType,
   type BaseEvent,
   type RunAgentInput,
@@ -20,12 +20,12 @@ import {
   type ReasoningMessageContentEvent,
   type ReasoningMessageEndEvent,
   type ActivitySnapshotEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 
 // Mirrors the TS SDK test pattern: instead of subclassing AbstractAgent and
 // returning of(...events), we expose a function that turns a RunAgentInput
 // into the same canned event array. The HTTP server then writes each event
-// through @ag-ui/encoder. This keeps the test code path identical to what
+// through @0noxtackore/encoder. This keeps the test code path identical to what
 // the TS SDK client itself is tested against — just exposed over HTTP so a
 // non-JS client (here, the C# AGUIChatClient) can consume the exact same
 // events on the wire.

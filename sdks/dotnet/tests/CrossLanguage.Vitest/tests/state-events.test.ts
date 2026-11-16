@@ -1,10 +1,10 @@
-import { describe, it, expect } from "vitest";
+﻿import { describe, it, expect } from "vitest";
 import {
   EventType,
   type BaseEvent,
   type StateSnapshotEvent,
   type StateDeltaEvent,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { baseUrl } from "../helpers/dotnet-server";
 import {
   TRANSPORTS,

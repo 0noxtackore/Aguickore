@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { EventType, type BaseEvent, type TokenUsage } from "@ag-ui/core";
+﻿import { describe, it, expect } from "vitest";
+import { EventType, type BaseEvent, type TokenUsage } from "@0noxtackore/core";
 import { baseUrl } from "../helpers/dotnet-server";
 import {
   TRANSPORTS,

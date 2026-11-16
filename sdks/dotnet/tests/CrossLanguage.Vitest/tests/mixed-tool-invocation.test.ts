@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
-import { HttpAgent } from "@ag-ui/client";
-import { EventType, type BaseEvent, type Tool } from "@ag-ui/core";
+﻿import { describe, it, expect } from "vitest";
+import { HttpAgent } from "@0noxtackore/client";
+import { EventType, type BaseEvent, type Tool } from "@0noxtackore/core";
 import { baseUrl } from "../helpers/dotnet-server";
 
 interface ToolCallStartEvent extends BaseEvent {

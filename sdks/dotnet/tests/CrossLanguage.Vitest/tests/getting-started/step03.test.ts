@@ -1,6 +1,6 @@
-import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { HttpAgent } from "@ag-ui/client";
-import { EventType, type BaseEvent, type RunStartedEvent } from "@ag-ui/core";
+﻿import { describe, it, expect, beforeAll, afterAll } from "vitest";
+import { HttpAgent } from "@0noxtackore/client";
+import { EventType, type BaseEvent, type RunStartedEvent } from "@0noxtackore/core";
 import { startStepServer, type StepServerHandle } from "../../helpers/step-server";
 
 interface TextDeltaEvent extends BaseEvent {

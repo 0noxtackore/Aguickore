@@ -1,6 +1,6 @@
-import { describe, it, expect } from "vitest";
-import { HttpAgent } from "@ag-ui/client";
-import { EventType, type BaseEvent } from "@ag-ui/core";
+﻿import { describe, it, expect } from "vitest";
+import { HttpAgent } from "@0noxtackore/client";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 import { baseUrl } from "../helpers/dotnet-server";
 
 async function run(userMessage: string, threadId: string): Promise<BaseEvent[]> {

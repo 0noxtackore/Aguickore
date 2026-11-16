@@ -1,5 +1,5 @@
-import { HttpAgent } from "@ag-ui/client";
-import { AGUI_MEDIA_TYPE } from "@ag-ui/proto";
+﻿import { HttpAgent } from "@0noxtackore/client";
+import { AGUI_MEDIA_TYPE } from "@0noxtackore/proto";
 
 /**
  * The two wire transports a TS client can negotiate with a C# AG-UI server.

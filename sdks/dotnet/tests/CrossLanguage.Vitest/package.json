@@ -1,5 +1,5 @@
-{
-  "name": "@ag-ui/cross-language-tests",
+﻿{
+  "name": "@0noxtackore/cross-language-tests",
   "private": true,
   "version": "0.0.0",
   "description": "Cross-language E2E tests: TypeScript AG-UI client driving the C# AG-UI server through LLMock, and a fake-agent TS AG-UI server driven by the C# AGUIChatClient.",
@@ -11,10 +11,10 @@
     "server": "tsx server/main.ts"
   },
   "dependencies": {
-    "@ag-ui/client": "workspace:*",
-    "@ag-ui/core": "workspace:*",
-    "@ag-ui/encoder": "workspace:*",
-    "@ag-ui/proto": "workspace:*",
+    "@0noxtackore/client": "workspace:*",
+    "@0noxtackore/core": "workspace:*",
+    "@0noxtackore/encoder": "workspace:*",
+    "@0noxtackore/proto": "workspace:*",
     "@copilotkit/aimock": "1.37.4",
     "express": "^4.19.0",
     "rxjs": "7.8.1"

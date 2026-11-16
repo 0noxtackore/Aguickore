@@ -1,6 +1,6 @@
-import express, { type Request, type Response } from "express";
-import { EventEncoder } from "@ag-ui/encoder";
-import type { RunAgentInput } from "@ag-ui/core";
+﻿import express, { type Request, type Response } from "express";
+import { EventEncoder } from "@0noxtackore/encoder";
+import type { RunAgentInput } from "@0noxtackore/core";
 import {
   agenticChat,
   backendToolRendering,
@@ -21,7 +21,7 @@ import {
 // middleware-chained-integration.test.ts) exposed over HTTP so non-JS
 // clients can consume the exact same events on the wire. Each route is a
 // fake "AbstractAgent": it converts a RunAgentInput into a canned event
-// array and streams the events as SSE via @ag-ui/encoder.
+// array and streams the events as SSE via @0noxtackore/encoder.
 
 const DEFAULT_PORT = Number(process.env.PORT ?? 8092);
 

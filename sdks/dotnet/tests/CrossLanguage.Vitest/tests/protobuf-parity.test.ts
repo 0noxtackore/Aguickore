@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest";
-import * as proto from "@ag-ui/proto";
-import { EventEncoder } from "@ag-ui/encoder";
-import type { BaseEvent } from "@ag-ui/core";
+﻿import { describe, it, expect } from "vitest";
+import * as proto from "@0noxtackore/proto";
+import { EventEncoder } from "@0noxtackore/encoder";
+import type { BaseEvent } from "@0noxtackore/core";
 import { baseUrl } from "../helpers/dotnet-server";
 import { protobufFixtures } from "../fixtures/protobuf-events";
 
@@ -14,7 +14,7 @@ import { protobufFixtures } from "../fixtures/protobuf-events";
 //   POST /protobuf/decode-framed : 4-byte BE framed bytes -> AG-UI event JSON array
 //
 // For every supported event we prove ROUND-TRIP SEMANTIC EQUIVALENCE in both
-// directions against `@ag-ui/proto`, which is the real interop guarantee, and
+// directions against `@0noxtackore/proto`, which is the real interop guarantee, and
 // additionally assert strict byte parity for scalar-only events (where it is
 // deterministic). The canonical reference for an event is what the TypeScript
 // codec itself produces when decoding its own encoded bytes
@@ -73,7 +73,7 @@ function bytesEqual(a: Uint8Array, b: Uint8Array): boolean {
   return true;
 }
 
-describe("protobuf wire compatibility: .NET AGUIProtobuf <-> TS @ag-ui/proto", () => {
+describe("protobuf wire compatibility: .NET AGUIProtobuf <-> TS @0noxtackore/proto", () => {
   for (const fixture of protobufFixtures) {
     describe(fixture.name, () => {
       // The TS canonical reference: same bytes decoded by the TS codec.
@@ -131,7 +131,7 @@ describe("protobuf framing interop: TS encodeProtobuf (4-byte BE prefix) -> .NET
     const encoder = new EventEncoder();
 
     // Build a concatenated framed stream from several fixtures, exactly the way
-    // @ag-ui/encoder writes events on the wire (each: 4-byte BE length + message).
+    // @0noxtackore/encoder writes events on the wire (each: 4-byte BE length + message).
     const sample = protobufFixtures.filter((f) =>
       ["RUN_STARTED", "TEXT_MESSAGE_CONTENT", "STATE_SNAPSHOT (nested object)", "RUN_ERROR"].includes(
         f.name,

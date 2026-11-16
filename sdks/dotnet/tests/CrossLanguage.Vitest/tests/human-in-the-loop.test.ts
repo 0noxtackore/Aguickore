@@ -1,11 +1,11 @@
-import { describe, it, expect } from "vitest";
-import { HttpAgent } from "@ag-ui/client";
+﻿import { describe, it, expect } from "vitest";
+import { HttpAgent } from "@0noxtackore/client";
 import {
   EventType,
   type BaseEvent,
   type RunFinishedEvent,
   type RunFinishedInterruptOutcome,
-} from "@ag-ui/core";
+} from "@0noxtackore/core";
 import { baseUrl } from "../helpers/dotnet-server";
 
 interface CollectedRun {

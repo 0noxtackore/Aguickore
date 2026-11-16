@@ -1,11 +1,11 @@
-import { EventType, type BaseEvent } from "@ag-ui/core";
+﻿import { EventType, type BaseEvent } from "@0noxtackore/core";
 
 /**
  * Representative instances of each of the 16 protobuf-supported AG-UI events,
  * used to prove .NET <-> TypeScript protobuf wire compatibility.
  *
  * `byteParity` declares whether strict byte-for-byte equality between the TS
- * `@ag-ui/proto` encoder and the .NET `AGUIProtobuf.Encode` output is expected:
+ * `@0noxtackore/proto` encoder and the .NET `AGUIProtobuf.Encode` output is expected:
  *
  *  - "strict": the event carries only scalar (string/number) fields, which both
  *    encoders serialise in field-number order with identical wire bytes.

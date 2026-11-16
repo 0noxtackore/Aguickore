@@ -44,6 +44,36 @@ import {
 } from "./types";
 import untruncateJson from "untruncate-json";
 
+/**
+ * The optional fields this bridge copies from a 1.0 event onto a legacy event,
+ * by legacy event type, that the 1.0 contract no longer accepts when they arrive
+ * as an explicit `null`. A `null` is dropped before the legacy event leaves the
+ * bridge — the same treatment the CompatibilityBoundary already applies on the
+ * inbound path — so the two conversion paths cannot drift apart on what they
+ * forward. Optional fields the bridge does not copy are never touched.
+ */
+const LEGACY_OPTIONAL_NULLS: Readonly<Record<string, ReadonlyArray<string>>> = {
+  ActionExecutionStart: ["parentMessageId"],
+  RunStarted: ["parentRunId", "input"],
+  RunFinished: ["result", "outcome"],
+  ToolCallStart: ["parentMessageId"],
+  ToolCallChunk: ["parentMessageId"],
+  ToolCallResult: ["role"],
+};
+
+const stripLegacyOptionalNulls = (event: BaseEvent, type: string): BaseEvent => {
+  const fields = LEGACY_OPTIONAL_NULLS[type];
+  if (!fields) return event;
+  const rest: Record<string, unknown> = { ...event };
+  let changed = false;
+  for (const field of fields) {
+    if (rest[field] !== null) continue;
+    delete rest[field];
+    changed = true;
+  }
+  return (changed ? rest : event) as BaseEvent;
+};
+
 const flattenMessageContentToText = (content: Message["content"]) => {
   if (typeof content === "string") {
     return content;
@@ -126,9 +156,10 @@ export const convertToLegacyEvents =
 
     return events$.pipe(
       mergeMap((event) => {
-        switch (event.type) {
+        const source = stripLegacyOptionalNulls(event, event.type);
+        switch (source.type) {
           case EventType.TEXT_MESSAGE_START: {
-            const startEvent = event as TextMessageStartEvent;
+            const startEvent = source as TextMessageStartEvent;
             return [
               {
                 type: LegacyRuntimeEventTypes.TextMessageStart,
@@ -138,7 +169,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.TEXT_MESSAGE_CONTENT: {
-            const contentEvent = event as TextMessageContentEvent;
+            const contentEvent = source as TextMessageContentEvent;
             return [
               {
                 type: LegacyRuntimeEventTypes.TextMessageContent,
@@ -148,7 +179,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.TEXT_MESSAGE_END: {
-            const endEvent = event as TextMessageEndEvent;
+            const endEvent = source as TextMessageEndEvent;
             return [
               {
                 type: LegacyRuntimeEventTypes.TextMessageEnd,
@@ -157,7 +188,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.TOOL_CALL_START: {
-            const startEvent = event as ToolCallStartEvent;
+            const startEvent = source as ToolCallStartEvent;
 
             currentToolCalls.push({
               id: startEvent.toolCallId,
@@ -181,7 +212,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.TOOL_CALL_ARGS: {
-            const argsEvent = event as ToolCallArgsEvent;
+            const argsEvent = source as ToolCallArgsEvent;
 
             // Find the tool call by ID instead of using the last one
             const currentToolCall = currentToolCalls.find((tc) => tc.id === argsEvent.toolCallId);
@@ -257,7 +288,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.TOOL_CALL_END: {
-            const endEvent = event as ToolCallEndEvent;
+            const endEvent = source as ToolCallEndEvent;
             return [
               {
                 type: LegacyRuntimeEventTypes.ActionExecutionEnd,
@@ -266,7 +297,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.TOOL_CALL_RESULT: {
-            const resultEvent = event as ToolCallResultEvent;
+            const resultEvent = source as ToolCallResultEvent;
             const knownName = toolCallNames[resultEvent.toolCallId];
             // `=== ""` as well as `=== undefined`, and `||` rather than `??`
             // on the substitution below. `toolCallName` is `z.string()`, so an
@@ -316,7 +347,7 @@ export const convertToLegacyEvents =
             return [];
           }
           case EventType.CUSTOM: {
-            const customEvent = event as CustomEvent;
+            const customEvent = source as CustomEvent;
             switch (customEvent.name) {
               case "Exit":
                 running = false;
@@ -335,7 +366,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.STATE_SNAPSHOT: {
-            const stateEvent = event as StateSnapshotEvent;
+            const stateEvent = source as StateSnapshotEvent;
             updateCurrentState(stateEvent.snapshot);
 
             return [
@@ -353,7 +384,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.STATE_DELTA: {
-            const deltaEvent = event as StateDeltaEvent;
+            const deltaEvent = source as StateDeltaEvent;
             // `validate = true` makes applyPatch THROW on a bad patch rather
             // than answer falsy, so the `if (!result) return []` that stood
             // here was dead code and one malformed delta tore the whole bridge
@@ -387,7 +418,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.MESSAGES_SNAPSHOT: {
-            const messagesSnapshot = event as MessagesSnapshotEvent;
+            const messagesSnapshot = source as MessagesSnapshotEvent;
             syncedMessages = messagesSnapshot.messages;
             return [
               {
@@ -454,7 +485,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.RUN_ERROR: {
-            const errorEvent = event as RunErrorEvent;
+            const errorEvent = source as RunErrorEvent;
             return [
               {
                 type: LegacyRuntimeEventTypes.RunError,
@@ -464,7 +495,7 @@ export const convertToLegacyEvents =
             ];
           }
           case EventType.STEP_STARTED: {
-            const stepStarted = event as StepStartedEvent;
+            const stepStarted = source as StepStartedEvent;
             nodeName = stepStarted.stepName;
 
             currentToolCalls = [];

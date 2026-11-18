@@ -1,4 +1,4 @@
-﻿import { afterEach, beforeEach, describe, expect, it, vi, type MockInstance } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi, type MockInstance } from "vitest";
 import { type BaseEvent, EventType } from "@0noxtackore/core";
 import { decode, encode } from "../proto";
 

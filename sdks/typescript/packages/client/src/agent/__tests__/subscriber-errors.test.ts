@@ -1,4 +1,4 @@
-﻿/**
+/**
  * What happens to an exception a subscriber throws.
  *
  * Development and production log subscriber errors and continue. Tests retain

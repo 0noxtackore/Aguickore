@@ -1,4 +1,4 @@
-﻿# @0noxtackore/a2ui-middleware
+# @0noxtackore/a2ui-middleware
 
 Middleware for streaming A2UI surfaces and generation recovery activities.
 

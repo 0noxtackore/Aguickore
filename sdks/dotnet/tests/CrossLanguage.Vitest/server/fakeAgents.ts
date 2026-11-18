@@ -1,4 +1,4 @@
-﻿import {
+import {
   EventType,
   type BaseEvent,
   type RunAgentInput,

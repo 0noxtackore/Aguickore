@@ -1,4 +1,4 @@
-﻿# @0noxtackore/cloudflare-agents
+# @0noxtackore/cloudflare-agents
 
 AG-UI community integration for Cloudflare Agents. Provides a WebSocket client for connecting to deployed Cloudflare Workers and a server-side adapter for converting Vercel AI SDK v5 streams into AG-UI protocol events.
 

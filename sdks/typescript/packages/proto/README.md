@@ -1,4 +1,4 @@
-﻿# @0noxtackore/proto
+# @0noxtackore/proto
 
 Protocol Buffer encoding/decoding for **Agent-User Interaction (AG-UI) Protocol** events.
 

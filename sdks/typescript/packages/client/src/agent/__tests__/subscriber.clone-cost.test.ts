@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import type { Message, State } from "@0noxtackore/core";
 
 // Spy on the clone helper so we can COUNT how many full structuredClone_ calls

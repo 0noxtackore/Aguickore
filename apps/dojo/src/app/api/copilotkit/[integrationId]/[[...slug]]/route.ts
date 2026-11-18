@@ -1,4 +1,4 @@
-﻿import {
+import {
   CopilotRuntime,
   InMemoryAgentRunner,
   createCopilotEndpointSingleRoute,

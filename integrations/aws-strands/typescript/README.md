@@ -1,4 +1,4 @@
-﻿# AWS Strands Integration for AG-UI (TypeScript)
+# AWS Strands Integration for AG-UI (TypeScript)
 
 This package exposes a lightweight wrapper that lets any `@strands-agents/sdk` `Agent` speak the AG-UI protocol. It mirrors the developer experience of the other integrations: give us a Strands agent instance, plug it into `StrandsAgent`, and wire it to Express via `createStrandsApp` (or `addStrandsExpressEndpoint`).
 

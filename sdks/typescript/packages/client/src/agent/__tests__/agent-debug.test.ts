@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
 import { AbstractAgent } from "../agent";
 import { DebugLogger } from "@/debug-logger";
 import {

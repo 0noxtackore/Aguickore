@@ -1,4 +1,4 @@
-﻿import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { EventType, type Tool as AguiTool } from "@0noxtackore/core";
 import {
   Agent,

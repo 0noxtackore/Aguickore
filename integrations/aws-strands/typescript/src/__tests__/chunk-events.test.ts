@@ -1,4 +1,4 @@
-﻿/**
+/**
  * StrandsAgentConfig.emitChunkEvents collapses START/CONTENT/END triples
  * into self-expanding TEXT_MESSAGE_CHUNK / TOOL_CALL_CHUNK /
  * REASONING_MESSAGE_CHUNK events.

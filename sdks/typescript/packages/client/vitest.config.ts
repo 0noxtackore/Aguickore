@@ -1,4 +1,4 @@
-﻿import path from "path";
+import path from "path";
 import { mergeConfig, defineConfig } from "vitest/config";
 import baseConfig from "../../vitest.base";
 

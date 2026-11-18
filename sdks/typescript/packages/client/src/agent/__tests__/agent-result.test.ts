@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "../agent";
+import { AbstractAgent } from "../agent";
 import { AgentSubscriber } from "../subscriber";
 import {
   ActivityDeltaEvent,

@@ -1,4 +1,4 @@
-﻿import { HttpEvent, HttpEventType, runHttpRequest } from "../../run/http-request";
+import { HttpEvent, HttpEventType, runHttpRequest } from "../../run/http-request";
 import { firstValueFrom, ReplaySubject, Subject, take } from "rxjs";
 import {
   EventType,

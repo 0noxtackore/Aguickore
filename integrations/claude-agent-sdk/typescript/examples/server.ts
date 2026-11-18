@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Multi-agent server for Claude Agent SDK integration (TypeScript).
  *
  * The adapter manages the SDK lifecycle internally — the server just

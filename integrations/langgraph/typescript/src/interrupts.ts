@@ -1,4 +1,4 @@
-﻿import type { Interrupt as LangGraphInterrupt } from "@langchain/langgraph-sdk";
+import type { Interrupt as LangGraphInterrupt } from "@langchain/langgraph-sdk";
 import type {
   Interrupt as AGUIInterrupt,
   ResumeEntry,

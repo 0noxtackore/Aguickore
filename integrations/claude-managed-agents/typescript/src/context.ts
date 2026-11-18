@@ -1,4 +1,4 @@
-﻿import type { RunAgentInput } from "@0noxtackore/client";
+import type { RunAgentInput } from "@0noxtackore/client";
 import type { BetaManagedAgentsEventParams } from "@anthropic-ai/sdk/resources/beta/sessions/events";
 import type { SessionRecord } from "./types";
 export class ContextDeliveryError extends Error {

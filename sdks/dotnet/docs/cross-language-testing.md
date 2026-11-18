@@ -1,4 +1,4 @@
-﻿# Cross-Language E2E Testing: .NET ↔ TypeScript Interop
+# Cross-Language E2E Testing: .NET ↔ TypeScript Interop
 
 ## Goal
 

@@ -1,4 +1,4 @@
-﻿# @0noxtackore/watsonx
+# @0noxtackore/watsonx
 
 AG-UI integration for [IBM watsonx orchestrate](https://www.ibm.com/products/watsonx-orchestrate) agents.
 

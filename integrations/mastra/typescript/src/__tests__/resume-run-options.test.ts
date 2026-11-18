@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import { EventType } from "@0noxtackore/client";
 import { Agent } from "@mastra/core/agent";
 import { MockMemory } from "@mastra/core/memory";

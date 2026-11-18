@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Agentic Chat with Multimodal support for AWS Strands (TypeScript).
  *
  * Demonstrates multimodal message handling. When the user uploads an image,

@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { AIMessage } from "@langchain/core/messages";
 import { EventType, RunAgentInput, RunFinishedEvent } from "@0noxtackore/client";
 import { firstValueFrom, toArray } from "rxjs";

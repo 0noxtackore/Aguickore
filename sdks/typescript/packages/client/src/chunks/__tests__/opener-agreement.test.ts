@@ -1,4 +1,4 @@
-﻿import { from, lastValueFrom } from "rxjs";
+import { from, lastValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
   BaseEvent,

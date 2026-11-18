@@ -1,4 +1,4 @@
-﻿/** AWS Strands integration for AG-UI. */
+/** AWS Strands integration for AG-UI. */
 
 export {
   StrandsAgent,

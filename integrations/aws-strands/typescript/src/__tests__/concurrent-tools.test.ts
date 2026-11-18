@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Concurrent tool executor — event ordering integrity.
  *
  * Strands defaults to `toolExecutor: 'concurrent'` which executes multiple

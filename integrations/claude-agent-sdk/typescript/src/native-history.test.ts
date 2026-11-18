@@ -1,4 +1,4 @@
-﻿import type { RunAgentInput } from "@0noxtackore/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 import { afterEach, expect, it, vi } from "vitest";
 import { mkdtemp, mkdir, writeFile, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";

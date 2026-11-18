@@ -1,4 +1,4 @@
-﻿import { EventType } from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import type { Message } from "@0noxtackore/client";
 import {
   convertAGUIMessagesToA2A,

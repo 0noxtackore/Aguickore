@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import type { Tool as AguiTool } from "@0noxtackore/core";
 
 import {

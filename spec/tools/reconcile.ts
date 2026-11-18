@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Builds the three-way required-ness table that RECONCILIATION.md holds.
  *
  * The premise of this whole exercise is that the languages disagree about things

@@ -1,4 +1,4 @@
-﻿import { EventType } from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import type { BaseEvent } from "@0noxtackore/client";
 import { APIError } from "@anthropic-ai/sdk";
 import { describe, expect, it } from "vitest";

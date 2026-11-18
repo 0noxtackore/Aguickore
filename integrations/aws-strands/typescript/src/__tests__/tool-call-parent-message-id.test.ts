@@ -1,4 +1,4 @@
-﻿/**
+/**
  * How `ToolCallStartEvent.parentMessageId` is derived.
  *
  * The parent must identify the assistant message that owns the tool call, so a

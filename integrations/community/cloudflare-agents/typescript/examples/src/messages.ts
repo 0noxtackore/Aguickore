@@ -1,4 +1,4 @@
-﻿import type { Message } from "@0noxtackore/client";
+import type { Message } from "@0noxtackore/client";
 import type { ModelMessage } from "ai";
 
 function textOf(content: unknown): string {

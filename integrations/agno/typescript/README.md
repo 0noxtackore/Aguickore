@@ -1,4 +1,4 @@
-﻿# @0noxtackore/agno
+# @0noxtackore/agno
 
 Implementation of the AG-UI protocol for Agno.
 

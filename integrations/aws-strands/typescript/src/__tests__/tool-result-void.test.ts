@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A tool that returns void / null / empty still produces TOOL_CALL_RESULT,
  * so legitimate side-effect tools get a result card in the UI instead of
  * silently dropping the emission.

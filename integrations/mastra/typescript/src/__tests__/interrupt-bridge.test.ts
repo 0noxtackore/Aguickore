@@ -1,4 +1,4 @@
-﻿import { vi } from "vitest";
+import { vi } from "vitest";
 import { EventType } from "@0noxtackore/client";
 import type { BaseEvent, Interrupt } from "@0noxtackore/client";
 import { RunFinishedEventSchema } from "@0noxtackore/core/schemas";

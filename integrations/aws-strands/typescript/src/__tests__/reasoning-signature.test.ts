@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests that `reasoningSignatureEvent` events are silently consumed
  * (not yielded) by the StrandsAgent adapter.
  *

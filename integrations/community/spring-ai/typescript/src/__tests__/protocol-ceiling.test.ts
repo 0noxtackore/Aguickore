@@ -1,4 +1,4 @@
-﻿// The Spring AI server (community Java SDK) rejects 1.0 ContentPart[] content
+// The Spring AI server (community Java SDK) rejects 1.0 ContentPart[] content
 // with HTTP 400, so SpringAiAgent pins maxProtocolVersion to 0.0.39 and the
 // client flattens user and tool content to strings before sending.
 import { expect, it, vi } from "vitest";

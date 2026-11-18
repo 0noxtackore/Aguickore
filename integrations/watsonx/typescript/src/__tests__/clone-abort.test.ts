@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for clone() and abortRun() behavior.
  */
 

@@ -1,4 +1,4 @@
-﻿import { EventType } from "@0noxtackore/core";
+import { EventType } from "@0noxtackore/core";
 import {
   AuthCredentialTypes,
   BaseTool,

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The Python emitter: model in, pydantic source out.
  *
  * Python idiom only — the model already resolved everything. Design mirrors

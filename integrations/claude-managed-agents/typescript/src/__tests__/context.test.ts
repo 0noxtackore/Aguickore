@@ -1,4 +1,4 @@
-﻿import Anthropic from "@anthropic-ai/sdk";
+import Anthropic from "@anthropic-ai/sdk";
 import { expect, it } from "vitest";
 import { lastValueFrom, toArray } from "rxjs";
 import type { RunAgentInput } from "@0noxtackore/client";

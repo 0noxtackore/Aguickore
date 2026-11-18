@@ -1,4 +1,4 @@
-﻿/**
+/**
  * `ToolBehavior.continueAfterFrontendCall = true` must keep the stream
  * alive after a frontend tool call completes. Without the flag, the
  * adapter sets `pendingHalt` after emitting TOOL_CALL_END and silences

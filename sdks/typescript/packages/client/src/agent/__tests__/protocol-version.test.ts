@@ -1,4 +1,4 @@
-﻿import { of, Observable } from "rxjs";
+import { of, Observable } from "rxjs";
 import { BaseEvent, EventType, PROTOCOL_VERSION, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent, compareDeclaredProtocol } from "../agent";
 import packageJson from "../../../package.json";

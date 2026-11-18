@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useMemo, useState } from "react";
 import "@copilotkit/react-core/v2/styles.css";
 import {

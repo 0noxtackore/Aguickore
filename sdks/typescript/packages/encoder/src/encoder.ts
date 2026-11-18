@@ -1,4 +1,4 @@
-﻿import { BaseEvent, omitOptionalNulls } from "@0noxtackore/core";
+import { BaseEvent, omitOptionalNulls } from "@0noxtackore/core";
 import * as proto from "@0noxtackore/proto";
 import { preferredMediaTypes } from "./media-type";
 

@@ -1,4 +1,4 @@
-﻿# A2UI Runtime and Renderer Wiring
+# A2UI Runtime and Renderer Wiring
 
 A2UI needs three pieces to line up: a server-side AG-UI bridge, an A2UI
 operation source, and a client renderer with the matching catalog.

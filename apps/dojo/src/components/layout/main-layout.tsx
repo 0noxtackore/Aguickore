@@ -44,18 +44,18 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       <div className="flex h-full w-full overflow-hidden relative gap-2">
         {/* Mobile Header with Hamburger Menu */}
         {isMobile && !sidebarHidden && (
-          <div className="absolute top-0 left-0 right-0 z-50 bg-background border-b p-2 md:hidden">
+          <div className="absolute top-0 left-0 right-0 z-50 bg-palette-surface-container/90 backdrop-blur border-b border-palette-border-divider p-2 md:hidden">
             <div className="flex items-center justify-between">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={toggleMobileSidebar}
-                className="p-2"
+                className="p-2 text-palette-text-primary"
               >
                 {isMobileSidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
-              <h1 className="text-sm font-medium text-center flex-1">{getTitleForCurrentDomain() || "AG-UI Dojo"}</h1>
-              <div className="w-9" /> {/* Spacer for centering */}
+              <h1 className="text-sm font-semibold text-center flex-1 text-palette-text-primary">{getTitleForCurrentDomain() || "Aguickore Dojo"}</h1>
+              <div className="w-9" />
             </div>
           </div>
         )}

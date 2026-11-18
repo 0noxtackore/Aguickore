@@ -1,4 +1,4 @@
-﻿import { mergeMap, Observable, finalize } from "rxjs";
+import { mergeMap, Observable, finalize } from "rxjs";
 import {
   BaseEvent,
   TextMessageChunkEvent,

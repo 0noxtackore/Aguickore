@@ -1,4 +1,4 @@
-﻿import { EventType, type BaseEvent } from "@0noxtackore/core";
+import { EventType, type BaseEvent } from "@0noxtackore/core";
 
 /**
  * Representative instances of each of the 16 protobuf-supported AG-UI events,

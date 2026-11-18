@@ -1,4 +1,4 @@
-﻿/** Lossless content conversion. Original filenames/metadata remain in RUN_STARTED.input. */
+/** Lossless content conversion. Original filenames/metadata remain in RUN_STARTED.input. */
 import type { Message, ContentPart } from "@0noxtackore/client";
 import type { BetaManagedAgentsUserMessageEventParams } from "@anthropic-ai/sdk/resources/beta/sessions/events";
 

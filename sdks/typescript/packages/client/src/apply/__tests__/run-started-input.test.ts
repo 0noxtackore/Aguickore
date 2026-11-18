@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "../../agent/agent";
+import { AbstractAgent } from "../../agent/agent";
 import {
   BaseEvent,
   EventType,

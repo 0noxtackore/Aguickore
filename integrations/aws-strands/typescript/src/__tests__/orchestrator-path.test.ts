@@ -1,4 +1,4 @@
-﻿/**
+/**
  * StrandsAgent, when given a multi-agent orchestrator (Graph/Swarm)
  * instead of an Agent, drives `.stream()` and translates the real TS SDK
  * multi-agent event classes into AG-UI STEP_* / MultiAgentHandoff /

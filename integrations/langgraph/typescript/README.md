@@ -1,4 +1,4 @@
-﻿# @0noxtackore/langgraph
+# @0noxtackore/langgraph
 
 Implementation of the AG-UI protocol for LangGraph.
 

@@ -1,4 +1,4 @@
-﻿import {
+import {
   getSessionMessages,
   type SessionStore,
 } from "@anthropic-ai/claude-agent-sdk";

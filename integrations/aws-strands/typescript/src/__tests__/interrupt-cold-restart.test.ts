@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Regression coverage for the "resume validation happens before session
  * restoration" gap: on a cold process start, `_pendingInterruptsByThread`
  * is empty even though a `sessionManagerProvider`-backed thread may have a

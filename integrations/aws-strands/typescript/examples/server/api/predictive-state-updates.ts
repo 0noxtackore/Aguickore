@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Predictive State Updates example for AWS Strands (TypeScript).
  *
  * Mirrors `python/examples/server/api/predictive_state_updates.py`.

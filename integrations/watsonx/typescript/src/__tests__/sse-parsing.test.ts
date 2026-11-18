@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for SSE parsing: text content, tool calls, edge cases, and buffer handling.
  */
 

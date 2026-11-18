@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Shared state agent configuration - Recipe collaboration demo.
  *
  * This module demonstrates bidirectional state synchronization between Claude and the UI.

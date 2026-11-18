@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Cloudflare Agents Worker for the AG-UI Dojo.
  *
  * Each AG-UI thread maps to one `AgUiAgent` Durable Object (the Agents SDK

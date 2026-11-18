@@ -1,4 +1,4 @@
-﻿import { restoreStateHistory } from "./state";
+import { restoreStateHistory } from "./state";
 import { restoreContext } from "./context";
 import type Anthropic from "@anthropic-ai/sdk";
 import type {

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Typed stand-ins for the objects the adapter hands to a demo's config hooks.
  *
  * Built from the real exported types rather than cast with `as never`. A cast

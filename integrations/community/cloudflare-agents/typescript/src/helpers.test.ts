@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { createSSEResponse, createNDJSONResponse } from "./helpers";
 import { Observable } from "rxjs";
 import { EventType, type BaseEvent } from "@0noxtackore/client";

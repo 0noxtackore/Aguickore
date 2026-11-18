@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Application state a tool keeps in the Strands agent's `appState`.
  *
  * AG-UI shared state and durable application state are different things. A

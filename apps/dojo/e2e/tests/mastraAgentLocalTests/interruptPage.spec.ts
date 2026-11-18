@@ -1,4 +1,4 @@
-﻿import { test, expect } from "../../test-isolation-helper";
+import { test, expect } from "../../test-isolation-helper";
 import { CopilotSelectors } from "../../utils/copilot-selectors";
 import { DEFAULT_WELCOME_MESSAGE } from "../../lib/constants";
 import { captureRuntimeSSE, expectRunFinished } from "../../utils/runtime-sse";

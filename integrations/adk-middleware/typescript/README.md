@@ -1,4 +1,4 @@
-﻿# @0noxtackore/adk
+# @0noxtackore/adk
 
 AG-UI integration for [Google ADK](https://google.github.io/adk-docs/) (Agent Development Kit). This package ships a thin TypeScript client, `ADKAgent`, that connects an AG-UI front end to an ADK-backed agent endpoint served by the companion Python middleware (`ag_ui_adk`).
 

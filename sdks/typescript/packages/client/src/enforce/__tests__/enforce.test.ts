@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { of, lastValueFrom, Observable } from "rxjs";
 import { toArray, map } from "rxjs/operators";
 import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";

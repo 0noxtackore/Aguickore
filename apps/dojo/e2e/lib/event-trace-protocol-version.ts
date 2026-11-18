@@ -1,4 +1,4 @@
-﻿import { type TraceEvent, parseEventTraceSse } from "./event-trace-events";
+import { type TraceEvent, parseEventTraceSse } from "./event-trace-events";
 
 /**
  * Shared AG-UI 1.0 version-declaration check (PNI-537).

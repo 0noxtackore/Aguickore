@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { AbstractAgent, HttpAgent } from "@/agent";
 import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { Observable, of } from "rxjs";

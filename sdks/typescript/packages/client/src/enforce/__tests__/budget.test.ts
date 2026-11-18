@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { lastValueFrom, of } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { z } from "zod/v4";

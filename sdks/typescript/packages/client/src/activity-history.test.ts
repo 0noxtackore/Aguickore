@@ -1,4 +1,4 @@
-﻿import { EventType, MessagesSnapshotEvent } from "@0noxtackore/core";
+import { EventType, MessagesSnapshotEvent } from "@0noxtackore/core";
 import { authoritativeActivityTypes, withAuthoritativeActivityTypes } from "./activity-history";
 
 const snapshot = (metadata?: MessagesSnapshotEvent["metadata"]): MessagesSnapshotEvent => ({

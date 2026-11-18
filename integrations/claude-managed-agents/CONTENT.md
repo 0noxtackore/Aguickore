@@ -1,4 +1,4 @@
-﻿# Live conversation content contract
+# Live conversation content contract
 
 This describes the adapter implementation, not released product validation. TypeScript,
 Python and .NET need independent release and application validation.

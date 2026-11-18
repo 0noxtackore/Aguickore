@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "../agent";
+import { AbstractAgent } from "../agent";
 import { AgentSubscriber, runSubscribersWithMutation } from "../subscriber";
 import {
   BaseEvent,

@@ -1,4 +1,4 @@
-﻿import { HttpAgent } from "@0noxtackore/client";
+import { HttpAgent } from "@0noxtackore/client";
 import type { AgentSubscriber, RunAgentInput } from "@0noxtackore/client";
 import { reconcileLegacyResumeInterrupts } from "./interrupts";
 

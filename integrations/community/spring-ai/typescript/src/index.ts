@@ -1,4 +1,4 @@
-﻿/**
+/**
  * AG-UI client for agents served by the community Spring AI integration
  * (`com.ag-ui.community:ag-ui-spring-ai-*`, sources in sdks/community/java/spring).
  */

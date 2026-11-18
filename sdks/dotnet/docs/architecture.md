@@ -1,4 +1,4 @@
-﻿# AG-UI .NET SDK Architecture
+# AG-UI .NET SDK Architecture
 
 ## What this SDK does
 

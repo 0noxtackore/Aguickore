@@ -1,4 +1,4 @@
-﻿import { HttpAgent } from "@0noxtackore/client";
+import { HttpAgent } from "@0noxtackore/client";
 import type { AgentCapabilities } from "@0noxtackore/core";
 import { AgentCapabilitiesSchema } from "@0noxtackore/core/schemas";
 

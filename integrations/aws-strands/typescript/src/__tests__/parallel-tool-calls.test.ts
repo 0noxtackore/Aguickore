@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for parallel frontend tool-call handling in StrandsAgent.
  *
  * Port of Python's test_parallel_tool_call_handling.py.

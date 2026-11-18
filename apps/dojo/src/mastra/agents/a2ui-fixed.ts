@@ -1,4 +1,4 @@
-﻿import { Agent } from "@mastra/core/agent";
+import { Agent } from "@mastra/core/agent";
 import { createTool } from "@mastra/core/tools";
 import { z } from "zod";
 

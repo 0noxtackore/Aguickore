@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Dynamic A2UI example for AWS Strands (TypeScript).
  *
  * A plain agent with no a2ui wiring. When the runtime enables A2UI tool

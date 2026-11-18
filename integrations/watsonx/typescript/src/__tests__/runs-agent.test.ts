@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for WatsonxRunsAgent (`/v1/orchestrate/runs/stream`).
  *
  * The streams below are synthetic, shaped after events recorded from a

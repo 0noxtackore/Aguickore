@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
 import type {
   BaseEvent,

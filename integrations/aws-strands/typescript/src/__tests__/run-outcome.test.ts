@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Every RUN_FINISHED reports how the run ended. A client switching on
  * `outcome.type` has to work on the ordinary path too, not only on the
  * interrupt and resume paths that already reported one.

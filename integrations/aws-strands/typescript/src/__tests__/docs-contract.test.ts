@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The README's load-bearing claims, checked against the code.
  *
  * Review of this package repeatedly found documentation that named a constant

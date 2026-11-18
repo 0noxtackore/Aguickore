@@ -1,4 +1,4 @@
-﻿import { AbstractAgent, RunAgentResult } from "./agent";
+import { AbstractAgent, RunAgentResult } from "./agent";
 import { runHttpRequest } from "@/run/http-request";
 import { enforceOutgoingInput } from "@/enforce";
 import { HttpAgentConfig, HttpAgentFetchFn, RunAgentParameters } from "./types";

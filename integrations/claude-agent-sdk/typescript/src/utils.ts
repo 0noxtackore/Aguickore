@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Utility functions for Claude Agent SDK adapter.
  *
  * Helper functions for message processing, tool conversion, and prompt building.

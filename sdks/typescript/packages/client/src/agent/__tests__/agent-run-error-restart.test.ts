@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A producer-sent RUN_ERROR does NOT end the stream.
  *
  * The verifier has always admitted a RUN_STARTED after a RUN_ERROR — it resets

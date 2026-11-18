@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A2UI Error Recovery example for AWS Strands (TypeScript).
  *
  * A plain agent with no a2ui wiring. The adapter auto-injects `generate_a2ui`,

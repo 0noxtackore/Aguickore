@@ -1,4 +1,4 @@
-﻿import { NativeChildRecovery } from "./native-recovery";
+import { NativeChildRecovery } from "./native-recovery";
 import { startLoopbackMcp } from "./loopback-mcp";
 import {
   RecoveryRun,

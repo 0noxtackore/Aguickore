@@ -1,4 +1,4 @@
-﻿import { recoverA2UIHistory, preserveCompletedA2UIResults } from "./a2ui-history";
+import { recoverA2UIHistory, preserveCompletedA2UIResults } from "./a2ui-history";
 import { Observable, Subscriber } from "rxjs";
 import {
   Client as LangGraphClient,

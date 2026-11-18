@@ -1,4 +1,4 @@
-﻿import { beforeEach, describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { MASTRA_RESOURCE_ID_KEY } from "@mastra/core/request-context";
 
 /**

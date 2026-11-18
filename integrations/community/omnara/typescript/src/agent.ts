@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "@0noxtackore/client";
+import { AbstractAgent } from "@0noxtackore/client";
 import type { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { Observable } from "rxjs";
 import { createOmnaraApi, type OmnaraApi } from "./api";

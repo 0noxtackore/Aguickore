@@ -1,4 +1,4 @@
-﻿import type { RunAgentInput } from "@0noxtackore/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 import { ADKJSAgent, type ADKJSSubagentMode } from "@0noxtackore/adk-js";
 import {
   Agent,

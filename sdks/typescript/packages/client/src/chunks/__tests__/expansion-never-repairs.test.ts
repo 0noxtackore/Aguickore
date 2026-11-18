@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Chunk expansion must RESHAPE, never repair.
  *
  * There are two places it runs, and they sit on opposite sides of the

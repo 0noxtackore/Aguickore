@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Lifecycle and failure handling of the Dojo example server. The example is what
  * people copy, so its rejected-handler, aborted-client and mid-stream-failure
  * paths are worth pinning down.

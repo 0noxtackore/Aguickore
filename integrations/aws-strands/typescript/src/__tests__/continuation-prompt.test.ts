@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The synthetic continuation prompt: what the model is told after a frontend
  * tool resolves.
  *

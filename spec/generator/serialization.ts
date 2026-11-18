@@ -1,4 +1,4 @@
-﻿import type { Definition, ProtocolModel, TypeExpr } from "./ir";
+import type { Definition, ProtocolModel, TypeExpr } from "./ir";
 
 /** Only protocol structure is traversable. Arbitrary JSON and open maps are leaves. */
 type Shape =

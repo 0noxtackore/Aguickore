@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Which message a non-streamed tool call is attached to.
  *
  * A tool call that never streamed through `OnChatModelStream` is announced

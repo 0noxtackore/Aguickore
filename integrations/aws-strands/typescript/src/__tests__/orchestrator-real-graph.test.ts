@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The orchestrator path driven by a REAL `Graph` from `@strands-agents/sdk`.
  *
  * The rest of the orchestrator suite scripts a stub that yields node events and

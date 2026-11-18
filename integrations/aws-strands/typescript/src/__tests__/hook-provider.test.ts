@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for hook provider independence across threads.
  *
  * Port of Python's test_template_hooks_preservation.py — validates that

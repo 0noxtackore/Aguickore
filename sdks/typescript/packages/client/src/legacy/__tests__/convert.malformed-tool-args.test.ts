@@ -1,4 +1,4 @@
-﻿import { convertMessagesToLegacyFormat, convertToLegacyEvents } from "../convert";
+import { convertMessagesToLegacyFormat, convertToLegacyEvents } from "../convert";
 import { of } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {

@@ -1,4 +1,4 @@
-﻿import { mergeMap } from "rxjs/operators";
+import { mergeMap } from "rxjs/operators";
 import jsonpatch from "fast-json-patch";
 
 import {

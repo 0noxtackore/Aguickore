@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for subgraph streaming: detection, ordering fix, and snapshot dispatch.
  *
  * The bug: when a subgraph (e.g. hotels_agent) commits a message mid-stream,

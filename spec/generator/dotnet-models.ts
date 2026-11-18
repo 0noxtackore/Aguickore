@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The C# model emitter: protocol model in, the AGUI.Abstractions types out.
  *
  * Emits the public .NET protocol types — events, messages, content parts and

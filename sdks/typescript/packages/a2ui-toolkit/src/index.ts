@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @0noxtackore/a2ui-toolkit
  *
  * Framework-agnostic building blocks for A2UI subagent tools. Each per-

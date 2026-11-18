@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Strands token usage, mapped onto the AG-UI `TokenUsage` shape.
  *
  * Strands reports usage per model invocation on `modelMetadataEvent`, not only

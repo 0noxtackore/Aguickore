@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A frontend-tool continuation that arrives on a cold agent with
  * `replayHistoryIntoStrands: false` and no session manager.
  *

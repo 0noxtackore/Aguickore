@@ -1,4 +1,4 @@
-﻿import { Subject } from "rxjs";
+import { Subject } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { defaultApplyEvents } from "../default";

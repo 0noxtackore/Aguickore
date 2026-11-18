@@ -1,4 +1,4 @@
-﻿import { Observable, of, Subscriber } from "rxjs";
+import { Observable, of, Subscriber } from "rxjs";
 import { AbstractAgent } from "@/agent";
 import {
   BaseEvent,

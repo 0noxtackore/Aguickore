@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for interrupt detection across parallel tasks — fixes #1409.
  *
  * The bug: interrupt checking only looked at tasks[0], so if a parallel

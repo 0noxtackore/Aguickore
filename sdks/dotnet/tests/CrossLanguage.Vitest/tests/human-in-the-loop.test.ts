@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { HttpAgent } from "@0noxtackore/client";
 import {
   EventType,

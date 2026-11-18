@@ -1,2 +1,2 @@
-﻿export * from "./encoder";
+export * from "./encoder";
 export { AGUI_MEDIA_TYPE } from "@0noxtackore/proto";

@@ -1,4 +1,4 @@
-﻿import { MessagesSnapshotEvent } from "@0noxtackore/core";
+import { MessagesSnapshotEvent } from "@0noxtackore/core";
 
 /** Package-owned convention. The protocol-reserved `ag-ui` namespace is untouched. */
 export const ACTIVITY_HISTORY_METADATA = "@0noxtackore/client";

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Human-in-the-Loop example for AWS Strands (TypeScript).
  *
  * The `generate_task_steps` tool is declared on the frontend via

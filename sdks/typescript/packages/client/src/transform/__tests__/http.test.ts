@@ -1,4 +1,4 @@
-﻿import { transformHttpEventStream } from "../http";
+import { transformHttpEventStream } from "../http";
 import { HttpEvent, HttpEventType } from "../../run/http-request";
 import { parseProtoStream } from "../proto";
 import * as proto from "@0noxtackore/proto";

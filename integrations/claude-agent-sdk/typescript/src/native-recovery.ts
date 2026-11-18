@@ -1,4 +1,4 @@
-﻿import { buildAguiToolMessage } from "./utils";
+import { buildAguiToolMessage } from "./utils";
 import { isDeepStrictEqual } from "node:util";
 import { spawn, type ChildProcess } from "node:child_process";
 import {

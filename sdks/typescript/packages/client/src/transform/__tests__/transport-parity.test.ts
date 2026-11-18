@@ -1,4 +1,4 @@
-﻿import { Subject, firstValueFrom, toArray } from "rxjs";
+import { Subject, firstValueFrom, toArray } from "rxjs";
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { BaseEvent } from "@0noxtackore/core";
 import * as proto from "@0noxtackore/proto";

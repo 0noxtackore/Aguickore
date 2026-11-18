@@ -1,4 +1,4 @@
-﻿import {
+import {
   Middleware,
   AbstractAgent,
   BaseEvent,

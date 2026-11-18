@@ -1,4 +1,4 @@
-﻿/**
+/**
  * URL fetch scheme/network policy (server-side request forgery and local file
  * reads) for AG-UI content sources.
  *

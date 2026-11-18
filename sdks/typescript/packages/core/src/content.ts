@@ -1,4 +1,4 @@
-﻿import type { ContentPart } from "./generated/types";
+import type { ContentPart } from "./generated/types";
 
 /**
  * The text of string-or-parts content, for a consumer that can only hold a

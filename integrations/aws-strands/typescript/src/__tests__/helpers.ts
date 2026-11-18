@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Shared test helpers. These mirror the Python test helpers but adapted for
  * the TS Strands SDK's streaming shape.
  */

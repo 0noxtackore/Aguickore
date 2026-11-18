@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Regression coverage for interrupt bookkeeping surviving a process restart.
  *
  * `_pendingInterruptsByThread` and `_lastResumeFingerprint` are the

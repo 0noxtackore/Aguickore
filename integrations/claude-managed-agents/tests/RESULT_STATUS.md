@@ -1,4 +1,4 @@
-﻿# Managed tool-result failure fidelity (PNI-691)
+# Managed tool-result failure fidelity (PNI-691)
 
 Native `agent.tool_result`, `agent.mcp_tool_result` and recovered
 `user.custom_tool_result` events preserve their original result and call IDs.

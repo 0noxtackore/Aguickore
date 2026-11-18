@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 ## 0.0.47 — 2026-10-07
 

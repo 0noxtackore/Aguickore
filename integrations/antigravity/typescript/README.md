@@ -1,4 +1,4 @@
-﻿# @0noxtackore/antigravity
+# @0noxtackore/antigravity
 
 TypeScript client for [Google Antigravity](https://github.com/google-antigravity/antigravity-sdk-python)
 agents exposed over the [AG-UI protocol](https://github.com/ag-ui-protocol/ag-ui).

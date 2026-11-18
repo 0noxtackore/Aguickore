@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Request-scoped model context for the AWS Strands bridge.
  *
  * `RunAgentInput.context` is what the application knew at the moment the user

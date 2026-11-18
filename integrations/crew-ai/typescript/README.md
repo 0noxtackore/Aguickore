@@ -1,4 +1,4 @@
-﻿# @0noxtackore/crewai
+# @0noxtackore/crewai
 
 Implementation of the AG-UI protocol for CrewAI.
 

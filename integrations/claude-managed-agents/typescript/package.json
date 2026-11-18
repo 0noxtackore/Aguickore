@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "@0noxtackore/claude-managed-agents",
   "version": "0.0.4",
   "description": "AG-UI integration for Claude Managed Agents (Anthropic hosted agent sessions)",

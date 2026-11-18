@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Emits the TypeScript translation layer between AG-UI JSON events and the
  * protobuf wire messages: sdks/typescript/packages/proto/src/proto.ts.
  *

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A rejected resume must be atomic and must leave the checkpoint retryable.
  *
  * Atomic: the gate rejects before anything is mutated, so the model is never

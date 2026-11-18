@@ -1,4 +1,4 @@
-﻿# @0noxtackore/spring-ai
+# @0noxtackore/spring-ai
 
 AG-UI client for agents served by the community [Spring AI](https://spring.io/projects/spring-ai)
 integration.

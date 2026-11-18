@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Per-request filtering of the tools the template agent contributed.
  *
  * The adapter keeps one Strands `Agent` per thread and that instance is

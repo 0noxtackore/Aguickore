@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Fidelity of the model-facing history a scripted model records.
  *
  * Real-SDK tests assert what the model saw on a given turn by reading

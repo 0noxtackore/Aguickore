@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Reconcile frontend (proxy) tool results into a Strands `SessionManager`.
  *
  * Frontend tools are executed on the client, so server-side the proxy returns a

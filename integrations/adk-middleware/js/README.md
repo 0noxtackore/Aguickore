@@ -1,4 +1,4 @@
-﻿# @0noxtackore/adk-js
+# @0noxtackore/adk-js
 
 `@0noxtackore/adk-js` runs a Google ADK JavaScript `Runner` inside a Node.js AG-UI
 runtime. It translates raw ADK events into AG-UI messages, tools, state,

@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import express from "express";
 import type { AddressInfo } from "net";
 import { EventType } from "@0noxtackore/core";

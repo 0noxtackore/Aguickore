@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "@/agent";
+import { AbstractAgent } from "@/agent";
 import { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { Observable } from "rxjs";
 import packageJson from "../../../package.json";

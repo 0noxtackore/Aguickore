@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for messages-tuple stream mode support.
  *
  * When "events" stream mode doesn't produce on_chat_model_stream events

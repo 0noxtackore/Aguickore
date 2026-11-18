@@ -1,4 +1,4 @@
-﻿import { BaseEvent, EventType, RunAgentInput, omitOptionalNulls } from "@0noxtackore/core";
+import { BaseEvent, EventType, RunAgentInput, omitOptionalNulls } from "@0noxtackore/core";
 import { EventSchema, RunAgentInputSchema } from "@0noxtackore/core/schemas";
 import { z } from "zod/v4";
 import { Observable, of, EMPTY } from "rxjs";

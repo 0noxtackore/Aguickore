@@ -1,4 +1,4 @@
-﻿# @0noxtackore/langroid
+# @0noxtackore/langroid
 
 TypeScript client integration for Langroid agents with AG-UI.
 

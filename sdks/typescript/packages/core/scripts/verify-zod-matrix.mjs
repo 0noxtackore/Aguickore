@@ -1,4 +1,4 @@
-﻿// Proves the built package works under both supported zod majors, in both
+// Proves the built package works under both supported zod majors, in both
 // module formats, and that the main entry works with NO zod installed. zod is
 // an optional peer; all runtime code uses the `zod/v4` subpath API, which zod
 // ships in 3.25+ and in 4.x — so a consumer forcing either major must get a

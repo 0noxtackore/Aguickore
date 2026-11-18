@@ -1,4 +1,4 @@
-﻿import test from "node:test";
+import test from "node:test";
 import assert from "node:assert/strict";
 import { buildReleaseNotification } from "./lib/build-release-notification";
 import type { BuildReleaseNotificationInput } from "./lib/build-release-notification";

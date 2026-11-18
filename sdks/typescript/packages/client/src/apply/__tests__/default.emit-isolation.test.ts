@@ -1,4 +1,4 @@
-﻿import { Subject, firstValueFrom } from "rxjs";
+import { Subject, firstValueFrom } from "rxjs";
 import { tap, toArray } from "rxjs/operators";
 import { BaseEvent, EventType, Message, RunAgentInput } from "@0noxtackore/core";
 import { defaultApplyEvents } from "../default";

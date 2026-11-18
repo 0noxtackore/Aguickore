@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://nx.dev/reference/nx-json#workspace-configuration",
   "useDaemonProcess": true,
   "parallel": 30,

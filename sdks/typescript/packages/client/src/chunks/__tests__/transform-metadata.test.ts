@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { Subject, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {

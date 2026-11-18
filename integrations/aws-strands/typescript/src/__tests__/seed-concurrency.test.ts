@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Seed building for one thread with slow multimodal URL fetches must not
  * serialize cold-cache inits for OTHER threads behind the global
  * _threadInitLock.

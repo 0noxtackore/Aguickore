@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The stripper on its own, at the shapes the enforcement tests cannot reach
  * through a whole event: what it must NOT touch, what it must report, and the
  * schema constructs the generated schemas do not use yet.

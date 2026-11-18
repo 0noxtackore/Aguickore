@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Generic (non-tool-approval) native interrupts must stay generic.
  *
  * Interrupts NOT raised by the adapter's own interruptOnCall hook (which

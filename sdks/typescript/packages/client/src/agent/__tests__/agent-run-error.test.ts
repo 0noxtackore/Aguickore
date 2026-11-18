@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A producer-sent RUN_ERROR is reported, not raised.
  *
  * The stream is well formed — an agent honestly reporting that its run failed

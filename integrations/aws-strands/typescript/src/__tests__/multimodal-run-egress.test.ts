@@ -1,4 +1,4 @@
-﻿/**
+/**
  * What one cold run costs a deployment in egress, and what it tells a client
  * when an attachment does not make it to the model.
  *

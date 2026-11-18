@@ -1,4 +1,4 @@
-﻿import { encode, decode } from "../src/proto";
+import { encode, decode } from "../src/proto";
 import {
   BaseEvent,
   EventType,

@@ -1,4 +1,4 @@
-﻿import fixture from "../../../../../fixtures/agent-capabilities.json";
+import fixture from "../../../../../fixtures/agent-capabilities.json";
 
 import { AgentCapabilitiesSchema } from "../schemas";
 

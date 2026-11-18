@@ -1,4 +1,4 @@
-﻿# @0noxtackore/encoder
+# @0noxtackore/encoder
 
 Event encoding utilities for the **Agent-User Interaction (AG-UI) Protocol**.
 

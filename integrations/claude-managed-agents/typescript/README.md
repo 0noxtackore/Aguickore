@@ -1,4 +1,4 @@
-﻿# @0noxtackore/claude-managed-agents
+# @0noxtackore/claude-managed-agents
 
 Connect an [AG-UI](https://ag-ui.com) frontend to [Claude Managed Agents](https://platform.claude.com/docs/en/managed-agents/overview), Anthropic's hosted agent runtime. Each AG-UI thread maps to one managed session. Each run drives one turn of that session and streams the agent's events back as AG-UI events.
 

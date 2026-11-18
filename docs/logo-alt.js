@@ -9,7 +9,7 @@
 // callback rate trivial.
 (function () {
   try {
-    var TARGET_ALT = "AG-UI";
+    var TARGET_ALT = "Aguickore";
     var SELECTOR = "img.nav-logo";
     var scheduled = false;
 

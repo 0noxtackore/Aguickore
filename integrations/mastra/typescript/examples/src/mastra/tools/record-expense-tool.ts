@@ -1,4 +1,4 @@
-﻿import { createTool } from "@mastra/core/tools";
+import { createTool } from "@mastra/core/tools";
 import { z } from "zod";
 
 // Backend tool gated by Mastra's native approval (`requireApproval: true`).

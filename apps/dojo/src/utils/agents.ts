@@ -1,4 +1,4 @@
-﻿import type { AbstractAgent } from "@0noxtackore/client";
+import type { AbstractAgent } from "@0noxtackore/client";
 
 /**
  * Helper to map feature keys to agent instances using a builder function.

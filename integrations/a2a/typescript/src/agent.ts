@@ -1,4 +1,4 @@
-﻿import {
+import {
   AbstractAgent,
   AgentConfig,
   BaseEvent,

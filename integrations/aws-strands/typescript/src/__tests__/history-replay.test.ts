@@ -1,4 +1,4 @@
-﻿/**
+/**
  * History reconciliation (replayHistoryIntoStrands). Fixes the "chart loops
  * forever" symptom: without replay, the LLM never sees the client-produced
  * tool result on the next turn and re-fires the same tool.

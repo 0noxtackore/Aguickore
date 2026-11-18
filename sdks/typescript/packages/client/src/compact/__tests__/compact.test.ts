@@ -1,4 +1,4 @@
-﻿import { compactEvents } from "../compact";
+import { compactEvents } from "../compact";
 import {
   EventType,
   TextMessageStartEvent,

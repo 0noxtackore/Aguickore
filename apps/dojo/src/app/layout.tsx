@@ -9,6 +9,7 @@ import { MainLayout } from "@/components/layout/main-layout";
 import { URLParamsProvider } from "@/contexts/url-params-context";
 import { PHProvider } from "@/components/posthog-provider";
 import { ScarfPixel } from "@/components/scarf-pixel";
+import { BrandOverride } from "@/components/brand-override";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/icon-dark.png" media="(prefers-color-scheme: light)" />
+        <link rel="icon" href="/icon-light.png" media="(prefers-color-scheme: dark)" />
         <Script
           id="hubspot-script"
           src="https://js.hs-scripts.com/45532593.js"
@@ -91,6 +94,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <BrandOverride />
         <PHProvider>
           <Suspense>
             <URLParamsProvider>

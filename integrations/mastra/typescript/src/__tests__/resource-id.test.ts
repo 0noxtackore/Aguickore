@@ -1,4 +1,4 @@
-﻿import { EventType } from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";
 import {
   FakeLocalAgent,

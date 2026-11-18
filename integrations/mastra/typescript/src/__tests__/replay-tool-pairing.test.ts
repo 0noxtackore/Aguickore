@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import type { Message } from "@0noxtackore/client";
 import { convertMessages } from "@mastra/core/agent";
 import { convertAGUIMessagesToMastra } from "../utils";

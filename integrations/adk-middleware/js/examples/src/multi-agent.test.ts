@@ -1,4 +1,4 @@
-﻿import { verifyEvents } from "@0noxtackore/client";
+import { verifyEvents } from "@0noxtackore/client";
 import { EventType, type AGUIEvent, type RunAgentInput } from "@0noxtackore/core";
 import {
   BaseLlm,

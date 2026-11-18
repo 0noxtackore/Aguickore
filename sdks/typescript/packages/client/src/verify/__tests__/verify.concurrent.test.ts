@@ -1,4 +1,4 @@
-﻿import { Subject } from "rxjs";
+import { Subject } from "rxjs";
 import { toArray, catchError } from "rxjs/operators";
 import { firstValueFrom } from "rxjs";
 import { verifyEvents } from "../verify";

@@ -1,4 +1,4 @@
-﻿import { of, concat } from "rxjs";
+import { of, concat } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { transformChunks } from "../transform";
 import {

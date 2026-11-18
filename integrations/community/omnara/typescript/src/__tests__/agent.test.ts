@@ -1,4 +1,4 @@
-﻿import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type { BaseEvent, Message, Tool } from "@0noxtackore/core";
 import { OmnaraAgent } from "../agent";
 import { inputKey } from "../messages";

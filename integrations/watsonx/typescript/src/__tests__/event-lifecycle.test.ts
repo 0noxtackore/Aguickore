@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for the full event lifecycle:
  * RUN_STARTED → STEP_STARTED → content → STEP_FINISHED → MESSAGES_SNAPSHOT → RUN_FINISHED
  * Plus error paths, RAW events, and TOOL_CALL_RESULT.

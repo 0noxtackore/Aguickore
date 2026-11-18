@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Audio on an SDK that predates `AudioBlock`.
  *
  * The peer range admits `@strands-agents/sdk` releases before 1.14.0, which

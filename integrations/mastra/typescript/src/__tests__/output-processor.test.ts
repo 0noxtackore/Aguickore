@@ -1,4 +1,4 @@
-﻿import type { RunFinishedEvent, TextMessageChunkEvent } from "@0noxtackore/client";
+import type { RunFinishedEvent, TextMessageChunkEvent } from "@0noxtackore/client";
 import { EventType } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";
 import {

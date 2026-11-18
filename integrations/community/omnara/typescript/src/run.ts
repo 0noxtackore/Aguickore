@@ -1,4 +1,4 @@
-﻿import {
+import {
   EventType,
   PROTOCOL_VERSION,
   type AGUIEvent,

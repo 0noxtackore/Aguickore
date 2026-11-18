@@ -1,4 +1,4 @@
-﻿import { EventType, type AGUIEvent, type Interrupt } from "@0noxtackore/core";
+import { EventType, type AGUIEvent, type Interrupt } from "@0noxtackore/core";
 import {
   AgentTool,
   LlmAgent,

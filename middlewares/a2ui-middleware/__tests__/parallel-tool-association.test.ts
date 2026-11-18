@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { ActivitySnapshotEvent, BaseEvent, EventType } from "@0noxtackore/client";
 import { A2UIMiddleware, A2UIMiddlewareConfig } from "../src";
 import { MockAgent, collectEvents, createRunAgentInput } from "./test-utils";

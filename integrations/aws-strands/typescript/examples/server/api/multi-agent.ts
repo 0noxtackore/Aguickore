@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Multi-agent example for AWS Strands (TypeScript).
  *
  * Mirrors `python/examples/server/api/multi_agent.py`: a Strands `Graph` of

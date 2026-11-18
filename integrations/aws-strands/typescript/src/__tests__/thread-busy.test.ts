@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Concurrent runs on the same thread must be rejected with a
  * protocol-shaped RUN_ERROR/THREAD_BUSY, not the internal Strands error
  * message. The refusal only holds if the slot is also released, so the

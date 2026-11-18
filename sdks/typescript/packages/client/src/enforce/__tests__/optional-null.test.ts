@@ -1,4 +1,4 @@
-﻿import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
+import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 import { EventSchemas } from "@0noxtackore/core/schemas";
 import { EventEncoder } from "@0noxtackore/encoder";
 import { decode } from "@0noxtackore/proto";

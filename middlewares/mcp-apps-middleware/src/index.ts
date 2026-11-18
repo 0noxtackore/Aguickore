@@ -1,4 +1,4 @@
-﻿import {
+import {
   Middleware,
   RunAgentInput,
   AbstractAgent,

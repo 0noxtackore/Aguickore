@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "../agent";
+import { AbstractAgent } from "../agent";
 import { HttpAgent } from "../http";
 import { AgentSubscriber } from "../subscriber";
 import { BaseEvent, Message, RunAgentInput, State, ToolCall, AssistantMessage } from "@0noxtackore/core";

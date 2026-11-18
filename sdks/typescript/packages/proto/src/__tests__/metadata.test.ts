@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { EventType, type TextMessageStartEvent, type MessagesSnapshotEvent } from "@0noxtackore/core";
 import { decode, encode } from "../proto";
 

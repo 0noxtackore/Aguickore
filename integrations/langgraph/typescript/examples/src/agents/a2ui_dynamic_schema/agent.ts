@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Dynamic A2UI agent (prebuilt).
  *
  * Uses LangChain's `createAgent` prebuilt with the AG-UI `getA2UITools`

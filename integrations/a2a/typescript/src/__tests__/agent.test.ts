@@ -1,4 +1,4 @@
-﻿import type { Message } from "@0noxtackore/client";
+import type { Message } from "@0noxtackore/client";
 import { PROTOCOL_VERSION } from "@0noxtackore/client";
 import { A2AAgent } from "../agent";
 import type { MessageSendParams } from "@a2a-js/sdk";

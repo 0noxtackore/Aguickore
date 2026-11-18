@@ -1,4 +1,4 @@
-﻿# Langroid Integration Architecture
+# Langroid Integration Architecture
 
 This document explains how the Langroid integration inside `integrations/langroid/` is implemented today. It covers the Python adapter that speaks the AG-UI protocol and the FastAPI transport helpers.
 

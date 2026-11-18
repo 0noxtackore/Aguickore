@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "@0noxtackore/client";
+import { AbstractAgent } from "@0noxtackore/client";
 import {
   EventType,
   PROTOCOL_VERSION,

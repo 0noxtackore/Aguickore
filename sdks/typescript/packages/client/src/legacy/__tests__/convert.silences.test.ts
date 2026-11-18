@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Three places where the legacy bridge lost something without saying so.
  *
  * The bridge is a translation to a protocol that cannot represent everything

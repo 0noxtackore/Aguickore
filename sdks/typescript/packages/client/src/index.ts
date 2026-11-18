@@ -1,4 +1,4 @@
-﻿export * from "./apply";
+export * from "./apply";
 export * from "./verify";
 export * from "./transform";
 export * from "./run";

@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { EventType, RunAgentInput } from "@0noxtackore/client";
 import { LangChainAgent, ChainFnParams } from "../agent";
 import { firstValueFrom, toArray } from "rxjs";

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Verifies that a custom toolStreamEventHandler suppresses the default
  * STATE_SNAPSHOT behavior and yields custom events instead.
  */

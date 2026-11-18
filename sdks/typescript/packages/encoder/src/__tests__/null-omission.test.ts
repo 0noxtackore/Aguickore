@@ -1,4 +1,4 @@
-﻿import { omitOptionalNulls } from "@0noxtackore/core";
+import { omitOptionalNulls } from "@0noxtackore/core";
 import { EventSchemas } from "@0noxtackore/core/schemas";
 
 import fixture from "../../../../../fixtures/null-omission.json";

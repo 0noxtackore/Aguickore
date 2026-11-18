@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for message mapping: AG-UI messages to watsonx format,
  * tool forwarding, and forwardedProps filtering.
  */

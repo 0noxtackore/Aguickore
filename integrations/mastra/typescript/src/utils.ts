@@ -1,4 +1,4 @@
-﻿import type { Message, PartSource, TextPart } from "@0noxtackore/client";
+import type { Message, PartSource, TextPart } from "@0noxtackore/client";
 import { AbstractAgent, contentToText } from "@0noxtackore/client";
 import { MastraClient } from "@mastra/client-js";
 import type { Mastra } from "@mastra/core";

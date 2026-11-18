@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Multi-agent events from the TS Strands SDK must translate to
  * AG-UI STEP_STARTED / STEP_FINISHED / CUSTOM{MultiAgentHandoff}.
  *

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * One direct test per terminal RUN_ERROR this bridge can emit.
  *
  * Each test drives the real `StrandsAgent` (or the real Express endpoint) to

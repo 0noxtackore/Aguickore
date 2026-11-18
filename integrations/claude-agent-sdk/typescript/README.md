@@ -1,4 +1,4 @@
-﻿# @0noxtackore/claude-agent-sdk
+# @0noxtackore/claude-agent-sdk
 
 Implementation of the AG-UI protocol for the Anthropic Claude Agent SDK (TypeScript).
 

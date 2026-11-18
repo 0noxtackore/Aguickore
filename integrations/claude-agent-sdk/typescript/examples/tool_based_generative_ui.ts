@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tool-based generative UI agent configuration.
  *
  * This module demonstrates how frontend tools (defined by the client) are dynamically

@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { AbstractAgent } from "@/agent";
 import { BaseEvent, EventType, RunAgentInput } from "@0noxtackore/core";
 import { Observable } from "rxjs";

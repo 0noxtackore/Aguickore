@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { AgentsToAGUIAdapter } from "./adapter";
 import { EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
 import type { BaseEvent, Message } from "@0noxtackore/client";

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The gate over the conformance fixture corpus.
  *
  * The fixtures themselves are run by each client's own lane — TypeScript in

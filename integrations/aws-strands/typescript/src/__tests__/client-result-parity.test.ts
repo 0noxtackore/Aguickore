@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Parity between the two paths that carry a client tool result to the model.
  *
  * A frontend tool runs on the client, so its answer arrives on the NEXT request

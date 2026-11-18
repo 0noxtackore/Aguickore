@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Native interrupt flow (Strands SDK 1.1.0+): when the underlying
  * `AgentResult` comes back with `stopReason === "interrupt"`, the adapter
  * emits the interrupt-variant `RUN_FINISHED` and records the interrupt IDs

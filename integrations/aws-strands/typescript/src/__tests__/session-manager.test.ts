@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for session manager provider lifecycle in StrandsAgent.
  *
  * Port of Python's test_session_manager.py — covers caching, async providers,

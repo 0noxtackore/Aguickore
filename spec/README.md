@@ -1,4 +1,4 @@
-﻿# The AG-UI specification
+# The AG-UI specification
 
 The protocol's contract as JSON Schema, and the suite that checks it.
 

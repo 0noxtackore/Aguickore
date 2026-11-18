@@ -1,4 +1,4 @@
-﻿# Native recovery validation — 2026-10-23
+# Native recovery validation — 2026-10-23
 
 The opt-in `nativeChildRecovery` / `native_child_recovery` path uses native SDK
 files and a trusted host executor/lease. It does not require Intelligence, AG-UI

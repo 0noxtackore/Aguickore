@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Unit tests for StrandsAgent.
  *
  * We don't spin up a full Strands Agent — instead we inject a stub that

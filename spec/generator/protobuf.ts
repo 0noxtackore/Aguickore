@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The protobuf emitter: model in, .proto files, the wire freeze, and the
  * TypeScript translation layer out.
  *

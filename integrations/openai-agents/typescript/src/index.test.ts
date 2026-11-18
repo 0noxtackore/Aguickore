@@ -1,4 +1,4 @@
-﻿import { HttpAgent } from "@0noxtackore/client";
+import { HttpAgent } from "@0noxtackore/client";
 import { describe, expect, it } from "vitest";
 
 import { OpenAIAgentsHttpAgent } from "./index";

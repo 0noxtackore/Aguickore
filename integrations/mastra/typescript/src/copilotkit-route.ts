@@ -1,4 +1,4 @@
-﻿import {
+import {
   MASTRA_RESOURCE_ID_KEY,
   RequestContext,
 } from "@mastra/core/request-context";

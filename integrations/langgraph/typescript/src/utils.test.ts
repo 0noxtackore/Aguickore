@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for multimodal message conversion between AG-UI and LangChain formats.
  */
 

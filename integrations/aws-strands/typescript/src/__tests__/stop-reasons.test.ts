@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Abnormal terminal stop reasons.
  *
  * A forced stop is a failed run carrying the underlying reason; a truncated

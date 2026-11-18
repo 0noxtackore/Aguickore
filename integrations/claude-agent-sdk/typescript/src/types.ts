@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Type definitions for AG-UI Claude SDK integration.
  *
  * Only defines types specific to this adapter.

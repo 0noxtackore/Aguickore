@@ -1,4 +1,8 @@
-﻿# aguickore
+<p align="center">
+  <img src="docs/logo/logo_solid.jpg" alt="Aguickore" width="640" />
+</p>
+
+# aguickore
 
 **aguickore** is an open, event-driven protocol and SDK ecosystem for connecting AI agents to user-facing applications — maintained by **0noxtackore** as a security-hardened, actively improved evolution of the AG-UI project.
 

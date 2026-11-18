@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The TypeScript emitter: model in, source text out.
  *
  * No interpretation happens here — the model already resolved composition,

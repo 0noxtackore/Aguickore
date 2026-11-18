@@ -1,4 +1,4 @@
-﻿import type { MenuIntegrationConfig } from "./types/integration";
+import type { MenuIntegrationConfig } from "./types/integration";
 import { CREWAI_CONVERSATIONAL_FEATURES, CREWAI_FLOW_FEATURES } from "./crewai";
 export * from "./types/integration";
 

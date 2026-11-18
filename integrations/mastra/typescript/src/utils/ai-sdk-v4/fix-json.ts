@@ -1,4 +1,4 @@
-﻿// Vendored from @ai-sdk/ui-utils@1.2.11 (Apache-2.0, Copyright Vercel, Inc.), via the
+// Vendored from @ai-sdk/ui-utils@1.2.11 (Apache-2.0, Copyright Vercel, Inc.), via the
 // identical copy Mastra made in @mastra/client-js when it dropped the same dependency:
 // https://github.com/mastra-ai/mastra/pull/27297 (client-sdks/client-js/src/utils/ai-sdk-v4/fix-json.ts
 // at c56d026c5194b1977e5321f429565eedbccf2c40).

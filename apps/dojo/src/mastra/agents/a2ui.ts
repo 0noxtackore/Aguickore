@@ -1,4 +1,4 @@
-﻿import { Agent } from "@mastra/core/agent";
+import { Agent } from "@mastra/core/agent";
 import type { A2UIAttemptRecord, A2UIInjectConfig } from "@0noxtackore/mastra";
 
 // Provider-string model, resolved by Mastra's model router (respects

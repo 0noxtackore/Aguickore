@@ -1,4 +1,4 @@
-﻿import { from } from "rxjs";
+import { from } from "rxjs";
 import { toArray } from "rxjs/operators";
 import {
   EventType,

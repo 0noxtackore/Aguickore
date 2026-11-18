@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Agentic Generative UI example for AWS Strands (TypeScript).
  *
  * Demonstrates streaming agent state updates to the frontend for real-time

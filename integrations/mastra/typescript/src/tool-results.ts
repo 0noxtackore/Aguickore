@@ -1,4 +1,4 @@
-﻿import type { ContentPart, PartSource } from "@0noxtackore/client";
+import type { ContentPart, PartSource } from "@0noxtackore/client";
 
 /**
  * Tool results as content parts, in both directions.

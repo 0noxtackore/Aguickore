@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A throwing generator finally on client disconnect must not produce an
  * unhandled rejection (which crashes the Node process on default
  * settings).

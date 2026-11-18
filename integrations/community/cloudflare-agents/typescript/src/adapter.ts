@@ -1,4 +1,4 @@
-﻿import { type StreamTextResult } from "ai";
+import { type StreamTextResult } from "ai";
 import {
   EventType,
   PROTOCOL_VERSION,

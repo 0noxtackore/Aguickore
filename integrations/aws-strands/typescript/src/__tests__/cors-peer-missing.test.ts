@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 
 import { createStrandsApp } from "../server";
 import { FixedAgent } from "./transport-harness";

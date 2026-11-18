@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Verifies that mid-execution tool yields arrive as STATE_SNAPSHOT events.
  *
  * The Strands v1 SDK wraps `ToolStreamEvent` (produced by an async-generator

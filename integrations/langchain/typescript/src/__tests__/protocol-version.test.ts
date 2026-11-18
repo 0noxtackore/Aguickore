@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { EventType } from "@0noxtackore/client";
 import type { RunAgentInput, RunStartedEvent } from "@0noxtackore/client";
 import { firstValueFrom, toArray } from "rxjs";

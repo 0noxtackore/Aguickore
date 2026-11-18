@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Citations example for AWS Strands (TypeScript).
  *
  * Demonstrates citations reaching the client attached to the message they

@@ -1,4 +1,4 @@
-﻿import type { Message, ToolMessage } from "@0noxtackore/core";
+import type { Message, ToolMessage } from "@0noxtackore/core";
 import { createHash } from "node:crypto";
 import type { AgentEvent } from "./api";
 

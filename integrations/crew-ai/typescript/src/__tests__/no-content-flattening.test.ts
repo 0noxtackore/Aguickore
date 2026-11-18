@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PNI-216: the 0.0.39 content-flattening compat middleware must not be
  * applied on CrewAI's path. CrewAIAgent inherits maxVersion from
  * @0noxtackore/client, which sits above every backward-compat threshold, so

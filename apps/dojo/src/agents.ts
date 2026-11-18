@@ -1,4 +1,4 @@
-﻿import "server-only";
+import "server-only";
 
 import type { AbstractAgent } from "@0noxtackore/client";
 import type { AgentsMap } from "./types/agents";

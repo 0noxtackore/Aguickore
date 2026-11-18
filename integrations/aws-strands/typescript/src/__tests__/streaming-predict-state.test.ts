@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tool-call wire ordering for streaming predict_state.
  *
  * The documented order (Python adapter's fix #1638) is:

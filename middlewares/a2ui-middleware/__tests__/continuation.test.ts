@@ -1,4 +1,4 @@
-﻿import {
+import {
   AbstractAgent,
   EventType,
   type BaseEvent,

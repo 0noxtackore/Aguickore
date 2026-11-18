@@ -1,4 +1,4 @@
-﻿# ag-ui-crewai
+# ag-ui-crewai
 
 ## Native streaming migration (PNI-561)
 

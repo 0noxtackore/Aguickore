@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "@0noxtackore/langroid",
   "//": "private: @0noxtackore/langroid is currently an empty HttpAgent subclass with no added behavior — intentionally NOT published. See src/index.ts for what would make it publishable.",
   "private": true,

@@ -1,4 +1,4 @@
-﻿import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { EventType } from "@0noxtackore/core";
 import { decode, encode } from "../proto";
 import * as protoEvents from "../generated/events";

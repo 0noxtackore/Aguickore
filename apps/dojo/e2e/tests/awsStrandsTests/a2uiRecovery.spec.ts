@@ -1,4 +1,4 @@
-﻿import { test, expect } from "../../test-isolation-helper";
+import { test, expect } from "../../test-isolation-helper";
 import { A2UIPage } from "../../featurePages/A2UIPage";
 
 // A2UI error-recovery showcase — AWS Strands (Python) port.

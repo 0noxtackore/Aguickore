@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   MessageSendConfiguration,
   MessageSendParams,
   Message as A2AMessage,

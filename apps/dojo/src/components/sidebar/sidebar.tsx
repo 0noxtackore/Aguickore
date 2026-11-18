@@ -25,7 +25,6 @@ import type { Feature } from "@/types/integration";
 import { useURLParams } from "@/contexts/url-params-context";
 import { View } from "@/types/interface";
 import { getTitleForCurrentDomain } from "@/utils/domain-config";
-import { useTheme } from "next-themes";
 import posthog from "posthog-js";
 
 // Integrations without a hosted backend stay out of the picker in production.
@@ -43,8 +42,7 @@ export function Sidebar({ isMobile, onMobileClose }: SidebarProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const { theme, setTheme } = useTheme();
-  const isDarkTheme = theme === "dark";
+  const logoSrc = "/Aguickore_logo_name_light.png";
   const {
     view,
     frameworkPickerHidden,
@@ -57,6 +55,7 @@ export function Sidebar({ isMobile, onMobileClose }: SidebarProps) {
   const pathParts = pathname.split("/");
   const currentIntegrationId = pathParts[1]; // First segment after root
   const currentDemoId = pathParts[pathParts.length - 1];
+  const isFeatureRoute = pathParts[2] === "feature" && Boolean(pathParts[3]);
 
   // Find the current integration (only if we have a valid integration ID)
   const currentIntegration =
@@ -104,23 +103,23 @@ export function Sidebar({ isMobile, onMobileClose }: SidebarProps) {
     router.push(url);
   };
 
-  const tabClass = `cursor-pointer flex-1 h-8 px-2 text-sm text-primary shadow-none bg-none border-none font-medium gap-1 rounded-lg data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-none`;
+  const tabClass = `cursor-pointer flex-1 h-8 px-2 text-sm text-palette-text-secondary shadow-none bg-transparent border border-transparent font-medium gap-1 rounded-lg transition-all data-[state=active]:bg-palette-surface-containerActive data-[state=active]:text-palette-text-primary data-[state=active]:border-palette-border-actionEnabled/40 data-[state=active]:shadow-none hover:text-palette-text-primary`;
 
   return (
     <div
-      className={`flex flex-col h-full border-2 border-palette-border-default
-      ${isMobile ? "w-80 shadow-xl bg-white z-99" : "bg-white/50 w-74 min-w-[296px] flex-shrink-0 rounded-lg overflow-hidden"}
+      className={`flex flex-col h-full border border-palette-border-default backdrop-blur-xl
+      ${isMobile ? "w-80 shadow-2xl bg-palette-surface-container/95 z-99" : "bg-palette-surface-container/70 w-74 min-w-[296px] flex-shrink-0 rounded-xl overflow-hidden shadow-lg"}
     `}
     >
       {/* Sidebar Header */}
-      <div className="p-4">
+      <div className="p-4 pb-3">
         <div className="flex items-center justify-between ml-1">
-          <div className="flex items-start flex-col">
-            <h1
-              className={`text-lg font-light ${isDarkTheme ? "text-white" : "text-gray-900"}`}
-            >
-              {getTitleForCurrentDomain() || "AG-UI Interactive Dojo"}
-            </h1>
+          <div className="flex items-center">
+            <img
+              src={logoSrc}
+              alt="Aguickore"
+              className="h-14 w-auto max-w-[260px] object-contain"
+            />
           </div>
 
           {/*<ThemeToggle />*/}
@@ -129,14 +128,14 @@ export function Sidebar({ isMobile, onMobileClose }: SidebarProps) {
 
       {/* Controls Section */}
       {(!frameworkPickerHidden || !viewPickerHidden) && (
-        <div className="p-4 border-b">
+        <div className="p-4 border-b border-palette-border-divider">
           {/* Integration picker */}
           {!frameworkPickerHidden && (
             <div className="mb-spacing-4">
               <SectionTitle title="Integrations" />
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <div className="flex items-center justify-between h-spacing-8 rounded-sm gap-spacing-2 px-spacing-3 transition-colors hover:bg-palette-surface-containerHovered cursor-pointer">
+                  <div className="flex items-center justify-between h-spacing-8 rounded-lg gap-spacing-2 px-spacing-3 border border-palette-border-container bg-palette-surface-default50 transition-colors hover:bg-palette-surface-containerHovered hover:border-palette-border-actionEnabled/40 cursor-pointer">
                     <span className="pb-[2px] text-palette-text-primary font-medium leading-[22px] inline-block truncate">
                       {currentIntegration
                         ? currentIntegration.name
@@ -148,12 +147,12 @@ export function Sidebar({ isMobile, onMobileClose }: SidebarProps) {
                     />
                   </div>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="ml-4 w-80 bg-palette-surface-container border-palette-border-container shadow-elevation-md">
+                <DropdownMenuContent className="ml-4 w-80 bg-palette-surface-container border-palette-border-container shadow-xl">
                   {pickerIntegrations.map((integration) => (
                     <DropdownMenuItem
                       key={integration.id}
                       onClick={() => handleIntegrationSelect(integration.id)}
-                      className="cursor-pointer hover:bg-palette-grey-200 text-palette-text-primary text-base h-12 rounded-sm"
+                      className="cursor-pointer hover:bg-palette-surface-containerHovered focus:bg-palette-surface-containerHovered text-palette-text-primary text-base h-12 rounded-md"
                     >
                       <span>{integration.name}</span>
                     </DropdownMenuItem>
@@ -167,33 +166,39 @@ export function Sidebar({ isMobile, onMobileClose }: SidebarProps) {
           {!viewPickerHidden && (
             <div className="mb-1">
               <SectionTitle title="View" />
-              <Tabs
-                value={view}
-                onValueChange={(tab) => {
-                  posthog.capture("view_changed", {
-                    view: tab,
-                    integration_id: currentIntegrationId || null,
-                    demo_id: currentDemoId || null,
-                  });
-                  setView(tab as View);
-                }}
-                className="w-full rounded-lg bg-none border-none"
-              >
-                <TabsList className="w-full rounded-lg h-8 p-0 bg-transparent border-none">
-                  <TabsTrigger value="preview" className={tabClass}>
-                    <Eye className="h-3 w-3" />
-                    <span>Preview</span>
-                  </TabsTrigger>
-                  <TabsTrigger value="code" className={tabClass}>
-                    <Code className="h-3 w-3" />
-                    <span>Code</span>
-                  </TabsTrigger>
-                  <TabsTrigger value="readme" className={tabClass}>
-                    <Book className="h-3 w-3" />
-                    <span>Docs</span>
-                  </TabsTrigger>
-                </TabsList>
-              </Tabs>
+              {isFeatureRoute ? (
+                <Tabs
+                  value={view}
+                  onValueChange={(tab) => {
+                    posthog.capture("view_changed", {
+                      view: tab,
+                      integration_id: currentIntegrationId || null,
+                      demo_id: currentDemoId || null,
+                    });
+                    setView(tab as View);
+                  }}
+                  className="w-full rounded-lg bg-none border-none"
+                >
+                  <TabsList className="w-full rounded-lg h-8 p-0 bg-transparent border-none">
+                    <TabsTrigger value="preview" className={tabClass}>
+                      <Eye className="h-3 w-3" />
+                      <span>Preview</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="code" className={tabClass}>
+                      <Code className="h-3 w-3" />
+                      <span>Code</span>
+                    </TabsTrigger>
+                    <TabsTrigger value="readme" className={tabClass}>
+                      <Book className="h-3 w-3" />
+                      <span>Docs</span>
+                    </TabsTrigger>
+                  </TabsList>
+                </Tabs>
+              ) : (
+                <p className="text-xs text-palette-text-secondary px-1 py-1">
+                  Selecciona una demo para cambiar entre Preview, Code y Docs.
+                </p>
+              )}
             </div>
           )}
         </div>

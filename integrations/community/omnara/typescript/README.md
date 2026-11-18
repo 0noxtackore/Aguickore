@@ -1,4 +1,4 @@
-﻿# @0noxtackore/omnara
+# @0noxtackore/omnara
 
 Connect an [AG-UI](https://ag-ui.com) frontend, such as [CopilotKit](https://copilotkit.ai), to [Omnara](https://omnara.com), the open-source control plane for durable, hosted agents. Each chat thread gets its own Omnara agent, per user, launched from a [profile or an inline definition](https://docs.omnara.com/agents/configuration).
 

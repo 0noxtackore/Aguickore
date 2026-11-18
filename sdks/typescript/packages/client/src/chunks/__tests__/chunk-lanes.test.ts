@@ -1,4 +1,4 @@
-﻿import { from, firstValueFrom } from "rxjs";
+import { from, firstValueFrom } from "rxjs";
 import { toArray } from "rxjs/operators";
 import { transformChunks } from "../transform";
 import { verifyEvents } from "../../verify/verify";

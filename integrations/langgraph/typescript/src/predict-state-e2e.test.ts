@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Outcome tests for the predict_state / state-streaming mechanism.
  *
  * Tests observable behavior: when a tracked tool call streams its args,

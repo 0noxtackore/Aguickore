@@ -1,4 +1,4 @@
-﻿import { AGUIError } from "@0noxtackore/core";
+import { AGUIError } from "@0noxtackore/core";
 
 /**
  * How many container entries the enforcement stage will walk for ONE event or

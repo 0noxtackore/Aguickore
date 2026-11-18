@@ -1,4 +1,4 @@
-﻿/**
+/**
  * PNI-220: AgnoAgent must not have a protocol version ceiling, and the
  * backward-compat middlewares must stay off its path. AgnoAgent inherits
  * maxProtocolVersion (and the deprecated maxVersion alias) from

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Issue #2291 regression — the RAW fallback must not re-deliver assembled
  * content blocks.
  *

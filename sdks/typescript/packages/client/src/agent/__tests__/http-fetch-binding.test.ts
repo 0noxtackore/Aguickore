@@ -1,4 +1,4 @@
-﻿import { HttpAgent } from "../http";
+import { HttpAgent } from "../http";
 import { runHttpRequest } from "@/run/http-request";
 import { RunAgentInput } from "@0noxtackore/core";
 import { describe, it, expect, vi, beforeEach, afterEach, Mock } from "vitest";

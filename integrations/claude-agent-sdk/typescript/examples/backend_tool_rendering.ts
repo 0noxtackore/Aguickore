@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Backend tool rendering example.
  *
  * This example demonstrates how to create an agent with backend-defined MCP tools.

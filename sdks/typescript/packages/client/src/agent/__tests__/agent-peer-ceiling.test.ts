@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The peer ceiling (`maxProtocolVersion`, and its deprecated alias
  * `maxVersion`) must preserve subclass overrides through both spellings.
  * Constructor version gates run before subclass instance fields exist.

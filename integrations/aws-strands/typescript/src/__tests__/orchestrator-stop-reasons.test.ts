@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Abnormal stop reasons on the orchestrator path (Graph/Swarm).
  *
  * The orchestrator counterpart of `stop-reasons.test.ts`, for the ONE thing the

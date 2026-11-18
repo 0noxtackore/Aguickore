@@ -1,4 +1,4 @@
-﻿# Agent User Interaction Protocol TypeScript SDK
+# Agent User Interaction Protocol TypeScript SDK
 
 The TypeScript SDK for the [Agent User Interaction Protocol](https://ag-ui.com).
 

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Multimodal `RunAgentInput.messages[*].content` must be passed to
  * `agent.stream()` as `ContentBlock[]`, not flattened to a text string.
  *

@@ -1,4 +1,4 @@
-﻿import { Message } from "@0noxtackore/client";
+import { Message } from "@0noxtackore/client";
 import { contentHasMedia, contentToText } from "@0noxtackore/core";
 import type { ContentPart, ImagePart } from "@0noxtackore/core";
 import {

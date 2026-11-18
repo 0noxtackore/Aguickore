@@ -1,4 +1,4 @@
-﻿import type { RunAgentInput } from "@0noxtackore/core";
+import type { RunAgentInput } from "@0noxtackore/core";
 import {
   Agent,
   createEvent,

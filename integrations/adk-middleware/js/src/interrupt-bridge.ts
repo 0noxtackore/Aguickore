@@ -1,4 +1,4 @@
-﻿import { Validator, type Schema } from "@cfworker/json-schema";
+import { Validator, type Schema } from "@cfworker/json-schema";
 import type {
   Interrupt,
   Message,

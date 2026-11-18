@@ -1,4 +1,4 @@
-﻿import { EventType, type AGUIEvent } from "@0noxtackore/core";
+import { EventType, type AGUIEvent } from "@0noxtackore/core";
 import { isNodeErrorEvent, type Event as AdkEvent } from "@google/adk";
 
 import type { AgentTreeIndex } from "./agent-tree";

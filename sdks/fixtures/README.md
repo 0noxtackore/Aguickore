@@ -1,4 +1,4 @@
-﻿# Cross-language fixtures
+# Cross-language fixtures
 
 Fixtures in this directory are shared by more than one AG-UI SDK. They exist so a wire-format
 expectation is written down **once** and every SDK is held to the same text, instead of each SDK

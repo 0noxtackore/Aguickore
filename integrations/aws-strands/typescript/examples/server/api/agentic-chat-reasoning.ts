@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Agentic Chat with Reasoning example for AWS Strands (TypeScript).
  *
  * Demonstrates reasoning/thinking event streaming. When the underlying model

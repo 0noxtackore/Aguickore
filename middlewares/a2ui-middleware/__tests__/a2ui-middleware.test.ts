@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, beforeAll, beforeEach, afterEach, vi } from "vitest";
+import { describe, it, expect, beforeAll, beforeEach, afterEach, vi } from "vitest";
 import {
   BaseEvent,
   AbstractAgent,

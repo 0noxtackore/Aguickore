@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Agentic chat example - basic configuration.
  *
  * This example shows how to create a basic agentic chat adapter

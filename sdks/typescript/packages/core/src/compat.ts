@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   Event,
   BaseEvent as ProtocolBaseEvent,
   ContentPart,

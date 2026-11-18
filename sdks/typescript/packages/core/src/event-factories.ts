@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Event factories: constructors that validate what they build.
  *
  * This module has a RUNTIME dependency on zod — it imports the generated

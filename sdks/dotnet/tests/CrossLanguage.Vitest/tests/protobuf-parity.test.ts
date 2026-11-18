@@ -1,4 +1,4 @@
-﻿import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import * as proto from "@0noxtackore/proto";
 import { EventEncoder } from "@0noxtackore/encoder";
 import type { BaseEvent } from "@0noxtackore/core";

@@ -1,4 +1,4 @@
-﻿import { splitOutbound } from "./context";
+import { splitOutbound } from "./context";
 import { toolContent } from "./content";
 import type { SessionStream } from "./recovery";
 import type { PendingConfirmation } from "./types";

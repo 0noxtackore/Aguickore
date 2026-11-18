@@ -1,4 +1,4 @@
-﻿/** Utilities for forwarding client-defined tools to the Strands agent at runtime. */
+/** Utilities for forwarding client-defined tools to the Strands agent at runtime. */
 
 import {
   Agent,

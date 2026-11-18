@@ -1,4 +1,4 @@
-﻿import { LangroidHttpAgent } from "./index";
+import { LangroidHttpAgent } from "./index";
 import { HttpAgent } from "@0noxtackore/client";
 
 describe("LangroidHttpAgent", () => {

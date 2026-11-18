@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { EventType } from "@0noxtackore/client";
 import type { BaseEvent, Message, Tool } from "@0noxtackore/client";
 import { ReasoningEncryptedValueEventSchema } from "@0noxtackore/core/schemas";

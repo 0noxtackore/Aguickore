@@ -1,4 +1,4 @@
-﻿import { EventEncoder } from "../encoder";
+import { EventEncoder } from "../encoder";
 import { EventType, TextMessageStartEvent } from "@0noxtackore/core";
 import * as proto from "@0noxtackore/proto";
 

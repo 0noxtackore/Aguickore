@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 
 // Mock workspace packages that aren't built in worktree isolation
 vi.mock("@0noxtackore/client", () => {

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The native interrupt path, driven through a genuine Strands `Agent`.
  *
  * Every other interrupt suite fabricates the interrupt: `Interrupt` is

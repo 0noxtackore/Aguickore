@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Verification server: mounts every TS example on the same paths the Python
  * reference server uses, so both implementations can be driven by the same
  * curl payloads.

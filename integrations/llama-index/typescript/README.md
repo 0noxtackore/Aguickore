@@ -1,4 +1,4 @@
-﻿# @0noxtackore/llamaindex
+# @0noxtackore/llamaindex
 
 Implementation of the AG-UI protocol for LlamaIndex.
 

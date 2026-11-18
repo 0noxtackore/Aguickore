@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tool-based Generative UI example for AWS Strands (TypeScript).
  *
  * The `generate_haiku` tool is declared on the frontend via

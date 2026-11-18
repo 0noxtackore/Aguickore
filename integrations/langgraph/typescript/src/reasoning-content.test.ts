@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for resolveReasoningContent and resolveEncryptedReasoningContent.
  * Covers all supported AI provider formats including the Bedrock Converse API
  * fix for issue #1361.

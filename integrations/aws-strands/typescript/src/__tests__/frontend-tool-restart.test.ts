@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Durable recovery of frontend tool results across a process restart.
  *
  * A frontend tool executes on the client, so server-side the proxy persists a

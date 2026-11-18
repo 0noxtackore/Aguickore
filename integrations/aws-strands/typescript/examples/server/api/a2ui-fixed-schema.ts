@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A2UI Fixed Schema example for AWS Strands (TypeScript, OSS-158).
  *
  * Strands port of the LangGraph / ADK `a2ui_fixed_schema` demo. Unlike the

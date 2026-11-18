@@ -1,4 +1,4 @@
-﻿import { vi } from "vitest";
+import { vi } from "vitest";
 import { AbstractAgent } from "../agent";
 import { HttpAgent } from "../http";
 import { BaseEvent, RunAgentInput } from "@0noxtackore/core";

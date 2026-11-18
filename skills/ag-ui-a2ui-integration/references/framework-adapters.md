@@ -1,4 +1,4 @@
-﻿# Framework Adapters
+# Framework Adapters
 
 Start from the app's existing agent framework. Use the relevant AG-UI adapter
 and its A2UI helpers instead of hand-rolling event translation when an adapter

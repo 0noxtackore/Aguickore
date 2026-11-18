@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for AG-UI <-> LangChain message conversion (all message types).
  * Extends existing multimodal tests in utils.test.ts to cover full message lifecycle.
  */

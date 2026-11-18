@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { UserMessage } from "@0noxtackore/client";
 import { Message as LangGraphMessage } from "@langchain/langgraph-sdk";
 import { aguiMessagesToLangChain, langchainMessagesToAgui } from "./utils";

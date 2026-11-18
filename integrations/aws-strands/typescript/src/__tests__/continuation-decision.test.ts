@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The continuation decision, enumerated.
  *
  * What a continuation turn should do is one decision over one input space, and

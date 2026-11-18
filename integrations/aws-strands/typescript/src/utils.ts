@@ -1,4 +1,4 @@
-﻿/** Utility functions for AWS Strands integration. */
+/** Utility functions for AWS Strands integration. */
 
 import type {
   InputContent,

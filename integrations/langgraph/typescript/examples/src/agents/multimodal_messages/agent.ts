@@ -1,4 +1,4 @@
-﻿/**
+/**
  * An example demonstrating multimodal message support with images.
  *
  * This agent demonstrates how to:

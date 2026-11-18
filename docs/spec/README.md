@@ -1,4 +1,4 @@
-﻿# Serving the specification at `ag-ui.com/spec`
+# Serving the specification at `ag-ui.com/spec`
 
 Every schema file names its own web address in `$id`, and a tool that meets one
 fetches that address to resolve it and any reference it makes. The address has

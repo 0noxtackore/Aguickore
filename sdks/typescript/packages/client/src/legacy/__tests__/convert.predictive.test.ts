@@ -1,4 +1,4 @@
-﻿import { convertToLegacyEvents } from "../convert";
+import { convertToLegacyEvents } from "../convert";
 import { of } from "rxjs";
 import {
   BaseEvent,

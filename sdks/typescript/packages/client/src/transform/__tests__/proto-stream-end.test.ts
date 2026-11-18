@@ -1,4 +1,4 @@
-﻿/**
+/**
  * What the binary reader does with what is left in its buffer when the stream
  * ends, and whether it reports at all.
  *

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Concurrent runs on the orchestrator path (Graph/Swarm) must be rejected
  * with RUN_ERROR/THREAD_BUSY, not leak Strands's internal "already
  * processing" error.

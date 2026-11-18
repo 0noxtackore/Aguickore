@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
 import { encodePackageName, packageMetadataUrl, resolveRegistry } from "./registry";
 

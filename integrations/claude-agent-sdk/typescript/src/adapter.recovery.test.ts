@@ -1,4 +1,4 @@
-﻿import { A2UIMiddleware } from "../../../../middlewares/a2ui-middleware/src";
+import { A2UIMiddleware } from "../../../../middlewares/a2ui-middleware/src";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { beforeEach, expect, it, vi } from "vitest";

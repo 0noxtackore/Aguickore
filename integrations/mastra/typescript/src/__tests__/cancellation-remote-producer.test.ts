@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach } from "vitest";
 import { EventType, type BaseEvent } from "@0noxtackore/client";
 
 // ---------------------------------------------------------------------------

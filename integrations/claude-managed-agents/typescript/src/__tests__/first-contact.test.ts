@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { EventType, type Message, type RunAgentInput } from "@0noxtackore/client";
 import { lastValueFrom, toArray } from "rxjs";
 import { ManagedAgentsAgent } from "../agent";

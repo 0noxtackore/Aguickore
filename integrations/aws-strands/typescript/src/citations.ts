@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Model citations, folded onto the assistant message they annotate.
  *
  * When a model answers over documents with citations enabled, it returns the

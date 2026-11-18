@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A2UI recovery agent (OSS-162) — DRAFT showcase, verify before wiring.
  *
  * A clone of `a2ui_dynamic_schema` that showcases the error-recovery loop. It

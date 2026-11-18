@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The TypeScript conformance lane: every shared fixture stream, replayed over
  * real HTTP/SSE into a real HttpAgent, asserted against the outcome the
  * specification requires.

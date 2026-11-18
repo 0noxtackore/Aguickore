@@ -1,4 +1,4 @@
-﻿/**
+/**
  * AWS Strands Agent adapter for AG-UI.
  *
  * Translates Strands streaming events into the AG-UI event protocol.

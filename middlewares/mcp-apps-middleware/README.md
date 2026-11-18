@@ -1,4 +1,4 @@
-﻿# @0noxtackore/mcp-apps-middleware
+# @0noxtackore/mcp-apps-middleware
 
 MCP Apps middleware for AG-UI that enables UI-enabled tools from MCP (Model Context Protocol) servers.
 

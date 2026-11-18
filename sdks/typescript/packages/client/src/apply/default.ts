@@ -1,4 +1,4 @@
-﻿import { authoritativeActivityTypes } from "../activity-history";
+import { authoritativeActivityTypes } from "../activity-history";
 import type { AbstractAgent } from "@/agent/agent";
 import {
   type AgentStateMutation,

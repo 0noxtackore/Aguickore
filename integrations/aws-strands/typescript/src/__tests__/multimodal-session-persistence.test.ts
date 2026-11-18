@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Attachments in Strands' own durable history.
  *
  * With a session manager wired, Strands owns the thread's history and the

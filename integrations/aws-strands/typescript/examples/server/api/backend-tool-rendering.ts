@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Backend Tool Rendering example for AWS Strands (TypeScript).
  *
  * Demonstrates backend-executed tools. Tool results reach the frontend as

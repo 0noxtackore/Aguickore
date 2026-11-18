@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Dojo example server: one AG-UI endpoint per feature, each backed by a
  * managed agent. Provision the agents first with `pnpm setup:examples`.
  *

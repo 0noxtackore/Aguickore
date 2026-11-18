@@ -1,4 +1,4 @@
-﻿# @0noxtackore/mastra
+# @0noxtackore/mastra
 
 Implementation of the AG-UI protocol for Mastra.
 

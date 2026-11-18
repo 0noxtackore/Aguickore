@@ -1,4 +1,4 @@
-﻿import { EventType } from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import { Subscriber } from "rxjs";
 import { describe, expect, it } from "vitest";
 

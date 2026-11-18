@@ -1,4 +1,4 @@
-﻿import type { BaseEvent, RunAgentInput } from "@0noxtackore/client";
+import type { BaseEvent, RunAgentInput } from "@0noxtackore/client";
 import {
   MockAgent,
   createRunStartedEvent,

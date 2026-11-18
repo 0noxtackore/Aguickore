@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import type { Interrupt, RunFinishedEvent } from "@0noxtackore/core";
 import { EventType } from "@0noxtackore/core";
 import { getRunOutcome, isInterruptExpired, buildResumeArray } from "../index";

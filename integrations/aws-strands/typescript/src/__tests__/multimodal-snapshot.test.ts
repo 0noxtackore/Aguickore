@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { EventType, type InputContent, type UserMessage } from "@0noxtackore/core";
 import { buildSnapshotMessages } from "../agent";
 import {

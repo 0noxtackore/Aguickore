@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Multimodal `RunAgentInput.messages[*].content` must be POSTed to the
  * LlamaIndex AG-UI server as the original parts array, not flattened to a
  * text string.

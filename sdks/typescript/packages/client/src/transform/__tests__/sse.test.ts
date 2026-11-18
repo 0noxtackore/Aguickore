@@ -1,4 +1,4 @@
-﻿import { ReplaySubject, Subject } from "rxjs";
+import { ReplaySubject, Subject } from "rxjs";
 import { firstValueFrom } from "rxjs";
 import { take } from "rxjs/operators";
 import { transformHttpEventStream } from "../http";

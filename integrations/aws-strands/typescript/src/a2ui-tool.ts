@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A2UI subagent tool for AWS Strands agents.
  *
  * Thin adapter over `@0noxtackore/a2ui-toolkit` — the recovery loop, validation, op

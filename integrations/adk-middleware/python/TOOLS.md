@@ -1,4 +1,4 @@
-﻿# ADK Middleware Tool Support Guide
+# ADK Middleware Tool Support Guide
 
 This guide covers the tool support functionality in the ADK Middleware.
 

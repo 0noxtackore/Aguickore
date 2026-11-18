@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The C# emitter: wire model in, the AGUI.Protobuf mappers out.
  *
  * Emits the .NET translation layer between the AGUI.Abstractions models and

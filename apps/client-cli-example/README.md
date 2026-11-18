@@ -1,4 +1,4 @@
-﻿# AG-UI CLI Example
+# AG-UI CLI Example
 
 A command-line chat interface demonstrating the AG-UI client with a Mastra agent. This example shows how to build an interactive CLI application that streams agent responses and tool calls in real-time.
 

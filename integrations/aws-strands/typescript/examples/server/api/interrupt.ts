@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Interrupt example for AWS Strands (TypeScript).
  *
  * Mirrors `python/examples/server/api/interrupt.py`.

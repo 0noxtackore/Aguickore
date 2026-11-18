@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The provider artefacts of one reasoning span: what a provider needs back on a
  * later turn to restore the reasoning it stands for (an Anthropic thinking
  * signature or redacted block, an OpenAI reasoning item id and encrypted

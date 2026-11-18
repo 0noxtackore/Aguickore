@@ -1,4 +1,4 @@
-﻿/**
+/**
  * AG-UI integration for Anthropic Claude Agent SDK.
  *
  * The adapter manages the SDK query lifecycle internally — just call

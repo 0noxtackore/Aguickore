@@ -1,4 +1,4 @@
-﻿import { vi } from "vitest";
+import { vi } from "vitest";
 import { from, firstValueFrom } from "rxjs";
 import { tap, toArray } from "rxjs/operators";
 import { verifyEvents } from "../verify";

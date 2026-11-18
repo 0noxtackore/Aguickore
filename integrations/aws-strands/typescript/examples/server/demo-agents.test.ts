@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Contracts the dojo depends on from the example demos.
  *
  * The dojo's code panel shows a demo's file under `server/api/` while

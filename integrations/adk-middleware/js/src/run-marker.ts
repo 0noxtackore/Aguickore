@@ -1,4 +1,4 @@
-﻿import type { Interrupt, Message, TokenUsage } from "@0noxtackore/core";
+import type { Interrupt, Message, TokenUsage } from "@0noxtackore/core";
 import { createEvent, type Event as AdkEvent } from "@google/adk";
 
 import { AG_UI_RUN_KEY } from "./constants";

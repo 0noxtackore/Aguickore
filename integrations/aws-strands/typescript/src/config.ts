@@ -1,4 +1,4 @@
-﻿/** Configuration primitives for customizing Strands agent behavior. */
+/** Configuration primitives for customizing Strands agent behavior. */
 
 import type { RunAgentInput, BaseEvent } from "@0noxtackore/core";
 import type { AgentConfig, SessionManager } from "@strands-agents/sdk";

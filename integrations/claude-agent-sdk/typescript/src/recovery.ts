@@ -1,4 +1,4 @@
-﻿import { buildAguiToolMessage } from "./utils";
+import { buildAguiToolMessage } from "./utils";
 
 /** Session bindings are host-owned metadata, separate from SDK transcript storage. */
 import type {

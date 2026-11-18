@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
   "name": "Agent User Interaction Protocol",
@@ -322,8 +322,8 @@
     }
   },
   "logo": {
-    "light": "/logo/ag-ui-light.svg",
-    "dark": "/logo/ag-ui-dark.svg"
+    "light": "/logo/Aguickore_logo_name_light.png",
+    "dark": "/logo/Aguickore_logo_name_dark.png"
   },
   "navbar": {
     "links": [

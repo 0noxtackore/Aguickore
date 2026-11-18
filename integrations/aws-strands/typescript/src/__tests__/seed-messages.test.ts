@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Prior conversation history is converted into Strands `MessageData` and
  * seeded on the per-thread agent's `AgentConfig.messages`.
  */

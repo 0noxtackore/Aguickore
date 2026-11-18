@@ -1,4 +1,4 @@
-﻿import { EventType } from "@0noxtackore/core";
+import { EventType } from "@0noxtackore/core";
 import { createEvent } from "@google/adk";
 import { describe, expect, it } from "vitest";
 

@@ -1,4 +1,4 @@
-﻿import { expect, test } from "vitest";
+import { expect, test } from "vitest";
 import { SequenceAgent, toolTurn } from "./sequence-agent";
 import {
   type ActivitySnapshotEvent,

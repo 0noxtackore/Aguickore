@@ -1,4 +1,4 @@
-﻿import {
+import {
   EventType,
   TextMessageChunkEvent,
   ToolCallStartEvent,

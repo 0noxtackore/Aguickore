@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Original attachment filenames survive native Strands persistence.
  *
  * A client names each attachment in the part's `metadata` (CopilotKit writes

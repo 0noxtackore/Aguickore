@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for langGraphDefaultMergeState.
  * Covers basic merging, tool deduplication, and the orphaned-tools fix for #1412.
  *

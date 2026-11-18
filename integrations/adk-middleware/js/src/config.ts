@@ -1,4 +1,4 @@
-﻿import type { AgentConfig } from "@0noxtackore/client";
+import type { AgentConfig } from "@0noxtackore/client";
 import type { AgentCapabilities, RunAgentInput } from "@0noxtackore/core";
 import type {
   BaseSessionService,

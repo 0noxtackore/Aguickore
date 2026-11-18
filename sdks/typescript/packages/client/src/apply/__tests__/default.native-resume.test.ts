@@ -1,4 +1,4 @@
-﻿import { vi } from "vitest";
+import { vi } from "vitest";
 import { firstValueFrom, from, toArray } from "rxjs";
 import { BaseEvent, RunAgentInput } from "@0noxtackore/core";
 import { AbstractAgent } from "@/agent";

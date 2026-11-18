@@ -1,4 +1,4 @@
-﻿import { type Message } from "@0noxtackore/core";
+import { type Message } from "@0noxtackore/core";
 import { describe, expect, it, vi } from "vitest";
 
 import { convertMessage } from "../message-converter";

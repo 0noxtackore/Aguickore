@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Human-in-the-loop agent configuration - Task planning with approval.
  *
  * This module demonstrates how to create agents that require human approval

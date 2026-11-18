@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A LangGraph implementation of the human-in-the-loop agent.
  *
  * AG-UI interrupt protocol note:

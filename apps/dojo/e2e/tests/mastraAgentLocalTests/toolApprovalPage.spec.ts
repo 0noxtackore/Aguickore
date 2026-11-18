@@ -1,4 +1,4 @@
-﻿import type { Locator, Page } from "@playwright/test";
+import type { Locator, Page } from "@playwright/test";
 import { test, expect } from "../../test-isolation-helper";
 import { CopilotSelectors } from "../../utils/copilot-selectors";
 import { awaitResponseAfterAction } from "../../utils/copilot-actions";

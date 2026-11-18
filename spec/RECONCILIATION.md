@@ -1,4 +1,4 @@
-﻿# Reconciliation
+# Reconciliation
 
 0 fields where TypeScript and
 Python disagree with the schema about required-ness. Each one is a decision the schema

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * End-to-end regression for the dynamic-A2UI hang: drive a REAL Strands `Agent`
  * loop (not a scripted stub) with a fake `Model` that scripts the full
  * conversation — outer turn calls the auto-injected `generate_a2ui`, the

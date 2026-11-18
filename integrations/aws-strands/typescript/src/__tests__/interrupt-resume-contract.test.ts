@@ -1,4 +1,4 @@
-﻿/**
+/**
  * What a paused tool actually receives when a resume reaches it.
  *
  * This is the cross-language contract: a tool body written against one

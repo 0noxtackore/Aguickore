@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Agentic Chat example for AWS Strands (TypeScript).
  *
  * Simple conversational agent. Frontend tools sent in RunAgentInput.tools

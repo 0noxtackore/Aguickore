@@ -1,4 +1,4 @@
-﻿# @0noxtackore/a2a
+# @0noxtackore/a2a
 
 A TypeScript integration that connects AG-UI agents with remote services that expose the [A2A protocol](https://a2a.dev/). It converts AG-UI conversations into A2A payloads, forwards them through the official A2A SDK, and replays the responses back into AG-UI event streams.
 

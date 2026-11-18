@@ -1,4 +1,4 @@
-﻿import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { EventType, type RunAgentInput } from "@0noxtackore/core";
 import { LangGraphAgent } from "../agent";
 

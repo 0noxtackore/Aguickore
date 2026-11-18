@@ -1,4 +1,4 @@
-﻿# @0noxtackore/core
+# @0noxtackore/core
 
 TypeScript definitions & runtime schemas for the **Agent-User Interaction (AG-UI) Protocol**.
 

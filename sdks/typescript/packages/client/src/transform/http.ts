@@ -1,4 +1,4 @@
-﻿import { BaseEvent } from "@0noxtackore/core";
+import { BaseEvent } from "@0noxtackore/core";
 import { Subject, ReplaySubject, Observable, Subscription } from "rxjs";
 import { HttpEvent, HttpEventType } from "../run/http-request";
 import { parseSSEStream } from "./sse";

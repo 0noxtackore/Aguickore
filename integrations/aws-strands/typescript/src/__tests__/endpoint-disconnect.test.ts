@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Client disconnect while streaming must `.return()` the iterator so the
  * agent generator's `finally` runs and `_activeRunsByThread` releases the
  * slot.

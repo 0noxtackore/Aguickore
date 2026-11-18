@@ -1,4 +1,4 @@
-﻿// The `@0noxtackore/core/schemas` subpath: the zod validators, and nothing else.
+// The `@0noxtackore/core/schemas` subpath: the zod validators, and nothing else.
 // Type-only consumers import the main entry; runtime validation imports this.
 // Regenerate the generated source with `pnpm --filter @0noxtackore/spec generate`.
 //

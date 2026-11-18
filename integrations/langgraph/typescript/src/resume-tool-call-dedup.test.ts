@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Regression tests for issue #2014.
  *
  * On a HITL resume, `handleStreamEvents` resets `emittedToolCallStartIds` to a

@@ -1,4 +1,4 @@
-﻿import { BaseEvent, EventType, AGUIError } from "@0noxtackore/core";
+import { BaseEvent, EventType, AGUIError } from "@0noxtackore/core";
 import { Observable, throwError, of } from "rxjs";
 import { mergeMap } from "rxjs/operators";
 import { type DebugLoggerInput, resolveDebugLogger } from "@/debug-logger";

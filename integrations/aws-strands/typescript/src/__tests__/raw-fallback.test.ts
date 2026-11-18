@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Issue #2291 — the adapter's event dispatch has no terminal fallback, so any
  * Strands event it does not translate is dropped with no error and no log.
  * Provider extensions the adapter predates vanish before they reach the

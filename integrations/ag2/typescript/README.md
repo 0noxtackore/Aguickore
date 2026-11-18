@@ -1,4 +1,4 @@
-﻿# @0noxtackore/ag2
+# @0noxtackore/ag2
 
 AG-UI client for [AG2](https://ag2.ai/) (formerly AutoGen) servers that expose the AG-UI protocol via `AGUIStream`.
 

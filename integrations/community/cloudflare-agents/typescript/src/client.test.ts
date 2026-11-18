@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { CloudflareAgentsClient } from "./client";
 import { EventType, PROTOCOL_VERSION } from "@0noxtackore/client";
 import type { RunAgentInput, BaseEvent } from "@0noxtackore/client";

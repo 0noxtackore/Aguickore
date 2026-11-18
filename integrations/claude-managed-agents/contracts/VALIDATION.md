@@ -1,4 +1,4 @@
-﻿# PNI-692 implementation validation
+# PNI-692 implementation validation
 
 Base: `b5562fd9c46482828e434fb67d3e33d5dc55f5db` (origin/main).
 Branch: `fix/managed-shared-state`.

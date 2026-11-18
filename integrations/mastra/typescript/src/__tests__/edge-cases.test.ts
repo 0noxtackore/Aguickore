@@ -1,4 +1,4 @@
-﻿import { vi } from "vitest";
+import { vi } from "vitest";
 import type { TextMessageChunkEvent, ToolCallStartEvent } from "@0noxtackore/client";
 import { EventType } from "@0noxtackore/client";
 import { MastraAgent } from "../mastra";

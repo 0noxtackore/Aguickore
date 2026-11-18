@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { EventType } from "@0noxtackore/client";
 import { AgentCapabilitiesSchema } from "@0noxtackore/core/schemas";
 import { Agent } from "@mastra/core/agent";

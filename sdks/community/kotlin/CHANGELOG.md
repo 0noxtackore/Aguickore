@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to ag-ui-4k will be documented in this file.
 

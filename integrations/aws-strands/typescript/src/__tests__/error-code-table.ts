@@ -1,4 +1,4 @@
-﻿/**
+/**
  * The shared `error-codes.json` table, read by this bridge's suites.
  *
  * One table, two runtimes: `../../../error-codes.json` holds the codes and the

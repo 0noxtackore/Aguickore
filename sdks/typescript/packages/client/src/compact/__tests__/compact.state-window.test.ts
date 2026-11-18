@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Compacting a window of state events that contains no SNAPSHOT.
  *
  * Collapsing `SNAPSHOT + deltas` into one snapshot is sound: the snapshot said

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Citations reach the client attached to the assistant message they annotate,
  * under the `citations` key of that message's metadata.
  *

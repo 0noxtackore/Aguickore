@@ -1,4 +1,4 @@
-﻿import { afterEach, beforeEach, describe, it, expect, vi } from "vitest";
+import { afterEach, beforeEach, describe, it, expect, vi } from "vitest";
 import { EventType } from "@0noxtackore/client";
 import type { BaseEvent, ContentPart, Message, Tool } from "@0noxtackore/client";
 import { ToolCallResultEventSchema } from "@0noxtackore/core/schemas";

@@ -1,4 +1,4 @@
-﻿import { describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { EventType } from "@0noxtackore/client";
 import { RunFinishedEventSchema } from "@0noxtackore/core/schemas";
 import {

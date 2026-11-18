@@ -1,4 +1,4 @@
-﻿/**
+/**
  * `toolBehaviors[name].interruptOnCall` approval semantics, driven through the
  * real Strands SDK: a real `Agent` built by the adapter, the adapter's own
  * `BeforeToolCallEvent` hook, and the SDK's real interrupt/resume machinery.

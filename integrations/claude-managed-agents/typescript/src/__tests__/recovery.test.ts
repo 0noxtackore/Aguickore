@@ -1,4 +1,4 @@
-﻿import { lastValueFrom, toArray } from "rxjs";
+import { lastValueFrom, toArray } from "rxjs";
 import { mkdtemp, readFile, writeFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";

@@ -1,4 +1,4 @@
-﻿import { AbstractAgent } from "../agent";
+import { AbstractAgent } from "../agent";
 import { HttpAgent } from "../http";
 import { BaseEvent, Message, RunAgentInput } from "@0noxtackore/core";
 import { EMPTY, Observable, Subscriber } from "rxjs";

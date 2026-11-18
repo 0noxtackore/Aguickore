@@ -1,4 +1,4 @@
-﻿# @0noxtackore/openai-agents
+# @0noxtackore/openai-agents
 
 TypeScript client for connecting an AG-UI front end to a server built with
 the companion Python integration

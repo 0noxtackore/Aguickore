@@ -1,4 +1,4 @@
-﻿> Current floors: Python 1.55.0 and TypeScript 1.1.0. See [SDK compatibility](SDK_COMPATIBILITY.md) for the migration boundary. Older version observations below are historical.
+> Current floors: Python 1.55.0 and TypeScript 1.1.0. See [SDK compatibility](SDK_COMPATIBILITY.md) for the migration boundary. Older version observations below are historical.
 
 # AWS Strands Integration Architecture
 

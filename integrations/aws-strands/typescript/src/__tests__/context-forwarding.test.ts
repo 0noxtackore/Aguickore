@@ -1,4 +1,4 @@
-﻿/**
+/**
  * `RunAgentInput.context` must reach the model for one call and nowhere else.
  *
  * The block the application's context renders to is shown to the model from a

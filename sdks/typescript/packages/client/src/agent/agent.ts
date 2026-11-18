@@ -1,4 +1,4 @@
-﻿import { defaultApplyEvents, keepToolResultsWithCalls } from "@/apply/default";
+import { defaultApplyEvents, keepToolResultsWithCalls } from "@/apply/default";
 import {
   Message,
   State,

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Shared HTTP harness for the CORS and transport suites.
  *
  * Everything here boots a real Express app on an ephemeral port and reads real

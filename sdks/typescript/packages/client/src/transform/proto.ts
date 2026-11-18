@@ -1,4 +1,4 @@
-﻿import { Observable, Subject } from "rxjs";
+import { Observable, Subject } from "rxjs";
 import { HttpEvent, HttpEventType } from "../run/http-request";
 import { BaseEvent } from "@0noxtackore/core";
 import * as proto from "@0noxtackore/proto";

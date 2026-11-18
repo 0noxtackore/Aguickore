@@ -1,4 +1,4 @@
-﻿import type { A2UIMiddlewareConfig } from "@0noxtackore/a2ui-middleware";
+import type { A2UIMiddlewareConfig } from "@0noxtackore/a2ui-middleware";
 import { zodToJsonSchema } from "zod-to-json-schema";
 
 import {

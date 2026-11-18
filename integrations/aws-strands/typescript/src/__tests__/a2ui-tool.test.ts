@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Unit tests for the AWS Strands A2UI subagent tool, covering both wiring
  * modes (explicit + auto-injected) and message-shape helpers:
  *

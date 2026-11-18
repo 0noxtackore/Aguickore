@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Shared State example for AWS Strands (TypeScript): a collaborative recipe
  * editor. `predictState` is what streams the recipe into the UI while the model
  * is still emitting the tool call; `stateFromArgs` fires once the arguments are

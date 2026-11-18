@@ -1,4 +1,4 @@
-﻿# @0noxtackore/langchain
+# @0noxtackore/langchain
 
 Implementation of the AG-UI protocol for LangChain.
 

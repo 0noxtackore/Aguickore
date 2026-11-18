@@ -1,4 +1,4 @@
-﻿import {
+import {
   Middleware,
   EventType,
   type AbstractAgent,

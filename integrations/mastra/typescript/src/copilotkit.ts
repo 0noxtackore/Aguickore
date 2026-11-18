@@ -1,4 +1,4 @@
-﻿import {
+import {
   AgentsConfig,
   CopilotCorsConfig,
   CopilotRuntime,

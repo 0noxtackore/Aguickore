@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Server-side entry point for `@0noxtackore/aws-strands`.
  *
  * Import from `@0noxtackore/aws-strands/server` when you need the Express transport

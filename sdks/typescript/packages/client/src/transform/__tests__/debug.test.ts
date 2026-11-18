@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach, type MockInstance } from "vitest";
 import { Subject, firstValueFrom } from "rxjs";
 import { take } from "rxjs/operators";
 import { parseSSEStream } from "../sse";

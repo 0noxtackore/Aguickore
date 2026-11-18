@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A2UI subagent tool factory for Mastra agents.
  *
  * Thin adapter over ``@0noxtackore/a2ui-toolkit`` — the heavy lifting (op builders,

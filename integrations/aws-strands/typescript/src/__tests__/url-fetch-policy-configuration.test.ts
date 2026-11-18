@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Reaching the URL fetch policy from configuration, and what that changes.
  *
  * `url-fetch-policy.test.ts` pins the policy itself: what it refuses, and what

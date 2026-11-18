@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Open/close discipline on reasoning spans and reasoning messages.
  *
  * The verifier held this for text messages and tool calls but not for

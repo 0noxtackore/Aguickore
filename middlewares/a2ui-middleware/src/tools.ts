@@ -1,4 +1,4 @@
-﻿import { Tool } from "@0noxtackore/client";
+import { Tool } from "@0noxtackore/client";
 import { A2UI_PROTOCOL_V1_0, type A2UIProtocolVersion } from "./protocol";
 
 /**

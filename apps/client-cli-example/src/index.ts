@@ -1,4 +1,4 @@
-﻿import * as readline from "readline";
+import * as readline from "readline";
 import { randomUUID } from "@0noxtackore/client";
 import { agent } from "./agent";
 

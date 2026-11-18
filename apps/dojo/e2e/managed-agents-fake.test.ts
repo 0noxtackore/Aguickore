@@ -1,4 +1,4 @@
-﻿import { createServer } from "node:http";
+import { createServer } from "node:http";
 import { once } from "node:events";
 import { createRequire } from "node:module";
 import assert from "node:assert/strict";

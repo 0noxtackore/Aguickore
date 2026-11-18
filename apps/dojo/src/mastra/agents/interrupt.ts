@@ -1,4 +1,4 @@
-﻿import { Agent } from "@mastra/core/agent";
+import { Agent } from "@mastra/core/agent";
 import { Memory } from "@mastra/memory";
 import { scheduleMeetingTool } from "../tools";
 import { getStorage } from "../storage";

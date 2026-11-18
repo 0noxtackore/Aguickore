@@ -1,4 +1,4 @@
-﻿// Real registered CPK handlers; explicit public resume while CPK automatic reconciliation is separate work.
+// Real registered CPK handlers; explicit public resume while CPK automatic reconciliation is separate work.
 import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 import { createRequire } from "node:module";

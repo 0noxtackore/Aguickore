@@ -1,4 +1,4 @@
-﻿/** Express endpoint utilities for AWS Strands integration. */
+/** Express endpoint utilities for AWS Strands integration. */
 
 import type {
   Express,

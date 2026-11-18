@@ -1,4 +1,4 @@
-﻿import { expect, test } from "vitest";
+import { expect, test } from "vitest";
 import { rewriteWorkspaceDependencies } from "./workspace-deps";
 
 const source = (dependencies: Record<string, string>) =>

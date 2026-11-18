@@ -1,4 +1,4 @@
-﻿# @0noxtackore/client
+# @0noxtackore/client
 
 Client SDK for connecting to **Agent-User Interaction (AG-UI) Protocol** servers.
 

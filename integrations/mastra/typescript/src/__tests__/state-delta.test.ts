@@ -1,4 +1,4 @@
-﻿import { EventType } from "@0noxtackore/client";
+import { EventType } from "@0noxtackore/client";
 import type { StateDeltaEvent, StateSnapshotEvent } from "@0noxtackore/client";
 import { applyPatch } from "fast-json-patch";
 import {

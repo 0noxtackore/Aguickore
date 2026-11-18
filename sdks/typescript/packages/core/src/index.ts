@@ -1,4 +1,4 @@
-﻿// The generated protocol source: types and constants, regenerated from
+// The generated protocol source: types and constants, regenerated from
 // spec/1.0/schema.json (`pnpm --filter @0noxtackore/spec generate`).
 //
 // The zod validators are deliberately NOT here. They live behind the

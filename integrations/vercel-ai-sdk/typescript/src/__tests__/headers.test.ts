@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { VercelAISDKAgent } from "../index";
 import { RunAgentInput } from "@0noxtackore/client";
 import { firstValueFrom, toArray } from "rxjs";

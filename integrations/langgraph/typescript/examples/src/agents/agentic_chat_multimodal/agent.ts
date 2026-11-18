@@ -1,4 +1,4 @@
-﻿/**
+/**
  * A multimodal agentic chat that can analyze images and other media.
  *
  * This agent demonstrates how to:

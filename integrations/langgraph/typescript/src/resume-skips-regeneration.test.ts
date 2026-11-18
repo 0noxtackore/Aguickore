@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Tests for the resume-skips-regeneration fix.
  *
  * The bug: prepareStream's regeneration detection

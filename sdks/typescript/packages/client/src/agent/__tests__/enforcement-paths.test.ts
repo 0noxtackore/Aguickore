@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach, afterEach, Mock } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach, Mock } from "vitest";
 import { scheduled, asyncScheduler, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { HttpAgent } from "../http";

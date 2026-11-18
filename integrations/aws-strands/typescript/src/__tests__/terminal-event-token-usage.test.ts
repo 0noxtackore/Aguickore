@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Provider-reported token usage on the terminal event.
  *
  * Strands reports usage per model invocation on `modelMetadataEvent`, and the

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Event handlers for Claude SDK stream processing.
  *
  * Breaks down stream processing into focused handler functions.

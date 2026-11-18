@@ -1,4 +1,4 @@
-﻿/**
+/**
  * MessagesSnapshotEvent emission + message_id rotation.
  *
  * Four lifecycle splice points (Python parity, PR #1638):

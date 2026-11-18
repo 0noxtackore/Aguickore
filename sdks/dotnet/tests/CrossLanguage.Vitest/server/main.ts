@@ -1,4 +1,4 @@
-﻿import express, { type Request, type Response } from "express";
+import express, { type Request, type Response } from "express";
 import { EventEncoder } from "@0noxtackore/encoder";
 import type { RunAgentInput } from "@0noxtackore/core";
 import {

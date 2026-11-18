@@ -1,4 +1,4 @@
-﻿// Public HttpAgent/full-resume control. Optional real CPK core, never mutates pendingInterrupts.
+// Public HttpAgent/full-resume control. Optional real CPK core, never mutates pendingInterrupts.
 import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 import { createRequire } from "node:module";

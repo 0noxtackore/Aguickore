@@ -1,4 +1,4 @@
-﻿# @0noxtackore/vercel-ai-sdk
+# @0noxtackore/vercel-ai-sdk
 
 Implementation of the AG-UI protocol for Vercel AI SDK.
 
